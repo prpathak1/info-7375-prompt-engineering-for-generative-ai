@@ -1,0 +1,223 @@
+{
+  "video": "final-project-film",
+  "metadata": {
+    "slug": "honest-shortlist-pitch",
+    "title": "Honest Shortlist: Final Project Pitch",
+    "topic": "FINAL PROJECT PITCH",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "student",
+    "persona": "none: Prathamesh's own first-person script, synthetic voice, disclosed in B00",
+    "voice": "af_bella",
+    "voice_kokoro": "af_bella",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Plain",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "bookend_exempt": [
+      "cold-open",
+      "bidea",
+      "bdefs",
+      "bhtf",
+      "bvdt",
+      "bout"
+    ],
+    "bookend_exempt_reason": "Student pitch film: the brief says to narrate as yourself and not to use the instructor's name, persona or credit line, so every house bookend is dropped (hesitant writer, terms card, Claude composer, @NikBearBrown outro). B00 is a plain title with the synthetic-voice disclosure; B14 is a short close.",
+    "source_doc": "PROJECT-BRIEF.md (final, 2026-10-14)",
+    "playlist": "INFO 7375 Fall 2026",
+    "chapter_number": 0,
+    "tags": [
+      "agentic AI",
+      "job search agent",
+      "source grounding",
+      "evaluation",
+      "INFO 7375"
+    ],
+    "build": {
+      "at": "2026-10-14T18:04:09",
+      "cut": "review",
+      "filled": 15,
+      "of": 15,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'un-annotated' \u2014 COLD OPEN LAW wants ClaudeComposerAsk",
+        "B14: palette=claude but the outro is 'un-annotated' \u2014 OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "source_of_truth": "beat_sheet.json \u2014 edit the sheet, not this file",
+  "beats_total": 15,
+  "beats_open": 0,
+  "beats": [
+    {
+      "beat_id": "B00",
+      "status": "filled",
+      "on_disk": "manim/B00.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B00.mp4",
+      "label": "I'm Prathamesh Pathak, pitching Honest Shortlist for an applied AI and agent engineering role. This "
+    },
+    {
+      "beat_id": "B01",
+      "status": "filled",
+      "on_disk": "manim/B01.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B01.mp4",
+      "label": "A network engineering posting lists skills, city, sometimes pay. On sponsorship, it often says nothi"
+    },
+    {
+      "beat_id": "B02",
+      "status": "filled",
+      "on_disk": "manim/B02.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B02.mp4",
+      "label": "Honest Shortlist will be a Python and Claude agent that watches public job boards and gives that stu"
+    },
+    {
+      "beat_id": "B03",
+      "status": "filled",
+      "on_disk": "manim/B03.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B03.mp4",
+      "label": "Each claim, new, location, sponsorship, pay, will be labeled supported, contradicted, or insufficien"
+    },
+    {
+      "beat_id": "B04",
+      "status": "filled",
+      "on_disk": "manim/B04.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B04.mp4",
+      "label": "Why care? It will show its evidence and say the posting doesn't say, instead of guessing. I haven't "
+    },
+    {
+      "beat_id": "B05",
+      "status": "filled",
+      "on_disk": "manim/B05.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B05.mp4",
+      "label": "A hiring manager or engineer screening for that role will read the read-me and sample output, then r"
+    },
+    {
+      "beat_id": "B06",
+      "status": "filled",
+      "on_disk": "manim/B06.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B06.mp4",
+      "label": "It will show I can build prompt contracts, with a validator that rejects anything off-schema; an age"
+    },
+    {
+      "beat_id": "B07",
+      "status": "filled",
+      "on_disk": "manim/B07.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B07.mp4",
+      "label": "Then source grounding with an M C P style tool, verification and versioned memory, a held-out evalua"
+    },
+    {
+      "beat_id": "B08",
+      "status": "filled",
+      "on_disk": "manim/B08.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B08.mp4",
+      "label": "Out, by design: no LinkedIn or Indeed scraping, only public Greenhouse, Lever, and Ashby data. And i"
+    },
+    {
+      "beat_id": "B09",
+      "status": "filled",
+      "on_disk": "manim/B09.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B09.mp4",
+      "label": "First, a one-board watch. Run one will set a baseline. Run two will report only new postings, on a r"
+    },
+    {
+      "beat_id": "B10",
+      "status": "filled",
+      "on_disk": "manim/B10.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B10.mp4",
+      "label": "The risk: keywords mislead. Visa can be the payments company; authorized to work, without the word s"
+    },
+    {
+      "beat_id": "B11",
+      "status": "filled",
+      "on_disk": "manim/B11.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B11.mp4",
+      "label": "Writing Python myself, agent loops, policies in code, and evaluations that can say no are new to me."
+    },
+    {
+      "beat_id": "B12",
+      "status": "filled",
+      "on_disk": "manim/B12.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B12.mp4",
+      "label": "How often postings are silent, I don't know yet; I will measure it. Every claim here will be checkab"
+    },
+    {
+      "beat_id": "B13",
+      "status": "filled",
+      "on_disk": "manim/B13.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B13.mp4",
+      "label": "Today, the toolkit has passed its smoke test, and my Week 1 and recipe commits exist. Everything els"
+    },
+    {
+      "beat_id": "B14",
+      "status": "filled",
+      "on_disk": "manim/B14.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B14.mp4",
+      "label": "Honest Shortlist: every claim will carry its evidence, and silence will be called silence."
+    }
+  ]
+}

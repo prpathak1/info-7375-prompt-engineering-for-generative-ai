@@ -1,0 +1,397 @@
+[run] skip B00_Title — B00 already filled
+[run] skip B01_Silence — B01 already filled
+[run] skip B02_Watch — B02 already filled
+[run] skip B03_Labels — B03 already filled
+[run] skip B04_NotYet — B04 already filled
+[run] skip B05_SixtySeconds — B05 already filled
+[run] skip B07_Skills2 — B07 already filled
+[run] skip B08_Fence — B08 already filled
+[run] skip B10_FalseFriends — B10 already filled
+[run] skip B11_Have — B11 already filled
+[run] skip B12_Measure — B12 already filled
+[run] skip B13_ExistsWill — B13 already filled
+[run] skip B14_Close — B14 already filled
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[gateW] B06_Skills1 clean
+[gateW] B09_Baseline clean
+[run] rendering B06_Skills1
+Manim Community v0.20.1
+
+[10/14/26 17:31:22] INFO     Animation 0 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                           
+
+Animation 1: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/12 [00:00<?, ?it/s]
+Animation 1: FadeIn(VGroup of 3 submobjects), etc.:  25%|##5       | 3/12 [00:00<00:00, 16.94it/s]
+Animation 1: FadeIn(VGroup of 3 submobjects), etc.:  42%|####1     | 5/12 [00:00<00:00, 16.95it/s]
+Animation 1: FadeIn(VGroup of 3 submobjects), etc.:  58%|#####8    | 7/12 [00:00<00:00, 15.76it/s]
+Animation 1: FadeIn(VGroup of 3 submobjects), etc.:  75%|#######5  | 9/12 [00:00<00:00, 15.46it/s]
+Animation 1: FadeIn(VGroup of 3 submobjects), etc.:  92%|#########1| 11/12 [00:00<00:00, 14.90it/s]
+                                                                                                   
+[10/14/26 17:31:24] INFO     Animation 1 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                          
+[10/14/26 17:31:26] INFO     Animation 2 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                           
+
+Animation 3: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/12 [00:00<?, ?it/s]
+Animation 3: FadeIn(VGroup of 3 submobjects), etc.:  25%|##5       | 3/12 [00:00<00:00, 19.60it/s]
+Animation 3: FadeIn(VGroup of 3 submobjects), etc.:  42%|####1     | 5/12 [00:00<00:00, 16.48it/s]
+Animation 3: FadeIn(VGroup of 3 submobjects), etc.:  58%|#####8    | 7/12 [00:00<00:00, 13.95it/s]
+Animation 3: FadeIn(VGroup of 3 submobjects), etc.:  75%|#######5  | 9/12 [00:00<00:00, 13.21it/s]
+Animation 3: FadeIn(VGroup of 3 submobjects), etc.:  92%|#########1| 11/12 [00:00<00:00, 13.77it/s]
+                                                                                                   
+[10/14/26 17:31:28] INFO     Animation 3 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                          
+[10/14/26 17:31:30] INFO     Animation 4 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                          
+
+Animation 5: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/12 [00:00<?, ?it/s]
+Animation 5: FadeIn(VGroup of 3 submobjects), etc.:  25%|##5       | 3/12 [00:00<00:00, 17.88it/s]
+Animation 5: FadeIn(VGroup of 3 submobjects), etc.:  42%|####1     | 5/12 [00:00<00:00, 15.80it/s]
+Animation 5: FadeIn(VGroup of 3 submobjects), etc.:  58%|#####8    | 7/12 [00:00<00:00, 14.76it/s]
+Animation 5: FadeIn(VGroup of 3 submobjects), etc.:  75%|#######5  | 9/12 [00:00<00:00, 13.40it/s]
+Animation 5: FadeIn(VGroup of 3 submobjects), etc.:  92%|#########1| 11/12 [00:00<00:00, 13.60it/s]
+                                                                                                   
+[10/14/26 17:31:33] INFO     Animation 5 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                           
+[10/14/26 17:31:45] INFO     Animation 6 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                          
+
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/20 [00:00<?, ?it/s]
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:  10%|#         | 2/20 [00:00<00:01, 11.74it/s]
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:  20%|##        | 4/20 [00:00<00:01, 10.87it/s]
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:  30%|###       | 6/20 [00:00<00:01, 11.60it/s]
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:  40%|####      | 8/20 [00:00<00:01, 11.89it/s]
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:  50%|#####     | 10/20 [00:00<00:00, 11.71it/s]
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:  60%|######    | 12/20 [00:01<00:00, 11.49it/s]
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:  70%|#######   | 14/20 [00:01<00:00, 11.43it/s]
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:  80%|########  | 16/20 [00:01<00:00, 11.69it/s]
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:  90%|######### | 18/20 [00:01<00:00, 11.64it/s]
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.: 100%|##########| 20/20 [00:01<00:00, 11.94it/s]
+                                                                                                   
+[10/14/26 17:31:49] INFO     Animation 7 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                          
+[10/14/26 17:32:01] INFO     Animation 8 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                           
+                    INFO     Combining to Movie file.  scene_file_writer.py:753
+                    INFO                               scene_file_writer.py:904
+                             File ready at                                     
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                             
+                                                                               
+                    INFO     Rendered B06_Skills1                  scene.py:278
+                             Played 9 animations                               
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+<LOCAL> DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+Animation 1: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                                         
+
+Animation 3: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                                         
+
+Animation 5: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                                         
+
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/12 [00:00<?, ?it/s]
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:  67%|######6   | 8/12 [00:00<00:00, 73.57it/s]
+                                                                                                  
+[audit] scenes: 14 snapshots → CLEAN
+[audit] report: <LOCAL>
+[run] rendering B09_Baseline
+Manim Community v0.20.1
+
+[10/14/26 17:32:14] INFO     Animation 0 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+
+Animation 1: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 1: FadeIn(VGroup of 2 submobjects), etc.:  13%|#3        | 2/15 [00:00<00:00, 19.89it/s]
+Animation 1: FadeIn(VGroup of 2 submobjects), etc.:  27%|##6       | 4/15 [00:00<00:00, 15.60it/s]
+Animation 1: FadeIn(VGroup of 2 submobjects), etc.:  40%|####      | 6/15 [00:00<00:00, 14.98it/s]
+Animation 1: FadeIn(VGroup of 2 submobjects), etc.:  53%|#####3    | 8/15 [00:00<00:00, 13.45it/s]
+Animation 1: FadeIn(VGroup of 2 submobjects), etc.:  67%|######6   | 10/15 [00:00<00:00, 13.61it/s]
+Animation 1: FadeIn(VGroup of 2 submobjects), etc.:  80%|########  | 12/15 [00:00<00:00, 13.76it/s]
+Animation 1: FadeIn(VGroup of 2 submobjects), etc.:  93%|#########3| 14/15 [00:01<00:00, 13.35it/s]
+                                                                                                   
+[10/14/26 17:32:16] INFO     Animation 1 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                          
+[10/14/26 17:32:20] INFO     Animation 2 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+
+Animation 3: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 3: FadeIn(VGroup of 2 submobjects), etc.:  13%|#3        | 2/15 [00:00<00:00, 18.83it/s]
+Animation 3: FadeIn(VGroup of 2 submobjects), etc.:  27%|##6       | 4/15 [00:00<00:00, 15.53it/s]
+Animation 3: FadeIn(VGroup of 2 submobjects), etc.:  40%|####      | 6/15 [00:00<00:00, 16.37it/s]
+Animation 3: FadeIn(VGroup of 2 submobjects), etc.:  53%|#####3    | 8/15 [00:00<00:00, 15.12it/s]
+Animation 3: FadeIn(VGroup of 2 submobjects), etc.:  67%|######6   | 10/15 [00:00<00:00, 13.94it/s]
+Animation 3: FadeIn(VGroup of 2 submobjects), etc.:  80%|########  | 12/15 [00:00<00:00, 14.33it/s]
+Animation 3: FadeIn(VGroup of 2 submobjects), etc.:  93%|#########3| 14/15 [00:00<00:00, 14.56it/s]
+                                                                                                   
+[10/14/26 17:32:23] INFO     Animation 3 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                          
+[10/14/26 17:32:26] INFO     Animation 4 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                          
+
+Animation 5: LaggedStart(Group):   0%|          | 0/17 [00:00<?, ?it/s]
+Animation 5: LaggedStart(Group):  18%|#7        | 3/17 [00:00<00:00, 17.80it/s]
+Animation 5: LaggedStart(Group):  29%|##9       | 5/17 [00:00<00:00, 16.27it/s]
+Animation 5: LaggedStart(Group):  41%|####1     | 7/17 [00:00<00:00, 15.13it/s]
+Animation 5: LaggedStart(Group):  53%|#####2    | 9/17 [00:00<00:00, 15.25it/s]
+Animation 5: LaggedStart(Group):  65%|######4   | 11/17 [00:00<00:00, 14.87it/s]
+Animation 5: LaggedStart(Group):  76%|#######6  | 13/17 [00:00<00:00, 14.55it/s]
+Animation 5: LaggedStart(Group):  88%|########8 | 15/17 [00:00<00:00, 14.68it/s]
+Animation 5: LaggedStart(Group): 100%|##########| 17/17 [00:01<00:00, 14.77it/s]
+                                                                                
+[10/14/26 17:32:28] INFO     Animation 5 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                           
+[10/14/26 17:32:38] INFO     Animation 6 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                          
+
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:  13%|#3        | 2/15 [00:00<00:00, 14.53it/s]
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:  27%|##6       | 4/15 [00:00<00:00, 12.99it/s]
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:  40%|####      | 6/15 [00:00<00:00, 11.93it/s]
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:  53%|#####3    | 8/15 [00:00<00:00, 11.48it/s]
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:  67%|######6   | 10/15 [00:00<00:00, 11.72it/s]
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:  80%|########  | 12/15 [00:01<00:00, 11.67it/s]
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:  93%|#########3| 14/15 [00:01<00:00, 11.99it/s]
+                                                                                                   
+[10/14/26 17:32:41] INFO     Animation 7 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+[10/14/26 17:32:45] INFO     Animation 8 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+
+Animation 9: GrowFromCenter(VGroup of 2 submobjects):   0%|          | 0/10 [00:00<?, ?it/s]
+Animation 9: GrowFromCenter(VGroup of 2 submobjects):  20%|##        | 2/10 [00:00<00:00, 17.42it/s]
+Animation 9: GrowFromCenter(VGroup of 2 submobjects):  40%|####      | 4/10 [00:00<00:00, 18.43it/s]
+Animation 9: GrowFromCenter(VGroup of 2 submobjects):  60%|######    | 6/10 [00:00<00:00, 15.72it/s]
+Animation 9: GrowFromCenter(VGroup of 2 submobjects):  80%|########  | 8/10 [00:00<00:00, 13.69it/s]
+Animation 9: GrowFromCenter(VGroup of 2 submobjects): 100%|##########| 10/10 [00:00<00:00, 14.37it/s]
+                                                                                                     
+[10/14/26 17:32:47] INFO     Animation 9 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+[10/14/26 17:32:54] INFO     Animation 10 : Partial    scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                    INFO     Combining to Movie file.  scene_file_writer.py:753
+                    INFO                               scene_file_writer.py:904
+                             File ready at                                     
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                            
+                                                                               
+                    INFO     Rendered B09_Baseline                 scene.py:278
+                             Played 11 animations                              
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+<LOCAL> DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+Animation 1: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/9 [00:00<?, ?it/s]
+                                                                                         
+
+Animation 3: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/9 [00:00<?, ?it/s]
+                                                                                         
+
+Animation 5: LaggedStart(Group):   0%|          | 0/11 [00:00<?, ?it/s]
+                                                                       
+
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/9 [00:00<?, ?it/s]
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.: 100%|##########| 9/9 [00:00<00:00, 81.29it/s]
+                                                                                                 
+
+Animation 9: GrowFromCenter(VGroup of 2 submobjects):   0%|          | 0/6 [00:00<?, ?it/s]
+                                                                                           
+[audit] scenes: 17 snapshots → CLEAN
+[audit] report: <LOCAL>
+[remotion] nothing to do — no shot.remotion.pattern beats
+[art] compiled B06  MANIM    14.5s  ← B06.mp4
+[art] compiled B09  MANIM    15.5s  ← B09.mp4
+[art] motion histogram: graphic:15
+[art] SKIN LINT: B00: palette=claude but the cold open is 'un-annotated' — COLD OPEN LAW wants ClaudeComposerAsk
+[art] SKIN LINT: B14: palette=claude but the outro is 'un-annotated' — OUTRO LAW wants ClaudeTitleOutro
+[art] build stamp → beat_sheet.json (15/15 filled)
+[art] QC contact sheet → <LOCAL>
+[art] wrote <LOCAL>  (197.4s, audio: per-beat timeline (source audio preserved), drawtext: yes)
+[art] slots: 15/15 filled — B00:MANIM B01:MANIM B02:MANIM B03:MANIM B04:MANIM B05:MANIM B06:MANIM B07:MANIM B08:MANIM B09:MANIM B10:MANIM B11:MANIM B12:MANIM B13:MANIM B14:MANIM
+[run] GATE V — frame-level visual QC on the compiled reel
+[gate-v] frames=30 BLOCKER=0 MAJOR=0 → <LOCAL>
+[run] done → <LOCAL>  (QC gates: on)
+[run] REVIEW built; no final exported. Use ./art final <reel> for a verified master.
+[run] any remaining slates are YOUR slots — see <LOCAL>

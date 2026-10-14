@@ -1,0 +1,14 @@
+--- a/runtime/scripts/compile.py
++++ b/runtime/scripts/compile.py
+@@ -792,7 +792,10 @@
+                       f":enable='between(t,0,{first_beat_dur:.3f})'[vtitle]")
+             prev = "vtitle"
+         if a.review and drawtext:
+-            fc.append(f"[{prev}]drawtext=fontfile={font}:text='%{{pts\\:hms}}'"
++            # ffmpeg filter syntax: ':' separates options and '\' escapes, so a
++            # Windows path (C:\...) needs '/' separators and an escaped colon.
++            ff_font = str(font).replace("\\", "/").replace(":", "\\:")
++            fc.append(f"[{prev}]drawtext=fontfile='{ff_font}':text='%{{pts\\:hms}}'"
+                       f":fontcolor=white:fontsize={int(h*0.04)}:box=1"
+                       # inside the 5% title-safe inset (layout.ts SAFE), box border included
+                       f":boxcolor=black@0.55:boxborderw=8:x=w*0.95-text_w-8:y=h*0.05+8[vout]")

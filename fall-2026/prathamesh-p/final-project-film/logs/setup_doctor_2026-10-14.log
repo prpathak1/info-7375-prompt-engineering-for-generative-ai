@@ -1,0 +1,19 @@
+
+[1mbrutalist — readiness (free-only toolkit: no keys, ever)[0m
+
+  FEATURE                      STATUS
+  -------                      ------
+  audio (Kokoro Bella/Onyx)    [32m✅ ready[0m
+  captions + word clock        [32m✅ ready[0m
+  Manim beats                  [32m✅ ready[0m
+  Manim equation beats         [32m✅ ready[0m
+  Remotion beats + bookends    [32m✅ ready[0m
+  slates / previz / compile    [32m✅ ready[0m
+  fonts (EB Garamond + Oswald) [32m✅ ready[0m
+
+[32mAll core features ready. Voices: Bella (af_bella) and Onyx (am_onyx). Cost: $0.00.[0m
+Run `./art keys` to check optional Higgsfield login.
+A green table above means every dependency checks out live — it does NOT
+mean a video actually renders. Run `./art smoke` for that proof: it builds
+the tiny examples/_smoke/ fixture end to end and verifies the DECODED
+mp4 (audio volume, real video/audio streams, non-zero file).

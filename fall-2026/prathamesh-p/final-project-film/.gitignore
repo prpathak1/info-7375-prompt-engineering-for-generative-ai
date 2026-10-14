@@ -1,0 +1,40 @@
+# Video stays out of GitHub (course repo root .gitignore and the final project brief).
+# The rendered master goes in the Canvas ZIP; README.md records its filename, size,
+# runtime and SHA-256 so this folder provably matches the ZIP.
+*.mp4
+*.mov
+*.webm
+*.mp3
+*.wav
+*.m4a
+manim/
+media/
+mp3/
+mp4/
+clips/
+_qc/
+_superseded/
+_build/
+
+# Caches
+__pycache__/
+*.pyc
+node_modules/
+.venv/
+venv/
+
+# Credentials and local config, never committed
+.env
+.env.*
+*.key
+*.pem
+credentials/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Toolkit compile scratch dirs (an orphaned one from the interrupted attempt 2 holds a truncated mp4)
+.*-candidate-*/
+build-state.json.tmp

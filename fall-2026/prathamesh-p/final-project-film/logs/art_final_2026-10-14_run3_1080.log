@@ -1,0 +1,38 @@
+[typecheck] wrote <LOCAL>
+[typecheck] §8.10 B00: SKIP
+[typecheck] §8.10 B01: SKIP
+[typecheck] §8.10 B02: SKIP
+[typecheck] §8.10 B03: SKIP
+[typecheck] §8.10 B04: SKIP
+[typecheck] §8.10 B05: SKIP
+[typecheck] §8.10 B06: SKIP
+[typecheck] §8.10 B07: SKIP
+[typecheck] §8.10 B08: SKIP
+[typecheck] §8.10 B09: SKIP
+[typecheck] §8.10 B10: SKIP
+[typecheck] §8.10 B11: SKIP
+[typecheck] §8.10 B12: SKIP
+[typecheck] §8.10 B13: SKIP
+[typecheck] §8.10 B14: SKIP
+[typecheck] GATE T: PASS
+[art] compiled B00  MANIM     9.2s  ← B00.mp4
+[art] compiled B01  MANIM    12.2s  ← B01.mp4
+[art] compiled B02  MANIM    14.5s  ← B02.mp4
+[art] compiled B03  MANIM    12.1s  ← B03.mp4
+[art] compiled B04  MANIM    13.7s  ← B04.mp4
+[art] compiled B05  MANIM    15.0s  ← B05.mp4
+[art] compiled B06  MANIM    14.5s  ← B06.mp4
+[art] compiled B07  MANIM    13.2s  ← B07.mp4
+[art] compiled B08  MANIM    10.4s  ← B08.mp4
+[art] compiled B09  MANIM    15.5s  ← B09.mp4
+[art] compiled B10  MANIM    17.7s  ← B10.mp4
+[art] compiled B11  MANIM    20.9s  ← B11.mp4
+[art] compiled B12  MANIM     8.7s  ← B12.mp4
+[art] compiled B13  MANIM    14.6s  ← B13.mp4
+[art] compiled B14  MANIM     5.4s  ← B14.mp4
+[art] motion histogram: graphic:15
+[art] SKIN LINT: B00: palette=claude but the cold open is 'un-annotated' — COLD OPEN LAW wants ClaudeComposerAsk
+[art] SKIN LINT: B14: palette=claude but the outro is 'un-annotated' — OUTRO LAW wants ClaudeTitleOutro
+[art] build stamp → beat_sheet.json (15/15 filled)
+[art] wrote <LOCAL>  (197.4s, audio: per-beat timeline (source audio preserved), drawtext: yes)
+[art] slots: 15/15 filled — B00:MANIM B01:MANIM B02:MANIM B03:MANIM B04:MANIM B05:MANIM B06:MANIM B07:MANIM B08:MANIM B09:MANIM B10:MANIM B11:MANIM B12:MANIM B13:MANIM B14:MANIM

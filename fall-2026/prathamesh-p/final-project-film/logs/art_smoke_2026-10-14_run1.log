@@ -1,0 +1,6 @@
+[smoke] building examples/_smoke in <LOCAL>
+[smoke] --- GATE 0: Kokoro narration ---
+Fatal Python error: preconfig_init_utf8_mode: invalid PYTHONUTF8 environment variable value
+Python runtime state: preinitializing
+
+[31m[smoke] FAIL: generate_audio_kokoro.py failed — see <LOCAL>[0m

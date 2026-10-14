@@ -1,0 +1,891 @@
+{
+  "metadata": {
+    "slug": "honest-shortlist-pitch",
+    "title": "Honest Shortlist: Final Project Pitch",
+    "topic": "FINAL PROJECT PITCH",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "student",
+    "persona": "none: Prathamesh's own first-person script, synthetic voice, disclosed in B00",
+    "voice": "af_bella",
+    "voice_kokoro": "af_bella",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Plain",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "bookend_exempt": [
+      "cold-open",
+      "bidea",
+      "bdefs",
+      "bhtf",
+      "bvdt",
+      "bout"
+    ],
+    "bookend_exempt_reason": "Student pitch film: the brief says to narrate as yourself and not to use the instructor's name, persona or credit line, so every house bookend is dropped (hesitant writer, terms card, Claude composer, @NikBearBrown outro). B00 is a plain title with the synthetic-voice disclosure; B14 is a short close.",
+    "source_doc": "PROJECT-BRIEF.md (final, 2026-10-14)",
+    "playlist": "INFO 7375 Fall 2026",
+    "chapter_number": 0,
+    "tags": [
+      "agentic AI",
+      "job search agent",
+      "source grounding",
+      "evaluation",
+      "INFO 7375"
+    ],
+    "build": {
+      "at": "2026-10-14T18:21:18",
+      "cut": "master",
+      "filled": 15,
+      "of": 15,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'un-annotated' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B14: palette=claude but the outro is 'un-annotated' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "pitch_question": "title",
+      "narration_text": "I'm Prathamesh Pathak, pitching Honest Shortlist for an applied AI and agent engineering role. This synthetic voice is reading my script.",
+      "estimated_duration_s": 8.9,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Title stack on the cream stage: 'Honest Shortlist', name, target role; an ink rule draws under the title; the disclosure line lands last.",
+        "motion_claim": "Title stack on the cream stage: 'Honest Shortlist', name, target role; an ink rule draws under the title; the disclosure line lands last.",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "title"
+          },
+          {
+            "at": 0.3,
+            "event": "rule draws"
+          },
+          {
+            "at": 0.4,
+            "event": "name + role"
+          },
+          {
+            "at": 0.6,
+            "event": "disclosure line"
+          }
+        ],
+        "manim": {
+          "class": "B00_Title"
+        },
+        "on_screen_labels": [
+          "Honest Shortlist",
+          "Prathamesh Pathak",
+          "Target role: AI / agent engineer (applied AI)",
+          "Narration: synthetic voice (Kokoro) reading my script"
+        ],
+        "constructed": false
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 9.22,
+      "render_duration_s": 9.25,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B00.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:21:18"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "pitch_question": "problem (Q6)",
+      "narration_text": "A network engineering posting lists skills, city, sometimes pay. On sponsorship, it often says nothing. For the fictional F one student I'm designing for, that silence is the problem.",
+      "estimated_duration_s": 12.1,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "One kraft posting page; three scribble rows fill in (skills, city, pay); the fourth row, 'sponsorship', stays empty and a ghost question mark grows beside it. Tag: 'fictional F-1 student'.",
+        "motion_claim": "One kraft posting page; three scribble rows fill in (skills, city, pay); the fourth row, 'sponsorship', stays empty and a ghost question mark grows beside it. Tag: 'fictional F-1 student'.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "page lands"
+          },
+          {
+            "at": 0.3,
+            "event": "rows fill"
+          },
+          {
+            "at": 0.6,
+            "event": "empty sponsorship row + ?"
+          }
+        ],
+        "manim": {
+          "class": "B01_Silence"
+        },
+        "on_screen_labels": [
+          "CONSTRUCTED",
+          "sponsorship",
+          "fictional F-1 student"
+        ],
+        "constructed": true
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 12.25,
+      "render_duration_s": 12.25,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:21:18"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "pitch_question": "Q1",
+      "narration_text": "Honest Shortlist will be a Python and Claude agent that watches public job boards and gives that student a short daily list of new postings, shipped as a GitHub repo with tests, a held-out evaluation, and a ten-document packet.",
+      "estimated_duration_s": 16.0,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Three board stacks on the left; postings slide through a narrow gate into a short-list tray; the tray sits inside an open box tagged 'GitHub repo' with a test page, an eval sheet and a ten-page stack.",
+        "motion_claim": "Three board stacks on the left; postings slide through a narrow gate into a short-list tray; the tray sits inside an open box tagged 'GitHub repo' with a test page, an eval sheet and a ten-page stack.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "boards"
+          },
+          {
+            "at": 0.3,
+            "event": "postings flow through gate"
+          },
+          {
+            "at": 0.6,
+            "event": "repo box + parts"
+          }
+        ],
+        "manim": {
+          "class": "B02_Watch"
+        },
+        "on_screen_labels": [
+          "CONSTRUCTED",
+          "job boards",
+          "GitHub repo"
+        ],
+        "constructed": true
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 14.49,
+      "render_duration_s": 14.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:21:18"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "pitch_question": "Q1",
+      "narration_text": "Each claim, new, location, sponsorship, pay, will be labeled supported, contradicted, or insufficient against the posting's own text. Liveness will be checked by fetching the board again.",
+      "estimated_duration_s": 11.3,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "One shortlist card with four claim rows; a stamp lands on each row (check, cross, dash); a refresh arrow loops from the card back to a board stack.",
+        "motion_claim": "One shortlist card with four claim rows; a stamp lands on each row (check, cross, dash); a refresh arrow loops from the card back to a board stack.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "card"
+          },
+          {
+            "at": 0.35,
+            "event": "stamps land"
+          },
+          {
+            "at": 0.75,
+            "event": "refresh arrow to board"
+          }
+        ],
+        "manim": {
+          "class": "B03_Labels"
+        },
+        "on_screen_labels": [
+          "CONSTRUCTED",
+          "supported",
+          "contradicted",
+          "insufficient"
+        ],
+        "constructed": true
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 12.1,
+      "render_duration_s": 12.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:21:18"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "pitch_question": "Q2",
+      "narration_text": "Why care? It will show its evidence and say the posting doesn't say, instead of guessing. I haven't examined alternatives yet. In my first job-search assignment, I will compare LinkedIn job alerts and a chat assistant.",
+      "estimated_duration_s": 14.8,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Left: the posting page's empty row stamped 'insufficient'. Right: two plain-text tags, 'LinkedIn job alerts' and 'chat assistant', under a tag 'not yet examined · JS1, Oct 31'. No logos.",
+        "motion_claim": "Left: the posting page's empty row stamped 'insufficient'. Right: two plain-text tags, 'LinkedIn job alerts' and 'chat assistant', under a tag 'not yet examined · JS1, Oct 31'. No logos.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "insufficient stamp"
+          },
+          {
+            "at": 0.45,
+            "event": "two plain-text tags"
+          },
+          {
+            "at": 0.7,
+            "event": "not yet · JS1"
+          }
+        ],
+        "manim": {
+          "class": "B04_NotYet"
+        },
+        "on_screen_labels": [
+          "CONSTRUCTED",
+          "insufficient",
+          "LinkedIn job alerts",
+          "chat assistant",
+          "not yet examined · JS1, Oct 31"
+        ],
+        "constructed": true
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 13.63,
+      "render_duration_s": 13.666666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:21:18"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "pitch_question": "Q3",
+      "narration_text": "A hiring manager or engineer screening for that role will read the read-me and sample output, then run one command, all within a minute. Each claim will link to its posting text, beside an evaluation table that shows the failures.",
+      "estimated_duration_s": 16.4,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A 60-second dial; a README page, then one terminal line, then the shortlist card whose claims draw leader lines to posting text; an eval table beside it with one failure row marked.",
+        "motion_claim": "A 60-second dial; a README page, then one terminal line, then the shortlist card whose claims draw leader lines to posting text; an eval table beside it with one failure row marked.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "dial starts"
+          },
+          {
+            "at": 0.3,
+            "event": "README"
+          },
+          {
+            "at": 0.42,
+            "event": "one command"
+          },
+          {
+            "at": 0.6,
+            "event": "claims link to text; eval table with failure row"
+          }
+        ],
+        "manim": {
+          "class": "B05_SixtySeconds"
+        },
+        "on_screen_labels": [
+          "CONSTRUCTED",
+          "60 s",
+          "README",
+          "failures"
+        ],
+        "constructed": true
+      },
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 15.0,
+      "render_duration_s": 15.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:21:18"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "pitch_question": "Q4",
+      "narration_text": "It will show I can build prompt contracts, with a validator that rejects anything off-schema; an agent loop with budgets, exits, and a stop the model doesn't control; and permissions enforced in code, with boundary tests.",
+      "estimated_duration_s": 14.8,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Three blocks rise in a row, each with a small evidence page: contract (a schema slot rejecting a bent card), loop (a ring with an exit gate), permissions (a fence with an allow-list tag).",
+        "motion_claim": "Three blocks rise in a row, each with a small evidence page: contract (a schema slot rejecting a bent card), loop (a ring with an exit gate), permissions (a fence with an allow-list tag).",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "contract block"
+          },
+          {
+            "at": 0.4,
+            "event": "loop block"
+          },
+          {
+            "at": 0.7,
+            "event": "permissions block"
+          }
+        ],
+        "manim": {
+          "class": "B06_Skills1"
+        },
+        "on_screen_labels": [
+          "CONSTRUCTED",
+          "contract · JS1",
+          "loop · JS2",
+          "permissions · JS2"
+        ],
+        "constructed": true
+      },
+      "actual_duration_s": 14.42,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 14.458333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:21:18"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "pitch_question": "Q4",
+      "narration_text": "Then source grounding with an M C P style tool, verification and versioned memory, a held-out evaluation with five or more deliberate failures, and a human approval gate bound to the exact shortlist.",
+      "estimated_duration_s": 13.6,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The row continues: four more blocks rise (grounding, memory, evaluation, gate); the gate block closes on the shortlist card with a fingerprint seal.",
+        "motion_claim": "The row continues: four more blocks rise (grounding, memory, evaluation, gate); the gate block closes on the shortlist card with a fingerprint seal.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "grounding"
+          },
+          {
+            "at": 0.3,
+            "event": "memory"
+          },
+          {
+            "at": 0.5,
+            "event": "evaluation"
+          },
+          {
+            "at": 0.72,
+            "event": "gate seals the shortlist"
+          }
+        ],
+        "manim": {
+          "class": "B07_Skills2"
+        },
+        "on_screen_labels": [
+          "CONSTRUCTED",
+          "grounding · JS3",
+          "memory · JS4",
+          "evaluation",
+          "human gate · JS5"
+        ],
+        "constructed": true
+      },
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 13.14,
+      "render_duration_s": 13.166666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:21:18"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "pitch_question": "Q5",
+      "narration_text": "Out, by design: no LinkedIn or Indeed scraping, only public Greenhouse, Lever, and Ashby data. And it will never apply, email, message, or log in.",
+      "estimated_duration_s": 10.5,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A fence with one gate: three board blocks (plain-text names) pass through; four action tags (apply, email, message, log in) bump the fence and drop away.",
+        "motion_claim": "A fence with one gate: three board blocks (plain-text names) pass through; four action tags (apply, email, message, log in) bump the fence and drop away.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "fence"
+          },
+          {
+            "at": 0.35,
+            "event": "boards pass"
+          },
+          {
+            "at": 0.65,
+            "event": "actions blocked"
+          }
+        ],
+        "manim": {
+          "class": "B08_Fence"
+        },
+        "on_screen_labels": [
+          "CONSTRUCTED",
+          "Greenhouse · Lever · Ashby",
+          "never: apply · email · message · log in"
+        ],
+        "constructed": true
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 10.35,
+      "render_duration_s": 10.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:21:18"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "pitch_question": "Q5",
+      "narration_text": "First, a one-board watch. Run one will set a baseline. Run two will report only new postings, on a real second day, or from a saved earlier response, clearly labeled. Anyone will be able to check the raw responses and the diff.",
+      "estimated_duration_s": 17.2,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two run trays side by side: run 1 fills a state page and shows '0 new'; run 2 adds two cards that glow; a diff page between them draws two marked lines.",
+        "motion_claim": "Two run trays side by side: run 1 fills a state page and shows '0 new'; run 2 adds two cards that glow; a diff page between them draws two marked lines.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "run 1 · 0 new"
+          },
+          {
+            "at": 0.4,
+            "event": "run 2 · new cards"
+          },
+          {
+            "at": 0.7,
+            "event": "diff draws"
+          }
+        ],
+        "manim": {
+          "class": "B09_Baseline"
+        },
+        "on_screen_labels": [
+          "CONSTRUCTED",
+          "run 1: 0 new",
+          "run 2",
+          "SEEDED if not day 2"
+        ],
+        "constructed": true
+      },
+      "actual_duration_s": 15.45,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 15.458333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:21:18"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "pitch_question": "Q6",
+      "narration_text": "The risk: keywords mislead. Visa can be the payments company; authorized to work, without the word sponsorship, answers neither question. So insufficient will be the default, and public H one B employer data will stay a separate company signal, never a claim about the posting.",
+      "estimated_duration_s": 18.4,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two plain-text keyword tags drop onto the posting page: 'Visa' and 'authorized to work'; a ghost check and cross hover, then an 'insufficient' stamp lands; a company block slides apart, tagged 'employer data'.",
+        "motion_claim": "Two plain-text keyword tags drop onto the posting page: 'Visa' and 'authorized to work'; a ghost check and cross hover, then an 'insufficient' stamp lands; a company block slides apart, tagged 'employer data'.",
+        "show": [
+          {
+            "at": 0.12,
+            "event": "'Visa' tag"
+          },
+          {
+            "at": 0.3,
+            "event": "'authorized to work' tag"
+          },
+          {
+            "at": 0.6,
+            "event": "insufficient stamp"
+          },
+          {
+            "at": 0.8,
+            "event": "company block set apart"
+          }
+        ],
+        "manim": {
+          "class": "B10_FalseFriends"
+        },
+        "on_screen_labels": [
+          "CONSTRUCTED",
+          "Visa",
+          "authorized to work",
+          "insufficient",
+          "public H-1B employer data"
+        ],
+        "constructed": true
+      },
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 17.64,
+      "render_duration_s": 17.666666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:21:18"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "pitch_question": "Q7",
+      "narration_text": "Writing Python myself, agent loops, policies in code, and evaluations that can say no are new to me. I already ran the Brutalist toolkit on Windows, diagnosed its failures, and reviewed and approved Claude's fixes. On my Reallocation recipe, I chose the persona, rules, and dates, while Claude drafted the code.",
+      "estimated_duration_s": 20.8,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Left: four outlined, unfilled tool tags ('new to me'). Right, REAL: two dated git log lines typed in a dark panel (hash, date, subject only; no author, email or paths), captioned 'real · git log'.",
+        "motion_claim": "Left: four outlined, unfilled tool tags ('new to me'). Right, REAL: two dated git log lines typed in a dark panel (hash, date, subject only; no author, email or paths), captioned 'real · git log'.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "new-to-me tags"
+          },
+          {
+            "at": 0.4,
+            "event": "panel"
+          },
+          {
+            "at": 0.55,
+            "event": "line 1"
+          },
+          {
+            "at": 0.75,
+            "event": "line 2"
+          }
+        ],
+        "manim": {
+          "class": "B11_Have"
+        },
+        "on_screen_labels": [
+          "new to me",
+          "real · git log",
+          "ce1a06c  2026-09-27",
+          "1b5a589  2026-10-03"
+        ],
+        "constructed": false,
+        "real_source": {
+          "what": "git log --format='%h %cs %s' (subjects shown as committed)",
+          "lines": [
+            "ce1a06c 2026-09-27 Week 01 video: expected vs observed (prathamesh-p)",
+            "1b5a589 2026-10-03 Final sample run + recipe 0.1.2 (DRAFT, sample run passing)"
+          ],
+          "repos": [
+            "info-7375-prompt-engineering-for-generative-ai (fork)",
+            "the-reallocation-engine (fork)"
+          ]
+        }
+      },
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": 20.86,
+      "render_duration_s": 20.875,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B11.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:21:18"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "pitch_question": "Q7",
+      "narration_text": "How often postings are silent, I don't know yet; I will measure it. Every claim here will be checkable, and that's the work I want to be hired for.",
+      "estimated_duration_s": 12.1,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The empty-row posting page with a tally sheet beside it; the tally stays blank with a 'to measure · JS1' tag.",
+        "motion_claim": "The empty-row posting page with a tally sheet beside it; the tally stays blank with a 'to measure · JS1' tag.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "page + blank tally"
+          },
+          {
+            "at": 0.55,
+            "event": "'to measure' tag"
+          }
+        ],
+        "manim": {
+          "class": "B12_Measure"
+        },
+        "on_screen_labels": [
+          "CONSTRUCTED",
+          "to measure · JS1"
+        ],
+        "constructed": true
+      },
+      "audio_file": "mp3/beat-B12.mp3",
+      "actual_duration_s": 8.64,
+      "render_duration_s": 8.666666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B12.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:21:18"
+      }
+    },
+    {
+      "beat_id": "B13",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "pitch_question": "exists vs will",
+      "narration_text": "Today, the toolkit has passed its smoke test, and my Week 1 and recipe commits exist. Everything else is planned: the first watch by October thirty-first, and the full system, a stranger run, and a demo by December twentieth.",
+      "estimated_duration_s": 16.0,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Split stage. Left 'exists today': REAL smoke log lines in a dark panel, dated 2026-10-14. Right 'will exist': an ink timeline with seven ticks, Oct 21 to Dec 20; hollow dots appear in order (planned).",
+        "motion_claim": "Split stage. Left 'exists today': REAL smoke log lines in a dark panel, dated 2026-10-14. Right 'will exist': an ink timeline with seven ticks, Oct 21 to Dec 20; hollow dots appear in order (planned).",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "left panel: real log lines"
+          },
+          {
+            "at": 0.4,
+            "event": "right: timeline draws"
+          },
+          {
+            "at": 0.7,
+            "event": "Dec 20 tick"
+          }
+        ],
+        "manim": {
+          "class": "B13_ExistsWill"
+        },
+        "on_screen_labels": [
+          "exists today",
+          "will exist (planned)",
+          "2026-10-14",
+          "Oct 21 · Oct 31 · Nov 10 · Nov 23 · Dec 1 · Dec 13 · Dec 20"
+        ],
+        "constructed": false,
+        "real_source": {
+          "what": "logs/art_smoke_2026-10-14_run2.log (verbatim lines; the fixture path in the SMOKE PASS line is elided as …)",
+          "lines": [
+            "[smoke] GATE TYPE passed — video + audio streams both decode",
+            "[smoke] GATE AUDIO passed — mean_volume -24.2 dB (floor -40 dB)",
+            "[smoke] SMOKE PASS — … built a real, watchable slate cut end to end."
+          ]
+        }
+      },
+      "audio_file": "mp3/beat-B13.mp3",
+      "actual_duration_s": 14.55,
+      "render_duration_s": 14.583333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B13.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:21:18"
+      }
+    },
+    {
+      "beat_id": "B14",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "pitch_question": "close",
+      "narration_text": "Honest Shortlist: every claim will carry its evidence, and silence will be called silence.",
+      "estimated_duration_s": 6.1,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The shortlist card settles centre; its sponsorship row shows the 'insufficient' stamp; the title draws beneath.",
+        "motion_claim": "The shortlist card settles centre; its sponsorship row shows the 'insufficient' stamp; the title draws beneath.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "card settles"
+          },
+          {
+            "at": 0.45,
+            "event": "title"
+          }
+        ],
+        "manim": {
+          "class": "B14_Close"
+        },
+        "on_screen_labels": [
+          "CONSTRUCTED",
+          "Honest Shortlist"
+        ],
+        "constructed": true
+      },
+      "audio_file": "mp3/beat-B14.mp3",
+      "actual_duration_s": 5.35,
+      "render_duration_s": 5.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B14.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:21:18"
+      }
+    }
+  ]
+}
