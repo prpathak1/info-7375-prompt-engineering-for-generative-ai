@@ -1,0 +1,28 @@
+{
+  "session_id": "872f450a-7a8d-488e-8b03-b3d759aa3776",
+  "session_id_requested": "872f450a-7a8d-488e-8b03-b3d759aa3776",
+  "model": [
+    "claude-opus-5-5"
+  ],
+  "requested_at": "2026-10-31T14:24:05-0400",
+  "finished_at": "2026-10-31T14:24:10-0400",
+  "label": "judgment (raw Claude response)",
+  "posting_id": "6320b978-abf4-483b-a09f-bfba0c44c485",
+  "prompt_file": "prompts/judge_v2.md",
+  "prompt_sha256": "4fac001a387edfa5474d6be98120e97f228e349d1e84dd2b903e95c5898d2c2c",
+  "cmd": [
+    "claude",
+    "-p",
+    "--no-session-persistence",
+    "--session-id",
+    "872f450a-7a8d-488e-8b03-b3d759aa3776",
+    "--output-format",
+    "json",
+    "--tools",
+    "",
+    "--strict-mcp-config"
+  ],
+  "returncode": 0,
+  "stdout": "{\"duration_api_ms\":3026,\"stop_reason\":\"end_turn\",\"session_id\":\"872f450a-7a8d-488e-8b03-b3d759aa3776\",\"total_cost_usd\":0.0513978,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":5510,\"cache_read_input_tokens\":649,\"output_tokens\":359,\"output_tokens_details\":{\"thinking_tokens\":0},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":5510,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":359,\"cache_read_input_tokens\":649,\"cache_creation_input_tokens\":5510,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":5510},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":359,\"cacheReadInputTokens\":649,\"cacheCreationInputTokens\":5510,\"webSearchRequests\":0,\"costUSD\":0.0513978,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":0,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":5510,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"posting_id\\\": \\\"6320b978-abf4-483b-a09f-bfba0c44c485\\\", \\\"verdict\\\": \\\"not_relevant\\\", \\\"citations\\\": [{\\\"resume_field\\\": \\\"target.soc_title\\\", \\\"resume_value\\\": \\\"Computer Network Architects\\\", \\\"posting_field\\\": \\\"text\\\", \\\"posting_value\\\": \\\"Test Infrastructure Engineer\\\"}, {\\\"resume_field\\\": \\\"target.title_terms\\\", \\\"resume_value\\\": \\\"network engineer\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"6+ years of industry experience with software development focused on on-prem or cloud infrastructure\\\"}, {\\\"resume_field\\\": \\\"skills.automation\\\", \\\"resume_value\\\": \\\"Python\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Deep background in Python programming (scripting, web services, tool development, and test frameworks)\\\"}, {\\\"resume_field\\\": \\\"skills.familiar_with_not_shipped\\\", \\\"resume_value\\\": \\\"Kubernetes networking\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Experience with cloud deployment and infrastructure technologies, such as Kubernetes, Terraform, and AWS\\\"}]}\",\"ttft_ms\":3379,\"type\":\"result\",\"duration_ms\":3455,\"uuid\":\"fe47d023-5dc9-4490-9067-91b3897618c2\",\"ttft_stream_ms\":1043,\"time_to_request_ms\":401,\"first_content_frame_ms\":1043,\"queued_turn_count\":0,\"result_index\":0}\n",
+  "stderr": ""
+}

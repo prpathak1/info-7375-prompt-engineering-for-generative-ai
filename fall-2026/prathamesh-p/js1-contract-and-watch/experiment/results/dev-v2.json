@@ -1,0 +1,173 @@
+{
+  "label": "judgment (Claude responses; not fact)",
+  "prompt": "prompts/judge_v2.md",
+  "prompt_sha256": "99ff01260298a4d32e1392c0688ef6aa600fd6e8f2855f6bf3bc652752a245f7",
+  "split": "dev",
+  "ids": [
+    "2a5ffe65-9b0a-4f0e-a2d4-d7875b5c6f24",
+    "a0ffbca7-3613-498a-9f7b-c8dc13858184",
+    "36be565f-6ee7-4fcc-bc81-3c61e0dc2469",
+    "3e74f14a-667a-4381-9f8e-2e8b9f1b92d3",
+    "5ab0cc36-0d91-4acd-9cf3-c38a273293cb",
+    "94b5b4a5-257a-43d8-96bb-8dccd6d690f0",
+    "2ec7b1be-46f6-420d-b582-e565fe4f6b3e",
+    "9945ef61-1c15-4cf1-9734-b65944c73757",
+    "bdeeba8c-947d-474d-9d90-d788d09d0ce6",
+    "5b0c4c1d-9308-4809-995a-223161fb5068"
+  ],
+  "repeats": 1,
+  "started_at": "2026-10-31T14:23:28-0400",
+  "finished_at": "2026-10-31T14:23:45-0400",
+  "calls": [
+    {
+      "posting_id": "2a5ffe65-9b0a-4f0e-a2d4-d7875b5c6f24",
+      "title": "Engineering Manager, Software Core Connectivity",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "8431e260-3775-4772-b288-4b1249127348",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:23:28-0400",
+      "finished_at": "2026-10-31T14:23:34-0400",
+      "raw_response_file": "experiment/raw-judgments/dev-v2/20261031T142334-2a5ffe65-9b0a-4f0e-a2d4-d7875b5c6f24-8431e260-3775-4772-b288-4b1249127348.json",
+      "errors": []
+    },
+    {
+      "posting_id": "a0ffbca7-3613-498a-9f7b-c8dc13858184",
+      "title": "Manager, Manufacturing Systems",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "cb4f0294-f88f-4592-8e0c-d6c7e7ef80ed",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:23:28-0400",
+      "finished_at": "2026-10-31T14:23:34-0400",
+      "raw_response_file": "experiment/raw-judgments/dev-v2/20261031T142334-a0ffbca7-3613-498a-9f7b-c8dc13858184-cb4f0294-f88f-4592-8e0c-d6c7e7ef80ed.json",
+      "errors": []
+    },
+    {
+      "posting_id": "36be565f-6ee7-4fcc-bc81-3c61e0dc2469",
+      "title": "Senior / Staff Connectivity Integration Lead",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "aedd9384-1247-4b44-b8d0-fe26254ef524",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:23:28-0400",
+      "finished_at": "2026-10-31T14:23:34-0400",
+      "raw_response_file": "experiment/raw-judgments/dev-v2/20261031T142334-36be565f-6ee7-4fcc-bc81-3c61e0dc2469-aedd9384-1247-4b44-b8d0-fe26254ef524.json",
+      "errors": []
+    },
+    {
+      "posting_id": "3e74f14a-667a-4381-9f8e-2e8b9f1b92d3",
+      "title": "Senior Systems Engineer, Fail Operational Capabilities",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "86b03991-89ee-4838-94ea-5d39883a3be3",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:23:28-0400",
+      "finished_at": "2026-10-31T14:23:34-0400",
+      "raw_response_file": "experiment/raw-judgments/dev-v2/20261031T142334-3e74f14a-667a-4381-9f8e-2e8b9f1b92d3-86b03991-89ee-4838-94ea-5d39883a3be3.json",
+      "errors": []
+    },
+    {
+      "posting_id": "5ab0cc36-0d91-4acd-9cf3-c38a273293cb",
+      "title": "Senior/Staff Software Engineer - SRE, GitHub & CI/CD Infrastructure",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "77f1127f-3b85-436e-bee2-3a72c3520d8b",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:23:34-0400",
+      "finished_at": "2026-10-31T14:23:40-0400",
+      "raw_response_file": "experiment/raw-judgments/dev-v2/20261031T142340-5ab0cc36-0d91-4acd-9cf3-c38a273293cb-77f1127f-3b85-436e-bee2-3a72c3520d8b.json",
+      "errors": []
+    },
+    {
+      "posting_id": "94b5b4a5-257a-43d8-96bb-8dccd6d690f0",
+      "title": "Software Engineer - Road Network Tools",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "464ca2ed-4b9b-4106-9c3a-246c1ab98e18",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:23:34-0400",
+      "finished_at": "2026-10-31T14:23:40-0400",
+      "raw_response_file": "experiment/raw-judgments/dev-v2/20261031T142340-94b5b4a5-257a-43d8-96bb-8dccd6d690f0-464ca2ed-4b9b-4106-9c3a-246c1ab98e18.json",
+      "errors": []
+    },
+    {
+      "posting_id": "2ec7b1be-46f6-420d-b582-e565fe4f6b3e",
+      "title": "Staff Compute Systems Engineer",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "8bec56b6-570e-4a9a-a890-c10e2c53127e",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:23:34-0400",
+      "finished_at": "2026-10-31T14:23:40-0400",
+      "raw_response_file": "experiment/raw-judgments/dev-v2/20261031T142340-2ec7b1be-46f6-420d-b582-e565fe4f6b3e-8bec56b6-570e-4a9a-a890-c10e2c53127e.json",
+      "errors": []
+    },
+    {
+      "posting_id": "9945ef61-1c15-4cf1-9734-b65944c73757",
+      "title": "Staff Network Security Architect",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "c01b2188-ef27-4535-8aa5-a8819e1536c4",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:23:34-0400",
+      "finished_at": "2026-10-31T14:23:39-0400",
+      "raw_response_file": "experiment/raw-judgments/dev-v2/20261031T142339-9945ef61-1c15-4cf1-9734-b65944c73757-c01b2188-ef27-4535-8aa5-a8819e1536c4.json",
+      "errors": []
+    },
+    {
+      "posting_id": "bdeeba8c-947d-474d-9d90-d788d09d0ce6",
+      "title": "Staff/Senior Staff Software Engineer - Product Security",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "8adaf822-484b-4b7c-b91a-0a854911263e",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:23:39-0400",
+      "finished_at": "2026-10-31T14:23:45-0400",
+      "raw_response_file": "experiment/raw-judgments/dev-v2/20261031T142345-bdeeba8c-947d-474d-9d90-d788d09d0ce6-8adaf822-484b-4b7c-b91a-0a854911263e.json",
+      "errors": []
+    },
+    {
+      "posting_id": "5b0c4c1d-9308-4809-995a-223161fb5068",
+      "title": "Wireless Firmware Validation Engineer",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "b3d49379-45e8-44a4-982b-c1986582d99a",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:23:40-0400",
+      "finished_at": "2026-10-31T14:23:45-0400",
+      "raw_response_file": "experiment/raw-judgments/dev-v2/20261031T142345-5b0c4c1d-9308-4809-995a-223161fb5068-b3d49379-45e8-44a4-982b-c1986582d99a.json",
+      "errors": []
+    }
+  ]
+}

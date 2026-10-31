@@ -1,0 +1,140 @@
+{
+  "_label": "DATED CLAUDE RESPONSE (judgment, not fact): smoke test of the claude -p judge on row 2, 2026-10-30 18:41:32-18:41:43 EDT. The raw CLI output is in judgment.raw_response_file.",
+  "posting_id": "8321d00e-9e2b-4947-a37e-fdbad7dcd637",
+  "posting_title": "Senior Network Security Engineer",
+  "record": {
+    "label": "record",
+    "verdict": "relevant",
+    "needs_human": false,
+    "reason": "all gates pass; skills matched: BGP, OSPF, TCP/IP, VLAN, VPN, firewall",
+    "gate_results": {
+      "title": {
+        "decision": "include",
+        "reason": "network role title"
+      },
+      "authorization": {
+        "hits": []
+      },
+      "skills": {
+        "matched": [
+          "BGP",
+          "OSPF",
+          "TCP/IP",
+          "VLAN",
+          "VPN",
+          "firewall"
+        ],
+        "threshold": 2
+      }
+    },
+    "citations": [
+      {
+        "resume_field": "target.soc_code",
+        "resume_value": "15-1241",
+        "posting_field": "text",
+        "posting_value": "Senior Network Security Engineer"
+      },
+      {
+        "resume_field": "skills.networking",
+        "resume_value": "BGP",
+        "posting_field": "lists",
+        "posting_value": "BGP"
+      },
+      {
+        "resume_field": "skills.networking",
+        "resume_value": "OSPF",
+        "posting_field": "lists",
+        "posting_value": "OSPF"
+      },
+      {
+        "resume_field": "skills.networking",
+        "resume_value": "TCP/IP",
+        "posting_field": "lists",
+        "posting_value": "TCP/IP"
+      },
+      {
+        "resume_field": "skills.networking",
+        "resume_value": "VLAN",
+        "posting_field": "lists",
+        "posting_value": "VLAN"
+      },
+      {
+        "resume_field": "skills.networking",
+        "resume_value": "VPN",
+        "posting_field": "lists",
+        "posting_value": "VPN"
+      },
+      {
+        "resume_field": "skills.networking",
+        "resume_value": "firewall",
+        "posting_field": "lists",
+        "posting_value": "firewall"
+      }
+    ]
+  },
+  "judgment": {
+    "label": "judgment",
+    "status": "accepted",
+    "posting_id": "8321d00e-9e2b-4947-a37e-fdbad7dcd637",
+    "verdict": "relevant",
+    "citations": [
+      {
+        "resume_field": "target.title_terms",
+        "resume_value": "network security engineer",
+        "posting_field": "text",
+        "posting_value": "Senior Network Security Engineer"
+      },
+      {
+        "resume_field": "target.soc_code",
+        "resume_value": "15-1241",
+        "posting_field": "descriptionPlain",
+        "posting_value": "you will design, implement, and operate security controls across Zoox's enterprise, OT networks, and cloud infrastructure"
+      },
+      {
+        "resume_field": "skills.networking",
+        "resume_value": "BGP",
+        "posting_field": "lists",
+        "posting_value": "TCP/IP, BGP, OSPF, VLAN, 802.1X, TLS/PKI"
+      },
+      {
+        "resume_field": "skills.vendors",
+        "resume_value": "Palo Alto",
+        "posting_field": "lists",
+        "posting_value": "Palo Alto Networks, Fortinet"
+      },
+      {
+        "resume_field": "skills.security",
+        "resume_value": "network segmentation",
+        "posting_field": "lists",
+        "posting_value": "enforce zero-trust access controls and network segmentation"
+      },
+      {
+        "resume_field": "skills.automation",
+        "resume_value": "Python",
+        "posting_field": "lists",
+        "posting_value": "Terraform, Python, CI/CD, and REST APIs"
+      },
+      {
+        "resume_field": "certifications",
+        "resume_value": "CCNA (fictional record)",
+        "posting_field": "lists",
+        "posting_value": "Certifications: PCNSE, AWS Security Specialty, CCNA"
+      },
+      {
+        "resume_field": "target.commitment",
+        "resume_value": "full-time",
+        "posting_field": "categories.commitment",
+        "posting_value": "Full-time"
+      }
+    ],
+    "obtained_at": "2026-10-30T18:41:43-0400",
+    "session_id": "f0dc4819-b4d8-486f-9dd2-186cff30c397",
+    "session_id_requested": "f0dc4819-b4d8-486f-9dd2-186cff30c397",
+    "model": [
+      "claude-opus-5-5"
+    ],
+    "requested_at": "2026-10-30T18:41:32-0400",
+    "finished_at": "2026-10-30T18:41:43-0400",
+    "raw_response_file": "judgments/20261030T184143-8321d00e-9e2b-4947-a37e-fdbad7dcd637-f0dc4819-b4d8-486f-9dd2-186cff30c397.json"
+  }
+}

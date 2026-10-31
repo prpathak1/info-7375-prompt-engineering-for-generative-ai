@@ -1,0 +1,28 @@
+{
+  "session_id": "51fe9771-aa39-4f25-8890-8e0c8de001fc",
+  "session_id_requested": "51fe9771-aa39-4f25-8890-8e0c8de001fc",
+  "model": [
+    "claude-opus-5-5"
+  ],
+  "requested_at": "2026-10-31T14:23:54-0400",
+  "finished_at": "2026-10-31T14:23:59-0400",
+  "label": "judgment (raw Claude response)",
+  "posting_id": "bf983498-1063-4c02-8ea6-8f037c2b0c56",
+  "prompt_file": "prompts/judge_v2.md",
+  "prompt_sha256": "af94fc7e6f356cb0f012713cc36b84ea9a7f3f4f8dedf51642574215e886a399",
+  "cmd": [
+    "claude",
+    "-p",
+    "--no-session-persistence",
+    "--session-id",
+    "51fe9771-aa39-4f25-8890-8e0c8de001fc",
+    "--output-format",
+    "json",
+    "--tools",
+    "",
+    "--strict-mcp-config"
+  ],
+  "returncode": 0,
+  "stdout": "{\"duration_api_ms\":3182,\"stop_reason\":\"end_turn\",\"session_id\":\"51fe9771-aa39-4f25-8890-8e0c8de001fc\",\"total_cost_usd\":0.0578738,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":6332,\"cache_read_input_tokens\":649,\"output_tokens\":354,\"output_tokens_details\":{\"thinking_tokens\":0},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":6332,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":354,\"cache_read_input_tokens\":649,\"cache_creation_input_tokens\":6332,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":6332},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":354,\"cacheReadInputTokens\":649,\"cacheCreationInputTokens\":6332,\"webSearchRequests\":0,\"costUSD\":0.0578738,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":0,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":6332,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"posting_id\\\": \\\"bf983498-1063-4c02-8ea6-8f037c2b0c56\\\", \\\"verdict\\\": \\\"not_relevant\\\", \\\"citations\\\": [{\\\"resume_field\\\": \\\"target.soc_title\\\", \\\"resume_value\\\": \\\"Computer Network Architects\\\", \\\"posting_field\\\": \\\"text\\\", \\\"posting_value\\\": \\\"Information Security Manager - Identity and Access Management (IAM)\\\"}, {\\\"resume_field\\\": \\\"target.title_terms\\\", \\\"resume_value\\\": \\\"network engineer\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"8+ years of total experience in IT and Cybersecurity\\\"}, {\\\"resume_field\\\": \\\"skills.networking\\\", \\\"resume_value\\\": \\\"BGP\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Deep understanding of OAuth 2.0, SAML, OIDC, SCIM, Kerberos, and LDAP protocols.\\\"}, {\\\"resume_field\\\": \\\"skills.security\\\", \\\"resume_value\\\": \\\"zero trust\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Team Management: Lead, mentor, and build a high-performing team of IAM engineers\\\"}]}\",\"ttft_ms\":3661,\"type\":\"result\",\"duration_ms\":3732,\"uuid\":\"a08d450c-fb45-485c-884c-cd6e2b254414\",\"ttft_stream_ms\":1383,\"time_to_request_ms\":610,\"first_content_frame_ms\":1384,\"queued_turn_count\":0,\"result_index\":0}\n",
+  "stderr": ""
+}

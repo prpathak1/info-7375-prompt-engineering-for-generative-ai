@@ -1,0 +1,28 @@
+{
+  "session_id": "561c69c7-4d41-40c2-9974-3d7201e2faea",
+  "session_id_requested": "561c69c7-4d41-40c2-9974-3d7201e2faea",
+  "model": [
+    "claude-opus-5-5"
+  ],
+  "requested_at": "2026-10-31T14:23:54-0400",
+  "finished_at": "2026-10-31T14:23:59-0400",
+  "label": "judgment (raw Claude response)",
+  "posting_id": "082ed20c-b8e1-4b1c-9c22-4738ad94055d",
+  "prompt_file": "prompts/judge_v2.md",
+  "prompt_sha256": "47f9161b6445807d5054220f1653c5c2f911a98da5e5442779837c836f4b7daa",
+  "cmd": [
+    "claude",
+    "-p",
+    "--no-session-persistence",
+    "--session-id",
+    "561c69c7-4d41-40c2-9974-3d7201e2faea",
+    "--output-format",
+    "json",
+    "--tools",
+    "",
+    "--strict-mcp-config"
+  ],
+  "returncode": 0,
+  "stdout": "{\"duration_api_ms\":2684,\"stop_reason\":\"end_turn\",\"session_id\":\"561c69c7-4d41-40c2-9974-3d7201e2faea\",\"total_cost_usd\":0.055381799999999995,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":6193,\"cache_read_input_tokens\":649,\"output_tokens\":285,\"output_tokens_details\":{\"thinking_tokens\":0},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":6193,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":285,\"cache_read_input_tokens\":649,\"cache_creation_input_tokens\":6193,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":6193},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":285,\"cacheReadInputTokens\":649,\"cacheCreationInputTokens\":6193,\"webSearchRequests\":0,\"costUSD\":0.055381799999999995,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":0,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":6193,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"posting_id\\\": \\\"082ed20c-b8e1-4b1c-9c22-4738ad94055d\\\", \\\"verdict\\\": \\\"not_relevant\\\", \\\"citations\\\": [{\\\"resume_field\\\": \\\"target.soc_title\\\", \\\"resume_value\\\": \\\"Computer Network Architects\\\", \\\"posting_field\\\": \\\"text\\\", \\\"posting_value\\\": \\\"Embedded Software Engineer - Battery Management Systems\\\"}, {\\\"resume_field\\\": \\\"skills.networking\\\", \\\"resume_value\\\": \\\"routing\\\", \\\"posting_field\\\": \\\"descriptionPlain\\\", \\\"posting_value\\\": \\\"designing, building, and testing real-time embedded code in C/C++ for BMS (Battery Management Systems)\\\"}, {\\\"resume_field\\\": \\\"target.title_terms\\\", \\\"resume_value\\\": \\\"network engineer\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"8+ years of experience developing real-time embedded software for Power Electronics and Battery Management.\\\"}]}\",\"ttft_ms\":3227,\"type\":\"result\",\"duration_ms\":3290,\"uuid\":\"9e15b15c-8614-42f5-8e00-c930acecd489\",\"ttft_stream_ms\":1439,\"time_to_request_ms\":594,\"first_content_frame_ms\":1439,\"queued_turn_count\":0,\"result_index\":0}\n",
+  "stderr": ""
+}

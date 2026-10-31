@@ -1,0 +1,318 @@
+{
+  "label": "judgment (Claude responses; not fact)",
+  "prompt": "prompts/judge_v1.md",
+  "prompt_sha256": "f55c7c68cf04c36ecd3300c8dacd48b1243644fd47e051604557e5927f946272",
+  "split": null,
+  "ids": [
+    "9945ef61-1c15-4cf1-9734-b65944c73757",
+    "94b5b4a5-257a-43d8-96bb-8dccd6d690f0",
+    "5ab0cc36-0d91-4acd-9cf3-c38a273293cb",
+    "2ec7b1be-46f6-420d-b582-e565fe4f6b3e",
+    "5b0c4c1d-9308-4809-995a-223161fb5068"
+  ],
+  "repeats": 4,
+  "started_at": "2026-10-31T14:22:21-0400",
+  "finished_at": "2026-10-31T14:23:01-0400",
+  "calls": [
+    {
+      "posting_id": "9945ef61-1c15-4cf1-9734-b65944c73757",
+      "title": "Staff Network Security Architect",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "relevant",
+      "session_id": "4637b740-a071-40cb-8c98-ef9d95f1ad08",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:22:21-0400",
+      "finished_at": "2026-10-31T14:22:33-0400",
+      "raw_response_file": "experiment/raw-judgments/sampling/20261031T142233-9945ef61-1c15-4cf1-9734-b65944c73757-4637b740-a071-40cb-8c98-ef9d95f1ad08.json",
+      "errors": []
+    },
+    {
+      "posting_id": "9945ef61-1c15-4cf1-9734-b65944c73757",
+      "title": "Staff Network Security Architect",
+      "repeat": 2,
+      "status": "accepted",
+      "verdict": "relevant",
+      "session_id": "aa78bd1d-5176-41c9-893a-f4dda3f68fe8",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:22:21-0400",
+      "finished_at": "2026-10-31T14:22:35-0400",
+      "raw_response_file": "experiment/raw-judgments/sampling/20261031T142235-9945ef61-1c15-4cf1-9734-b65944c73757-aa78bd1d-5176-41c9-893a-f4dda3f68fe8.json",
+      "errors": []
+    },
+    {
+      "posting_id": "9945ef61-1c15-4cf1-9734-b65944c73757",
+      "title": "Staff Network Security Architect",
+      "repeat": 3,
+      "status": "accepted",
+      "verdict": "relevant",
+      "session_id": "31593b63-f73a-4e6e-8cc2-650cb479db7e",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:22:21-0400",
+      "finished_at": "2026-10-31T14:22:35-0400",
+      "raw_response_file": "experiment/raw-judgments/sampling/20261031T142235-9945ef61-1c15-4cf1-9734-b65944c73757-31593b63-f73a-4e6e-8cc2-650cb479db7e.json",
+      "errors": []
+    },
+    {
+      "posting_id": "9945ef61-1c15-4cf1-9734-b65944c73757",
+      "title": "Staff Network Security Architect",
+      "repeat": 4,
+      "status": "accepted",
+      "verdict": "relevant",
+      "session_id": "aef0236d-d56e-42cb-b5c8-bf0a84fad377",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:22:21-0400",
+      "finished_at": "2026-10-31T14:22:34-0400",
+      "raw_response_file": "experiment/raw-judgments/sampling/20261031T142234-9945ef61-1c15-4cf1-9734-b65944c73757-aef0236d-d56e-42cb-b5c8-bf0a84fad377.json",
+      "errors": []
+    },
+    {
+      "posting_id": "94b5b4a5-257a-43d8-96bb-8dccd6d690f0",
+      "title": "Software Engineer - Road Network Tools",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "c6ff036d-1c0b-4376-9d61-d692050bcd7f",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:22:33-0400",
+      "finished_at": "2026-10-31T14:22:40-0400",
+      "raw_response_file": "experiment/raw-judgments/sampling/20261031T142240-94b5b4a5-257a-43d8-96bb-8dccd6d690f0-c6ff036d-1c0b-4376-9d61-d692050bcd7f.json",
+      "errors": []
+    },
+    {
+      "posting_id": "94b5b4a5-257a-43d8-96bb-8dccd6d690f0",
+      "title": "Software Engineer - Road Network Tools",
+      "repeat": 2,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "1f0a0405-664f-4317-bdf0-82d76e563484",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:22:34-0400",
+      "finished_at": "2026-10-31T14:22:40-0400",
+      "raw_response_file": "experiment/raw-judgments/sampling/20261031T142240-94b5b4a5-257a-43d8-96bb-8dccd6d690f0-1f0a0405-664f-4317-bdf0-82d76e563484.json",
+      "errors": []
+    },
+    {
+      "posting_id": "94b5b4a5-257a-43d8-96bb-8dccd6d690f0",
+      "title": "Software Engineer - Road Network Tools",
+      "repeat": 3,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "42b61fbc-8f45-4a16-8bf0-72b413bb184e",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:22:35-0400",
+      "finished_at": "2026-10-31T14:22:40-0400",
+      "raw_response_file": "experiment/raw-judgments/sampling/20261031T142240-94b5b4a5-257a-43d8-96bb-8dccd6d690f0-42b61fbc-8f45-4a16-8bf0-72b413bb184e.json",
+      "errors": []
+    },
+    {
+      "posting_id": "94b5b4a5-257a-43d8-96bb-8dccd6d690f0",
+      "title": "Software Engineer - Road Network Tools",
+      "repeat": 4,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "ccdd74c8-1c8a-4c29-a4ab-1b84cf4c8f7f",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:22:35-0400",
+      "finished_at": "2026-10-31T14:22:41-0400",
+      "raw_response_file": "experiment/raw-judgments/sampling/20261031T142241-94b5b4a5-257a-43d8-96bb-8dccd6d690f0-ccdd74c8-1c8a-4c29-a4ab-1b84cf4c8f7f.json",
+      "errors": []
+    },
+    {
+      "posting_id": "5ab0cc36-0d91-4acd-9cf3-c38a273293cb",
+      "title": "Senior/Staff Software Engineer - SRE, GitHub & CI/CD Infrastructure",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "add75e72-906d-4d01-9fdb-01bae19989a7",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:22:40-0400",
+      "finished_at": "2026-10-31T14:22:46-0400",
+      "raw_response_file": "experiment/raw-judgments/sampling/20261031T142246-5ab0cc36-0d91-4acd-9cf3-c38a273293cb-add75e72-906d-4d01-9fdb-01bae19989a7.json",
+      "errors": []
+    },
+    {
+      "posting_id": "5ab0cc36-0d91-4acd-9cf3-c38a273293cb",
+      "title": "Senior/Staff Software Engineer - SRE, GitHub & CI/CD Infrastructure",
+      "repeat": 2,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "834a9ab0-2abd-4ac0-ad55-34300cbc2e73",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:22:40-0400",
+      "finished_at": "2026-10-31T14:22:46-0400",
+      "raw_response_file": "experiment/raw-judgments/sampling/20261031T142246-5ab0cc36-0d91-4acd-9cf3-c38a273293cb-834a9ab0-2abd-4ac0-ad55-34300cbc2e73.json",
+      "errors": []
+    },
+    {
+      "posting_id": "5ab0cc36-0d91-4acd-9cf3-c38a273293cb",
+      "title": "Senior/Staff Software Engineer - SRE, GitHub & CI/CD Infrastructure",
+      "repeat": 3,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "6872de15-a76c-4fe6-a1d2-3b371f2d3b94",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:22:40-0400",
+      "finished_at": "2026-10-31T14:22:46-0400",
+      "raw_response_file": "experiment/raw-judgments/sampling/20261031T142246-5ab0cc36-0d91-4acd-9cf3-c38a273293cb-6872de15-a76c-4fe6-a1d2-3b371f2d3b94.json",
+      "errors": []
+    },
+    {
+      "posting_id": "5ab0cc36-0d91-4acd-9cf3-c38a273293cb",
+      "title": "Senior/Staff Software Engineer - SRE, GitHub & CI/CD Infrastructure",
+      "repeat": 4,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "fb9cdd3c-4a88-483e-ae9d-08645e7ce736",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:22:41-0400",
+      "finished_at": "2026-10-31T14:22:46-0400",
+      "raw_response_file": "experiment/raw-judgments/sampling/20261031T142246-5ab0cc36-0d91-4acd-9cf3-c38a273293cb-fb9cdd3c-4a88-483e-ae9d-08645e7ce736.json",
+      "errors": []
+    },
+    {
+      "posting_id": "2ec7b1be-46f6-420d-b582-e565fe4f6b3e",
+      "title": "Staff Compute Systems Engineer",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "ec9e5092-c829-4ffb-a96b-c3adf8f34c4a",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:22:46-0400",
+      "finished_at": "2026-10-31T14:22:52-0400",
+      "raw_response_file": "experiment/raw-judgments/sampling/20261031T142252-2ec7b1be-46f6-420d-b582-e565fe4f6b3e-ec9e5092-c829-4ffb-a96b-c3adf8f34c4a.json",
+      "errors": []
+    },
+    {
+      "posting_id": "2ec7b1be-46f6-420d-b582-e565fe4f6b3e",
+      "title": "Staff Compute Systems Engineer",
+      "repeat": 2,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "e3712492-a0e4-4184-b8af-66b7228d5837",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:22:46-0400",
+      "finished_at": "2026-10-31T14:22:53-0400",
+      "raw_response_file": "experiment/raw-judgments/sampling/20261031T142253-2ec7b1be-46f6-420d-b582-e565fe4f6b3e-e3712492-a0e4-4184-b8af-66b7228d5837.json",
+      "errors": []
+    },
+    {
+      "posting_id": "2ec7b1be-46f6-420d-b582-e565fe4f6b3e",
+      "title": "Staff Compute Systems Engineer",
+      "repeat": 3,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "76052034-4b1f-416b-b51a-2c3ddf71e073",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:22:46-0400",
+      "finished_at": "2026-10-31T14:22:53-0400",
+      "raw_response_file": "experiment/raw-judgments/sampling/20261031T142253-2ec7b1be-46f6-420d-b582-e565fe4f6b3e-76052034-4b1f-416b-b51a-2c3ddf71e073.json",
+      "errors": []
+    },
+    {
+      "posting_id": "2ec7b1be-46f6-420d-b582-e565fe4f6b3e",
+      "title": "Staff Compute Systems Engineer",
+      "repeat": 4,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "7d80c385-5139-4611-bfda-3eeae036b27d",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:22:46-0400",
+      "finished_at": "2026-10-31T14:22:54-0400",
+      "raw_response_file": "experiment/raw-judgments/sampling/20261031T142254-2ec7b1be-46f6-420d-b582-e565fe4f6b3e-7d80c385-5139-4611-bfda-3eeae036b27d.json",
+      "errors": []
+    },
+    {
+      "posting_id": "5b0c4c1d-9308-4809-995a-223161fb5068",
+      "title": "Wireless Firmware Validation Engineer",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "a65ac542-52c3-4c4b-9f1b-f7ccaf6d2a1c",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:22:52-0400",
+      "finished_at": "2026-10-31T14:23:01-0400",
+      "raw_response_file": "experiment/raw-judgments/sampling/20261031T142301-5b0c4c1d-9308-4809-995a-223161fb5068-a65ac542-52c3-4c4b-9f1b-f7ccaf6d2a1c.json",
+      "errors": []
+    },
+    {
+      "posting_id": "5b0c4c1d-9308-4809-995a-223161fb5068",
+      "title": "Wireless Firmware Validation Engineer",
+      "repeat": 2,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "cb97a140-3a76-454e-95af-4e552756b579",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:22:53-0400",
+      "finished_at": "2026-10-31T14:23:01-0400",
+      "raw_response_file": "experiment/raw-judgments/sampling/20261031T142301-5b0c4c1d-9308-4809-995a-223161fb5068-cb97a140-3a76-454e-95af-4e552756b579.json",
+      "errors": []
+    },
+    {
+      "posting_id": "5b0c4c1d-9308-4809-995a-223161fb5068",
+      "title": "Wireless Firmware Validation Engineer",
+      "repeat": 3,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "76aa3307-201b-47d7-afbe-f845c36b9780",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:22:53-0400",
+      "finished_at": "2026-10-31T14:23:01-0400",
+      "raw_response_file": "experiment/raw-judgments/sampling/20261031T142301-5b0c4c1d-9308-4809-995a-223161fb5068-76aa3307-201b-47d7-afbe-f845c36b9780.json",
+      "errors": []
+    },
+    {
+      "posting_id": "5b0c4c1d-9308-4809-995a-223161fb5068",
+      "title": "Wireless Firmware Validation Engineer",
+      "repeat": 4,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "40dbd19b-9afd-4545-87c1-5ed4879047f3",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:22:54-0400",
+      "finished_at": "2026-10-31T14:23:00-0400",
+      "raw_response_file": "experiment/raw-judgments/sampling/20261031T142300-5b0c4c1d-9308-4809-995a-223161fb5068-40dbd19b-9afd-4545-87c1-5ed4879047f3.json",
+      "errors": []
+    }
+  ]
+}

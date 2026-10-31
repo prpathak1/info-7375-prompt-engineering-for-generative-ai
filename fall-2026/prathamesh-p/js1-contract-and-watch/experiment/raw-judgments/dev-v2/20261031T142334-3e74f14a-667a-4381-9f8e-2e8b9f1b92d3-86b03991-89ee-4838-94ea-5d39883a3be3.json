@@ -1,0 +1,28 @@
+{
+  "session_id": "86b03991-89ee-4838-94ea-5d39883a3be3",
+  "session_id_requested": "86b03991-89ee-4838-94ea-5d39883a3be3",
+  "model": [
+    "claude-opus-5-5"
+  ],
+  "requested_at": "2026-10-31T14:23:28-0400",
+  "finished_at": "2026-10-31T14:23:34-0400",
+  "label": "judgment (raw Claude response)",
+  "posting_id": "3e74f14a-667a-4381-9f8e-2e8b9f1b92d3",
+  "prompt_file": "prompts/judge_v2.md",
+  "prompt_sha256": "43ceffc4cee8d047cdfaae7a95c5209eed76ab4d49f1347546b2dd68a3f477f2",
+  "cmd": [
+    "claude",
+    "-p",
+    "--no-session-persistence",
+    "--session-id",
+    "86b03991-89ee-4838-94ea-5d39883a3be3",
+    "--output-format",
+    "json",
+    "--tools",
+    "",
+    "--strict-mcp-config"
+  ],
+  "returncode": 0,
+  "stdout": "{\"duration_api_ms\":3183,\"stop_reason\":\"end_turn\",\"session_id\":\"86b03991-89ee-4838-94ea-5d39883a3be3\",\"total_cost_usd\":0.0525018,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":5613,\"cache_read_input_tokens\":649,\"output_tokens\":373,\"output_tokens_details\":{\"thinking_tokens\":0},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":5613,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":373,\"cache_read_input_tokens\":649,\"cache_creation_input_tokens\":5613,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":5613},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":373,\"cacheReadInputTokens\":649,\"cacheCreationInputTokens\":5613,\"webSearchRequests\":0,\"costUSD\":0.0525018,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":0,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":5613,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"posting_id\\\": \\\"3e74f14a-667a-4381-9f8e-2e8b9f1b92d3\\\", \\\"verdict\\\": \\\"not_relevant\\\", \\\"citations\\\": [{\\\"resume_field\\\": \\\"target.soc_title\\\", \\\"resume_value\\\": \\\"Computer Network Architects\\\", \\\"posting_field\\\": \\\"text\\\", \\\"posting_value\\\": \\\"Senior Systems Engineer, Fail Operational Capabilities\\\"}, {\\\"resume_field\\\": \\\"target.title_terms\\\", \\\"resume_value\\\": \\\"network engineer\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Lead the design of Fail-Operational behaviors while balancing safety, reliability, and operational efficiency.\\\"}, {\\\"resume_field\\\": \\\"skills.networking\\\", \\\"resume_value\\\": \\\"BGP\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Experience with requirements management tools (Polarion, DOORS, JAMA, etc) and MBSE tools (Cameo, Magicdraw, Catia Magic, etc)\\\"}, {\\\"resume_field\\\": \\\"target.soc_code\\\", \\\"resume_value\\\": \\\"15-1241\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"8 years of engineering work experience\\\"}]}\",\"ttft_ms\":3656,\"type\":\"result\",\"duration_ms\":3685,\"uuid\":\"521840fd-b433-4187-818b-fb966055c5bd\",\"ttft_stream_ms\":1314,\"time_to_request_ms\":529,\"first_content_frame_ms\":1314,\"queued_turn_count\":0,\"result_index\":0}\n",
+  "stderr": ""
+}

@@ -1,0 +1,187 @@
+{
+  "provenance": "Labels drafted by Claude (claude.ai chat, a separate conversation from this Claude Code session) from the excerpts in experiment/LABELING-SHEET.md, then reviewed and approved by Prathamesh BEFORE seeing any Claude judge output on these postings. Applied rule: experiment/LABELING-RULE.md. Numbering follows experiment/candidates.json (the same order as the sheet). Reasons are verbatim. 'verdict' maps fit -> relevant and not fit -> not_relevant, for comparison with the judge.",
+  "recorded_at": "2026-10-31T14:21:32-0400",
+  "recorded_by": "Claude Code (saved unedited)",
+  "labels": [
+    {
+      "n": 1,
+      "posting_id": "2a5ffe65-9b0a-4f0e-a2d4-d7875b5c6f24",
+      "title": "Engineering Manager, Software Core Connectivity",
+      "split": "dev",
+      "label": "not_fit",
+      "verdict": "not_relevant",
+      "reason": "Manager, 9+ yrs; software leadership, not network work"
+    },
+    {
+      "n": 2,
+      "posting_id": "a0ffbca7-3613-498a-9f7b-c8dc13858184",
+      "title": "Manager, Manufacturing Systems",
+      "split": "dev",
+      "label": "not_fit",
+      "verdict": "not_relevant",
+      "reason": "Manager, 15+ yrs; manufacturing systems"
+    },
+    {
+      "n": 3,
+      "posting_id": "36be565f-6ee7-4fcc-bc81-3c61e0dc2469",
+      "title": "Senior / Staff Connectivity Integration Lead",
+      "split": "dev",
+      "label": "not_fit",
+      "verdict": "not_relevant",
+      "reason": "Senior/Staff/Lead, 8+ yrs; cellular/wireless testing, not computer networks"
+    },
+    {
+      "n": 4,
+      "posting_id": "3e74f14a-667a-4381-9f8e-2e8b9f1b92d3",
+      "title": "Senior Systems Engineer, Fail Operational Capabilities",
+      "split": "dev",
+      "label": "not_fit",
+      "verdict": "not_relevant",
+      "reason": "Senior, 8 yrs; vehicle systems engineering"
+    },
+    {
+      "n": 5,
+      "posting_id": "5ab0cc36-0d91-4acd-9cf3-c38a273293cb",
+      "title": "Senior/Staff Software Engineer - SRE, GitHub & CI/CD Infrastructure",
+      "split": "dev",
+      "label": "not_fit",
+      "verdict": "not_relevant",
+      "reason": "Senior/Staff, 5+ yrs; SRE/CI-CD, not network work"
+    },
+    {
+      "n": 6,
+      "posting_id": "94b5b4a5-257a-43d8-96bb-8dccd6d690f0",
+      "title": "Software Engineer - Road Network Tools",
+      "split": "dev",
+      "label": "not_fit",
+      "verdict": "not_relevant",
+      "reason": "5+ yrs; road-map software (false friend)"
+    },
+    {
+      "n": 7,
+      "posting_id": "2ec7b1be-46f6-420d-b582-e565fe4f6b3e",
+      "title": "Staff Compute Systems Engineer",
+      "split": "dev",
+      "label": "not_fit",
+      "verdict": "not_relevant",
+      "reason": "Staff, 8+ yrs; vehicle compute"
+    },
+    {
+      "n": 8,
+      "posting_id": "9945ef61-1c15-4cf1-9734-b65944c73757",
+      "title": "Staff Network Security Architect",
+      "split": "dev",
+      "label": "not_fit",
+      "verdict": "not_relevant",
+      "reason": "network security architecture is network work, but Staff, 10+ yrs"
+    },
+    {
+      "n": 9,
+      "posting_id": "bdeeba8c-947d-474d-9d90-d788d09d0ce6",
+      "title": "Staff/Senior Staff Software Engineer - Product Security",
+      "split": "dev",
+      "label": "not_fit",
+      "verdict": "not_relevant",
+      "reason": "Staff, 10+ yrs; embedded product security"
+    },
+    {
+      "n": 10,
+      "posting_id": "5b0c4c1d-9308-4809-995a-223161fb5068",
+      "title": "Wireless Firmware Validation Engineer",
+      "split": "dev",
+      "label": "not_fit",
+      "verdict": "not_relevant",
+      "reason": "10+ yrs; wireless firmware validation"
+    },
+    {
+      "n": 11,
+      "posting_id": "8af192a0-9ee4-45de-a241-f373cb2ef71c",
+      "title": "Director, Corporate Security",
+      "split": "held_out",
+      "label": "not_fit",
+      "verdict": "not_relevant",
+      "reason": "Director, 15+ yrs; physical security"
+    },
+    {
+      "n": 12,
+      "posting_id": "082ed20c-b8e1-4b1c-9c22-4738ad94055d",
+      "title": "Embedded Software Engineer - Battery Management Systems",
+      "split": "held_out",
+      "label": "not_fit",
+      "verdict": "not_relevant",
+      "reason": "8+ yrs; embedded battery systems"
+    },
+    {
+      "n": 13,
+      "posting_id": "7522162e-a518-444e-8fe7-49b8b45bbdd3",
+      "title": "Embedded Software Engineer, Wireless Technologies",
+      "split": "held_out",
+      "label": "not_fit",
+      "verdict": "not_relevant",
+      "reason": "10+ yrs; embedded wireless"
+    },
+    {
+      "n": 14,
+      "posting_id": "bf983498-1063-4c02-8ea6-8f037c2b0c56",
+      "title": "Information Security Manager - Identity and Access Management (IAM)",
+      "split": "held_out",
+      "label": "not_fit",
+      "verdict": "not_relevant",
+      "reason": "Manager, 8+ yrs; identity management"
+    },
+    {
+      "n": 15,
+      "posting_id": "e6a4bbe1-20ab-4f1f-af07-f06fabedeabd",
+      "title": "Mechatronics Engineer - Closures",
+      "split": "held_out",
+      "label": "not_fit",
+      "verdict": "not_relevant",
+      "reason": "3 yrs OK, but mechatronics hardware, not network work"
+    },
+    {
+      "n": 16,
+      "posting_id": "a76e2e49-4f41-40d6-9bda-b15c24d7590b",
+      "title": "Senior Inventory Planning Manager",
+      "split": "held_out",
+      "label": "not_fit",
+      "verdict": "not_relevant",
+      "reason": "Senior Manager; inventory planning"
+    },
+    {
+      "n": 17,
+      "posting_id": "79d97b0a-3c16-4cb9-8a0d-0386836f25d1",
+      "title": "Senior Technical Recruiter, Hardware",
+      "split": "held_out",
+      "label": "not_fit",
+      "verdict": "not_relevant",
+      "reason": "Senior; recruiting"
+    },
+    {
+      "n": 18,
+      "posting_id": "65ffe656-2b91-46d3-9223-cb6c88441b45",
+      "title": "Senior Vehicle Attributes Engineer",
+      "split": "held_out",
+      "label": "not_fit",
+      "verdict": "not_relevant",
+      "reason": "Senior, 10+ yrs; vehicle attributes"
+    },
+    {
+      "n": 19,
+      "posting_id": "896f37b9-80b7-4077-a937-e499151ce5f2",
+      "title": "Software Systems Engineer - Security",
+      "split": "held_out",
+      "label": "not_fit",
+      "verdict": "not_relevant",
+      "reason": "3+ yrs OK, but security risk analysis, not network engineering (role unclear)"
+    },
+    {
+      "n": 20,
+      "posting_id": "6320b978-abf4-483b-a09f-bfba0c44c485",
+      "title": "Test Infrastructure Engineer",
+      "split": "held_out",
+      "label": "not_fit",
+      "verdict": "not_relevant",
+      "reason": "6+ yrs; test infrastructure software"
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "class_balance": {
+    "dev": {
+      "not_fit": 10,
+      "n": 10
+    },
+    "held_out": {
+      "not_fit": 10,
+      "n": 10
+    }
+  },
+  "sampling_v1": {
+    "prompt_sha256": "f55c7c68cf04c36ecd3300c8dacd48b1243644fd47e051604557e5927f946272",
+    "window": [
+      "2026-10-31T14:22:21-0400",
+      "2026-10-31T14:23:01-0400"
+    ],
+    "per_posting": {
+      "9945ef61-1c15-4cf1-9734-b65944c73757": {
+        "title": "Staff Network Security Architect",
+        "label": "not_fit",
+        "verdicts": [
+          "relevant",
+          "relevant",
+          "relevant",
+          "relevant"
+        ],
+        "counts": {
+          "relevant": 4
+        },
+        "unanimous": true,
+        "agrees_with_label": 0
+      },
+      "94b5b4a5-257a-43d8-96bb-8dccd6d690f0": {
+        "title": "Software Engineer - Road Network Tools",
+        "label": "not_fit",
+        "verdicts": [
+          "not_relevant",
+          "not_relevant",
+          "not_relevant",
+          "not_relevant"
+        ],
+        "counts": {
+          "not_relevant": 4
+        },
+        "unanimous": true,
+        "agrees_with_label": 4
+      },
+      "5ab0cc36-0d91-4acd-9cf3-c38a273293cb": {
+        "title": "Senior/Staff Software Engineer - SRE, GitHub & CI/CD Infrastructure",
+        "label": "not_fit",
+        "verdicts": [
+          "not_relevant",
+          "not_relevant",
+          "not_relevant",
+          "not_relevant"
+        ],
+        "counts": {
+          "not_relevant": 4
+        },
+        "unanimous": true,
+        "agrees_with_label": 4
+      },
+      "2ec7b1be-46f6-420d-b582-e565fe4f6b3e": {
+        "title": "Staff Compute Systems Engineer",
+        "label": "not_fit",
+        "verdicts": [
+          "not_relevant",
+          "not_relevant",
+          "not_relevant",
+          "not_relevant"
+        ],
+        "counts": {
+          "not_relevant": 4
+        },
+        "unanimous": true,
+        "agrees_with_label": 4
+      },
+      "5b0c4c1d-9308-4809-995a-223161fb5068": {
+        "title": "Wireless Firmware Validation Engineer",
+        "label": "not_fit",
+        "verdicts": [
+          "not_relevant",
+          "not_relevant",
+          "not_relevant",
+          "not_relevant"
+        ],
+        "counts": {
+          "not_relevant": 4
+        },
+        "unanimous": true,
+        "agrees_with_label": 4
+      }
+    }
+  },
+  "dev-v1.json": {
+    "prompt": "prompts/judge_v1.md",
+    "prompt_sha256": "f55c7c68cf04c36ecd3300c8dacd48b1243644fd47e051604557e5927f946272",
+    "window": [
+      "2026-10-31T14:23:09-0400",
+      "2026-10-31T14:23:28-0400"
+    ],
+    "n": 10,
+    "passed": 9,
+    "false_positives": [
+      "9945ef61-1c15-4cf1-9734-b65944c73757"
+    ],
+    "rejected": [],
+    "trivial_always_not_relevant_passed": 10
+  },
+  "dev-v2.json": {
+    "prompt": "prompts/judge_v2.md",
+    "prompt_sha256": "99ff01260298a4d32e1392c0688ef6aa600fd6e8f2855f6bf3bc652752a245f7",
+    "window": [
+      "2026-10-31T14:23:28-0400",
+      "2026-10-31T14:23:45-0400"
+    ],
+    "n": 10,
+    "passed": 10,
+    "false_positives": [],
+    "rejected": [],
+    "trivial_always_not_relevant_passed": 10
+  },
+  "heldout-v2-ONCE.json": {
+    "prompt": "prompts/judge_v2.md",
+    "prompt_sha256": "99ff01260298a4d32e1392c0688ef6aa600fd6e8f2855f6bf3bc652752a245f7",
+    "window": [
+      "2026-10-31T14:23:54-0400",
+      "2026-10-31T14:24:11-0400"
+    ],
+    "n": 10,
+    "passed": 9,
+    "false_positives": [],
+    "rejected": [
+      "bf983498-1063-4c02-8ea6-8f037c2b0c56"
+    ],
+    "trivial_always_not_relevant_passed": 10
+  },
+  "record_rule_on_20": {
+    "dev": {
+      "n": 10,
+      "agrees": 9,
+      "false_positives": [
+        "9945ef61-1c15-4cf1-9734-b65944c73757"
+      ]
+    },
+    "held_out": {
+      "n": 10,
+      "agrees": 10,
+      "false_positives": []
+    }
+  }
+}

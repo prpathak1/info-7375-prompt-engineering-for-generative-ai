@@ -1,0 +1,12 @@
+{
+  "chosen_by": "Claude Code, 2026-10-31",
+  "fixed": "#8 and #6 required by Prathamesh",
+  "extra": "random.Random(20261031).sample(sorted(other 8 dev ids), 3)",
+  "ids": [
+    "9945ef61-1c15-4cf1-9734-b65944c73757",
+    "94b5b4a5-257a-43d8-96bb-8dccd6d690f0",
+    "5ab0cc36-0d91-4acd-9cf3-c38a273293cb",
+    "2ec7b1be-46f6-420d-b582-e565fe4f6b3e",
+    "5b0c4c1d-9308-4809-995a-223161fb5068"
+  ]
+}

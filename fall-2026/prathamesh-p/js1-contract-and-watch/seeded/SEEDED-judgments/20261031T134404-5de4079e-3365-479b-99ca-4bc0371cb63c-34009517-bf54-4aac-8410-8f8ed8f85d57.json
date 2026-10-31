@@ -1,0 +1,28 @@
+{
+  "session_id": "34009517-bf54-4aac-8410-8f8ed8f85d57",
+  "session_id_requested": "34009517-bf54-4aac-8410-8f8ed8f85d57",
+  "model": [
+    "claude-opus-5-5"
+  ],
+  "requested_at": "2026-10-31T13:43:58-0400",
+  "finished_at": "2026-10-31T13:44:04-0400",
+  "label": "judgment (raw Claude response)",
+  "posting_id": "5de4079e-3365-479b-99ca-4bc0371cb63c",
+  "prompt_file": "prompts/judge_v1.md",
+  "prompt_sha256": "b7741e21f501a993b7dfefe00795b5c16ac7bf3680fbbc2902d7de11091fcad1",
+  "cmd": [
+    "claude",
+    "-p",
+    "--no-session-persistence",
+    "--session-id",
+    "34009517-bf54-4aac-8410-8f8ed8f85d57",
+    "--output-format",
+    "json",
+    "--tools",
+    "",
+    "--strict-mcp-config"
+  ],
+  "returncode": 0,
+  "stdout": "{\"duration_api_ms\":3512,\"stop_reason\":\"end_turn\",\"session_id\":\"34009517-bf54-4aac-8410-8f8ed8f85d57\",\"total_cost_usd\":0.0512498,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":5359,\"cache_read_input_tokens\":649,\"output_tokens\":412,\"output_tokens_details\":{\"thinking_tokens\":0},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":5359,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":412,\"cache_read_input_tokens\":649,\"cache_creation_input_tokens\":5359,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":5359},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":412,\"cacheReadInputTokens\":649,\"cacheCreationInputTokens\":5359,\"webSearchRequests\":0,\"costUSD\":0.0512498,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":0,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":5359,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"posting_id\\\": \\\"5de4079e-3365-479b-99ca-4bc0371cb63c\\\", \\\"verdict\\\": \\\"not_relevant\\\", \\\"citations\\\": [{\\\"resume_field\\\": \\\"target.soc_title\\\", \\\"resume_value\\\": \\\"Computer Network Architects\\\", \\\"posting_field\\\": \\\"text\\\", \\\"posting_value\\\": \\\"Senior Signal Integrity and EMC Engineer\\\"}, {\\\"resume_field\\\": \\\"skills.networking\\\", \\\"resume_value\\\": \\\"BGP\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Perform and/or oversee signal integrity and power integrity (SI/PI) simulations and analysis for critical high-speed interfaces and power distribution networks.\\\"}, {\\\"resume_field\\\": \\\"education.0.degree\\\", \\\"resume_value\\\": \\\"MS, Computer Systems Networking and Telecommunications\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Bachelor's or Master's of Science in Electrical Engineering with Electronics Design, Electromagnetics, or RF/Wireless-related coursework.\\\"}, {\\\"resume_field\\\": \\\"skills.vendors\\\", \\\"resume_value\\\": \\\"Cisco\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"10+ years of experience in signal integrity, RF design, and/or EMC validation of electronic components and systems.\\\"}]}\",\"ttft_ms\":3799,\"type\":\"result\",\"duration_ms\":3832,\"uuid\":\"d2e12dbd-b92d-42d7-aa05-4dd9671ce8e7\",\"ttft_stream_ms\":1015,\"time_to_request_ms\":316,\"first_content_frame_ms\":1015,\"queued_turn_count\":0,\"result_index\":0}\n",
+  "stderr": ""
+}

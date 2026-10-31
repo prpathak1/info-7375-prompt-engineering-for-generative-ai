@@ -1,0 +1,214 @@
+{
+  "_note": "Prompt-experiment candidates selected by Claude Code on 2026-10-30 from raw/2026-10-30/zoox.json (sha256 45a795dff755fc7839cbe7593a6fcb1ca48719eb8fcd3e4ecd883a238417eeb6). There are no verdicts and no Claude output here. Prathamesh labels these by hand. Excerpts are truncated; label from the full posting.",
+  "selection": {
+    "network_titled": "every title matching \\bnetwork (includes the false friend)",
+    "near_miss": "11 hand-picked by Claude Code (wireless/connectivity/security/infrastructure/systems)",
+    "random_fill": "random.Random(20261030).sample(sorted remaining ids, k)"
+  },
+  "split": {
+    "seed": 20261030,
+    "method": "sorted(ids) then random.Random(20261030).shuffle; first 10 = dev, last 10 = held_out"
+  },
+  "candidates": [
+    {
+      "posting_id": "2a5ffe65-9b0a-4f0e-a2d4-d7875b5c6f24",
+      "title": "Engineering Manager, Software Core Connectivity",
+      "split": "dev",
+      "selection_group": "near-miss",
+      "location": "Foster City, CA",
+      "excerpt_source": "lists: Qualifications",
+      "requirements_excerpt": "Bachelor's or Master's degree in computer science, electrical / computer engineering, or equivalent experience. 9+ years of experience in software development, with 4+ years in a leadership role managing software engineers. Strong grounding in at least one of: networked distributed systems, pub/sub and RPC middleware, vehicle or embedded networking, or transport protocols. Enough depth to hold your own in a design review without needing to run it. Strong C++ programming experience with large code bases and technical dependencies. A track record of driving work that spans organizational boundaries, where you did not control the people doing the work."
+    },
+    {
+      "posting_id": "a0ffbca7-3613-498a-9f7b-c8dc13858184",
+      "title": "Manager, Manufacturing Systems",
+      "split": "dev",
+      "selection_group": "random fill",
+      "location": "Hayward, CA",
+      "excerpt_source": "lists: Qualifications",
+      "requirements_excerpt": "Bachelor's degree in a relevant area such as Computer Science or Engineering 15+ years of experience in manufacturing environments utilizing various manufacturing systems, specifically with Manufacturing Execution Systems, SCADA systems, and Line control systems such as PLCs, automation systems, industrial equipment, and integration of these systems in production. Experience in creating long-term and short-term business and technical strategies for implementing manufacturing systems to increase manufacturing efficiency and effectiveness. Strong technical knowledge and experience in Manufacturing Systems architecture, detailed systems functionality, incorporating business requirements into sy [...]"
+    },
+    {
+      "posting_id": "36be565f-6ee7-4fcc-bc81-3c61e0dc2469",
+      "title": "Senior / Staff Connectivity Integration Lead",
+      "split": "dev",
+      "selection_group": "near-miss",
+      "location": "Foster City, CA",
+      "excerpt_source": "lists: Qualifications",
+      "requirements_excerpt": "M.S. in Electrical Engineering, Telecommunications, or a similar discipline with 8+ years of experience. Expertise in developing 3GPP cellular (4G, 5G-NR) /WiFi /Satellite feature test plans and debugging 4G-LTE / 5G-NR Protocol layers (such as MAC, L1, RF, FW). Expertise in LTE/5G Protocol Stacks (NAS, PDCP, RRC, RLC, MAC, PHY) Ability to use cellular network analysis tools (e.g., QXDM, Shannon Tools, Wireshark) and develop log frameworks to analyze wireless communication behavior and automate them. Hands-on experience configuring/programming wireless test platforms (UXM, CMX500, SMBv100, Spirent) and testing/troubleshooting modem development boards and prototypes."
+    },
+    {
+      "posting_id": "3e74f14a-667a-4381-9f8e-2e8b9f1b92d3",
+      "title": "Senior Systems Engineer, Fail Operational Capabilities",
+      "split": "dev",
+      "selection_group": "random fill",
+      "location": "Foster City, CA",
+      "excerpt_source": "lists: Qualifications",
+      "requirements_excerpt": "8 years of engineering work experience, alongside a Bachelor's degree in Engineering, Computer Science, or Physics. Experience designing complex systems that integrate multiple hardware and software components, paired with a solid understanding of full HW/SW development lifecycles. Demonstrated ability to deliver strong technical documentation (context diagrams, requirement decomposition, presentations) Proven leadership, organization, and communication skills."
+    },
+    {
+      "posting_id": "5ab0cc36-0d91-4acd-9cf3-c38a273293cb",
+      "title": "Senior/Staff Software Engineer - SRE, GitHub & CI/CD Infrastructure",
+      "split": "dev",
+      "selection_group": "near-miss",
+      "location": "Foster City, CA",
+      "excerpt_source": "lists: Qualifications",
+      "requirements_excerpt": "5+ years operating GitHub Enterprise (or equivalent) at scale, with hands-on experience scaling a large monorepo for an org of several hundred or more engineers. Strong CI/CD integration background (Buildkite, GitHub Actions, Jenkins, or GitLab CI) across code review workflows, build triggers, branch policies, and merge automation. Experience with infrastructure as code (Terraform, Pulumi, or equivalent), major cloud platforms, and executing platform migrations against active codebases. Strong technical leadership and written communication; able to drive alignment across infrastructure, security, and product engineering."
+    },
+    {
+      "posting_id": "94b5b4a5-257a-43d8-96bb-8dccd6d690f0",
+      "title": "Software Engineer - Road Network Tools",
+      "split": "dev",
+      "selection_group": "network-titled",
+      "location": "Foster City, CA",
+      "excerpt_source": "lists: Qualifications",
+      "requirements_excerpt": "At least 5 years of industry experience Fluency with Python or C++ Experience with OpenGL, WebGL, and graphics programming Experience with Fast API, Postgres, REST web services, and operational support Experience with AWS, cloud-based service providers, and service monitoring Experience developing spatial algorithms, routing, or graph theory"
+    },
+    {
+      "posting_id": "2ec7b1be-46f6-420d-b582-e565fe4f6b3e",
+      "title": "Staff Compute Systems Engineer",
+      "split": "dev",
+      "selection_group": "near-miss",
+      "location": "Foster City, CA",
+      "excerpt_source": "lists: Qualifications",
+      "requirements_excerpt": "B.S., M.S., or equivalent degree in Aerospace, Automotive, Robotics, Computer Science, Electrical, Mechanical, or Systems Engineering. 8+ years of relevant, staff-level experience in automotive, ADAS, autonomous vehicles, aerospace, or robotics, with an emphasis on systems-level design, validation, and safety analysis for complex, mission-critical systems with high levels of fail-operational redundancy. Analytical skills and a passion for writing clear, concise, and verifiable requirements for owned compute and controls systems. Strong EE fundamentals, including knowledge of compute architectures (e.g., x86, ARM), communication protocols (I2C, UART, SPI, CAN, LIN, USB, GMSL, FPD-Link), high- [...]"
+    },
+    {
+      "posting_id": "9945ef61-1c15-4cf1-9734-b65944c73757",
+      "title": "Staff Network Security Architect",
+      "split": "dev",
+      "selection_group": "network-titled",
+      "location": "Foster City, CA",
+      "excerpt_source": "lists: Qualifications",
+      "requirements_excerpt": "10+ years in network and security engineering, including 4+ years in an architecture or technical-lead role where you owned designs others implemented Demonstrated ownership of an enterprise-scale segmentation or zero-trust architecture from concept through adoption, including what you changed when it met reality Ability to reason about security frameworks as design inputs, not audit artifacts: fluency with NIST CSF 2.0, NIST 800-53, and ISO 27001, and a track record of turning them into engineering standards and evidence Depth in threat modeling and secure-by-design for network and infrastructure, including data flow analysis, trust boundaries, blast radius, and failure modes Strong platfor [...]"
+    },
+    {
+      "posting_id": "bdeeba8c-947d-474d-9d90-d788d09d0ce6",
+      "title": "Staff/Senior Staff Software Engineer - Product Security",
+      "split": "dev",
+      "selection_group": "near-miss",
+      "location": "Foster City, CA",
+      "excerpt_source": "lists: Qualifications",
+      "requirements_excerpt": "10+ years of experience in security engineering, including significant time in an architect, staff, or technical lead capacity. Deep expertise in embedded/IoT security, including secure boot, TPM/TEE, cryptographic key management, and hardened firmware/OS design. Demonstrated experience architecting security for complex, physical/cyber-physical systems (automotive, robotics, aerospace, industrial control, or similar). Strong track record of driving cross-functional technical strategy and influencing engineering leadership without direct authority. Solid understanding of network security, cloud security, and secure software development lifecycle practices."
+    },
+    {
+      "posting_id": "5b0c4c1d-9308-4809-995a-223161fb5068",
+      "title": "Wireless Firmware Validation Engineer",
+      "split": "dev",
+      "selection_group": "near-miss",
+      "location": "Foster City, CA",
+      "excerpt_source": "lists: Qualifications",
+      "requirements_excerpt": "B.S. or M.S. degree in Electrical Engineering, Telecommunications, Computer Science, or a similar discipline with 10+ years of industry experience in wireless validation or embedded systems test engineering. Validation Expertise: Deep expertise in developing 3GPP cellular (4G-LTE, 5G-NR), Wi-Fi, and Satellite feature test plans, as well as debugging protocol layers (MAC, L1, RF, FW). Protocol Knowledge: Extensive expertise in LTE/5G Protocol Stacks (NAS, PDCP, RRC, RLC, MAC, PHY) and interpreting 3GPP specifications. Network Analysis Tools: Exceptional ability to use cellular network analysis tools (e.g., QXDM , Shannon Tools, Wireshark) to capture, parse, and analyze complex cross-layer wir [...]"
+    },
+    {
+      "posting_id": "8af192a0-9ee4-45de-a241-f373cb2ef71c",
+      "title": "Director, Corporate Security",
+      "split": "held_out",
+      "selection_group": "near-miss",
+      "location": "Foster City, CA",
+      "excerpt_source": "lists: Qualifications",
+      "requirements_excerpt": "15+ years of progressive experience in corporate security with at least 5 years in a leadership role, ideally at companies with dispersed physical operations. Proven ability to lead and mentor diverse teams, including contractors and third-party service providers. Deep knowledge of physical security technologies, operations centers, and systems integration. Exceptional judgment, communication, and crisis leadership under pressure. Experience with emergency communications and escalation processes Demonstrated experience in managing insider threat programs and executing executive protection initiatives to enhance organizational security. Excellent organizational and interpersonal skills, and a [...]"
+    },
+    {
+      "posting_id": "082ed20c-b8e1-4b1c-9c22-4738ad94055d",
+      "title": "Embedded Software Engineer - Battery Management Systems",
+      "split": "held_out",
+      "selection_group": "random fill",
+      "location": "San Diego, CA",
+      "excerpt_source": "lists: Qualifications",
+      "requirements_excerpt": "Bachelor’s or Master’s degree in computer science, electrical engineering, mechanical engineering, or equivalent experience 8+ years of experience developing real-time embedded software for Power Electronics and Battery Management. Strong embedded C/C++ programming experience Experience with embedded micro-controllers and/or microprocessors (ARM, PowerPC) Hands-on experience with hardware bring-up and system debugging Understanding of sensors and actuators and automotive communication protocols (CAN, LIN)"
+    },
+    {
+      "posting_id": "7522162e-a518-444e-8fe7-49b8b45bbdd3",
+      "title": "Embedded Software Engineer, Wireless Technologies",
+      "split": "held_out",
+      "selection_group": "near-miss",
+      "location": "Foster City, CA",
+      "excerpt_source": "lists: Qualifications",
+      "requirements_excerpt": "More than 10+ years of experience in embedded linux systems and cellular/wireless stack software/firmware development. B.S. or M.S. degree in Computer Engineering, Computer Science, Physics, Electrical Engineering, or equivalent experience. Exceptional programming skills in C/C++, Linux OS, and Python/Shell scripting. Deep architectural understanding of LTE/5G Protocol Stacks (NAS, PDCP, RRC, RLC, MAC, PHY) and 3GPP specifications. Proven experience successfully integrating third-party cellular modems and proprietary stacks, with hands-on experience using Qualcomm ecosystems and cellular network analysis tools (e.g., QXDM , Shannon Tools, Wireshark). Good understanding of Embedded Systems, O [...]"
+    },
+    {
+      "posting_id": "bf983498-1063-4c02-8ea6-8f037c2b0c56",
+      "title": "Information Security Manager - Identity and Access Management (IAM)",
+      "split": "held_out",
+      "selection_group": "near-miss",
+      "location": "Foster City, CA",
+      "excerpt_source": "lists: Qualifications",
+      "requirements_excerpt": "8+ years of total experience in IT and Cybersecurity, with at least 3+ years in a leadership/management capacity focused specifically on Identity & Access Management. Hands-on experience with industry-standard IAM tools: ○ Directory & Identity Providers: Microsoft Entra ID (Azure AD), Okta, Ping Identity, Active Directory. ○ IGA Platforms: SailPoint, Saviynt, or Microsoft Entra ID Governance. ○ PAM Solutions: CyberArk, BeyondTrust, Delinea, or HashiCorp Vault. Deep understanding of OAuth 2.0, SAML, OIDC, SCIM, Kerberos, and LDAP protocols. Strong familiarity with regulatory compliance frameworks. Bachelor’s degree in Computer Science, Cybersecurity, Information Technology, or equivalent prac [...]"
+    },
+    {
+      "posting_id": "e6a4bbe1-20ab-4f1f-af07-f06fabedeabd",
+      "title": "Mechatronics Engineer - Closures",
+      "split": "held_out",
+      "selection_group": "random fill (held-out replacement)",
+      "location": "Foster City, CA",
+      "excerpt_source": "lists: Qualifications",
+      "requirements_excerpt": "BS in mechanical engineering, robotics, mechatronics, or a related field, with a minimum of 3 years of professional experience. Experience developing electromechanical hardware such as latches, actuators, or other motor-driven mechanisms, including work with technical suppliers. Proficiency in Python or MATLAB for data analysis, visualization, and system modeling. Experience with 3D CAD software, preferably CATIA 3DEXPERIENCE, and working knowledge of Design for Manufacturability, including GD&T and dimensional engineering. Comfortable debugging across mechanical, electrical, and software boundaries."
+    },
+    {
+      "posting_id": "a76e2e49-4f41-40d6-9bda-b15c24d7590b",
+      "title": "Senior Inventory Planning Manager",
+      "split": "held_out",
+      "selection_group": "random fill",
+      "location": "Hayward, CA",
+      "excerpt_source": "lists: Qualifications",
+      "requirements_excerpt": "8+ years of experience in inventory management, service parts planning, or supply chain operations. 2+ years leading or supervising planning, inventory, or logistics teams. Strong proficiency with SAP S/4HANA (MRP, inventory management, master data). Demonstrated experience supporting service operations or aftermarket parts environments. Expertise in forecasting, replenishment, and lifecycle management of service parts. Strong analytical and problem-solving skills with the ability to operate in fast-paced, ambiguous environments. Proven ability to collaborate cross-functionally with service, engineering, logistics, and procurement teams. Experience managing suppliers and resolving shortages, [...]"
+    },
+    {
+      "posting_id": "79d97b0a-3c16-4cb9-8a0d-0386836f25d1",
+      "title": "Senior Technical Recruiter, Hardware",
+      "split": "held_out",
+      "selection_group": "random fill",
+      "location": "Foster City, CA",
+      "excerpt_source": "lists: Qualifications:",
+      "requirements_excerpt": "8+ years of full-cycle technical recruiting experience in a competitive industry (sourcing, screening, and closing candidates) Ability to evaluate technical aptitude and screen candidates for both technical and behavioral fit Tech and industry knowledge with the ability to understand relevant skills and companies within the industry Consultative and interpersonal skills with the ability to communicate across all levels of the organization Proficiency in sourcing with LinkedIn as well as alternative techniques"
+    },
+    {
+      "posting_id": "65ffe656-2b91-46d3-9223-cb6c88441b45",
+      "title": "Senior Vehicle Attributes Engineer",
+      "split": "held_out",
+      "selection_group": "random fill",
+      "location": "Foster City, CA",
+      "excerpt_source": "lists: Qualifications",
+      "requirements_excerpt": "Bachelor’s or Masters degree in Engineering At least 10+ years of experience in vehicle attribute development or integration Deep technical understanding of vehicle systems, validation, and cross-functional integration Proven ability to manage multiple priorities, drive decisions, and deliver results in a fast-paced environment Experience leading and guiding a vehicle development program Skilled in data analysis, documentation, and reporting; proficiency with Smartsheet, Jira, and Google Workspace"
+    },
+    {
+      "posting_id": "896f37b9-80b7-4077-a937-e499151ce5f2",
+      "title": "Software Systems Engineer - Security",
+      "split": "held_out",
+      "selection_group": "near-miss",
+      "location": "Foster City, CA",
+      "excerpt_source": "lists: Qualifications",
+      "requirements_excerpt": "Master’s degree in CS or related engineering field (software, hardware, systems) and 3+ years of experience A strong general systems engineering background along with a demonstrated passion and concrete expertise in cybersecurity Prior experience with quantitative risk assessment frameworks (eg: EPSS, Attack trees/graph quantification, Monte Carlo simulations, Bayesian networks) Prior experience with the risk analysis of complex embedded systems and a demonstrated skill in turning the analysis into high-quality written deliverables Pragmatic adoption of AI/LLM toolchains for security analysis and authoring high quality regulatory work products"
+    },
+    {
+      "posting_id": "6320b978-abf4-483b-a09f-bfba0c44c485",
+      "title": "Test Infrastructure Engineer",
+      "split": "held_out",
+      "selection_group": "near-miss",
+      "location": "Foster City, CA",
+      "excerpt_source": "lists: Qualifications:",
+      "requirements_excerpt": "BS in Computer Science, Electrical Engineering, Mechanical Engineering, or related field; MS preferred 6+ years of industry experience with software development focused on on-prem or cloud infrastructure Exposure to software technologies used in manufacturing systems, such as MRP, MES, MQTT, SCADA systems, and IoT devices Experience with cloud deployment and infrastructure technologies, such as Kubernetes, Terraform, and AWS Deep background in Python programming (scripting, web services, tool development, and test frameworks). Working knowledge of Pytest required. Experience building dashboards and alerting systems for monitoring systems to monitor infrastructure health Knowledge of git and  [...]"
+    }
+  ],
+  "swaps": [
+    {
+      "at": "2026-10-31T13:28:36-0400",
+      "decision_by": "Prathamesh",
+      "removed": {
+        "posting_id": "8321d00e-9e2b-4947-a37e-fdbad7dcd637",
+        "title": "Senior Network Security Engineer",
+        "split": "held_out"
+      },
+      "reason": "examined before tuning: hand-applied in claude.ai chat, full text in tests/rows2-3-text.txt, and Claude judge smoke test on 2026-10-30 18:41 EDT",
+      "replacement": {
+        "posting_id": "e6a4bbe1-20ab-4f1f-af07-f06fabedeabd",
+        "title": "Mechatronics Engineer - Closures",
+        "split": "held_out"
+      },
+      "method": "same seeded fill procedure: random.Random(20261030).sample(others, k) for k = 7, 8, ... (prefix verified stable). Took the first newly drawn id that is not already a candidate and not examined (examined = tests/hand_labels.json ids + rows 2-3).",
+      "draw_index_k": 7,
+      "skipped_as_examined": []
+    }
+  ]
+}

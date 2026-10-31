@@ -1,0 +1,28 @@
+{
+  "session_id": "fb9cdd3c-4a88-483e-ae9d-08645e7ce736",
+  "session_id_requested": "fb9cdd3c-4a88-483e-ae9d-08645e7ce736",
+  "model": [
+    "claude-opus-5-5"
+  ],
+  "requested_at": "2026-10-31T14:22:41-0400",
+  "finished_at": "2026-10-31T14:22:46-0400",
+  "label": "judgment (raw Claude response)",
+  "posting_id": "5ab0cc36-0d91-4acd-9cf3-c38a273293cb",
+  "prompt_file": "prompts/judge_v1.md",
+  "prompt_sha256": "2b2382673939c371b35292be78f88144f88edb958d960f4d7c9bd3bac0f4a525",
+  "cmd": [
+    "claude",
+    "-p",
+    "--no-session-persistence",
+    "--session-id",
+    "fb9cdd3c-4a88-483e-ae9d-08645e7ce736",
+    "--output-format",
+    "json",
+    "--tools",
+    "",
+    "--strict-mcp-config"
+  ],
+  "returncode": 0,
+  "stdout": "{\"duration_api_ms\":3439,\"stop_reason\":\"end_turn\",\"session_id\":\"fb9cdd3c-4a88-483e-ae9d-08645e7ce736\",\"total_cost_usd\":0.0551978,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":5875,\"cache_read_input_tokens\":649,\"output_tokens\":403,\"output_tokens_details\":{\"thinking_tokens\":0},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":5875,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":403,\"cache_read_input_tokens\":649,\"cache_creation_input_tokens\":5875,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":5875},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":403,\"cacheReadInputTokens\":649,\"cacheCreationInputTokens\":5875,\"webSearchRequests\":0,\"costUSD\":0.0551978,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":0,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":5875,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"posting_id\\\": \\\"5ab0cc36-0d91-4acd-9cf3-c38a273293cb\\\", \\\"verdict\\\": \\\"not_relevant\\\", \\\"citations\\\": [{\\\"resume_field\\\": \\\"target.soc_title\\\", \\\"resume_value\\\": \\\"Computer Network Architects\\\", \\\"posting_field\\\": \\\"text\\\", \\\"posting_value\\\": \\\"Senior/Staff Software Engineer - SRE, GitHub & CI/CD Infrastructure\\\"}, {\\\"resume_field\\\": \\\"target.title_terms\\\", \\\"resume_value\\\": \\\"network engineer\\\", \\\"posting_field\\\": \\\"descriptionPlain\\\", \\\"posting_value\\\": \\\"We're hiring a Staff Site Reliability Engineer to own source control at Zoox\\\"}, {\\\"resume_field\\\": \\\"skills.networking\\\", \\\"resume_value\\\": \\\"BGP\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"5+ years operating GitHub Enterprise (or equivalent) at scale, with hands-on experience scaling a large monorepo\\\"}, {\\\"resume_field\\\": \\\"skills.familiar_with_not_shipped\\\", \\\"resume_value\\\": \\\"Terraform\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Strong CI/CD integration background (Buildkite, GitHub Actions, Jenkins, or GitLab CI)\\\"}]}\",\"ttft_ms\":3808,\"type\":\"result\",\"duration_ms\":3851,\"uuid\":\"4ef80c44-083b-435f-9c0f-4019bd3eb450\",\"ttft_stream_ms\":1336,\"time_to_request_ms\":400,\"first_content_frame_ms\":1336,\"queued_turn_count\":0,\"result_index\":0}\n",
+  "stderr": ""
+}

@@ -1,0 +1,28 @@
+{
+  "session_id": "f03ff854-6875-404a-96bb-286e21789371",
+  "session_id_requested": "f03ff854-6875-404a-96bb-286e21789371",
+  "model": [
+    "claude-opus-5-5"
+  ],
+  "requested_at": "2026-10-31T14:23:54-0400",
+  "finished_at": "2026-10-31T14:24:00-0400",
+  "label": "judgment (raw Claude response)",
+  "posting_id": "7522162e-a518-444e-8fe7-49b8b45bbdd3",
+  "prompt_file": "prompts/judge_v2.md",
+  "prompt_sha256": "292b233379df38a268e3efc0fb8b355aba77af3f6c7a25cbd390e53495c443fe",
+  "cmd": [
+    "claude",
+    "-p",
+    "--no-session-persistence",
+    "--session-id",
+    "f03ff854-6875-404a-96bb-286e21789371",
+    "--output-format",
+    "json",
+    "--tools",
+    "",
+    "--strict-mcp-config"
+  ],
+  "returncode": 0,
+  "stdout": "{\"duration_api_ms\":4153,\"stop_reason\":\"end_turn\",\"session_id\":\"f03ff854-6875-404a-96bb-286e21789371\",\"total_cost_usd\":0.0615778,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":6685,\"cache_read_input_tokens\":649,\"output_tokens\":398,\"output_tokens_details\":{\"thinking_tokens\":0},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":6685,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":398,\"cache_read_input_tokens\":649,\"cache_creation_input_tokens\":6685,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":6685},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":398,\"cacheReadInputTokens\":649,\"cacheCreationInputTokens\":6685,\"webSearchRequests\":0,\"costUSD\":0.0615778,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":0,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":6685,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"posting_id\\\": \\\"7522162e-a518-444e-8fe7-49b8b45bbdd3\\\", \\\"verdict\\\": \\\"not_relevant\\\", \\\"citations\\\": [{\\\"resume_field\\\": \\\"target.soc_title\\\", \\\"resume_value\\\": \\\"Computer Network Architects\\\", \\\"posting_field\\\": \\\"text\\\", \\\"posting_value\\\": \\\"Embedded Software Engineer, Wireless Technologies\\\"}, {\\\"resume_field\\\": \\\"target.title_terms\\\", \\\"resume_value\\\": \\\"network engineer\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"writing the host-side glue code (C/C++) needed for the Linux networking stack\\\"}, {\\\"resume_field\\\": \\\"visa.current_status\\\", \\\"resume_value\\\": \\\"F-1, STEM OPT eligible after graduation\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"More than 10+ years of experience in embedded linux systems and cellular/wireless stack software/firmware development\\\"}, {\\\"resume_field\\\": \\\"skills.networking\\\", \\\"resume_value\\\": \\\"TCP/IP\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Deep architectural understanding of LTE/5G Protocol Stacks (NAS, PDCP, RRC, RLC, MAC, PHY) and 3GPP specifications\\\"}]}\",\"ttft_ms\":4653,\"type\":\"result\",\"duration_ms\":4685,\"uuid\":\"21153243-3e67-4cf4-94f0-4f4e41be34f0\",\"ttft_stream_ms\":2083,\"time_to_request_ms\":526,\"first_content_frame_ms\":2083,\"queued_turn_count\":0,\"result_index\":0}\n",
+  "stderr": ""
+}

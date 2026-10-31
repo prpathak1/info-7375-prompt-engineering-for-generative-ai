@@ -1,0 +1,345 @@
+{
+  "label": "SEEDED",
+  "run_at": "2026-10-31T13:44:14-0400",
+  "raw_file": "raw/2026-10-31/zoox.json",
+  "raw_sha256": "45a795dff755fc7839cbe7593a6fcb1ca48719eb8fcd3e4ecd883a238417eeb6",
+  "baseline": false,
+  "total": 227,
+  "new_count": 5,
+  "removed_count": 0,
+  "new": [
+    {
+      "posting_id": "48639085-6179-4a14-94c5-5b5ba027879c",
+      "posting_title": "Senior Director, Head of Talent Acquisition",
+      "record": {
+        "label": "record",
+        "verdict": "not_relevant",
+        "needs_human": false,
+        "reason": "Gate 1 (title) exclude: no 'network' in title",
+        "gate_results": {
+          "title": {
+            "decision": "exclude",
+            "reason": "no 'network' in title"
+          },
+          "authorization": {
+            "hits": []
+          },
+          "skills": {
+            "matched": [],
+            "threshold": 2
+          }
+        },
+        "citations": [
+          {
+            "resume_field": "target.soc_code",
+            "resume_value": "15-1241",
+            "posting_field": "text",
+            "posting_value": "Senior Director, Head of Talent Acquisition"
+          }
+        ]
+      },
+      "judgment": {
+        "label": "judgment",
+        "status": "rejected",
+        "errors": [
+          "citation 3: résumé has no 'MS, Computer Systems Networking and Telecommunications' at 'education.0.degree'"
+        ],
+        "raw_response": "{\"posting_id\": \"48639085-6179-4a14-94c5-5b5ba027879c\", \"verdict\": \"not_relevant\", \"citations\": [{\"resume_field\": \"target.soc_title\", \"resume_value\": \"Computer Network Architects\", \"posting_field\": \"text\", \"posting_value\": \"Senior Director, Head of Talent Acquisition\"}, {\"resume_field\": \"target.title_terms\", \"resume_value\": \"network engineer\", \"posting_field\": \"categories.team\", \"posting_value\": \"Talent\"}, {\"resume_field\": \"skills.networking\", \"resume_value\": \"BGP\", \"posting_field\": \"lists\", \"posting_value\": \"15+ years of TA leadership experience\"}, {\"resume_field\": \"education.0.degree\", \"resume_value\": \"MS, Computer Systems Networking and Telecommunications\", \"posting_field\": \"lists\", \"posting_value\": \"Bachelor’s degree in Human Resources, Business Administration, Organizational Development, or a related field\"}]}",
+        "session_id": "3bac5e88-5c65-42d5-89df-e6152112393a",
+        "session_id_requested": "3bac5e88-5c65-42d5-89df-e6152112393a",
+        "model": [
+          "claude-opus-5-5"
+        ],
+        "requested_at": "2026-10-31T13:43:42-0400",
+        "finished_at": "2026-10-31T13:43:48-0400",
+        "raw_response_file": "seeded/SEEDED-judgments/20261031T134348-48639085-6179-4a14-94c5-5b5ba027879c-3bac5e88-5c65-42d5-89df-e6152112393a.json"
+      }
+    },
+    {
+      "posting_id": "8321d00e-9e2b-4947-a37e-fdbad7dcd637",
+      "posting_title": "Senior Network Security Engineer",
+      "record": {
+        "label": "record",
+        "verdict": "relevant",
+        "needs_human": false,
+        "reason": "all gates pass; skills matched: BGP, OSPF, TCP/IP, VLAN, VPN, firewall",
+        "gate_results": {
+          "title": {
+            "decision": "include",
+            "reason": "network role title"
+          },
+          "authorization": {
+            "hits": []
+          },
+          "skills": {
+            "matched": [
+              "BGP",
+              "OSPF",
+              "TCP/IP",
+              "VLAN",
+              "VPN",
+              "firewall"
+            ],
+            "threshold": 2
+          }
+        },
+        "citations": [
+          {
+            "resume_field": "target.soc_code",
+            "resume_value": "15-1241",
+            "posting_field": "text",
+            "posting_value": "Senior Network Security Engineer"
+          },
+          {
+            "resume_field": "skills.networking",
+            "resume_value": "BGP",
+            "posting_field": "lists",
+            "posting_value": "BGP"
+          },
+          {
+            "resume_field": "skills.networking",
+            "resume_value": "OSPF",
+            "posting_field": "lists",
+            "posting_value": "OSPF"
+          },
+          {
+            "resume_field": "skills.networking",
+            "resume_value": "TCP/IP",
+            "posting_field": "lists",
+            "posting_value": "TCP/IP"
+          },
+          {
+            "resume_field": "skills.networking",
+            "resume_value": "VLAN",
+            "posting_field": "lists",
+            "posting_value": "VLAN"
+          },
+          {
+            "resume_field": "skills.networking",
+            "resume_value": "VPN",
+            "posting_field": "lists",
+            "posting_value": "VPN"
+          },
+          {
+            "resume_field": "skills.networking",
+            "resume_value": "firewall",
+            "posting_field": "lists",
+            "posting_value": "firewall"
+          }
+        ]
+      },
+      "judgment": {
+        "label": "judgment",
+        "status": "accepted",
+        "posting_id": "8321d00e-9e2b-4947-a37e-fdbad7dcd637",
+        "verdict": "relevant",
+        "citations": [
+          {
+            "resume_field": "target.title_terms",
+            "resume_value": "network security engineer",
+            "posting_field": "text",
+            "posting_value": "Senior Network Security Engineer"
+          },
+          {
+            "resume_field": "target.soc_code",
+            "resume_value": "15-1241",
+            "posting_field": "descriptionPlain",
+            "posting_value": "design, implement, and operate security controls"
+          },
+          {
+            "resume_field": "skills.vendors",
+            "resume_value": "Palo Alto",
+            "posting_field": "lists",
+            "posting_value": "Palo Alto Networks, Fortinet"
+          },
+          {
+            "resume_field": "skills.networking",
+            "resume_value": "BGP",
+            "posting_field": "lists",
+            "posting_value": "TCP/IP, BGP, OSPF, VLAN"
+          },
+          {
+            "resume_field": "skills.security",
+            "resume_value": "network segmentation",
+            "posting_field": "lists",
+            "posting_value": "network segmentation"
+          },
+          {
+            "resume_field": "skills.security",
+            "resume_value": "IDS/IPS",
+            "posting_field": "lists",
+            "posting_value": "IDS/IPS"
+          },
+          {
+            "resume_field": "skills.networking",
+            "resume_value": "VPN",
+            "posting_field": "lists",
+            "posting_value": "secure remote access solutions (VPN, ZTNA, site-to-site tunnels)"
+          },
+          {
+            "resume_field": "certifications",
+            "resume_value": "CCNA (fictional record)",
+            "posting_field": "lists",
+            "posting_value": "PCNSE, AWS Security Specialty, CCNA"
+          },
+          {
+            "resume_field": "visa.needs_sponsorship",
+            "resume_value": true,
+            "posting_field": "additionalPlain",
+            "posting_value": "You do not need to match every listed expectation to apply for this position."
+          }
+        ],
+        "obtained_at": "2026-10-31T13:43:58-0400",
+        "session_id": "f57c3f69-536b-4346-9592-16031318b28c",
+        "session_id_requested": "f57c3f69-536b-4346-9592-16031318b28c",
+        "model": [
+          "claude-opus-5-5"
+        ],
+        "requested_at": "2026-10-31T13:43:48-0400",
+        "finished_at": "2026-10-31T13:43:58-0400",
+        "raw_response_file": "seeded/SEEDED-judgments/20261031T134358-8321d00e-9e2b-4947-a37e-fdbad7dcd637-f57c3f69-536b-4346-9592-16031318b28c.json"
+      }
+    },
+    {
+      "posting_id": "5de4079e-3365-479b-99ca-4bc0371cb63c",
+      "posting_title": "Senior Signal Integrity and EMC Engineer",
+      "record": {
+        "label": "record",
+        "verdict": "not_relevant",
+        "needs_human": false,
+        "reason": "Gate 1 (title) exclude: no 'network' in title",
+        "gate_results": {
+          "title": {
+            "decision": "exclude",
+            "reason": "no 'network' in title"
+          },
+          "authorization": {
+            "hits": []
+          },
+          "skills": {
+            "matched": [],
+            "threshold": 2
+          }
+        },
+        "citations": [
+          {
+            "resume_field": "target.soc_code",
+            "resume_value": "15-1241",
+            "posting_field": "text",
+            "posting_value": "Senior Signal Integrity and EMC Engineer"
+          }
+        ]
+      },
+      "judgment": {
+        "label": "judgment",
+        "status": "rejected",
+        "errors": [
+          "citation 2: résumé has no 'MS, Computer Systems Networking and Telecommunications' at 'education.0.degree'"
+        ],
+        "raw_response": "{\"posting_id\": \"5de4079e-3365-479b-99ca-4bc0371cb63c\", \"verdict\": \"not_relevant\", \"citations\": [{\"resume_field\": \"target.soc_title\", \"resume_value\": \"Computer Network Architects\", \"posting_field\": \"text\", \"posting_value\": \"Senior Signal Integrity and EMC Engineer\"}, {\"resume_field\": \"skills.networking\", \"resume_value\": \"BGP\", \"posting_field\": \"lists\", \"posting_value\": \"Perform and/or oversee signal integrity and power integrity (SI/PI) simulations and analysis for critical high-speed interfaces and power distribution networks.\"}, {\"resume_field\": \"education.0.degree\", \"resume_value\": \"MS, Computer Systems Networking and Telecommunications\", \"posting_field\": \"lists\", \"posting_value\": \"Bachelor's or Master's of Science in Electrical Engineering with Electronics Design, Electromagnetics, or RF/Wireless-related coursework.\"}, {\"resume_field\": \"skills.vendors\", \"resume_value\": \"Cisco\", \"posting_field\": \"lists\", \"posting_value\": \"10+ years of experience in signal integrity, RF design, and/or EMC validation of electronic components and systems.\"}]}",
+        "session_id": "34009517-bf54-4aac-8410-8f8ed8f85d57",
+        "session_id_requested": "34009517-bf54-4aac-8410-8f8ed8f85d57",
+        "model": [
+          "claude-opus-5-5"
+        ],
+        "requested_at": "2026-10-31T13:43:58-0400",
+        "finished_at": "2026-10-31T13:44:04-0400",
+        "raw_response_file": "seeded/SEEDED-judgments/20261031T134404-5de4079e-3365-479b-99ca-4bc0371cb63c-34009517-bf54-4aac-8410-8f8ed8f85d57.json"
+      }
+    },
+    {
+      "posting_id": "f62f1083-acff-4862-984e-4d16d2a827a6",
+      "posting_title": "Senior Software Engineer - Robot Software Infrastructure",
+      "record": {
+        "label": "record",
+        "verdict": "not_relevant",
+        "needs_human": false,
+        "reason": "Gate 1 (title) exclude: no 'network' in title",
+        "gate_results": {
+          "title": {
+            "decision": "exclude",
+            "reason": "no 'network' in title"
+          },
+          "authorization": {
+            "hits": []
+          },
+          "skills": {
+            "matched": [],
+            "threshold": 2
+          }
+        },
+        "citations": [
+          {
+            "resume_field": "target.soc_code",
+            "resume_value": "15-1241",
+            "posting_field": "text",
+            "posting_value": "Senior Software Engineer - Robot Software Infrastructure"
+          }
+        ]
+      },
+      "judgment": {
+        "label": "judgment",
+        "status": "rejected",
+        "errors": [
+          "citation 3: résumé has no 'Operated a multi-site BGP and OSPF campus/WAN backbone of roughly 40 routers.' at 'experience'"
+        ],
+        "raw_response": "{\"posting_id\": \"f62f1083-acff-4862-984e-4d16d2a827a6\", \"verdict\": \"not_relevant\", \"citations\": [{\"resume_field\": \"target.soc_title\", \"resume_value\": \"Computer Network Architects\", \"posting_field\": \"text\", \"posting_value\": \"Senior Software Engineer - Robot Software Infrastructure\"}, {\"resume_field\": \"target.title_terms\", \"resume_value\": \"network engineer\", \"posting_field\": \"lists\", \"posting_value\": \"Develop and optimize device drivers and kernel-space components using C, C++, or Rust\"}, {\"resume_field\": \"skills.networking\", \"resume_value\": \"BGP\", \"posting_field\": \"lists\", \"posting_value\": \"Configure and manage embedded Linux build systems (e.g., Yocto) and bootloader processes (e.g., U-Boot)\"}, {\"resume_field\": \"experience\", \"resume_value\": \"Operated a multi-site BGP and OSPF campus/WAN backbone of roughly 40 routers.\", \"posting_field\": \"lists\", \"posting_value\": \"8+ years delivering production systems and software applications\"}, {\"resume_field\": \"target.soc_code\", \"resume_value\": \"15-1241\", \"posting_field\": \"categories.team\", \"posting_value\": \"Software Systems\"}]}",
+        "session_id": "295e104d-b305-47d3-b65d-086f7166d597",
+        "session_id_requested": "295e104d-b305-47d3-b65d-086f7166d597",
+        "model": [
+          "claude-opus-5-5"
+        ],
+        "requested_at": "2026-10-31T13:44:04-0400",
+        "finished_at": "2026-10-31T13:44:09-0400",
+        "raw_response_file": "seeded/SEEDED-judgments/20261031T134409-f62f1083-acff-4862-984e-4d16d2a827a6-295e104d-b305-47d3-b65d-086f7166d597.json"
+      }
+    },
+    {
+      "posting_id": "eed5bd1e-8f24-4180-ac1f-c757d67c775a",
+      "posting_title": "Team Lead, Ground Operations (3rd Shift)",
+      "record": {
+        "label": "record",
+        "verdict": "not_relevant",
+        "needs_human": false,
+        "reason": "Gate 1 (title) exclude: no 'network' in title",
+        "gate_results": {
+          "title": {
+            "decision": "exclude",
+            "reason": "no 'network' in title"
+          },
+          "authorization": {
+            "hits": []
+          },
+          "skills": {
+            "matched": [],
+            "threshold": 2
+          }
+        },
+        "citations": [
+          {
+            "resume_field": "target.soc_code",
+            "resume_value": "15-1241",
+            "posting_field": "text",
+            "posting_value": "Team Lead, Ground Operations (3rd Shift)"
+          }
+        ]
+      },
+      "judgment": {
+        "label": "judgment",
+        "status": "rejected",
+        "errors": [
+          "citation 4: résumé has no 'Network Engineer' at 'experience'"
+        ],
+        "raw_response": "{\"posting_id\": \"eed5bd1e-8f24-4180-ac1f-c757d67c775a\", \"verdict\": \"not_relevant\", \"citations\": [{\"resume_field\": \"target.soc_code\", \"resume_value\": \"15-1241\", \"posting_field\": \"text\", \"posting_value\": \"Team Lead, Ground Operations (3rd Shift)\"}, {\"resume_field\": \"target.title_terms\", \"resume_value\": \"network engineer\", \"posting_field\": \"categories.team\", \"posting_value\": \"Base Operations\"}, {\"resume_field\": \"skills.networking\", \"resume_value\": \"BGP\", \"posting_field\": \"lists\", \"posting_value\": \"5+ years of hands-on automotive technician experience\"}, {\"resume_field\": \"skills.networking\", \"resume_value\": \"routing\", \"posting_field\": \"lists\", \"posting_value\": \"high proficiency in CAN/LIN architecture, wiring diagrams, and soldering\"}, {\"resume_field\": \"experience\", \"resume_value\": \"Network Engineer\", \"posting_field\": \"descriptionPlain\", \"posting_value\": \"leading overnight fleet maintenance, rework, and mission readiness activities\"}]}",
+        "session_id": "383038ee-dd1c-4885-83e1-cc10053512a5",
+        "session_id_requested": "383038ee-dd1c-4885-83e1-cc10053512a5",
+        "model": [
+          "claude-opus-5-5"
+        ],
+        "requested_at": "2026-10-31T13:44:09-0400",
+        "finished_at": "2026-10-31T13:44:14-0400",
+        "raw_response_file": "seeded/SEEDED-judgments/20261031T134414-eed5bd1e-8f24-4180-ac1f-c757d67c775a-383038ee-dd1c-4885-83e1-cc10053512a5.json"
+      }
+    }
+  ]
+}

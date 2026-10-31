@@ -1,0 +1,28 @@
+{
+  "session_id": "1f0a0405-664f-4317-bdf0-82d76e563484",
+  "session_id_requested": "1f0a0405-664f-4317-bdf0-82d76e563484",
+  "model": [
+    "claude-opus-5-5"
+  ],
+  "requested_at": "2026-10-31T14:22:34-0400",
+  "finished_at": "2026-10-31T14:22:40-0400",
+  "label": "judgment (raw Claude response)",
+  "posting_id": "94b5b4a5-257a-43d8-96bb-8dccd6d690f0",
+  "prompt_file": "prompts/judge_v1.md",
+  "prompt_sha256": "bcfe3f6b337ab1336a87fa391e21b52a4be820805704fd6f9b5b3bf6d5a3418c",
+  "cmd": [
+    "claude",
+    "-p",
+    "--no-session-persistence",
+    "--session-id",
+    "1f0a0405-664f-4317-bdf0-82d76e563484",
+    "--output-format",
+    "json",
+    "--tools",
+    "",
+    "--strict-mcp-config"
+  ],
+  "returncode": 0,
+  "stdout": "{\"duration_api_ms\":3930,\"stop_reason\":\"end_turn\",\"session_id\":\"1f0a0405-664f-4317-bdf0-82d76e563484\",\"total_cost_usd\":0.052709799999999994,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":5604,\"cache_read_input_tokens\":649,\"output_tokens\":387,\"output_tokens_details\":{\"thinking_tokens\":0},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":5604,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":387,\"cache_read_input_tokens\":649,\"cache_creation_input_tokens\":5604,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":5604},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":387,\"cacheReadInputTokens\":649,\"cacheCreationInputTokens\":5604,\"webSearchRequests\":0,\"costUSD\":0.052709799999999994,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":0,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":5604,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"posting_id\\\": \\\"94b5b4a5-257a-43d8-96bb-8dccd6d690f0\\\", \\\"verdict\\\": \\\"not_relevant\\\", \\\"citations\\\": [{\\\"resume_field\\\": \\\"target.soc_title\\\", \\\"resume_value\\\": \\\"Computer Network Architects\\\", \\\"posting_field\\\": \\\"text\\\", \\\"posting_value\\\": \\\"Software Engineer - Road Network Tools\\\"}, {\\\"resume_field\\\": \\\"target.title_terms\\\", \\\"resume_value\\\": \\\"network engineer\\\", \\\"posting_field\\\": \\\"descriptionPlain\\\", \\\"posting_value\\\": \\\"build and manage our high-definition road network\\\"}, {\\\"resume_field\\\": \\\"skills.networking\\\", \\\"resume_value\\\": \\\"routing\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Experience developing spatial algorithms, routing, or graph theory\\\"}, {\\\"resume_field\\\": \\\"skills.networking\\\", \\\"resume_value\\\": \\\"BGP\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Experience with OpenGL, WebGL, and graphics programming\\\"}, {\\\"resume_field\\\": \\\"skills.cloud\\\", \\\"resume_value\\\": \\\"AWS VPC\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Experience with AWS, cloud-based service providers, and service monitoring\\\"}]}\",\"ttft_ms\":4297,\"type\":\"result\",\"duration_ms\":4342,\"uuid\":\"957d2bb6-7f4a-4d2d-8271-ebb43a13b57f\",\"ttft_stream_ms\":1778,\"time_to_request_ms\":403,\"first_content_frame_ms\":1778,\"queued_turn_count\":0,\"result_index\":0}\n",
+  "stderr": ""
+}

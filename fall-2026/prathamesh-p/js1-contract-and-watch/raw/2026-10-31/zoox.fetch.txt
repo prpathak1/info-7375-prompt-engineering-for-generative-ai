@@ -1,0 +1,8 @@
+board=zoox
+url=https://api.lever.co/v0/postings/zoox?mode=json
+final_url=https://api.lever.co/v0/postings/zoox?mode=json
+fetched_utc=2026-10-31T17:27:48Z
+fetched_local=Sat Oct 31 13:27:48 Eastern Daylight Time 2026
+http_status=200
+bytes=2306248
+sha256=45a795dff755fc7839cbe7593a6fcb1ca48719eb8fcd3e4ecd883a238417eeb6

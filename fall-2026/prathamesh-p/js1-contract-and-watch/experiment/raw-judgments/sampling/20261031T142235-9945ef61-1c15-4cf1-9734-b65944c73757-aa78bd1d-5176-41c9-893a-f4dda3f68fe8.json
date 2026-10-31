@@ -1,0 +1,28 @@
+{
+  "session_id": "aa78bd1d-5176-41c9-893a-f4dda3f68fe8",
+  "session_id_requested": "aa78bd1d-5176-41c9-893a-f4dda3f68fe8",
+  "model": [
+    "claude-opus-5-5"
+  ],
+  "requested_at": "2026-10-31T14:22:21-0400",
+  "finished_at": "2026-10-31T14:22:35-0400",
+  "label": "judgment (raw Claude response)",
+  "posting_id": "9945ef61-1c15-4cf1-9734-b65944c73757",
+  "prompt_file": "prompts/judge_v1.md",
+  "prompt_sha256": "ffe21ba351188dfcb5286f8daf3b6394f20d614064d45711cc674441667fa53f",
+  "cmd": [
+    "claude",
+    "-p",
+    "--no-session-persistence",
+    "--session-id",
+    "aa78bd1d-5176-41c9-893a-f4dda3f68fe8",
+    "--output-format",
+    "json",
+    "--tools",
+    "",
+    "--strict-mcp-config"
+  ],
+  "returncode": 0,
+  "stdout": "{\"duration_api_ms\":11026,\"stop_reason\":\"end_turn\",\"session_id\":\"aa78bd1d-5176-41c9-893a-f4dda3f68fe8\",\"total_cost_usd\":0.0781458,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":6331,\"cache_read_input_tokens\":649,\"output_tokens\":1368,\"output_tokens_details\":{\"thinking_tokens\":697},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":6331,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":1368,\"cache_read_input_tokens\":649,\"cache_creation_input_tokens\":6331,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":6331},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":1368,\"cacheReadInputTokens\":649,\"cacheCreationInputTokens\":6331,\"webSearchRequests\":0,\"costUSD\":0.0781458,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":697,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":6331,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"posting_id\\\": \\\"9945ef61-1c15-4cf1-9734-b65944c73757\\\", \\\"verdict\\\": \\\"relevant\\\", \\\"citations\\\": [{\\\"resume_field\\\": \\\"target.soc_title\\\", \\\"resume_value\\\": \\\"Computer Network Architects\\\", \\\"posting_field\\\": \\\"text\\\", \\\"posting_value\\\": \\\"Staff Network Security Architect\\\"}, {\\\"resume_field\\\": \\\"target.commitment\\\", \\\"resume_value\\\": \\\"full-time\\\", \\\"posting_field\\\": \\\"categories.commitment\\\", \\\"posting_value\\\": \\\"Full-time\\\"}, {\\\"resume_field\\\": \\\"skills.networking\\\", \\\"resume_value\\\": \\\"BGP\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"BGP\\\"}, {\\\"resume_field\\\": \\\"skills.networking\\\", \\\"resume_value\\\": \\\"OSPF\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"OSPF\\\"}, {\\\"resume_field\\\": \\\"skills.networking\\\", \\\"resume_value\\\": \\\"VPN\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"VPN\\\"}, {\\\"resume_field\\\": \\\"skills.vendors\\\", \\\"resume_value\\\": \\\"Palo Alto\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Palo Alto\\\"}, {\\\"resume_field\\\": \\\"skills.security\\\", \\\"resume_value\\\": \\\"IDS/IPS\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"IDS/IPS\\\"}, {\\\"resume_field\\\": \\\"skills.security\\\", \\\"resume_value\\\": \\\"zero trust\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"zero-trust\\\"}, {\\\"resume_field\\\": \\\"skills.cloud\\\", \\\"resume_value\\\": \\\"AWS VPC\\\", \\\"posting_field\\\": \\\"descriptionPlain\\\", \\\"posting_value\\\": \\\"hybrid cloud (AWS, GCP)\\\"}, {\\\"resume_field\\\": \\\"skills.familiar_with_not_shipped\\\", \\\"resume_value\\\": \\\"Terraform\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Terraform modules\\\"}, {\\\"resume_field\\\": \\\"visa.needs_sponsorship\\\", \\\"resume_value\\\": true, \\\"posting_field\\\": \\\"additionalPlain\\\", \\\"posting_value\\\": \\\"You do not need to match every listed expectation to apply for this position.\\\"}]}\",\"ttft_ms\":7232,\"type\":\"result\",\"duration_ms\":11452,\"uuid\":\"bebe78be-de5c-4ae3-a07b-71d825354bcc\",\"ttft_stream_ms\":1506,\"time_to_request_ms\":426,\"first_content_frame_ms\":1506,\"queued_turn_count\":0,\"result_index\":0}\n",
+  "stderr": ""
+}

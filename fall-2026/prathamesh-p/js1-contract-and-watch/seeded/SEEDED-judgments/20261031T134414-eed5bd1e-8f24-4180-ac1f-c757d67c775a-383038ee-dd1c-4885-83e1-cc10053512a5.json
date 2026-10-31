@@ -1,0 +1,28 @@
+{
+  "session_id": "383038ee-dd1c-4885-83e1-cc10053512a5",
+  "session_id_requested": "383038ee-dd1c-4885-83e1-cc10053512a5",
+  "model": [
+    "claude-opus-5-5"
+  ],
+  "requested_at": "2026-10-31T13:44:09-0400",
+  "finished_at": "2026-10-31T13:44:14-0400",
+  "label": "judgment (raw Claude response)",
+  "posting_id": "eed5bd1e-8f24-4180-ac1f-c757d67c775a",
+  "prompt_file": "prompts/judge_v1.md",
+  "prompt_sha256": "cade312750e149f7a09218a91b87ed6220236fa85a69005045c95088246591ab",
+  "cmd": [
+    "claude",
+    "-p",
+    "--no-session-persistence",
+    "--session-id",
+    "383038ee-dd1c-4885-83e1-cc10053512a5",
+    "--output-format",
+    "json",
+    "--tools",
+    "",
+    "--strict-mcp-config"
+  ],
+  "returncode": 0,
+  "stdout": "{\"duration_api_ms\":3220,\"stop_reason\":\"end_turn\",\"session_id\":\"383038ee-dd1c-4885-83e1-cc10053512a5\",\"total_cost_usd\":0.0555218,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":5963,\"cache_read_input_tokens\":649,\"output_tokens\":384,\"output_tokens_details\":{\"thinking_tokens\":0},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":5963,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":384,\"cache_read_input_tokens\":649,\"cache_creation_input_tokens\":5963,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":5963},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":384,\"cacheReadInputTokens\":649,\"cacheCreationInputTokens\":5963,\"webSearchRequests\":0,\"costUSD\":0.0555218,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":0,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":5963,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"posting_id\\\": \\\"eed5bd1e-8f24-4180-ac1f-c757d67c775a\\\", \\\"verdict\\\": \\\"not_relevant\\\", \\\"citations\\\": [{\\\"resume_field\\\": \\\"target.soc_code\\\", \\\"resume_value\\\": \\\"15-1241\\\", \\\"posting_field\\\": \\\"text\\\", \\\"posting_value\\\": \\\"Team Lead, Ground Operations (3rd Shift)\\\"}, {\\\"resume_field\\\": \\\"target.title_terms\\\", \\\"resume_value\\\": \\\"network engineer\\\", \\\"posting_field\\\": \\\"categories.team\\\", \\\"posting_value\\\": \\\"Base Operations\\\"}, {\\\"resume_field\\\": \\\"skills.networking\\\", \\\"resume_value\\\": \\\"BGP\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"5+ years of hands-on automotive technician experience\\\"}, {\\\"resume_field\\\": \\\"skills.networking\\\", \\\"resume_value\\\": \\\"routing\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"high proficiency in CAN/LIN architecture, wiring diagrams, and soldering\\\"}, {\\\"resume_field\\\": \\\"experience\\\", \\\"resume_value\\\": \\\"Network Engineer\\\", \\\"posting_field\\\": \\\"descriptionPlain\\\", \\\"posting_value\\\": \\\"leading overnight fleet maintenance, rework, and mission readiness activities\\\"}]}\",\"ttft_ms\":3491,\"type\":\"result\",\"duration_ms\":3522,\"uuid\":\"f6177b47-1898-42aa-a58f-d40d9e065af3\",\"ttft_stream_ms\":1002,\"time_to_request_ms\":296,\"first_content_frame_ms\":1002,\"queued_turn_count\":0,\"result_index\":0}\n",
+  "stderr": ""
+}

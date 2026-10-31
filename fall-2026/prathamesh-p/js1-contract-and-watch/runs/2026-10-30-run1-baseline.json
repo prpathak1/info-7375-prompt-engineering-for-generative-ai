@@ -1,0 +1,10 @@
+{
+  "run_at": "2026-10-30T18:35:23-0400",
+  "raw_file": "raw/2026-10-30/zoox.json",
+  "raw_sha256": "45a795dff755fc7839cbe7593a6fcb1ca48719eb8fcd3e4ecd883a238417eeb6",
+  "baseline": true,
+  "total": 227,
+  "new_count": 0,
+  "removed_count": 0,
+  "new": []
+}

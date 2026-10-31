@@ -1,0 +1,28 @@
+{
+  "session_id": "202314fe-af8f-4818-a018-0d9345017718",
+  "session_id_requested": "202314fe-af8f-4818-a018-0d9345017718",
+  "model": [
+    "claude-opus-5-5"
+  ],
+  "requested_at": "2026-10-31T14:23:09-0400",
+  "finished_at": "2026-10-31T14:23:15-0400",
+  "label": "judgment (raw Claude response)",
+  "posting_id": "a0ffbca7-3613-498a-9f7b-c8dc13858184",
+  "prompt_file": "prompts/judge_v1.md",
+  "prompt_sha256": "d19f649d81e38b8c5d6173bebc7a49e54c21e02a5f131778928c198aa1662fb9",
+  "cmd": [
+    "claude",
+    "-p",
+    "--no-session-persistence",
+    "--session-id",
+    "202314fe-af8f-4818-a018-0d9345017718",
+    "--output-format",
+    "json",
+    "--tools",
+    "",
+    "--strict-mcp-config"
+  ],
+  "returncode": 0,
+  "stdout": "{\"duration_api_ms\":3478,\"stop_reason\":\"end_turn\",\"session_id\":\"202314fe-af8f-4818-a018-0d9345017718\",\"total_cost_usd\":0.0586978,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":6300,\"cache_read_input_tokens\":649,\"output_tokens\":408,\"output_tokens_details\":{\"thinking_tokens\":0},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":6300,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":408,\"cache_read_input_tokens\":649,\"cache_creation_input_tokens\":6300,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":6300},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":408,\"cacheReadInputTokens\":649,\"cacheCreationInputTokens\":6300,\"webSearchRequests\":0,\"costUSD\":0.0586978,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":0,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":6300,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"posting_id\\\": \\\"a0ffbca7-3613-498a-9f7b-c8dc13858184\\\", \\\"verdict\\\": \\\"not_relevant\\\", \\\"citations\\\": [{\\\"resume_field\\\": \\\"target.soc_title\\\", \\\"resume_value\\\": \\\"Computer Network Architects\\\", \\\"posting_field\\\": \\\"text\\\", \\\"posting_value\\\": \\\"Manager, Manufacturing Systems\\\"}, {\\\"resume_field\\\": \\\"target.title_terms\\\", \\\"resume_value\\\": \\\"network engineer\\\", \\\"posting_field\\\": \\\"categories.team\\\", \\\"posting_value\\\": \\\"Manufacturing Engineering\\\"}, {\\\"resume_field\\\": \\\"skills.networking\\\", \\\"resume_value\\\": \\\"routing\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Manufacturing Execution Systems, SCADA systems, and Line control systems such as PLCs\\\"}, {\\\"resume_field\\\": \\\"skills.vendors\\\", \\\"resume_value\\\": \\\"Cisco\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"SAP ME/Mii/PCo, Inductive Automation Ignition SCADA system, Kepware OPC, Siemens PLCs\\\"}, {\\\"resume_field\\\": \\\"skills.automation\\\", \\\"resume_value\\\": \\\"Ansible\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"15+ years of experience in manufacturing environments\\\"}]}\",\"ttft_ms\":4013,\"type\":\"result\",\"duration_ms\":4075,\"uuid\":\"f2b8e9a6-b6fc-46b5-8554-62e5b7d3c748\",\"ttft_stream_ms\":1377,\"time_to_request_ms\":576,\"first_content_frame_ms\":1378,\"queued_turn_count\":0,\"result_index\":0}\n",
+  "stderr": ""
+}

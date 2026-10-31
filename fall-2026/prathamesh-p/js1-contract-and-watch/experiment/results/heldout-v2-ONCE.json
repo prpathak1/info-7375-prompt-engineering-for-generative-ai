@@ -1,0 +1,175 @@
+{
+  "label": "judgment (Claude responses; not fact)",
+  "prompt": "prompts/judge_v2.md",
+  "prompt_sha256": "99ff01260298a4d32e1392c0688ef6aa600fd6e8f2855f6bf3bc652752a245f7",
+  "split": "held_out",
+  "ids": [
+    "8af192a0-9ee4-45de-a241-f373cb2ef71c",
+    "082ed20c-b8e1-4b1c-9c22-4738ad94055d",
+    "7522162e-a518-444e-8fe7-49b8b45bbdd3",
+    "bf983498-1063-4c02-8ea6-8f037c2b0c56",
+    "e6a4bbe1-20ab-4f1f-af07-f06fabedeabd",
+    "a76e2e49-4f41-40d6-9bda-b15c24d7590b",
+    "79d97b0a-3c16-4cb9-8a0d-0386836f25d1",
+    "65ffe656-2b91-46d3-9223-cb6c88441b45",
+    "896f37b9-80b7-4077-a937-e499151ce5f2",
+    "6320b978-abf4-483b-a09f-bfba0c44c485"
+  ],
+  "repeats": 1,
+  "started_at": "2026-10-31T14:23:54-0400",
+  "finished_at": "2026-10-31T14:24:11-0400",
+  "calls": [
+    {
+      "posting_id": "8af192a0-9ee4-45de-a241-f373cb2ef71c",
+      "title": "Director, Corporate Security",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "a5de6157-5a6f-4ddb-b020-2346a12b1284",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:23:54-0400",
+      "finished_at": "2026-10-31T14:23:59-0400",
+      "raw_response_file": "experiment/raw-judgments/heldout-v2/20261031T142359-8af192a0-9ee4-45de-a241-f373cb2ef71c-a5de6157-5a6f-4ddb-b020-2346a12b1284.json",
+      "errors": []
+    },
+    {
+      "posting_id": "082ed20c-b8e1-4b1c-9c22-4738ad94055d",
+      "title": "Embedded Software Engineer - Battery Management Systems",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "561c69c7-4d41-40c2-9974-3d7201e2faea",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:23:54-0400",
+      "finished_at": "2026-10-31T14:23:59-0400",
+      "raw_response_file": "experiment/raw-judgments/heldout-v2/20261031T142359-082ed20c-b8e1-4b1c-9c22-4738ad94055d-561c69c7-4d41-40c2-9974-3d7201e2faea.json",
+      "errors": []
+    },
+    {
+      "posting_id": "7522162e-a518-444e-8fe7-49b8b45bbdd3",
+      "title": "Embedded Software Engineer, Wireless Technologies",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "f03ff854-6875-404a-96bb-286e21789371",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:23:54-0400",
+      "finished_at": "2026-10-31T14:24:00-0400",
+      "raw_response_file": "experiment/raw-judgments/heldout-v2/20261031T142400-7522162e-a518-444e-8fe7-49b8b45bbdd3-f03ff854-6875-404a-96bb-286e21789371.json",
+      "errors": []
+    },
+    {
+      "posting_id": "bf983498-1063-4c02-8ea6-8f037c2b0c56",
+      "title": "Information Security Manager - Identity and Access Management (IAM)",
+      "repeat": 1,
+      "status": "rejected",
+      "verdict": null,
+      "session_id": "51fe9771-aa39-4f25-8890-8e0c8de001fc",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:23:54-0400",
+      "finished_at": "2026-10-31T14:23:59-0400",
+      "raw_response_file": "experiment/raw-judgments/heldout-v2/20261031T142359-bf983498-1063-4c02-8ea6-8f037c2b0c56-51fe9771-aa39-4f25-8890-8e0c8de001fc.json",
+      "errors": [
+        "citation 2: 'Deep understanding of OAuth 2.0, SAML, OIDC, SCIM, Kerberos, and LDAP protocols.' not found in posting 'lists'"
+      ]
+    },
+    {
+      "posting_id": "e6a4bbe1-20ab-4f1f-af07-f06fabedeabd",
+      "title": "Mechatronics Engineer - Closures",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "757c816c-2db6-4258-a7b9-379ce3482691",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:23:59-0400",
+      "finished_at": "2026-10-31T14:24:04-0400",
+      "raw_response_file": "experiment/raw-judgments/heldout-v2/20261031T142404-e6a4bbe1-20ab-4f1f-af07-f06fabedeabd-757c816c-2db6-4258-a7b9-379ce3482691.json",
+      "errors": []
+    },
+    {
+      "posting_id": "a76e2e49-4f41-40d6-9bda-b15c24d7590b",
+      "title": "Senior Inventory Planning Manager",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "3dc460c6-5a59-4ee0-a2bd-72ad8ec668e2",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:23:59-0400",
+      "finished_at": "2026-10-31T14:24:05-0400",
+      "raw_response_file": "experiment/raw-judgments/heldout-v2/20261031T142405-a76e2e49-4f41-40d6-9bda-b15c24d7590b-3dc460c6-5a59-4ee0-a2bd-72ad8ec668e2.json",
+      "errors": []
+    },
+    {
+      "posting_id": "79d97b0a-3c16-4cb9-8a0d-0386836f25d1",
+      "title": "Senior Technical Recruiter, Hardware",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "dd32221f-c230-422d-8e42-10e0426963ae",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:23:59-0400",
+      "finished_at": "2026-10-31T14:24:08-0400",
+      "raw_response_file": "experiment/raw-judgments/heldout-v2/20261031T142408-79d97b0a-3c16-4cb9-8a0d-0386836f25d1-dd32221f-c230-422d-8e42-10e0426963ae.json",
+      "errors": []
+    },
+    {
+      "posting_id": "65ffe656-2b91-46d3-9223-cb6c88441b45",
+      "title": "Senior Vehicle Attributes Engineer",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "e3af0146-df2c-447b-bf23-8dd69302a8c8",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:24:00-0400",
+      "finished_at": "2026-10-31T14:24:05-0400",
+      "raw_response_file": "experiment/raw-judgments/heldout-v2/20261031T142405-65ffe656-2b91-46d3-9223-cb6c88441b45-e3af0146-df2c-447b-bf23-8dd69302a8c8.json",
+      "errors": []
+    },
+    {
+      "posting_id": "896f37b9-80b7-4077-a937-e499151ce5f2",
+      "title": "Software Systems Engineer - Security",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "a893706c-49e5-4a6b-8a7d-f9ab8399d6a8",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:24:04-0400",
+      "finished_at": "2026-10-31T14:24:11-0400",
+      "raw_response_file": "experiment/raw-judgments/heldout-v2/20261031T142411-896f37b9-80b7-4077-a937-e499151ce5f2-a893706c-49e5-4a6b-8a7d-f9ab8399d6a8.json",
+      "errors": []
+    },
+    {
+      "posting_id": "6320b978-abf4-483b-a09f-bfba0c44c485",
+      "title": "Test Infrastructure Engineer",
+      "repeat": 1,
+      "status": "accepted",
+      "verdict": "not_relevant",
+      "session_id": "872f450a-7a8d-488e-8b03-b3d759aa3776",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "requested_at": "2026-10-31T14:24:05-0400",
+      "finished_at": "2026-10-31T14:24:10-0400",
+      "raw_response_file": "experiment/raw-judgments/heldout-v2/20261031T142410-6320b978-abf4-483b-a09f-bfba0c44c485-872f450a-7a8d-488e-8b03-b3d759aa3776.json",
+      "errors": []
+    }
+  ]
+}

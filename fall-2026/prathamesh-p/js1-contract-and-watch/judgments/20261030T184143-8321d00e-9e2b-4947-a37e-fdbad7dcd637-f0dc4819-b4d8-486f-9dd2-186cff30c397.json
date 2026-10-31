@@ -1,0 +1,28 @@
+{
+  "session_id": "f0dc4819-b4d8-486f-9dd2-186cff30c397",
+  "session_id_requested": "f0dc4819-b4d8-486f-9dd2-186cff30c397",
+  "model": [
+    "claude-opus-5-5"
+  ],
+  "requested_at": "2026-10-30T18:41:32-0400",
+  "finished_at": "2026-10-30T18:41:43-0400",
+  "label": "judgment (raw Claude response)",
+  "posting_id": "8321d00e-9e2b-4947-a37e-fdbad7dcd637",
+  "prompt_file": "prompts/judge_v1.md",
+  "prompt_sha256": "736961eec8a613b6c714394be08b7ad8a857a05e0a8fb199e537133f35582256",
+  "cmd": [
+    "claude",
+    "-p",
+    "--no-session-persistence",
+    "--session-id",
+    "f0dc4819-b4d8-486f-9dd2-186cff30c397",
+    "--output-format",
+    "json",
+    "--tools",
+    "",
+    "--strict-mcp-config"
+  ],
+  "returncode": 0,
+  "stdout": "{\"duration_api_ms\":8317,\"stop_reason\":\"end_turn\",\"session_id\":\"f0dc4819-b4d8-486f-9dd2-186cff30c397\",\"total_cost_usd\":0.0689898,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":5874,\"cache_read_input_tokens\":649,\"output_tokens\":1093,\"output_tokens_details\":{\"thinking_tokens\":493},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":5874,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":1093,\"cache_read_input_tokens\":649,\"cache_creation_input_tokens\":5874,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":5874},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":1093,\"cacheReadInputTokens\":649,\"cacheCreationInputTokens\":5874,\"webSearchRequests\":0,\"costUSD\":0.0689898,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":493,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":5874,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"posting_id\\\": \\\"8321d00e-9e2b-4947-a37e-fdbad7dcd637\\\", \\\"verdict\\\": \\\"relevant\\\", \\\"citations\\\": [{\\\"resume_field\\\": \\\"target.title_terms\\\", \\\"resume_value\\\": \\\"network security engineer\\\", \\\"posting_field\\\": \\\"text\\\", \\\"posting_value\\\": \\\"Senior Network Security Engineer\\\"}, {\\\"resume_field\\\": \\\"target.soc_code\\\", \\\"resume_value\\\": \\\"15-1241\\\", \\\"posting_field\\\": \\\"descriptionPlain\\\", \\\"posting_value\\\": \\\"you will design, implement, and operate security controls across Zoox's enterprise, OT networks, and cloud infrastructure\\\"}, {\\\"resume_field\\\": \\\"skills.networking\\\", \\\"resume_value\\\": \\\"BGP\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"TCP/IP, BGP, OSPF, VLAN, 802.1X, TLS/PKI\\\"}, {\\\"resume_field\\\": \\\"skills.vendors\\\", \\\"resume_value\\\": \\\"Palo Alto\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Palo Alto Networks, Fortinet\\\"}, {\\\"resume_field\\\": \\\"skills.security\\\", \\\"resume_value\\\": \\\"network segmentation\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"enforce zero-trust access controls and network segmentation\\\"}, {\\\"resume_field\\\": \\\"skills.automation\\\", \\\"resume_value\\\": \\\"Python\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Terraform, Python, CI/CD, and REST APIs\\\"}, {\\\"resume_field\\\": \\\"certifications\\\", \\\"resume_value\\\": \\\"CCNA (fictional record)\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Certifications: PCNSE, AWS Security Specialty, CCNA\\\"}, {\\\"resume_field\\\": \\\"target.commitment\\\", \\\"resume_value\\\": \\\"full-time\\\", \\\"posting_field\\\": \\\"categories.commitment\\\", \\\"posting_value\\\": \\\"Full-time\\\"}]}\",\"ttft_ms\":5036,\"type\":\"result\",\"duration_ms\":8819,\"uuid\":\"c4a8a1d2-5f20-4fb2-8686-d90e7de48603\",\"ttft_stream_ms\":1156,\"time_to_request_ms\":498,\"first_content_frame_ms\":1156,\"queued_turn_count\":0,\"result_index\":0}\n",
+  "stderr": ""
+}

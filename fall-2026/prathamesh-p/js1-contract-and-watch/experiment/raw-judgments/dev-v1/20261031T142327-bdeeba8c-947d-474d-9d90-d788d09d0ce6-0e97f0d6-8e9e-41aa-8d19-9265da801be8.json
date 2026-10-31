@@ -1,0 +1,28 @@
+{
+  "session_id": "0e97f0d6-8e9e-41aa-8d19-9265da801be8",
+  "session_id_requested": "0e97f0d6-8e9e-41aa-8d19-9265da801be8",
+  "model": [
+    "claude-opus-5-5"
+  ],
+  "requested_at": "2026-10-31T14:23:20-0400",
+  "finished_at": "2026-10-31T14:23:27-0400",
+  "label": "judgment (raw Claude response)",
+  "posting_id": "bdeeba8c-947d-474d-9d90-d788d09d0ce6",
+  "prompt_file": "prompts/judge_v1.md",
+  "prompt_sha256": "9f65ff82647640700292f66f0a9825e8a8c13029a57d8d2112ff26e45cbeac3d",
+  "cmd": [
+    "claude",
+    "-p",
+    "--no-session-persistence",
+    "--session-id",
+    "0e97f0d6-8e9e-41aa-8d19-9265da801be8",
+    "--output-format",
+    "json",
+    "--tools",
+    "",
+    "--strict-mcp-config"
+  ],
+  "returncode": 0,
+  "stdout": "{\"duration_api_ms\":5064,\"stop_reason\":\"end_turn\",\"session_id\":\"0e97f0d6-8e9e-41aa-8d19-9265da801be8\",\"total_cost_usd\":0.0572738,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":5747,\"cache_read_input_tokens\":649,\"output_tokens\":558,\"output_tokens_details\":{\"thinking_tokens\":160},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":5747,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":558,\"cache_read_input_tokens\":649,\"cache_creation_input_tokens\":5747,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":5747},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":558,\"cacheReadInputTokens\":649,\"cacheCreationInputTokens\":5747,\"webSearchRequests\":0,\"costUSD\":0.0572738,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":160,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":5747,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"posting_id\\\": \\\"bdeeba8c-947d-474d-9d90-d788d09d0ce6\\\", \\\"verdict\\\": \\\"not_relevant\\\", \\\"citations\\\": [{\\\"resume_field\\\": \\\"target.soc_title\\\", \\\"resume_value\\\": \\\"Computer Network Architects\\\", \\\"posting_field\\\": \\\"text\\\", \\\"posting_value\\\": \\\"Staff/Senior Staff Software Engineer - Product Security\\\"}, {\\\"resume_field\\\": \\\"target.title_terms\\\", \\\"resume_value\\\": \\\"network security engineer\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Deep expertise in embedded/IoT security, including secure boot, TPM/TEE, cryptographic key management, and hardened firmware/OS design.\\\"}, {\\\"resume_field\\\": \\\"skills.security\\\", \\\"resume_value\\\": \\\"network segmentation\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"10+ years of experience in security engineering, including significant time in an architect, staff, or technical lead capacity.\\\"}, {\\\"resume_field\\\": \\\"skills.networking\\\", \\\"resume_value\\\": \\\"BGP\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Demonstrated experience architecting security for complex, physical/cyber-physical systems (automotive, robotics, aerospace, industrial control, or similar).\\\"}]}\",\"ttft_ms\":2779,\"type\":\"result\",\"duration_ms\":5407,\"uuid\":\"b583dc83-7bd8-4d17-9525-f99b4ccc68e2\",\"ttft_stream_ms\":1506,\"time_to_request_ms\":332,\"first_content_frame_ms\":1506,\"queued_turn_count\":0,\"result_index\":0}\n",
+  "stderr": ""
+}

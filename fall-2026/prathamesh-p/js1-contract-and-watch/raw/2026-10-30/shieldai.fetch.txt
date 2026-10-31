@@ -1,0 +1,7 @@
+board=shieldai
+url=https://api.lever.co/v0/postings/shieldai?mode=json
+fetched_utc=2026-10-30T22:11:42Z
+fetched_local=Fri Oct 30 18:11:42 EDT 2026
+http_status=200
+bytes=10458915
+sha256=3a3a428a6816cef22e4d331fbfe64158eb27d6c65d4b9370ddc4b9bbde3304a1

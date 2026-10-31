@@ -1,0 +1,28 @@
+{
+  "session_id": "3bac5e88-5c65-42d5-89df-e6152112393a",
+  "session_id_requested": "3bac5e88-5c65-42d5-89df-e6152112393a",
+  "model": [
+    "claude-opus-5-5"
+  ],
+  "requested_at": "2026-10-31T13:43:42-0400",
+  "finished_at": "2026-10-31T13:43:48-0400",
+  "label": "judgment (raw Claude response)",
+  "posting_id": "48639085-6179-4a14-94c5-5b5ba027879c",
+  "prompt_file": "prompts/judge_v1.md",
+  "prompt_sha256": "7607d8dce12ac457dfb63770fc0d9829542639f6ecf1d27ef2f123ee1e181fcb",
+  "cmd": [
+    "claude",
+    "-p",
+    "--no-session-persistence",
+    "--session-id",
+    "3bac5e88-5c65-42d5-89df-e6152112393a",
+    "--output-format",
+    "json",
+    "--tools",
+    "",
+    "--strict-mcp-config"
+  ],
+  "returncode": 0,
+  "stdout": "{\"duration_api_ms\":2967,\"stop_reason\":\"end_turn\",\"session_id\":\"3bac5e88-5c65-42d5-89df-e6152112393a\",\"total_cost_usd\":0.0522698,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":5709,\"cache_read_input_tokens\":649,\"output_tokens\":323,\"output_tokens_details\":{\"thinking_tokens\":0},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":5709,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":323,\"cache_read_input_tokens\":649,\"cache_creation_input_tokens\":5709,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":5709},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":323,\"cacheReadInputTokens\":649,\"cacheCreationInputTokens\":5709,\"webSearchRequests\":0,\"costUSD\":0.0522698,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":0,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":5709,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"posting_id\\\": \\\"48639085-6179-4a14-94c5-5b5ba027879c\\\", \\\"verdict\\\": \\\"not_relevant\\\", \\\"citations\\\": [{\\\"resume_field\\\": \\\"target.soc_title\\\", \\\"resume_value\\\": \\\"Computer Network Architects\\\", \\\"posting_field\\\": \\\"text\\\", \\\"posting_value\\\": \\\"Senior Director, Head of Talent Acquisition\\\"}, {\\\"resume_field\\\": \\\"target.title_terms\\\", \\\"resume_value\\\": \\\"network engineer\\\", \\\"posting_field\\\": \\\"categories.team\\\", \\\"posting_value\\\": \\\"Talent\\\"}, {\\\"resume_field\\\": \\\"skills.networking\\\", \\\"resume_value\\\": \\\"BGP\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"15+ years of TA leadership experience\\\"}, {\\\"resume_field\\\": \\\"education.0.degree\\\", \\\"resume_value\\\": \\\"MS, Computer Systems Networking and Telecommunications\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Bachelor’s degree in Human Resources, Business Administration, Organizational Development, or a related field\\\"}]}\",\"ttft_ms\":3344,\"type\":\"result\",\"duration_ms\":3396,\"uuid\":\"b32e1d4b-d3cc-4d90-bfbf-7a6798153fc5\",\"ttft_stream_ms\":1217,\"time_to_request_ms\":415,\"first_content_frame_ms\":1217,\"queued_turn_count\":0,\"result_index\":0}\n",
+  "stderr": ""
+}

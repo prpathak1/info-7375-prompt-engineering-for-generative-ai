@@ -1,0 +1,28 @@
+{
+  "session_id": "a5de6157-5a6f-4ddb-b020-2346a12b1284",
+  "session_id_requested": "a5de6157-5a6f-4ddb-b020-2346a12b1284",
+  "model": [
+    "claude-opus-5-5"
+  ],
+  "requested_at": "2026-10-31T14:23:54-0400",
+  "finished_at": "2026-10-31T14:23:59-0400",
+  "label": "judgment (raw Claude response)",
+  "posting_id": "8af192a0-9ee4-45de-a241-f373cb2ef71c",
+  "prompt_file": "prompts/judge_v2.md",
+  "prompt_sha256": "e868f7359e62dd5fc7d403cc57716eb395b0e51616330413cc9930a8e9170d02",
+  "cmd": [
+    "claude",
+    "-p",
+    "--no-session-persistence",
+    "--session-id",
+    "a5de6157-5a6f-4ddb-b020-2346a12b1284",
+    "--output-format",
+    "json",
+    "--tools",
+    "",
+    "--strict-mcp-config"
+  ],
+  "returncode": 0,
+  "stdout": "{\"duration_api_ms\":3473,\"stop_reason\":\"end_turn\",\"session_id\":\"a5de6157-5a6f-4ddb-b020-2346a12b1284\",\"total_cost_usd\":0.0529098,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":5779,\"cache_read_input_tokens\":649,\"output_tokens\":327,\"output_tokens_details\":{\"thinking_tokens\":0},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":5779,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":327,\"cache_read_input_tokens\":649,\"cache_creation_input_tokens\":5779,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":5779},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":327,\"cacheReadInputTokens\":649,\"cacheCreationInputTokens\":5779,\"webSearchRequests\":0,\"costUSD\":0.0529098,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":0,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":5779,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"posting_id\\\": \\\"8af192a0-9ee4-45de-a241-f373cb2ef71c\\\", \\\"verdict\\\": \\\"not_relevant\\\", \\\"citations\\\": [{\\\"resume_field\\\": \\\"target.soc_title\\\", \\\"resume_value\\\": \\\"Computer Network Architects\\\", \\\"posting_field\\\": \\\"descriptionPlain\\\", \\\"posting_value\\\": \\\"responsible for the development and implementation of physical security programs\\\"}, {\\\"resume_field\\\": \\\"target.title_terms\\\", \\\"resume_value\\\": \\\"network security engineer\\\", \\\"posting_field\\\": \\\"text\\\", \\\"posting_value\\\": \\\"Director, Corporate Security\\\"}, {\\\"resume_field\\\": \\\"skills.networking\\\", \\\"resume_value\\\": \\\"BGP\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"15+ years of progressive experience in corporate security with at least 5 years in a leadership role\\\"}, {\\\"resume_field\\\": \\\"skills.security\\\", \\\"resume_value\\\": \\\"network segmentation\\\", \\\"posting_field\\\": \\\"lists\\\", \\\"posting_value\\\": \\\"Deep knowledge of physical security technologies, operations centers, and systems integration.\\\"}]}\",\"ttft_ms\":3956,\"type\":\"result\",\"duration_ms\":4035,\"uuid\":\"e339b979-cd37-407d-8c4c-37c8b87d4315\",\"ttft_stream_ms\":1845,\"time_to_request_ms\":618,\"first_content_frame_ms\":1845,\"queued_turn_count\":0,\"result_index\":0}\n",
+  "stderr": ""
+}
