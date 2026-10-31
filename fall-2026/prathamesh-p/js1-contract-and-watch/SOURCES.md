@@ -69,7 +69,7 @@
 | 2026-10-31 14:36 | Inserted Prathamesh's ACTION-SURFACES.md (a) text verbatim (checked) | Done |
 | 2026-10-31 14:41 | Corrected the ACTION-SURFACES (a) provenance and revised its paragraph; filled the (a) table (summary); moved NOT-CHECKED items to confirmed; corrected the CONTRACT coarseness example; restructured FRICTIONAL My-take lines and log statuses; wrote README.md | Done |
 | 2026-10-31 14:55 | Ran the write-limit check (not enforced); inserted Prathamesh's writing verbatim (My takes, why column, least autonomy, sign-off, statuses); added NOT-CHECKED item 7; added the BLS citation | Done |
-| 2026-10-31 14:58 | Fixed stale SOURCES statuses and the README header; privacy scan (clean); gitignored shieldai.json; backup commit and push (Prathamesh's instruction) | Done |
+| 2026-10-31 14:58 | Fixed stale SOURCES statuses and the README header; privacy scan (clean); gitignored shieldai.json; backup commit and push (Prathamesh's instruction) | Done || 2026-10-31 15:04 | Pushed backup commit 92d54dd (ls-remote confirmed); real fresh-clone test (deep path failed on length, short path passed 50/50 and the baseline recompute); README note updated | Done; post-commit edits uncommitted || 2026-10-31 15:07 | Final real fetch (identical again) and run 3 against the real state (new=0); README table and claims updated; final commit, push and ZIP (Prathamesh's instruction) | Done |
 ## Claude responses shown in this folder (dated)
 
 | When (EDT) | What | Session | Model | File |

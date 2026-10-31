@@ -518,6 +518,26 @@ My take: For a one-off check of a single posting I've already found. When I past
 
 ---
 
+## F37. Push and real fresh-clone test
+
+- **Pushed (Sat Oct 31 14:59:51 EDT 2026):** `git push fork prathamesh-p-js1-contract-and-watch` created a new remote branch. `git ls-remote fork refs/heads/prathamesh-p-js1-contract-and-watch` returned `92d54ddd1ad2781ee4c0bee17ebb7384f59b3592`, which equals local HEAD.
+- **Fresh clone, attempt 1 (15:01:06 EDT): failed.** Cloning into a scratchpad folder with a 164-character Windows path prefix gave `error: unable to create file ...: Filename too long` for several repository files, including other students' folders. This folder's longest tracked path is 176 characters (`experiment/raw-judgments/...`).
+  `core.longpaths` is not set. Nothing was changed in git config.
+- **Fresh clone, attempt 2 (15:04:18 to 15:04:41 EDT): passed.** Cloning into the new short folder `C:\js1fc` gave 0 errors, at HEAD `92d54dd`. Results: `Ran 50 tests`, `OK`. The baseline recompute gave `baseline=True total=227 new=0 removed=0`, exit 0, and the state sha256 was `54a6a3cd…` (identical to the committed run-1 state).
+  The raw and prompt hashes matched. A first attempt that began with `rm -rf /c/js1fc` was blocked by a Claude Code safety check and did not run. **`C:\js1fc` is left on disk for Prathamesh to delete.**
+- **Changed:** The README fresh-clone note was updated with the real result and a Windows short-path note. **These post-commit edits (README, FRICTIONAL F37, SOURCES) are not committed yet.**
+
+---
+
+## F38. Final real fetch and run 3: still no change
+
+- **Tried (Sat Oct 31 15:06:53 EDT 2026, at Prathamesh's request, earlier than the planned 21:00):** `python -I jobwatch.py fetch --board zoox --raw-dir raw/run3-final`. A distinct directory was used because `raw/2026-10-31/zoox.json` already exists and `fetch` refuses to overwrite. No refused fetch was attempted, so no extra GET was made.
+- **Happened:** HTTP 200 at 15:06:55 EDT. 2,306,248 bytes, sha256 `45a795df…17eeb6`, which is **identical** to the 2026-10-30 and 2026-10-31 13:27 captures. Same ETag `W/"2330c8-heSJ2Bqg0cqPQH6sszfhA2uYSco"`, with a new server Date `Sat, 31 Oct 2026 19:06:53 GMT`.
+- **Run 3 (15:07:03 EDT):** `run --raw raw/run3-final/2026-10-31/zoox.json --state state/seen_ids.json --out runs/2026-10-31-run3-final.json --judge claude` gave `baseline=False total=227 new=0 removed=0`, exit 0. No Claude call was made. The state is unchanged (`54a6a3cd…`) and was copied to `state/seen_ids.after-run3-2026-10-31.json`.
+- **Recorded honestly:** No new postings appeared. Across all three real captures the board did not change, so the watch's new-posting path is shown only by the SEEDED run (F24) and by tests.
+
+---
+
 ## Claude suggestions log
 
 | When | Suggestion | Status (Prathamesh) |

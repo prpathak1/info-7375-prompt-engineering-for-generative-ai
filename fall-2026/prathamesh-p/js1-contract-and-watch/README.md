@@ -12,7 +12,7 @@ Each new posting gets a deterministic **record**, a rule that anyone can recompu
   Tests and the rule run offline.
 - **Network:** only `https://api.lever.co`, for one GET per `fetch`.
 
-Fresh clone (the branch must be pushed first; nothing is committed as of this draft):
+Fresh clone (branch pushed to the fork; backup commit `92d54dd`, 2026-10-31). **On Windows, clone into a short path such as `C:\js1fc`**, because some repository paths exceed the 260-character limit when nested deeply:
 
 ```bash
 git clone https://github.com/prpathak1/info-7375-prompt-engineering-for-generative-ai.git
@@ -33,8 +33,9 @@ python -I experiment/run_judge_batch.py --prompt prompts/judge_v2.md --split dev
 python -I experiment/score.py                                                 # recompute every experiment number
 ```
 
-*What was checked about the fresh-clone path:* on 2026-10-31 at 14:42 EDT, the folder was copied without `__pycache__` and without the ShieldAI raw file, and the 50 tests passed (`OK`) in that copy.
-A real `git clone` of the pushed branch has **not** been run yet.
+*What was checked about the fresh-clone path (real clone, 2026-10-31 15:04 EDT):* `git clone --branch prathamesh-p-js1-contract-and-watch` of the pushed fork into `C:\js1fc` (outside the working repo) checked out at `92d54dd` with 0 errors.
+In that clone, `python -I -m unittest discover -s tests -v` gave **`Ran 50 tests`, `OK`**. The baseline recompute gave **`baseline=True total=227 new=0 removed=0`** (exit 0), and its state file's sha256 was `54a6a3cd…`, **identical** to the committed run-1 state.
+The cloned raw and prompt hashes matched the ones recorded here. A first attempt, cloning into a deep temp folder (a 164-character prefix), failed with "Filename too long" on several repository files (other folders and this folder's 176-character raw-judgment paths), which is why the short-path note above exists.
 
 ## What actually ran: REAL vs SEEDED
 
@@ -44,6 +45,8 @@ A real `git clone` of the pushed branch has **not** been run yet.
 | Run 1 (baseline) | 2026-10-30 18:35:23 | `raw/2026-10-30/zoox.json` | new=0 / 227; state saved (`54a6a3cd…`) | **REAL** |
 | Fetch day 2 | 2026-10-31 13:27:48 | one GET api.lever.co/zoox | HTTP 200, 227 postings, **identical** sha256 and ETag; new server `Date` | **REAL** |
 | Run 2 | 2026-10-31 13:27:58 | `raw/2026-10-31/zoox.json` | new=0, removed=0 (correct on an identical response) | **REAL** |
+| Fetch final | 2026-10-31 15:06:55 | one GET api.lever.co/zoox (saved under `raw/run3-final/` because `raw/2026-10-31/` already existed) | HTTP 200, 227 postings, **identical** sha256 and ETag again; new server `Date` 19:06:53 GMT | **REAL** |
+| Run 3 (final) | 2026-10-31 15:07:03 | `raw/run3-final/2026-10-31/zoox.json` vs the real state, `--judge claude` | new=0, removed=0; no Claude call (nothing new) | **REAL** |
 | SEEDED run 1 | 2026-10-31 13:43:41 | `seeded/SEEDED-earlier-response-zoox-2026-10-30-minus-5.json` (**constructed**: day 1 minus 5 postings) | new=0 / 222 | **SEEDED** |
 | SEEDED run 2 | 2026-10-31 13:43:42–13:44:14 | real `raw/2026-10-31/zoox.json` vs SEEDED state, `--judge claude` | new=5; judgments: 1 accepted, 4 rejected (résumé-path format, pre-fix prompt) | **SEEDED** |
 | Judge smoke test | 2026-10-30 18:41:32–43 | `8321d00e` | accepted, relevant | Claude judgment |
@@ -51,7 +54,7 @@ A real `git clone` of the pushed branch has **not** been run yet.
 | Experiment | 2026-10-31 14:23:09–14:24:11 | dev v1, dev v2, held-out v2 once | 9/10, 10/10, 9/10 (1 rejected) | Claude judgments |
 
 The SEEDED files live only under `seeded/`, every file name starts with `SEEDED-`, and every SEEDED report starts with `"label": "SEEDED"`. They exist because the real board did not change
-between the two days, and they **do not** show a real board change. A final real fetch on 2026-10-31 evening is planned *(not yet run)*.
+between the two days, and they **do not** show a real board change. A final real fetch ran on 2026-10-31 at 15:06:55 EDT (run 3 at 15:07:03). The Zoox board was still byte-identical to 2026-10-30, so run 3 also reported new=0, removed=0. **No real board change was observed across the three captures.**
 
 ## Artifacts
 
@@ -61,8 +64,8 @@ between the two days, and they **do not** show a real board change. A final real
 | Code | [jobwatch.py](jobwatch.py), [experiment/run_judge_batch.py](experiment/run_judge_batch.py), [experiment/score.py](experiment/score.py) |
 | Tests | [tests/test_jobwatch.py](tests/test_jobwatch.py), with hand predictions in [tests/hand_labels.json](tests/hand_labels.json) ([provenance](tests/hand_labels.PROVENANCE.md)) |
 | Fictional résumé | [fixtures/resume.fictional.json](fixtures/resume.fictional.json) |
-| Raw responses | [raw/2026-10-30/](raw/2026-10-30/), [raw/2026-10-31/](raw/2026-10-31/) (body, headers, fetch metadata, SHA-256) |
-| State from both runs | [state/seen_ids.after-run1-2026-10-30.json](state/seen_ids.after-run1-2026-10-30.json), [state/seen_ids.after-run2-2026-10-31.json](state/seen_ids.after-run2-2026-10-31.json) |
+| Raw responses | [raw/2026-10-30/](raw/2026-10-30/), [raw/2026-10-31/](raw/2026-10-31/), [raw/run3-final/2026-10-31/](raw/run3-final/2026-10-31/) (body, headers, fetch metadata, SHA-256) |
+| State from every real run | [after run 1](state/seen_ids.after-run1-2026-10-30.json), [after run 2](state/seen_ids.after-run2-2026-10-31.json), [after run 3](state/seen_ids.after-run3-2026-10-31.json) (all sha256 `54a6a3cd…`) |
 | Run reports | [runs/](runs/), with SEEDED material in [seeded/](seeded/) ([manifest](seeded/SEEDED-MANIFEST.json)) |
 | Judge prompts | [prompts/judge_v1.md](prompts/judge_v1.md), [prompts/judge_v2.md](prompts/judge_v2.md), [prompts/archive/](prompts/archive/), [hashes](prompts/PROMPT-HASHES.md) |
 | Raw Claude responses | [judgments/](judgments/), [seeded/SEEDED-judgments/](seeded/SEEDED-judgments/), [experiment/raw-judgments/](experiment/raw-judgments/) |
@@ -121,7 +124,7 @@ Also not checked: a real `git clone` of the pushed branch, and whether Lever's p
 - Not that the Claude judge is correct. Agreement with the labels is partly Claude against Claude, because the labels were Claude-drafted and human-reviewed.
 - Not that v2 is better than doing nothing. The trivial "always not_relevant" baseline scored 100% on both splits, and the dev improvement rests on one posting.
 - Not that 4-of-4 agreement in sampling means correctness or stable behavior on other postings.
-- Not that the watch detected a real board change. The real day-2 response was identical, and the 5 "new" postings are **SEEDED**.
+- Not that the watch detected a real board change. All three real captures (2026-10-30 18:11, 2026-10-31 13:27 and 15:06) were byte-identical, and the 5 "new" postings are **SEEDED**.
 - Not that any result generalizes beyond Zoox's Lever board, beyond this fictional persona, past 2026-10-31, or to other Claude models or versions.
 - Not that LinkedIn behaves as documented generally. ALTERNATIVES.md (b) is one hands-on look on one date.
 - Not that the agent applies, emails, messages or logs in. There is no such code path, and that absence is all that is claimed.
