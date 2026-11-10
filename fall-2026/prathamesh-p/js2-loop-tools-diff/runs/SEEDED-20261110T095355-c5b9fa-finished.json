@@ -1,0 +1,49 @@
+{
+  "run_id": "SEEDED-20261110T095355-c5b9fa",
+  "label": "SEEDED",
+  "started_at": "2026-11-10T09:53:55-0500",
+  "status": "finished",
+  "exit_code": 0,
+  "budgets": {
+    "boards": 4,
+    "requests": 6,
+    "seconds": 120
+  },
+  "boards": [
+    {
+      "board": "ashby-openai",
+      "platform": "ashby",
+      "url": "https://api.ashbyhq.com/posting-api/job-board/openai",
+      "outcome": "ok_empty",
+      "attempts": 1,
+      "attempt_log": [
+        {
+          "n": 1,
+          "http_status": 200,
+          "final_url": "https://api.ashbyhq.com/posting-api/job-board/openai",
+          "raw_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\raw\\2026-11-10\\ashby-openai.SEEDED-20261110T095355-c5b9fa.a1.json",
+          "fetch_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\raw\\2026-11-10\\ashby-openai.SEEDED-20261110T095355-c5b9fa.a1.fetch.txt",
+          "sha256": "5e344d1d08dfb15bea70e2c6f1a4c37bb6a8e7b5ab23bc824a4f852a05b8b38c",
+          "bytes": 31
+        }
+      ],
+      "posting_count": 0,
+      "new_count": 0,
+      "new_ids": [],
+      "records": [],
+      "previous_state_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\SEEDED\\history\\ashby-openai.before-SEEDED-20261110T095355-c5b9fa.json",
+      "state_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\SEEDED\\ashby-openai.json",
+      "raw_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\raw\\2026-11-10\\ashby-openai.SEEDED-20261110T095355-c5b9fa.a1.json",
+      "baseline": false
+    }
+  ],
+  "escalations": [],
+  "not_attempted": [],
+  "requests_used": 1,
+  "seconds_used": 0.012,
+  "verify_reminder": "verify.py has NOT run. 'finished' only means every board reached a terminal outcome inside budget; it does not mean the result is right (GATE section 1). Run: python -I verify.py <this report>",
+  "trace_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\traces\\SEEDED-20261110T095355-c5b9fa.jsonl",
+  "report_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\runs\\SEEDED-20261110T095355-c5b9fa-finished.json",
+  "refused_repeats": [],
+  "ended_at": "2026-11-10T09:53:55-0500"
+}

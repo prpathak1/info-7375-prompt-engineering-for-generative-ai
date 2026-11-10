@@ -1,0 +1,975 @@
+demo/CLAUDE-DEV-01-loop-tests-red.txt: run by CLAUDE CODE (development run, not Prathamesh), started Tue Nov 10 09:33:08 EST 2026
+623699624385b27468c9e7c2d69cf12431aa888803fb2f45262999801380d406 *tests/test_loop.py
+ls: cannot access 'loop.py': No such file or directory
+ls: cannot access 'adapters.py': No such file or directory
+ls: cannot access 'verify.py': No such file or directory
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+======================================================================
+ERROR: test_A_1_parse_real_saved_raw_counts (test_loop.AdaptersAndState.test_A_1_parse_real_saved_raw_counts)
+EXPECTED: parsing the REAL saved captures raw/2026-11-10/{zoox,cloudflare,openai}.json gives 234, 466 and 826 postings
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 611, in test_A_1_parse_real_saved_raw_counts
+    a = _adapters()
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_A_2_greenhouse_content_unescaped_and_stripped (test_loop.AdaptersAndState.test_A_2_greenhouse_content_unescaped_and_stripped)
+EXPECTED: the Greenhouse content "&lt;p&gt;Run BGP and OSPF.&lt;/p&gt;" becomes descriptionPlain "Run BGP and OSPF." (no tags), and id 101 becomes "101".
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 623, in test_A_2_greenhouse_content_unescaped_and_stripped
+    p = _adapters().parse("greenhouse", GH_BODY)[0]
+        ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_A_3_format_changed (test_loop.AdaptersAndState.test_A_3_format_changed)
+EXPECTED: FormatChanged for non-JSON, for Greenhouse/Ashby bodies without a "jobs" list, for Lever bodies that are not a list,
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 629, in test_A_3_format_changed
+    a = _adapters()
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_A_4_baseline_then_new_ids_with_records (test_loop.AdaptersAndState.test_A_4_baseline_then_new_ids_with_records)
+EXPECTED: run 1 (no state) gives new_count 0 (baseline, as in JS1) and writes state with ids {L1, L2}. Run 2, whose body adds L3
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 641, in test_A_4_baseline_then_new_ids_with_records
+    t = FakeTransport({"lever:zoox": [ok(LEVER_BODY), ok(body2)]})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_A_5_seeded_label_everywhere (test_loop.AdaptersAndState.test_A_5_seeded_label_everywhere)
+EXPECTED: label="SEEDED" puts "SEEDED" in report["label"], at the start of run_id, in the report filename, in every raw filename,
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 659, in test_A_5_seeded_label_everywhere
+    t = FakeTransport({"ashby:openai": [ok(ASHBY_EMPTY)]})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_B_1_constants_match_gate_table (test_loop.Budgets.test_B_1_constants_match_gate_table)
+EXPECTED: the values parsed from the GATE section 2 table (boards 4, requests 6, seconds 120) and the per-request timeout (30 s),
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 274, in test_B_1_constants_match_gate_table
+    lp = _loop()
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 53, in _loop
+    import loop  # noqa: PLC0415   imported per test, so a missing module is reported per test
+    ^^^^^^^^^^^
+ModuleNotFoundError: No module named 'loop'
+
+======================================================================
+ERROR: test_B_2_more_than_max_boards_refused_before_any_request (test_loop.Budgets.test_B_2_more_than_max_boards_refused_before_any_request)
+EXPECTED: five distinct boards (more than 4) give "error", exit 2, with zero transport calls.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 290, in test_B_2_more_than_max_boards_refused_before_any_request
+    r = self.run_loop(boards, t)
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 129, in run_loop
+    lp = _loop()
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 53, in _loop
+    import loop  # noqa: PLC0415   imported per test, so a missing module is reported per test
+    ^^^^^^^^^^^
+ModuleNotFoundError: No module named 'loop'
+
+======================================================================
+ERROR: test_B_3_cli_flag_cannot_raise_a_budget (test_loop.Budgets.test_B_3_cli_flag_cannot_raise_a_budget) (flag='--max-requests')
+EXPECTED: --max-requests 7, --max-boards 5 or --max-seconds 121 (each above GATE) returns 2 with zero transport calls.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 299, in test_B_3_cli_flag_cannot_raise_a_budget
+    rc = _loop().main(["run", "--board", "lever:zoox", flag, val, "--raw-dir", str(self.dirs["raw"]),
+         ~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 53, in _loop
+    import loop  # noqa: PLC0415   imported per test, so a missing module is reported per test
+    ^^^^^^^^^^^
+ModuleNotFoundError: No module named 'loop'
+
+======================================================================
+ERROR: test_B_3_cli_flag_cannot_raise_a_budget (test_loop.Budgets.test_B_3_cli_flag_cannot_raise_a_budget) (flag='--max-boards')
+EXPECTED: --max-requests 7, --max-boards 5 or --max-seconds 121 (each above GATE) returns 2 with zero transport calls.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 299, in test_B_3_cli_flag_cannot_raise_a_budget
+    rc = _loop().main(["run", "--board", "lever:zoox", flag, val, "--raw-dir", str(self.dirs["raw"]),
+         ~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 53, in _loop
+    import loop  # noqa: PLC0415   imported per test, so a missing module is reported per test
+    ^^^^^^^^^^^
+ModuleNotFoundError: No module named 'loop'
+
+======================================================================
+ERROR: test_B_3_cli_flag_cannot_raise_a_budget (test_loop.Budgets.test_B_3_cli_flag_cannot_raise_a_budget) (flag='--max-seconds')
+EXPECTED: --max-requests 7, --max-boards 5 or --max-seconds 121 (each above GATE) returns 2 with zero transport calls.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 299, in test_B_3_cli_flag_cannot_raise_a_budget
+    rc = _loop().main(["run", "--board", "lever:zoox", flag, val, "--raw-dir", str(self.dirs["raw"]),
+         ~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 53, in _loop
+    import loop  # noqa: PLC0415   imported per test, so a missing module is reported per test
+    ^^^^^^^^^^^
+ModuleNotFoundError: No module named 'loop'
+
+======================================================================
+ERROR: test_B_4_cli_flag_can_lower_a_budget (test_loop.Budgets.test_B_4_cli_flag_can_lower_a_budget)
+EXPECTED: --max-requests 1 with two boards gives exit 4 (budget_exhausted) after exactly 1 call.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 307, in test_B_4_cli_flag_can_lower_a_budget
+    t = FakeTransport({"lever:zoox": [ok(LEVER_BODY)], "ashby:openai": [ok(ASHBY_BODY)]})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_B_5_default_boards_are_the_gate_four (test_loop.Budgets.test_B_5_default_boards_are_the_gate_four)
+EXPECTED: with no --board, the CLI uses exactly the GATE D-1 boards plus the D-12 deliberate failure, in this order:
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 317, in test_B_5_default_boards_are_the_gate_four
+    self.assertEqual(_loop().DEFAULT_BOARDS, BOARDS3 + [BAD])
+                     ~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 53, in _loop
+    import loop  # noqa: PLC0415   imported per test, so a missing module is reported per test
+    ^^^^^^^^^^^
+ModuleNotFoundError: No module named 'loop'
+
+======================================================================
+ERROR: test_P_10_format_change_escalates_and_raw_kept_unparsed (test_loop.ErrorPolicy.test_P_10_format_change_escalates_and_raw_kept_unparsed)
+EXPECTED: a 200 non-JSON body gives escalated, 1 call. The raw body is saved (the escalation's evidence file exists, holds
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 450, in test_P_10_format_change_escalates_and_raw_kept_unparsed
+    r, b, t = self.outcome([(200, {}, b"<html>not json</html>")])
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 373, in outcome
+    t = FakeTransport({board: script_items})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_P_11_request_budget_never_exceeded_by_retries (test_loop.ErrorPolicy.test_P_11_request_budget_never_exceeded_by_retries)
+EXPECTED (W5): four boards that each answer 503 twice would want 8 requests. Exactly 6 calls happen, then budget_exhausted/4,
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 463, in test_P_11_request_budget_never_exceeded_by_retries
+    t = FakeTransport({b: [(503, {}, b"x"), (503, {}, b"x")] for b in boards})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_P_12_raw_saved_for_every_attempt_with_hash (test_loop.ErrorPolicy.test_P_12_raw_saved_for_every_attempt_with_hash)
+EXPECTED: each attempt's body is saved under raw_dir/<day>/ with a .fetch.txt holding http_status and a sha256 equal to the
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 471, in test_P_12_raw_saved_for_every_attempt_with_hash
+    r, b, t = self.outcome([(503, {}, b"busy"), ok(LEVER_BODY)])
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 373, in outcome
+    t = FakeTransport({board: script_items})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_P_1_404_no_retry (test_loop.ErrorPolicy.test_P_1_404_no_retry)
+EXPECTED (W5): 404 gives exactly 1 call, outcome failed_http_404, no sleep, run incomplete/3, no invented values.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 379, in test_P_1_404_no_retry
+    r, b, t = self.outcome([(404, {}, b"{}")])
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 373, in outcome
+    t = FakeTransport({board: script_items})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_P_2_410_no_retry (test_loop.ErrorPolicy.test_P_2_410_no_retry)
+EXPECTED: 410 gives exactly 1 call and outcome failed_http_410 (D-3 names outcomes failed_http_<code>).
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 386, in test_P_2_410_no_retry
+    r, b, t = self.outcome([(410, {}, b"{}")])
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 373, in outcome
+    t = FakeTransport({board: script_items})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_P_3_5xx_one_retry_then_fail (test_loop.ErrorPolicy.test_P_3_5xx_one_retry_then_fail) (code=500)
+EXPECTED (W5): for each of 500, 502, 503 and 504, the code repeated twice gives exactly 2 calls, outcome failed_http_<code>,
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 395, in test_P_3_5xx_one_retry_then_fail
+    r, b, t = self.outcome([(code, {}, b"x"), (code, {}, b"x")])
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 373, in outcome
+    t = FakeTransport({board: script_items})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_P_3_5xx_one_retry_then_fail (test_loop.ErrorPolicy.test_P_3_5xx_one_retry_then_fail) (code=502)
+EXPECTED (W5): for each of 500, 502, 503 and 504, the code repeated twice gives exactly 2 calls, outcome failed_http_<code>,
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 395, in test_P_3_5xx_one_retry_then_fail
+    r, b, t = self.outcome([(code, {}, b"x"), (code, {}, b"x")])
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 373, in outcome
+    t = FakeTransport({board: script_items})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_P_3_5xx_one_retry_then_fail (test_loop.ErrorPolicy.test_P_3_5xx_one_retry_then_fail) (code=503)
+EXPECTED (W5): for each of 500, 502, 503 and 504, the code repeated twice gives exactly 2 calls, outcome failed_http_<code>,
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 395, in test_P_3_5xx_one_retry_then_fail
+    r, b, t = self.outcome([(code, {}, b"x"), (code, {}, b"x")])
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 373, in outcome
+    t = FakeTransport({board: script_items})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_P_3_5xx_one_retry_then_fail (test_loop.ErrorPolicy.test_P_3_5xx_one_retry_then_fail) (code=504)
+EXPECTED (W5): for each of 500, 502, 503 and 504, the code repeated twice gives exactly 2 calls, outcome failed_http_<code>,
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 395, in test_P_3_5xx_one_retry_then_fail
+    r, b, t = self.outcome([(code, {}, b"x"), (code, {}, b"x")])
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 373, in outcome
+    t = FakeTransport({board: script_items})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_P_4_503_then_ok_recovers (test_loop.ErrorPolicy.test_P_4_503_then_ok_recovers)
+EXPECTED: 503 followed by 200 gives 2 calls, outcome ok, and run finished/0.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 401, in test_P_4_503_then_ok_recovers
+    r, b, t = self.outcome([(503, {}, b"x"), ok(LEVER_BODY)])
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 373, in outcome
+    t = FakeTransport({board: script_items})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_P_5_429_retry_after_honoured_up_to_10s (test_loop.ErrorPolicy.test_P_5_429_retry_after_honoured_up_to_10s)
+EXPECTED: 429 with Retry-After: 5, then 200, gives a sleep of 5 s and 2 calls. 429 with Retry-After: 30 (>10) gives NO retry,
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 407, in test_P_5_429_retry_after_honoured_up_to_10s
+    r, b, t = self.outcome([(429, {"Retry-After": "5"}, b"x"), ok(LEVER_BODY)])
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 373, in outcome
+    t = FakeTransport({board: script_items})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_P_6_timeout_and_reset_one_retry (test_loop.ErrorPolicy.test_P_6_timeout_and_reset_one_retry)
+EXPECTED: TimeoutError twice gives 2 calls and failed_timeout. ConnectionResetError twice gives 2 calls and failed_network.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 416, in test_P_6_timeout_and_reset_one_retry
+    r, b, t = self.outcome([TimeoutError("t"), TimeoutError("t")])
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 373, in outcome
+    t = FakeTransport({board: script_items})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_P_7_dns_no_retry (test_loop.ErrorPolicy.test_P_7_dns_no_retry)
+EXPECTED: DNSFailure gives exactly 1 call and failed_network.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 426, in test_P_7_dns_no_retry
+    r, b, t = self.outcome([_loop().DNSFailure("no such host")])
+                            ~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 53, in _loop
+    import loop  # noqa: PLC0415   imported per test, so a missing module is reported per test
+    ^^^^^^^^^^^
+ModuleNotFoundError: No module named 'loop'
+
+======================================================================
+ERROR: test_P_8_401_403_escalate_no_retry (test_loop.ErrorPolicy.test_P_8_401_403_escalate_no_retry) (code=401)
+EXPECTED: 401 and 403 each give 1 call, outcome "escalated", and an entry in report["escalations"] naming the board,
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 434, in test_P_8_401_403_escalate_no_retry
+    r, b, t = self.outcome([(code, {}, b"denied")])
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 373, in outcome
+    t = FakeTransport({board: script_items})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_P_8_401_403_escalate_no_retry (test_loop.ErrorPolicy.test_P_8_401_403_escalate_no_retry) (code=403)
+EXPECTED: 401 and 403 each give 1 call, outcome "escalated", and an entry in report["escalations"] naming the board,
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 434, in test_P_8_401_403_escalate_no_retry
+    r, b, t = self.outcome([(code, {}, b"denied")])
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 373, in outcome
+    t = FakeTransport({board: script_items})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_P_9_login_redirect_on_allowed_host_escalates (test_loop.ErrorPolicy.test_P_9_login_redirect_on_allowed_host_escalates)
+EXPECTED: a 200 whose final_url is https://api.lever.co/login gives escalated, 1 call, and no posting_count.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 442, in test_P_9_login_redirect_on_allowed_host_escalates
+    r, b, t = self.outcome([(200, {}, b"<html>login</html>", "https://api.lever.co/login")])
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 373, in outcome
+    t = FakeTransport({board: script_items})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_E1_finished_exit_0_with_required_fields (test_loop.Exits.test_E1_finished_exit_0_with_required_fields)
+EXPECTED: three boards that answer 200 give status "finished", exit_code 0. Each board has outcome "ok", posting_count 2,
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 157, in test_E1_finished_exit_0_with_required_fields
+    t = FakeTransport({"lever:zoox": [ok(LEVER_BODY)], "greenhouse:cloudflare": [ok(GH_BODY)], "ashby:openai": [ok(ASHBY_BODY)]})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_E2_incomplete_exit_3_failed_board_fields_and_state_untouched (test_loop.Exits.test_E2_incomplete_exit_3_failed_board_fields_and_state_untouched)
+EXPECTED: three ok boards plus the deliberate bad board answering 404 give "incomplete", exit 3 (W6: not "finished").
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 178, in test_E2_incomplete_exit_3_failed_board_fields_and_state_untouched
+    t = FakeTransport({"lever:zoox": [ok(LEVER_BODY)], "greenhouse:cloudflare": [ok(GH_BODY)],
+                       "ashby:openai": [ok(ASHBY_BODY)], BAD: [(404, {}, b'{"status":404,"error":"Job not found"}')]})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_E3_budget_exhausted_exit_4_names_budget_value_and_not_attempted (test_loop.Exits.test_E3_budget_exhausted_exit_4_names_budget_value_and_not_attempted)
+EXPECTED: with max_requests=2 and three boards, the third request is not taken. Status "budget_exhausted", exit 4.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 196, in test_E3_budget_exhausted_exit_4_names_budget_value_and_not_attempted
+    t = FakeTransport({"lever:zoox": [ok(LEVER_BODY)], "greenhouse:cloudflare": [ok(GH_BODY)], "ashby:openai": [ok(ASHBY_BODY)]})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_E4_seconds_budget_checked_before_each_request (test_loop.Exits.test_E4_seconds_budget_checked_before_each_request)
+EXPECTED: a fake clock that advances 70 s per request, with max_seconds=120. Request 1 happens at t=0 and request 2 at t=70.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 211, in test_E4_seconds_budget_checked_before_each_request
+    t = FakeTransport({"lever:zoox": [ok(LEVER_BODY)], "greenhouse:cloudflare": [ok(GH_BODY)], "ashby:openai": [ok(ASHBY_BODY)]})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_E5_error_exit_2_off_host_final_url_stops_run_and_lists_written (test_loop.Exits.test_E5_error_exit_2_off_host_final_url_stops_run_and_lists_written)
+EXPECTED: board 1 is ok (its raw and state are written). Board 2's response has final_url https://evil.example/x (an off-host redirect).
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 227, in test_E5_error_exit_2_off_host_final_url_stops_run_and_lists_written
+    t = FakeTransport({"lever:zoox": [ok(LEVER_BODY)], "greenhouse:cloudflare": [(200, {}, GH_BODY, "https://evil.example/x")],
+                       "ashby:openai": [ok(ASHBY_BODY)]})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_E6_error_exit_2_on_unexpected_exception (test_loop.Exits.test_E6_error_exit_2_on_unexpected_exception)
+EXPECTED: a transport raising ValueError("boom") (not a listed error type) gives "error", exit 2, error.type "ValueError",
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 240, in test_E6_error_exit_2_on_unexpected_exception
+    t = FakeTransport({"lever:zoox": [ValueError("boom")]})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_E7_ok_empty_counts_as_finished (test_loop.Exits.test_E7_ok_empty_counts_as_finished)
+EXPECTED: a 200 with zero postings is outcome "ok_empty" with posting_count 0, and the run is "finished", exit 0.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 249, in test_E7_ok_empty_counts_as_finished
+    t = FakeTransport({"ashby:openai": [ok(ASHBY_EMPTY)]})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_E8_cli_prints_one_line_summary_and_returns_exit_code (test_loop.Exits.test_E8_cli_prints_one_line_summary_and_returns_exit_code)
+EXPECTED: loop.main([...]) with an injected transport returns 3 for the 404 case and prints one line containing "status=incomplete".
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 259, in test_E8_cli_prints_one_line_summary_and_returns_exit_code
+    t = FakeTransport({BAD: [(404, {}, b"{}")]})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_H_1_allowed_hosts_exactly_gate (test_loop.Permissions.test_H_1_allowed_hosts_exactly_gate)
+EXPECTED: adapters.ALLOWED_HOSTS == {"api.lever.co", "boards-api.greenhouse.io", "api.ashbyhq.com"}, and the board URLs match GATE D-1.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 486, in test_H_1_allowed_hosts_exactly_gate
+    a = _adapters()
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_H_2_B1_B2_check_url_refusals (test_loop.Permissions.test_H_2_B1_B2_check_url_refusals)
+EXPECTED: HostRefused for example.com (B1), the lookalike api.lever.co.evil.example (B2), http://, userinfo, and port 8443.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 495, in test_H_2_B1_B2_check_url_refusals
+    lp = _loop()
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 53, in _loop
+    import loop  # noqa: PLC0415   imported per test, so a missing module is reported per test
+    ^^^^^^^^^^^
+ModuleNotFoundError: No module named 'loop'
+
+======================================================================
+ERROR: test_H_3_W8_redirect_handler_refuses_off_host_for_all_three (test_loop.Permissions.test_H_3_W8_redirect_handler_refuses_off_host_for_all_three)
+EXPECTED (W8): the real transport's redirect handler (loop._AllowListRedirects) raises HostRefused for a redirect from each
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 507, in test_H_3_W8_redirect_handler_refuses_off_host_for_all_three
+    lp = _loop()
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 53, in _loop
+    import loop  # noqa: PLC0415   imported per test, so a missing module is reported per test
+    ^^^^^^^^^^^
+ModuleNotFoundError: No module named 'loop'
+
+======================================================================
+ERROR: test_H_4_W3_sibling_prefix_dir_refused_before_any_request (test_loop.Permissions.test_H_4_W3_sibling_prefix_dir_refused_before_any_request)
+EXPECTED (W3): state_dir = ROOT/state-evil (a sibling-prefix folder) gives "error", exit 2, with zero calls; the folder is not created.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 516, in test_H_4_W3_sibling_prefix_dir_refused_before_any_request
+    t = FakeTransport({"lever:zoox": [ok(LEVER_BODY)]})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_H_5_W4_junction_raw_dir_refused_before_any_request (test_loop.Permissions.test_H_5_W4_junction_raw_dir_refused_before_any_request)
+EXPECTED (W4): raw_dir = a junction under the sandbox pointing outside ROOT gives "error", exit 2, zero calls, and an empty
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 532, in test_H_5_W4_junction_raw_dir_refused_before_any_request
+    t = FakeTransport({"lever:zoox": [ok(LEVER_BODY)]})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_H_6_B13_static_no_send_paths (test_loop.Permissions.test_H_6_B13_static_no_send_paths)
+EXPECTED (B13): loop.py and adapters.py contain no POST/PUT/PATCH/DELETE method, no Authorization or Cookie header, no smtplib,
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 547, in test_H_6_B13_static_no_send_paths
+    src = (ROOT / name).read_text(encoding="utf-8")
+  File "C:\Program Files\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\loop.py'
+
+======================================================================
+ERROR: test_H_7_reads_go_through_check_read (test_loop.Permissions.test_H_7_reads_go_through_check_read)
+EXPECTED (step-6 follow-up): resume_path = a fictional résumé copied OUTSIDE the project gives "error", exit 2, zero calls,
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 562, in test_H_7_reads_go_through_check_read
+    t = FakeTransport({"lever:zoox": [ok(LEVER_BODY)]})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_H_8_approve_only_exact_path (test_loop.Permissions.test_H_8_approve_only_exact_path)
+EXPECTED (step-6 follow-up; GATE B10/B11 at loop level): with a fixed run_id, the raw path for attempt 1 already exists under
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 573, in test_H_8_approve_only_exact_path
+    lp = _loop()
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 53, in _loop
+    import loop  # noqa: PLC0415   imported per test, so a missing module is reported per test
+    ^^^^^^^^^^^
+ModuleNotFoundError: No module named 'loop'
+
+======================================================================
+ERROR: test_H_9_seeded_folder_is_readable_not_writable (test_loop.Permissions.test_H_9_seeded_folder_is_readable_not_writable)
+EXPECTED (amendment A1): policy.check_read(ROOT/seeded/SEEDED-openai-empty.json) is allowed; check_write on the same path is refused.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 600, in test_H_9_seeded_folder_is_readable_not_writable
+    self.assertEqual(Path(policy.check_read(p)), p.resolve())
+                          ~~~~~~~~~~~~~~~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\policy.py", line 62, in check_read
+    raise PermissionRefused(f"read refused: {path} is not under a readable folder {READ_DIRS} or file {READ_FILES}")
+policy.PermissionRefused: read refused: C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\seeded\SEEDED-openai-empty.json is not under a readable folder ('fixtures', 'raw', 'state', 'prompts') or file ('GATE.md',)
+
+======================================================================
+ERROR: test_R_1_normalize_url (test_loop.RepeatRule.test_R_1_normalize_url)
+EXPECTED: scheme and host lower-cased, default port dropped, query parameters sorted, fragment removed. Every variant below
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 326, in test_R_1_normalize_url
+    lp = _loop()
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 53, in _loop
+    import loop  # noqa: PLC0415   imported per test, so a missing module is reported per test
+    ^^^^^^^^^^^
+ModuleNotFoundError: No module named 'loop'
+
+======================================================================
+ERROR: test_R_2_ledger_refuses_repeat_allows_one_retry (test_loop.RepeatRule.test_R_2_ledger_refuses_repeat_allows_one_retry)
+EXPECTED: permit(GET, u) gives True. A second permit of an equivalent URL without retry gives False, is recorded in .refused and not counted in .sent.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 337, in test_R_2_ledger_refuses_repeat_allows_one_retry
+    lp = _loop()
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 53, in _loop
+    import loop  # noqa: PLC0415   imported per test, so a missing module is reported per test
+    ^^^^^^^^^^^
+ModuleNotFoundError: No module named 'loop'
+
+======================================================================
+ERROR: test_R_3_duplicate_board_collapsed_and_logged (test_loop.RepeatRule.test_R_3_duplicate_board_collapsed_and_logged)
+EXPECTED: boards ["lever:zoox", "LEVER:zoox"] are collapsed to one. There is exactly 1 call and 1 board in the report,
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 350, in test_R_3_duplicate_board_collapsed_and_logged
+    t = FakeTransport({"lever:zoox": [ok(LEVER_BODY)]})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_R_4_trace_has_every_request_and_outcome (test_loop.RepeatRule.test_R_4_trace_has_every_request_and_outcome)
+EXPECTED: the trace (traces/<run_id>.jsonl, under traces_dir) is JSON lines. The number of "request" observations equals the transport
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 360, in test_R_4_trace_has_every_request_and_outcome
+    t = FakeTransport({"lever:zoox": [(503, {}, b"busy"), ok(LEVER_BODY)], "ashby:openai": [ok(ASHBY_BODY)]})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_V_1_static_independence (test_loop.Verify.test_V_1_static_independence)
+EXPECTED: verify.py imports none of jobwatch, loop, adapters or policy.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 681, in test_V_1_static_independence
+    src = (ROOT / "verify.py").read_text(encoding="utf-8")
+  File "C:\Program Files\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\verify.py'
+
+======================================================================
+ERROR: test_V_2_W7_seeded_empty_finished_run_fails (test_loop.Verify.test_V_2_W7_seeded_empty_finished_run_fails)
+EXPECTED (W7): the previous snapshot has 3 openai ids, and the SEEDED day-2 run gets {"jobs": []}. The agent says finished/0
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 690, in test_V_2_W7_seeded_empty_finished_run_fails
+    t = FakeTransport({"ashby:openai": [ok(ASHBY_EMPTY)]})
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_V_3_honest_run_passes (test_loop.Verify.test_V_3_honest_run_passes)
+EXPECTED: previous snapshot {a-1, a-2} and today's body {a-1, a-2} give finished, and verify.py exits 0 with "PASS".
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 702, in test_V_3_honest_run_passes
+    r = self.run_loop(["ashby:openai"], FakeTransport({"ashby:openai": [ok(ASHBY_BODY)]}))
+                                        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_V_4_report_disagreeing_with_raw_fails (test_loop.Verify.test_V_4_report_disagreeing_with_raw_fails)
+EXPECTED: an honest run whose saved report is then edited (posting_count 2 changed to 5) makes verify.py exit 1 and name "posting_count".
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 709, in test_V_4_report_disagreeing_with_raw_fails
+    r = self.run_loop(["ashby:openai"], FakeTransport({"ashby:openai": [ok(ASHBY_BODY)]}))
+                                        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_V_5_raw_hash_mismatch_fails (test_loop.Verify.test_V_5_raw_hash_mismatch_fails)
+EXPECTED: an honest run whose saved raw body is then altered makes verify.py exit 1 and name "sha256".
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 720, in test_V_5_raw_hash_mismatch_fails
+    r = self.run_loop(["ashby:openai"], FakeTransport({"ashby:openai": [ok(ASHBY_BODY)]}))
+                                        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_V_6_drop_over_50_percent_fails (test_loop.Verify.test_V_6_drop_over_50_percent_fails)
+EXPECTED: a previous snapshot of 5 ids and today's 2 postings (a 60% drop) make verify.py exit 1 and name "50%".
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 730, in test_V_6_drop_over_50_percent_fails
+    r = self.run_loop(["ashby:openai"], FakeTransport({"ashby:openai": [ok(ASHBY_BODY)]}))
+                                        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+======================================================================
+ERROR: test_V_7_invented_value_on_failed_board_fails (test_loop.Verify.test_V_7_invented_value_on_failed_board_fails)
+EXPECTED: a 404 run whose report is edited to give the failed board a posting_count makes verify.py exit 1 and name "invented".
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 737, in test_V_7_invented_value_on_failed_board_fails
+    r = self.run_loop([BAD], FakeTransport({BAD: [(404, {}, b"{}")]}))
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 90, in __init__
+    self.script = {url(b): list(v) for b, v in script.items()}
+                   ~~~^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 83, in url
+    return _adapters().board_url(platform, slug)
+           ~~~~~~~~~^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_loop.py", line 58, in _adapters
+    import adapters  # noqa: PLC0415
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'adapters'
+
+----------------------------------------------------------------------
+Ran 50 tests in 0.241s
+
+FAILED (errors=56)
+exit_code=1
+ended Tue Nov 10 09:33:09 EST 2026

@@ -101,7 +101,7 @@ The allow-list is checked again on every redirect before it is followed (as in J
 
 | Request | Allowed paths (after full resolution) | Everything else |
 |---|---|---|
-| Read | `fixtures/`, `raw/`, `state/`, `prompts/`, `GATE.md` | refused |
+| Read | `fixtures/`, `raw/`, `state/`, `prompts/`, `GATE.md`; **`seeded/` (read only; amendment A1)** | refused |
 | Write (new file) | `raw/`, `state/`, `runs/`, `traces/` | refused |
 | Write that needs Prathamesh's approval | overwriting or deleting any existing file under `raw/` (evidence); deleting or resetting `state/` | refused unless the run was started with `--approve <exact relative path>` for that path |
 
@@ -174,4 +174,6 @@ Exit 0 means PASS, and 1 means FAIL with the reasons. The README reports the age
 
 ## 10. Amendments
 
-*(none yet. Format: date and time, old → new, reason, "Prathamesh".)*
+*(Format: date and time, old → new, reason, "Prathamesh".)*
+
+- **A1. Tue Nov 10 09:30:10 EST 2026.** §5 Read row: `fixtures/, raw/, state/, prompts/, GATE.md` → the same plus **`seeded/` (read only, not writable)**. Reason: §7 names the fixture `seeded/SEEDED-openai-empty.json`, but the §5 read allow-list did not include `seeded/`, so a policy-checked read of it would be refused. Found by Claude Code before any loop code was written; decision and wording of the change approved by Prathamesh. "Prathamesh"

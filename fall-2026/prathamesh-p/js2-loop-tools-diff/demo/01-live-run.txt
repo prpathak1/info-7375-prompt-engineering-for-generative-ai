@@ -1,0 +1,18 @@
+demo/01-live-run.txt: run by Prathamesh via !, started Tue Nov 10 09:52:31 EST 2026
+Python 3.13.1
+7ba1890d4bb303baa70adbc19bf60a518952ceea775108fee6be761b0e866c7e *loop.py
+a50714fb5f46e8f497186f5f134cfb9453e03e51e537093b4f77f8707517d8c7 *adapters.py
+d7e0a03bfa855a307da3b522ab66c94c17fe503aa21ec68c6b3e8a6044626524 *policy.py
+5fd58d789aa985a8823633a207059c23db1659f9f28b65090cdc43122ef457a5 *verify.py
+b04377ec0d34b812073629603a356db2b698c23e3155196a344ec514c613f862 *jobwatch.py
+[loop] status=incomplete exit=3 boards=4 requests=4/6 seconds=8.757/120 report=C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\runs\20261110T095231-e3cc74-incomplete.json
+  [board] lever-zoox                                    ok               attempts=1 postings=234 new=31
+  [board] greenhouse-cloudflare                         ok               attempts=1 postings=466 new=0
+  [board] ashby-openai                                  ok               attempts=1 postings=826 new=0
+  [board] greenhouse-cloudflare-js2-does-not-exist      failed_http_404  attempts=1 why=HTTP 404: bad board name or removed board; no retry (GATE section 4)
+loop_exit_code=3
+report=runs/20261110T095231-e3cc74-incomplete.json
+verify.py: run 20261110T095231-e3cc74  agent status=incomplete exit=3
+verify.py: PASS (counts recomputed from raw, no suspicious drop, hashes match)
+verify_exit_code=0
+ended Tue Nov 10 09:52:40 EST 2026

@@ -1,0 +1,14 @@
+file=lever-zoox.20261110T095231-e3cc74.a1.json
+board=lever-zoox
+platform=lever
+url=https://api.lever.co/v0/postings/zoox?mode=json
+final_url=https://api.lever.co/v0/postings/zoox?mode=json
+attempt=1
+http_status=200
+bytes=2413171
+sha256=7ebca330474c3b7b288a50691b955770e94e1acefe2846692faca7a20eee425c
+parsed=yes
+fetched_utc=2026-11-10T14:52:38Z
+fetched_local=Tue Nov 10 09:52:38 Eastern Standard Time 2026
+run_id=20261110T095231-e3cc74
+label=None

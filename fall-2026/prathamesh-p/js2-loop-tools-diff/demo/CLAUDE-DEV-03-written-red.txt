@@ -1,0 +1,36 @@
+demo/CLAUDE-DEV-03-written-red.txt: run by CLAUDE CODE (development run, not Prathamesh), BEFORE the fix, started Tue Nov 10 09:48:49 EST 2026
+56679bcf70a4b5b13c20142edda6f8505a8a1c8403caae30caef11e0d6dfa9cc *jobwatch.py
+584dd0dfb93e7b4b8b65134155c72d5f50e1b731d14f855a14e95637c0dec4ef *tests/test_written_reset.py
+test_W_1_two_refusals_after_a_writing_call_each_report_only_their_own_files (test_written_reset.WrittenIsPerCall.test_W_1_two_refusals_after_a_writing_call_each_report_only_their_own_files)
+EXPECTED: call A (a run fully inside state/) writes its out and state files and returns 0. Call B (--out outside) and then call C ... 
+  test_W_1_two_refusals_after_a_writing_call_each_report_only_their_own_files (test_written_reset.WrittenIsPerCall.test_W_1_two_refusals_after_a_writing_call_each_report_only_their_own_files) (call='B')
+EXPECTED: call A (a run fully inside state/) writes its out and state files and returns 0. Call B (--out outside) and then call C ... FAIL
+  test_W_1_two_refusals_after_a_writing_call_each_report_only_their_own_files (test_written_reset.WrittenIsPerCall.test_W_1_two_refusals_after_a_writing_call_each_report_only_their_own_files) (call='C')
+EXPECTED: call A (a run fully inside state/) writes its out and state files and returns 0. Call B (--out outside) and then call C ... FAIL
+
+======================================================================
+FAIL: test_W_1_two_refusals_after_a_writing_call_each_report_only_their_own_files (test_written_reset.WrittenIsPerCall.test_W_1_two_refusals_after_a_writing_call_each_report_only_their_own_files) (call='B')
+EXPECTED: call A (a run fully inside state/) writes its out and state files and returns 0. Call B (--out outside) and then call C
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_written_reset.py", line 65, in test_W_1_two_refusals_after_a_writing_call_each_report_only_their_own_files
+    self.assertIn("files written before the refusal: none", err)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'files written before the refusal: none' not found in "[error] write refused: C:\\Users\\PRATHA~1\\AppData\\Local\\Temp\\js2-written-outside-a76hknev\\b-out.json resolves to C:\\Users\\Prathamesh P\\AppData\\Local\\Temp\\js2-written-outside-a76hknev\\b-out.json, outside the project folder C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\n[error] status=error step=run; files written before the refusal: ['C:\\\\info7375\\\\info-7375-prompt-engineering-for-generative-ai\\\\fall-2026\\\\prathamesh-p\\\\js2-loop-tools-diff\\\\state\\\\_test_tmp_written_43ov3pnw\\\\a-out.json', 'C:\\\\info7375\\\\info-7375-prompt-engineering-for-generative-ai\\\\fall-2026\\\\prathamesh-p\\\\js2-loop-tools-diff\\\\state\\\\_test_tmp_written_43ov3pnw\\\\a-state.json']\n"
+
+======================================================================
+FAIL: test_W_1_two_refusals_after_a_writing_call_each_report_only_their_own_files (test_written_reset.WrittenIsPerCall.test_W_1_two_refusals_after_a_writing_call_each_report_only_their_own_files) (call='C')
+EXPECTED: call A (a run fully inside state/) writes its out and state files and returns 0. Call B (--out outside) and then call C
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_written_reset.py", line 65, in test_W_1_two_refusals_after_a_writing_call_each_report_only_their_own_files
+    self.assertIn("files written before the refusal: none", err)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'files written before the refusal: none' not found in "[error] write refused: C:\\Users\\PRATHA~1\\AppData\\Local\\Temp\\js2-written-outside-a76hknev\\c-state.json resolves to C:\\Users\\Prathamesh P\\AppData\\Local\\Temp\\js2-written-outside-a76hknev\\c-state.json, outside the project folder C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\n[error] status=error step=run; files written before the refusal: ['C:\\\\info7375\\\\info-7375-prompt-engineering-for-generative-ai\\\\fall-2026\\\\prathamesh-p\\\\js2-loop-tools-diff\\\\state\\\\_test_tmp_written_43ov3pnw\\\\a-out.json', 'C:\\\\info7375\\\\info-7375-prompt-engineering-for-generative-ai\\\\fall-2026\\\\prathamesh-p\\\\js2-loop-tools-diff\\\\state\\\\_test_tmp_written_43ov3pnw\\\\a-state.json']\n"
+
+----------------------------------------------------------------------
+Ran 1 test in 0.047s
+
+FAILED (failures=2)
+exit_code=1
+ended Tue Nov 10 09:48:49 EST 2026

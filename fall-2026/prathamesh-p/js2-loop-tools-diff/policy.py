@@ -18,7 +18,7 @@ import os
 from pathlib import Path, PurePosixPath
 
 ROOT = Path(os.path.realpath(Path(__file__).resolve().parent))
-READ_DIRS = ("fixtures", "raw", "state", "prompts")
+READ_DIRS = ("fixtures", "raw", "state", "prompts", "seeded")   # "seeded": read only, GATE amendment A1 (2026-11-10 09:30:10 EST)
 READ_FILES = ("GATE.md",)
 WRITE_DIRS = ("raw", "state", "runs", "traces")
 APPROVAL_DIRS = ("raw",)

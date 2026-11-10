@@ -453,6 +453,7 @@ def run(raw_path, state_path, out_path, resume: dict, judge=None, label=None) ->
 
 # ---------------------------------------------------------------- CLI
 def main(argv=None) -> int:
+    WRITTEN.clear()   # per call, not per process: a refusal reports only this call's own writes (defect in 6dc2abb, FRICTIONAL F34)
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
     f = sub.add_parser("fetch", help="one GET of the board; saves raw evidence")

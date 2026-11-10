@@ -1,0 +1,14 @@
+file=ashby-openai.SEEDED-20261110T095355-c5b9fa.a1.json
+board=ashby-openai
+platform=ashby
+url=https://api.ashbyhq.com/posting-api/job-board/openai
+final_url=https://api.ashbyhq.com/posting-api/job-board/openai
+attempt=1
+http_status=200
+bytes=31
+sha256=5e344d1d08dfb15bea70e2c6f1a4c37bb6a8e7b5ab23bc824a4f852a05b8b38c
+parsed=yes
+fetched_utc=2026-11-10T14:53:55Z
+fetched_local=Tue Nov 10 09:53:55 Eastern Standard Time 2026
+run_id=SEEDED-20261110T095355-c5b9fa
+label=SEEDED

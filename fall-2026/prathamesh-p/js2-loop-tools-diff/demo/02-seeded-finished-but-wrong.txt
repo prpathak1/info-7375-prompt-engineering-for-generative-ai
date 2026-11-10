@@ -1,0 +1,15 @@
+demo/02-seeded-finished-but-wrong.txt: SEEDED demonstration (constructed, NOT a real board response), run by Prathamesh via !, started Tue Nov 10 09:53:54 EST 2026
+5e344d1d08dfb15bea70e2c6f1a4c37bb6a8e7b5ab23bc824a4f852a05b8b38c *seeded/SEEDED-openai-empty.json
+7cdd73d3ac3d40c8adea1f461b5f7aab186d07fab8ac774c53d8bed1b78fbb23 *raw/2026-11-10/openai.json
+[seed-state] SEEDED ashby-openai: 826 ids from C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\raw\2026-11-10\openai.json -> C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\state\SEEDED\ashby-openai.json
+seed_exit_code=0
+[loop] *** SEEDED *** status=finished exit=0 boards=1 requests=1/6 seconds=0.012/120 report=C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\runs\SEEDED-20261110T095355-c5b9fa-finished.json
+  [board] ashby-openai                                  ok_empty         attempts=1 postings=0 new=0
+[loop] finished is not 'correct': run  python -I verify.py C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\runs\SEEDED-20261110T095355-c5b9fa-finished.json
+loop_exit_code=0
+report=runs/SEEDED-20261110T095355-c5b9fa-finished.json
+verify.py [SEEDED]: run SEEDED-20261110T095355-c5b9fa  agent status=finished exit=0
+verify.py [SEEDED]: FAIL (1 reason(s))
+  FAIL  ashby-openai: posting count is 0 but the previous snapshot had 826 ids: an empty board after a non-empty one is treated as an outage or format change, not as 'no new jobs'
+verify_exit_code=1
+ended Tue Nov 10 09:53:55 EST 2026

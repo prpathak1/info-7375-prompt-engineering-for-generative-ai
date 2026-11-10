@@ -1,0 +1,1140 @@
+{
+  "run_id": "20261110T095231-e3cc74",
+  "label": null,
+  "started_at": "2026-11-10T09:52:31-0500",
+  "status": "incomplete",
+  "exit_code": 3,
+  "budgets": {
+    "boards": 4,
+    "requests": 6,
+    "seconds": 120
+  },
+  "boards": [
+    {
+      "board": "lever-zoox",
+      "platform": "lever",
+      "url": "https://api.lever.co/v0/postings/zoox?mode=json",
+      "outcome": "ok",
+      "attempts": 1,
+      "attempt_log": [
+        {
+          "n": 1,
+          "http_status": 200,
+          "final_url": "https://api.lever.co/v0/postings/zoox?mode=json",
+          "raw_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\raw\\2026-11-10\\lever-zoox.20261110T095231-e3cc74.a1.json",
+          "fetch_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\raw\\2026-11-10\\lever-zoox.20261110T095231-e3cc74.a1.fetch.txt",
+          "sha256": "7ebca330474c3b7b288a50691b955770e94e1acefe2846692faca7a20eee425c",
+          "bytes": 2413171
+        }
+      ],
+      "posting_count": 234,
+      "new_count": 31,
+      "new_ids": [
+        "0168ad29-2fd8-4c91-865c-b9fff8aa30c1",
+        "85c6aec7-8da2-445d-9c4d-812365dbce97",
+        "eacbb34f-e823-4827-90bf-bc8044b660b1",
+        "53f5297a-fe30-4e1e-ab1c-96db5b23eded",
+        "0accbf9e-9b09-4733-b495-fb6dce13ba62",
+        "0c32245b-f51d-40d2-8e57-a0be1b744c5b",
+        "8e9a200c-3557-44a4-9f2b-3ad86136118d",
+        "008c7252-edd0-4e72-a79b-0dc021f212d5",
+        "f35b2447-360f-4945-8ae8-16870e8d7558",
+        "2d73563c-8039-4d1b-844c-3953259ba6b1",
+        "8aa27b7f-76b2-4760-9ebb-70a47e7cbbf6",
+        "fbc2a7a6-b916-4f3f-b825-a4b3d5d60852",
+        "affbfa7d-30c5-4639-aa56-2ba138200bd8",
+        "614f35d6-a415-4f44-be38-cb38877df1db",
+        "1f58ca3f-fedd-4156-baff-5fc2c1825112",
+        "62ba74a7-862e-4561-904b-075f3b4c8a7b",
+        "cf38cf65-d821-402d-819b-cb9c89194513",
+        "587518db-01e7-4408-8a1f-683846567483",
+        "d68c5944-5ae5-4371-945f-aecad726c1c7",
+        "1dc3a72e-1461-4c66-b424-252f057809ed",
+        "beeb6f55-0d41-4481-a5d8-18b1f9b6657b",
+        "9e5326f4-d879-465f-8118-4584b1ba6018",
+        "a5483274-c09e-4338-b2e4-cf0b373655d1",
+        "7b20b929-d9a4-4995-a472-16cd4925a877",
+        "88f6cb68-1534-44af-80db-10e43c203520",
+        "8b32157b-ab44-4078-85ea-1d8d7b747a20",
+        "01ff8f1c-eda8-4c45-9cca-b4461d8757d5",
+        "86b340fe-0d63-4f03-9aec-72b958f96c7f",
+        "6f987774-9331-46fa-991a-0e01e0c69282",
+        "a1e4ce53-12b7-440c-b222-c1b598384c31",
+        "80d8492a-0cf3-41d8-b381-5c0014874e59"
+      ],
+      "records": [
+        {
+          "posting_id": "0168ad29-2fd8-4c91-865c-b9fff8aa30c1",
+          "posting_title": "AI Workflows Intern [2027]",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "AI Workflows Intern [2027]"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "85c6aec7-8da2-445d-9c4d-812365dbce97",
+          "posting_title": "Data Science Intern [Summer 2027]",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Data Science Intern [Summer 2027]"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "eacbb34f-e823-4827-90bf-bc8044b660b1",
+          "posting_title": "Financial Analyst, Marketing and Commercial",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Financial Analyst, Marketing and Commercial"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "53f5297a-fe30-4e1e-ab1c-96db5b23eded",
+          "posting_title": "Hardware Engineer Intern, Manufacturing Operations [Summer 2027]",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Hardware Engineer Intern, Manufacturing Operations [Summer 2027]"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "0accbf9e-9b09-4733-b495-fb6dce13ba62",
+          "posting_title": "Hardware Engineer Intern, Vehicle Development [Summer 2027]",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Hardware Engineer Intern, Vehicle Development [Summer 2027]"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "0c32245b-f51d-40d2-8e57-a0be1b744c5b",
+          "posting_title": "Hardware Engineer Intern, Vehicle Systems [Summer 2027]",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Hardware Engineer Intern, Vehicle Systems [Summer 2027]"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "8e9a200c-3557-44a4-9f2b-3ad86136118d",
+          "posting_title": "Hardware Software Integration Engineer",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Hardware Software Integration Engineer"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "008c7252-edd0-4e72-a79b-0dc021f212d5",
+          "posting_title": "Human Resources Generalist",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [
+                  "routing"
+                ],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Human Resources Generalist"
+              },
+              {
+                "resume_field": "skills.networking",
+                "resume_value": "routing",
+                "posting_field": "lists",
+                "posting_value": "routing"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "f35b2447-360f-4945-8ae8-16870e8d7558",
+          "posting_title": "Information Technology & Applications Intern [Summer 2027]",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Information Technology & Applications Intern [Summer 2027]"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "2d73563c-8039-4d1b-844c-3953259ba6b1",
+          "posting_title": "Machine Learning Engineer, 3D Simulation",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Machine Learning Engineer, 3D Simulation"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "8aa27b7f-76b2-4760-9ebb-70a47e7cbbf6",
+          "posting_title": "Operational Strength Attribute Lead, Vehicle Integration",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Operational Strength Attribute Lead, Vehicle Integration"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "fbc2a7a6-b916-4f3f-b825-a4b3d5d60852",
+          "posting_title": "Process Improvement Intern [2027]",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Process Improvement Intern [2027]"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "affbfa7d-30c5-4639-aa56-2ba138200bd8",
+          "posting_title": "Program Manager Intern [Summer 2027]",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Program Manager Intern [Summer 2027]"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "614f35d6-a415-4f44-be38-cb38877df1db",
+          "posting_title": "Safety Reporting Intern [Summer 2027]",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Safety Reporting Intern [Summer 2027]"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "1f58ca3f-fedd-4156-baff-5fc2c1825112",
+          "posting_title": "Second Shift Lead, Senior Logistics Operations Associate",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Second Shift Lead, Senior Logistics Operations Associate"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "62ba74a7-862e-4561-904b-075f3b4c8a7b",
+          "posting_title": "Senior Data Scientist",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Senior Data Scientist"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "cf38cf65-d821-402d-819b-cb9c89194513",
+          "posting_title": "Senior Electrical Harness Engineer",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [
+                  "routing"
+                ],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Senior Electrical Harness Engineer"
+              },
+              {
+                "resume_field": "skills.networking",
+                "resume_value": "routing",
+                "posting_field": "descriptionPlain",
+                "posting_value": "routing"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "587518db-01e7-4408-8a1f-683846567483",
+          "posting_title": "Senior Exterior Designer, Robot Industrial Design",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Senior Exterior Designer, Robot Industrial Design"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "d68c5944-5ae5-4371-945f-aecad726c1c7",
+          "posting_title": "Senior Manager/Director, Cartography",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Senior Manager/Director, Cartography"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "1dc3a72e-1461-4c66-b424-252f057809ed",
+          "posting_title": "Senior/Staff Machine Learning Engineer, 3D Simulation",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Senior/Staff Machine Learning Engineer, 3D Simulation"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "beeb6f55-0d41-4481-a5d8-18b1f9b6657b",
+          "posting_title": "Senior/Staff Software Engineer, Core Connectivity",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Senior/Staff Software Engineer, Core Connectivity"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "9e5326f4-d879-465f-8118-4584b1ba6018",
+          "posting_title": "Senior/Staff Technical Program Manager - Automation & Scaling",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Senior/Staff Technical Program Manager - Automation & Scaling"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "a5483274-c09e-4338-b2e4-cf0b373655d1",
+          "posting_title": "Senior/Staff Technical Program Manager - Process and Tools",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Senior/Staff Technical Program Manager - Process and Tools"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "7b20b929-d9a4-4995-a472-16cd4925a877",
+          "posting_title": "Software Engineer Intern, Autonomy Software [Summer 2027]",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [
+                  "routing"
+                ],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Software Engineer Intern, Autonomy Software [Summer 2027]"
+              },
+              {
+                "resume_field": "skills.networking",
+                "resume_value": "routing",
+                "posting_field": "descriptionPlain",
+                "posting_value": "Routing"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "88f6cb68-1534-44af-80db-10e43c203520",
+          "posting_title": "Software Engineer Intern, Software Platforms & Product [Summer 2027]",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Software Engineer Intern, Software Platforms & Product [Summer 2027]"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "8b32157b-ab44-4078-85ea-1d8d7b747a20",
+          "posting_title": "Software Engineer Intern, Software Systems [Summer 2027]",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Software Engineer Intern, Software Systems [Summer 2027]"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "01ff8f1c-eda8-4c45-9cca-b4461d8757d5",
+          "posting_title": "Staff / Senior Staff Machine Learning Engineer - Collision Avoidance System",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Staff / Senior Staff Machine Learning Engineer - Collision Avoidance System"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "86b340fe-0d63-4f03-9aec-72b958f96c7f",
+          "posting_title": "Staff Chassis Engineer, Steering and Braking Actuation",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Staff Chassis Engineer, Steering and Braking Actuation"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "6f987774-9331-46fa-991a-0e01e0c69282",
+          "posting_title": "Staff Software Engineer - GPU System Software, Onboard Execution",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Staff Software Engineer - GPU System Software, Onboard Execution"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "a1e4ce53-12b7-440c-b222-c1b598384c31",
+          "posting_title": "Strategic Sourcing Manager, Battery",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Strategic Sourcing Manager, Battery"
+              }
+            ]
+          }
+        },
+        {
+          "posting_id": "80d8492a-0cf3-41d8-b381-5c0014874e59",
+          "posting_title": "Team Lead, Vehicle Technicians",
+          "record": {
+            "label": "record",
+            "verdict": "not_relevant",
+            "needs_human": false,
+            "reason": "Gate 1 (title) exclude: no 'network' in title",
+            "gate_results": {
+              "title": {
+                "decision": "exclude",
+                "reason": "no 'network' in title"
+              },
+              "authorization": {
+                "hits": []
+              },
+              "skills": {
+                "matched": [],
+                "threshold": 2
+              }
+            },
+            "citations": [
+              {
+                "resume_field": "target.soc_code",
+                "resume_value": "15-1241",
+                "posting_field": "text",
+                "posting_value": "Team Lead, Vehicle Technicians"
+              }
+            ]
+          }
+        }
+      ],
+      "previous_state_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\history\\lever-zoox.before-20261110T095231-e3cc74.json",
+      "state_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\lever-zoox.json",
+      "raw_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\raw\\2026-11-10\\lever-zoox.20261110T095231-e3cc74.a1.json",
+      "baseline": false
+    },
+    {
+      "board": "greenhouse-cloudflare",
+      "platform": "greenhouse",
+      "url": "https://boards-api.greenhouse.io/v1/boards/cloudflare/jobs?content=true",
+      "outcome": "ok",
+      "attempts": 1,
+      "attempt_log": [
+        {
+          "n": 1,
+          "http_status": 200,
+          "final_url": "https://boards-api.greenhouse.io/v1/boards/cloudflare/jobs?content=true",
+          "raw_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\raw\\2026-11-10\\greenhouse-cloudflare.20261110T095231-e3cc74.a1.json",
+          "fetch_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\raw\\2026-11-10\\greenhouse-cloudflare.20261110T095231-e3cc74.a1.fetch.txt",
+          "sha256": "7580b6b6ed9d778d8578a38880c6a1fdb01d33032aa247d1a8af602b2aa8f935",
+          "bytes": 8268528
+        }
+      ],
+      "posting_count": 466,
+      "new_count": 0,
+      "new_ids": [],
+      "records": [],
+      "previous_state_file": null,
+      "state_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\greenhouse-cloudflare.json",
+      "raw_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\raw\\2026-11-10\\greenhouse-cloudflare.20261110T095231-e3cc74.a1.json",
+      "baseline": true
+    },
+    {
+      "board": "ashby-openai",
+      "platform": "ashby",
+      "url": "https://api.ashbyhq.com/posting-api/job-board/openai",
+      "outcome": "ok",
+      "attempts": 1,
+      "attempt_log": [
+        {
+          "n": 1,
+          "http_status": 200,
+          "final_url": "https://api.ashbyhq.com/posting-api/job-board/openai",
+          "raw_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\raw\\2026-11-10\\ashby-openai.20261110T095231-e3cc74.a1.json",
+          "fetch_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\raw\\2026-11-10\\ashby-openai.20261110T095231-e3cc74.a1.fetch.txt",
+          "sha256": "e6ddec2b9c0b3b3827fb29a78e3dd573f7485005fed37596364134e24da2c800",
+          "bytes": 13794985
+        }
+      ],
+      "posting_count": 826,
+      "new_count": 0,
+      "new_ids": [],
+      "records": [],
+      "previous_state_file": null,
+      "state_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\ashby-openai.json",
+      "raw_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\raw\\2026-11-10\\ashby-openai.20261110T095231-e3cc74.a1.json",
+      "baseline": true
+    },
+    {
+      "board": "greenhouse-cloudflare-js2-does-not-exist",
+      "platform": "greenhouse",
+      "url": "https://boards-api.greenhouse.io/v1/boards/cloudflare-js2-does-not-exist/jobs?content=true",
+      "outcome": "failed_http_404",
+      "attempts": 1,
+      "attempt_log": [
+        {
+          "n": 1,
+          "http_status": 404,
+          "final_url": "https://boards-api.greenhouse.io/v1/boards/cloudflare-js2-does-not-exist/jobs?content=true",
+          "raw_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\raw\\2026-11-10\\greenhouse-cloudflare-js2-does-not-exist.20261110T095231-e3cc74.a1.body",
+          "fetch_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\raw\\2026-11-10\\greenhouse-cloudflare-js2-does-not-exist.20261110T095231-e3cc74.a1.fetch.txt",
+          "sha256": "76fe0d64c21edde1aa258ae01c07a04323d95ab31b21822348d9e3f1f400dffe",
+          "bytes": 38
+        }
+      ],
+      "error_type": "http_404",
+      "why_stopped": "HTTP 404: bad board name or removed board; no retry (GATE section 4)",
+      "http_status": 404
+    }
+  ],
+  "escalations": [],
+  "not_attempted": [],
+  "requests_used": 4,
+  "seconds_used": 8.757,
+  "verify_reminder": "verify.py has NOT run. 'finished' only means every board reached a terminal outcome inside budget; it does not mean the result is right (GATE section 1). Run: python -I verify.py <this report>",
+  "trace_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\traces\\20261110T095231-e3cc74.jsonl",
+  "report_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\runs\\20261110T095231-e3cc74-incomplete.json",
+  "refused_repeats": [],
+  "ended_at": "2026-11-10T09:52:40-0500"
+}
