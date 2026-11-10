@@ -1,0 +1,10 @@
+board=openai
+platform=ashby
+url=https://api.ashbyhq.com/posting-api/job-board/openai
+start_utc=2026-11-10T13:07:16Z
+start_local=Tue Nov 10 08:07:16 EST 2026
+end_utc=2026-11-10T13:07:17Z
+end_local=Tue Nov 10 08:07:17 EST 2026
+curl_result=200 13794881 https://api.ashbyhq.com/posting-api/job-board/openai 0 rc=0
+sha256=7cdd73d3ac3d40c8adea1f461b5f7aab186d07fab8ac774c53d8bed1b78fbb23
+method=GET (single request, curl, no retry, no auth)

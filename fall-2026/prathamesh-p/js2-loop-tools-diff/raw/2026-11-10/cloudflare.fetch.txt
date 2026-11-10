@@ -1,0 +1,10 @@
+board=cloudflare
+platform=greenhouse
+url=https://boards-api.greenhouse.io/v1/boards/cloudflare/jobs?content=true
+start_utc=2026-11-10T13:07:15Z
+start_local=Tue Nov 10 08:07:15 EST 2026
+end_utc=2026-11-10T13:07:15Z
+end_local=Tue Nov 10 08:07:16 EST 2026
+curl_result=200 8275126 https://boards-api.greenhouse.io/v1/boards/cloudflare/jobs?content=true 0 rc=0
+sha256=6c092ea57d1ba6d34a76619c93744bad93e1bc740bf7fdc2456261c8d0e3302b
+method=GET (single request, curl, no retry, no auth)

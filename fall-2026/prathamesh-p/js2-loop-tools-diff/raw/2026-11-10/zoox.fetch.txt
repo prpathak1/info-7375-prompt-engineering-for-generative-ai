@@ -1,0 +1,10 @@
+board=zoox
+platform=lever
+url=https://api.lever.co/v0/postings/zoox?mode=json
+start_utc=2026-11-10T13:07:13Z
+start_local=Tue Nov 10 08:07:13 EST 2026
+end_utc=2026-11-10T13:07:15Z
+end_local=Tue Nov 10 08:07:15 EST 2026
+curl_result=200 2413171 https://api.lever.co/v0/postings/zoox?mode=json 0 rc=0
+sha256=7ebca330474c3b7b288a50691b955770e94e1acefe2846692faca7a20eee425c
+method=GET (single request, curl, no retry, no auth)

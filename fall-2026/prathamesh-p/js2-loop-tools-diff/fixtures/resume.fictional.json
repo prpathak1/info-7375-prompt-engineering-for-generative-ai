@@ -1,0 +1,78 @@
+{
+  "_comment": "FICTIONAL EXAMPLE PERSONA - safe to commit. Invented for INFO 7375 JS1. Format follows the-reallocation-engine search/examples/*/resume.example.json, plus the visa/target/constraints fields from search/examples/priya-nair/profile.yml. No real person, employer record, or contact.",
+  "fictional": true,
+  "attested": false,
+  "attestation_note": "Constructed example data; nothing here is attested by anyone.",
+  "personal": {
+    "name": "Tanvi Kulkarni (fictional)",
+    "location": "Boston, MA",
+    "phone": "(617) 555-0192",
+    "email": "tanvi.kulkarni@example.com",
+    "linkedin": "linkedin.com/in/tanvikulkarni-example",
+    "github": "github.com/tanvikulkarni-example"
+  },
+  "visa": {
+    "type": "F-1",
+    "current_status": "F-1, STEM OPT eligible after graduation",
+    "needs_sponsorship": true,
+    "us_person_for_itar": false,
+    "holds_security_clearance": false
+  },
+  "target": {
+    "soc_code": "15-1241",
+    "soc_title": "Computer Network Architects",
+    "title_terms": ["network engineer", "network architect", "network administrator", "network security engineer", "network infrastructure"],
+    "commitment": "full-time"
+  },
+  "constraints": {
+    "excluded": [
+      "roles requiring U.S. citizenship",
+      "roles requiring an active or obtainable security clearance",
+      "roles restricted to U.S. persons under ITAR/EAR export control"
+    ],
+    "open_to_relocation": true
+  },
+  "education": [
+    {
+      "institution": "Northeastern University",
+      "location": "Boston, MA",
+      "degree": "MS, Computer Systems Networking and Telecommunications",
+      "start_date": "2025-09",
+      "end_date": "2027-05",
+      "status": "in_progress",
+      "coursework": ["Network Structures and Cloud Computing", "Network Security", "Software-Defined Networking"]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Example Telecom Pvt. Ltd. (fictional)",
+      "location": "Pune, India",
+      "title": "Network Engineer",
+      "start_date": "2022-07",
+      "end_date": "2025-07",
+      "bullets": [
+        "Operated a multi-site BGP and OSPF campus/WAN backbone of roughly 40 routers.",
+        "Migrated branch firewalls to a centralized policy model and wrote Ansible playbooks for config backup."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "lab-netbox-sync",
+      "start_date": "2026-01",
+      "end_date": "2026-04",
+      "type": "course project",
+      "team_size": "solo",
+      "bullets": ["Python script that reconciles NetBox inventory against live device configs in a GNS3 lab."]
+    }
+  ],
+  "skills": {
+    "networking": ["BGP", "OSPF", "TCP/IP", "VLAN", "VPN", "DNS", "firewall", "routing", "switching", "load balancing"],
+    "security": ["IDS/IPS", "zero trust", "network segmentation"],
+    "automation": ["Python", "Ansible", "NetBox"],
+    "cloud": ["AWS VPC", "Azure"],
+    "vendors": ["Cisco", "Juniper", "Palo Alto"],
+    "familiar_with_not_shipped": ["Terraform", "Kubernetes networking"]
+  },
+  "certifications": ["CCNA (fictional record)"]
+}
