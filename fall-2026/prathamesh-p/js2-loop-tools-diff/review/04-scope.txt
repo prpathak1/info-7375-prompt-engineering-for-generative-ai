@@ -1,0 +1,57 @@
+review/04-scope.txt: gathered by Claude Code on Tue Nov 10 08:52:11 EST 2026, against HEAD b6c78ae (commit 1, test before patch)
+policy.py is marked intent-to-add (git add -N) so that git diff shows it. Nothing is committed.
+(Git's 'CRLF will be replaced by LF' warnings are suppressed here; see FRICTIONAL F16.)
+
+== 1. git diff --stat (code and tests only)
+ .../prathamesh-p/js2-loop-tools-diff/jobwatch.py   | 66 +++++++++++++++---
+ .../prathamesh-p/js2-loop-tools-diff/policy.py     | 80 ++++++++++++++++++++++
+ .../js2-loop-tools-diff/tests/test_jobwatch.py     |  5 +-
+ 3 files changed, 139 insertions(+), 12 deletions(-)
+
+== 2. git diff --stat (whole JS2 folder, including logs)
+ .../prathamesh-p/js2-loop-tools-diff/FRICTIONAL.md | 46 +++++++++++++
+ .../prathamesh-p/js2-loop-tools-diff/jobwatch.py   | 66 +++++++++++++++---
+ .../prathamesh-p/js2-loop-tools-diff/policy.py     | 80 ++++++++++++++++++++++
+ .../js2-loop-tools-diff/tests/test_jobwatch.py     |  5 +-
+ 4 files changed, 185 insertions(+), 12 deletions(-)
+
+== 3. untracked files in the JS2 folder (not part of the patch)
+?? review/03-patch.diff
+?? review/04-scope.txt
+?? review/_probe.txt
+
+== 4. tests/test_policy.py, the step-2 test: diff vs HEAD (expected EMPTY)
+[lines: 0]
+
+== 5. tests/test_jobwatch.py: diff vs HEAD (NOT empty, by Prathamesh's decision F18; expected setUp temp location only)
+diff --git a/fall-2026/prathamesh-p/js2-loop-tools-diff/tests/test_jobwatch.py b/fall-2026/prathamesh-p/js2-loop-tools-diff/tests/test_jobwatch.py
+index d8dfe2f..a4879ad 100644
+--- a/fall-2026/prathamesh-p/js2-loop-tools-diff/tests/test_jobwatch.py
++++ b/fall-2026/prathamesh-p/js2-loop-tools-diff/tests/test_jobwatch.py
+@@ -65 +65,4 @@ class Base(unittest.TestCase):
+-        self.tmp = tempfile.TemporaryDirectory()
++        # JS2 (Prathamesh's decision, 2026-11-10, FRICTIONAL F18): the temp folder is inside the project, under state/, because the
++        # GATE.md section 5 write policy refuses %TEMP%. Only the location changed; no assertion changed.
++        (ROOT / "state").mkdir(exist_ok=True)
++        self.tmp = tempfile.TemporaryDirectory(dir=ROOT / "state", prefix="_test_tmp_")
+[removed or added lines calling self.assert*: 0]
+
+== 6. JS1 folder: diff vs a4f7165, working tree and index (expected EMPTY)
+[lines: 0]
+
+== 7. raw evidence: diff vs HEAD (expected EMPTY), and SHA256SUMS check
+[lines: 0]
+cloudflare.json: OK
+openai.json: OK
+zoox.json: OK
+
+== 8. write call sites remaining in jobwatch.py (each must be inside _write, lines 54-63, or _write_atomic)
+58:    target.parent.mkdir(parents=True, exist_ok=True)
+60:        target.write_bytes(data)
+62:        target.write_text(data, encoding="utf-8")
+130:    with urlopen(req, timeout=60) as resp:
+417:    target.parent.mkdir(parents=True, exist_ok=True)
+418:    tmp.write_text(text, encoding="utf-8")
+419:    os.replace(tmp, target)
+54:def _write(path: Path, data) -> None:
+414:def _write_atomic(path: Path, text: str) -> None:

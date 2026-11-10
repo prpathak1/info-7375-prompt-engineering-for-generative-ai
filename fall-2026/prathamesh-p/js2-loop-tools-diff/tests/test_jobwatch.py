@@ -62,7 +62,10 @@ RELEVANT_DESC = "You will operate our BGP and OSPF backbone and manage firewall 
 class Base(unittest.TestCase):
     def setUp(self):
         self.resume = jobwatch.load_resume(RESUME_PATH)
-        self.tmp = tempfile.TemporaryDirectory()
+        # JS2 (Prathamesh's decision, 2026-11-10, FRICTIONAL F18): the temp folder is inside the project, under state/, because the
+        # GATE.md section 5 write policy refuses %TEMP%. Only the location changed; no assertion changed.
+        (ROOT / "state").mkdir(exist_ok=True)
+        self.tmp = tempfile.TemporaryDirectory(dir=ROOT / "state", prefix="_test_tmp_")
         self.dir = Path(self.tmp.name)
 
     def tearDown(self):
@@ -113,7 +116,10 @@ class AllowList(unittest.TestCase):
             def __enter__(self): return self
             def __exit__(self, *a): return False
 
-        with tempfile.TemporaryDirectory() as d:
+        # JS2 (Prathamesh's decision, 2026-11-10, FRICTIONAL F26): the temp folder is inside the project, under state/, because the step-6 revision
+        # checks the write path before the request, and a %TEMP% folder would be refused before the redirect is reached. Location only; no assertion changed.
+        (ROOT / "state").mkdir(exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=ROOT / "state", prefix="_test_tmp_") as d:
             with self.assertRaises(jobwatch.HostRefused):
                 jobwatch.fetch("zoox", Path(d), urlopen=lambda *a, **k: FakeResp())
             self.assertEqual(list(Path(d).rglob("*")), [], "refused fetch must write no files")

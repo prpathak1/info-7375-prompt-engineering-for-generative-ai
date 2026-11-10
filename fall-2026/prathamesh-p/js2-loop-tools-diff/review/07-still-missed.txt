@@ -1,0 +1,20 @@
+run by Prathamesh via !
+started Tue Nov 10 09:17:59 2026 | ROOT = C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff
+
+== case A: jobwatch._write (plain write, used by fetch and claude_judge)
+victim (outside): C:\Users\PRATHA~1\AppData\Local\Temp\js2-hardlink-victim-pl3v027w\victim-plain.txt
+link   (inside):  C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\state\_demo_hardlink_plain_8b86e12b.json | st_nlink = 2 | same file: True
+policy.check_write(link) -> ALLOWED: C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\state\_demo_hardlink_plain_8b86e12b.json
+victim content now: 'OVERWRITTEN through state/ hard link\n'
+victim changed: True | link still same file as victim: True
+
+== case B: jobwatch._write_atomic (tmp + os.replace, used by run)
+victim (outside): C:\Users\PRATHA~1\AppData\Local\Temp\js2-hardlink-victim-pl3v027w\victim-atomic.txt
+link   (inside):  C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\state\_demo_hardlink_atomic_262515ef.json | st_nlink = 2 | same file: True
+policy.check_write(link) -> ALLOWED: C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\state\_demo_hardlink_atomic_262515ef.json
+victim content now: 'ORIGINAL outside content\n'
+victim changed: False | link still same file as victim: False
+
+cleanup: links removed: True | victim folder removed: True
+ended Tue Nov 10 09:17:59 2026
+exit_code=0

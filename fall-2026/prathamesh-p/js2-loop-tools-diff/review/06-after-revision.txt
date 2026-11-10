@@ -1,0 +1,104 @@
+started Tue Nov 10 09:16:16 EST 2026
+Python 3.13.1
+56679bcf70a4b5b13c20142edda6f8505a8a1c8403caae30caef11e0d6dfa9cc *jobwatch.py
+9a59c17a41c0da04663d3efc2bfb737beb0df1589e491e5b5221d905bb9c5efd *policy.py
+fc917421b62dc3ac3de8d444518d2a9d715b288ddd086de1bd0315d596535a0c *tests/test_policy.py
+99ac0136c83fcc5c4084a55180e5f1ab232e6dfcf2467d16bb44276451db4f45 *tests/test_jobwatch.py
+cfc8535463a98bc7a7faa544af4a593ece750cbd319502a0047bdc82fd2cb928 *tests/test_revision_fetch.py
+test_accepts_lever_https (test_jobwatch.AllowList.test_accepts_lever_https) ... ok
+test_refuses_non_https_and_odd_ports (test_jobwatch.AllowList.test_refuses_non_https_and_odd_ports) ... ok
+test_refuses_off_list_hosts (test_jobwatch.AllowList.test_refuses_off_list_hosts) ... ok
+test_refuses_redirect_off_host_and_writes_nothing (test_jobwatch.AllowList.test_refuses_redirect_off_host_and_writes_nothing) ... ok
+test_source_has_one_get_and_no_send_paths (test_jobwatch.AllowList.test_source_has_one_get_and_no_send_paths) ... ok
+test_each_call_gets_a_new_session_id (test_jobwatch.JudgeHarness.test_each_call_gets_a_new_session_id) ... ok
+test_fenced_output_is_rejected_and_kept_verbatim (test_jobwatch.JudgeHarness.test_fenced_output_is_rejected_and_kept_verbatim) ... ok
+test_fresh_headless_call_and_raw_saved_with_session_id (test_jobwatch.JudgeHarness.test_fresh_headless_call_and_raw_saved_with_session_id) ... ok
+test_prompt_allowed_resume_paths_match_what_validator_resolves (test_jobwatch.JudgeHarness.test_prompt_allowed_resume_paths_match_what_validator_resolves) ... ok
+test_prompt_contract_names_the_fixed_schema (test_jobwatch.JudgeHarness.test_prompt_contract_names_the_fixed_schema) ... ok
+test_accepts_fictional_fixture (test_jobwatch.ResumeLoader.test_accepts_fictional_fixture) ... ok
+test_refuses_non_example_email (test_jobwatch.ResumeLoader.test_refuses_non_example_email) ... ok
+test_refuses_without_fictional_true (test_jobwatch.ResumeLoader.test_refuses_without_fictional_true) ... ok
+test_auth_gate_phrases_make_not_relevant_and_cite_visa (test_jobwatch.Rule.test_auth_gate_phrases_make_not_relevant_and_cite_visa) ... ok
+test_auth_phrase_ear_is_whole_word (test_jobwatch.Rule.test_auth_phrase_ear_is_whole_word) ... ok
+test_auth_phrase_hyphen_is_a_boundary (test_jobwatch.Rule.test_auth_phrase_hyphen_is_a_boundary) ... ok
+test_auth_phrases_all_whole_word (test_jobwatch.Rule.test_auth_phrases_all_whole_word) ... ok
+test_auth_phrases_allow_plural_s (test_jobwatch.Rule.test_auth_phrases_allow_plural_s) ... ok
+test_auth_sponsorship_refusal_phrases (test_jobwatch.Rule.test_auth_sponsorship_refusal_phrases) ... ok
+test_flag_network_without_role_word (test_jobwatch.Rule.test_flag_network_without_role_word) ... ok
+test_flag_software_networking_is_not_relevant_with_needs_human (test_jobwatch.Rule.test_flag_software_networking_is_not_relevant_with_needs_human) ... ok
+test_hand_labels_if_present (test_jobwatch.Rule.test_hand_labels_if_present) ... ok
+test_include_title_with_two_skills_and_no_auth_text_is_relevant (test_jobwatch.Rule.test_include_title_with_two_skills_and_no_auth_text_is_relevant) ... ok
+test_location_is_not_a_criterion (test_jobwatch.Rule.test_location_is_not_a_criterion) ... ok
+test_other_false_friends_and_no_network (test_jobwatch.Rule.test_other_false_friends_and_no_network) ... ok
+test_road_network_tools_is_not_relevant_in_real_day1_data (test_jobwatch.Rule.test_road_network_tools_is_not_relevant_in_real_day1_data) ... ok
+test_road_network_tools_is_not_relevant_synthetic (test_jobwatch.Rule.test_road_network_tools_is_not_relevant_synthetic) ... ok
+test_skills_match_whole_word_case_insensitive_plural_s (test_jobwatch.Rule.test_skills_match_whole_word_case_insensitive_plural_s) ... ok
+test_skills_plural_rule_still_requires_whole_word (test_jobwatch.Rule.test_skills_plural_rule_still_requires_whole_word) ... ok
+test_skills_read_lists_content_with_tags_stripped (test_jobwatch.Rule.test_skills_read_lists_content_with_tags_stripped) ... ok
+test_skills_threshold_is_two (test_jobwatch.Rule.test_skills_threshold_is_two) ... ok
+test_sponsorship_available_is_not_a_hit (test_jobwatch.Rule.test_sponsorship_available_is_not_a_hit) ... ok
+test_verdict_is_two_valued (test_jobwatch.Rule.test_verdict_is_two_valued) ... ok
+test_accepts_good_output_and_labels_it_judgment (test_jobwatch.Validator.test_accepts_good_output_and_labels_it_judgment) ... ok
+test_rejects_off_schema (test_jobwatch.Validator.test_rejects_off_schema) ... ok
+test_rejects_uncited_or_fabricated_justification (test_jobwatch.Validator.test_rejects_uncited_or_fabricated_justification) ... ok
+test_check_citations_catches_fabrication (test_jobwatch.W1UncitedJustification.test_check_citations_catches_fabrication) ... ok
+test_every_record_citation_is_grounded (test_jobwatch.W1UncitedJustification.test_every_record_citation_is_grounded) ... ok
+test_one_skill_posting_cites_exactly_that_one_term (test_jobwatch.W1UncitedJustification.test_one_skill_posting_cites_exactly_that_one_term) ... ok
+test_W2_many_new_postings_each_carry_their_own_verdict (test_jobwatch.Watch.test_W2_many_new_postings_each_carry_their_own_verdict) ... ok
+test_W2_verdict_attached_to_correct_posting (test_jobwatch.Watch.test_W2_verdict_attached_to_correct_posting) ... ok
+test_baseline_on_real_day1_zoox_reports_zero_new (test_jobwatch.Watch.test_baseline_on_real_day1_zoox_reports_zero_new) ... ok
+test_baseline_reports_zero_new_and_saves_state (test_jobwatch.Watch.test_baseline_reports_zero_new_and_saves_state) ... ok
+test_failed_run_leaves_state_untouched (test_jobwatch.Watch.test_failed_run_leaves_state_untouched) ... ok
+test_judgment_never_changes_record (test_jobwatch.Watch.test_judgment_never_changes_record) ... ok
+test_rejected_judgment_is_stored_as_rejected_not_repaired (test_jobwatch.Watch.test_rejected_judgment_is_stored_as_rejected_not_repaired) ... ok
+test_rerun_same_day_reports_zero_new (test_jobwatch.Watch.test_rerun_same_day_reports_zero_new) ... ok
+test_second_run_reports_only_unseen_ids (test_jobwatch.Watch.test_second_run_reports_only_unseen_ids) ... ok
+test_seeded_label_is_carried_in_report (test_jobwatch.Watch.test_seeded_label_is_carried_in_report) ... ok
+test_state_equals_exactly_current_run_ids (test_jobwatch.Watch.test_state_equals_exactly_current_run_ids) ... ok
+test_C1_state_and_out_both_outside (test_policy.CliWritesOutsideProject.test_C1_state_and_out_both_outside)
+EXPECTED: exit 2; stderr contains "refused" and "o.json" (the first write, --out, as in JS1 run()); ... ok
+test_C2_out_outside_state_inside (test_policy.CliWritesOutsideProject.test_C2_out_outside_state_inside)
+EXPECTED: exit 2; stderr names "o.json"; the outside folder stays empty; the inside state file is NOT created ... ok
+test_C3_state_outside_out_inside (test_policy.CliWritesOutsideProject.test_C3_state_outside_out_inside)
+EXPECTED: exit 2; stderr names "s.json"; no file outside. Whether runs/... was written before the refusal is ... ok
+test_C4_control_both_inside_allowed (test_policy.CliWritesOutsideProject.test_C4_control_both_inside_allowed)
+EXPECTED: exit 0, and both files are created under state/ and runs/. This is a control, so that a "refuse everything" ... ok
+test_R1_B7_read_fixture_allowed (test_policy.PolicyReadBoundaries.test_R1_B7_read_fixture_allowed)
+EXPECTED: check_read(fixtures/resume.fictional.json) returns its resolved path (readable, although P7 shows it is not writable). ... ok
+test_R2_read_outside_refused (test_policy.PolicyReadBoundaries.test_R2_read_outside_refused)
+EXPECTED: PermissionRefused for check_read of a real file outside ROOT (a temp file). ... ok
+test_P10_B9_new_file_in_writable_folders_allowed (test_policy.PolicyWriteBoundaries.test_P10_B9_new_file_in_writable_folders_allowed)
+EXPECTED: allowed (returns the path inside ROOT) for a NEW file in each of raw/, state/, runs/, traces/. Nothing is written. ... ok
+test_P1_B3_sibling_prefix_root (test_policy.PolicyWriteBoundaries.test_P1_B3_sibling_prefix_root)
+EXPECTED: PermissionRefused for ../js2-loop-tools-diff-evil/x.json (a string-prefix check would accept it; that is wrong version W3). ... ok
+test_P2_B4_sibling_prefix_folder (test_policy.PolicyWriteBoundaries.test_P2_B4_sibling_prefix_folder)
+EXPECTED: PermissionRefused for ROOT/raw-evil/x.json (it starts with "raw" but is not raw/; W3). ... ok
+test_P3_B6_dotdot_escape (test_policy.PolicyWriteBoundaries.test_P3_B6_dotdot_escape)
+EXPECTED: PermissionRefused for ROOT/raw/../../js1-contract-and-watch/x.json (it resolves into the JS1 folder). ... ok
+test_P4_B12_absolute_outside_temp (test_policy.PolicyWriteBoundaries.test_P4_B12_absolute_outside_temp)
+EXPECTED: PermissionRefused for <%TEMP%>/x.json (absolute, outside the project). ... ok
+test_P5_B12_absolute_outside_system (test_policy.PolicyWriteBoundaries.test_P5_B12_absolute_outside_system)
+EXPECTED: PermissionRefused for C:/Windows/js2-x.txt (or /etc/js2-x.txt on POSIX). The file is never created. ... ok
+test_P6_B5_junction_escape (test_policy.PolicyWriteBoundaries.test_P6_B5_junction_escape)
+EXPECTED: PermissionRefused for ROOT/raw/<junction>/escape.json, where <junction> is an mklink /J pointing to a folder outside ROOT ... ok
+test_P7_B8_inside_project_not_writable (test_policy.PolicyWriteBoundaries.test_P7_B8_inside_project_not_writable)
+EXPECTED: PermissionRefused for fixtures/resume.fictional.json, GATE.md and jobwatch.py (inside ROOT, but not writable). ... ok
+test_P8_B10_overwrite_evidence_needs_approval (test_policy.PolicyWriteBoundaries.test_P8_B10_overwrite_evidence_needs_approval)
+EXPECTED: ApprovalRequired (a subclass of PermissionRefused) for the existing raw/2026-11-10/zoox.json with no approve list. ... ok
+test_P9_B11_overwrite_with_exact_approval (test_policy.PolicyWriteBoundaries.test_P9_B11_overwrite_with_exact_approval)
+EXPECTED: allowed with approve=("raw/2026-11-10/zoox.json",); it returns the resolved path. Approving a DIFFERENT ... ok
+test_V1_library_fetch_outside_raw_dir_makes_zero_requests (test_revision_fetch.FetchChecksPathsBeforeRequest.test_V1_library_fetch_outside_raw_dir_makes_zero_requests)
+EXPECTED: jobwatch.fetch("zoox", <outside>, urlopen=fake) raises policy.PermissionRefused, fake.calls == 0, ... ok
+test_V2_cli_fetch_outside_raw_dir_exit_2_zero_requests (test_revision_fetch.FetchChecksPathsBeforeRequest.test_V2_cli_fetch_outside_raw_dir_exit_2_zero_requests)
+EXPECTED: jobwatch.main(["fetch", "--board", "zoox", "--raw-dir", <outside>]) returns 2, fake.calls == 0, and the outside folder stays empty. ... [error] write refused: C:\Users\PRATHA~1\AppData\Local\Temp\js2-fetch-outside-8eoe2jmk\2026-11-10\zoox.json resolves to C:\Users\Prathamesh P\AppData\Local\Temp\js2-fetch-outside-8eoe2jmk\2026-11-10\zoox.json, outside the project folder C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff
+[error] status=error step=fetch; files written before the refusal: ['C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_9e__0150\\log\\20261110T091616-j3-0559e010-1413-4b8f-a8e9-b050ec417135.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_9e__0150\\log\\20261110T091616-j3-c58d989a-30e7-445e-82ae-5c7521e3c064.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_9e__0150\\log\\20261110T091616-j3-5dd14f74-3509-450e-9f9d-5189cbc0a8fd.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp__fny5k9v\\o1.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp__fny5k9v\\seen_ids.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp__fny5k9v\\judge-log\\20261110T091616-j2-ac7f5fad-613d-4340-9d79-b09b40801c63.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp__fny5k9v\\o2.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp__fny5k9v\\seen_ids.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_rbkh0d0k\\o1.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_rbkh0d0k\\seen_ids.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_rbkh0d0k\\judge-log\\20261110T091616-j1-a7f3f6a6-843b-416e-bb53-f964496caaf5.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_rbkh0d0k\\o2.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_rbkh0d0k\\seen_ids.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_j69yggbw\\o1.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_j69yggbw\\seen_ids.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_j69yggbw\\o2.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_j69yggbw\\seen_ids.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_ggltqo57\\o1.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_ggltqo57\\seen_ids.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_ggltqo57\\o2.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_ggltqo57\\seen_ids.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_0rmfq7mw\\out.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_0rmfq7mw\\seen_ids.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_9o9pn43q\\out1.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_9o9pn43q\\state\\seen_ids.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_g26nwc92\\o1.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_g26nwc92\\seen_ids.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_0ceg3sp9\\o1-relevant.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_0ceg3sp9\\s-relevant.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_0ceg3sp9\\o2-relevant.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_0ceg3sp9\\s-relevant.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_0ceg3sp9\\o1-not_relevant.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_0ceg3sp9\\s-not_relevant.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_0ceg3sp9\\o2-not_relevant.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_0ceg3sp9\\s-not_relevant.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_6tqv2r0z\\o1.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_6tqv2r0z\\seen_ids.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_6tqv2r0z\\o2.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_6tqv2r0z\\seen_ids.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_fqer1nbd\\o1.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_fqer1nbd\\seen_ids.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_fqer1nbd\\o2.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_fqer1nbd\\seen_ids.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_yo03q1uz\\o1.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_yo03q1uz\\seen_ids.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_yo03q1uz\\o2.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_yo03q1uz\\seen_ids.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_gci5dexh\\o1.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_gci5dexh\\s.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_gci5dexh\\o2.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_gci5dexh\\s.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_gci5dexh\\o3.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_gci5dexh\\s3.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_vm7ewhbs\\o1.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_vm7ewhbs\\seen_ids.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_vm7ewhbs\\o2.json', 'C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js2-loop-tools-diff\\state\\_test_tmp_vm7ewhbs\\seen_ids.json']
+ok
+test_V3_control_inside_raw_dir_does_request (test_revision_fetch.FetchChecksPathsBeforeRequest.test_V3_control_inside_raw_dir_does_request)
+EXPECTED: with an INSIDE folder (a temp folder under state/), the checks pass and fake.calls == 1. This is a control, so that a ... ok
+
+----------------------------------------------------------------------
+Ran 69 tests in 1.209s
+
+OK
+suite_exit_code=0
+ended Tue Nov 10 09:16:17 EST 2026

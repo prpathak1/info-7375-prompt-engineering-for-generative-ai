@@ -19,6 +19,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import html
+import importlib.util
 import json
 import os
 import re
@@ -30,6 +31,36 @@ import urllib.parse
 import urllib.request
 import uuid
 from pathlib import Path
+
+
+def _load_policy():
+    """policy.py beside this file. It is loaded by path because `python -I` does not put the script's folder on sys.path.
+    It is registered as module `policy`, so the tests' `import policy` and this module share one set of classes."""
+    here = Path(__file__).resolve().with_name("policy.py")
+    mod = sys.modules.get("policy")
+    if mod is not None and Path(getattr(mod, "__file__", "")).resolve() == here:
+        return mod
+    spec = importlib.util.spec_from_file_location("policy", here)
+    mod = importlib.util.module_from_spec(spec)
+    sys.modules["policy"] = mod
+    spec.loader.exec_module(mod)
+    return mod
+
+
+policy = _load_policy()
+WRITTEN: list[str] = []   # every file this process wrote, in order; reported if a later write is refused (GATE section 1)
+
+
+def _write(path: Path, data) -> None:
+    """The single non-atomic write path. policy.check_write runs first; nothing is created if it refuses.
+    bytes are written unmodified (raw evidence); str is written as UTF-8 text, as JS1 did."""
+    target = policy.check_write(path)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    if isinstance(data, bytes):
+        target.write_bytes(data)
+    else:
+        target.write_text(data, encoding="utf-8")
+    WRITTEN.append(str(target))
 
 ALLOWED_HOST = "api.lever.co"
 BOARD_RE = re.compile(r"^[a-z0-9][a-z0-9-]{0,63}$")
@@ -95,6 +126,10 @@ def fetch(board: str, dest_dir: Path, urlopen=_OPENER.open) -> Path:
     Files are written only after the final URL has passed the allow-list."""
     url = board_url(board)
     check_url(url)
+    day = Path(dest_dir) / time.strftime("%Y-%m-%d")
+    raw = day / f"{board}.json"
+    for target in (raw, day / f"{board}.headers.txt", day / f"{board}.fetch.txt"):
+        policy.check_write(target)            # step-6 revision: all three are checked BEFORE the network request
     req = urllib.request.Request(url, method="GET", headers={"User-Agent": "info7375-js1-watch"})
     with urlopen(req, timeout=60) as resp:
         final = resp.geturl()
@@ -105,20 +140,17 @@ def fetch(board: str, dest_dir: Path, urlopen=_OPENER.open) -> Path:
     if status != 200:
         raise RuntimeError(f"HTTP {status} from {final}")
     json.loads(body)  # must be JSON before anything is written
-    day = Path(dest_dir) / time.strftime("%Y-%m-%d")
-    raw = day / f"{board}.json"
     if raw.exists():
         raise FileExistsError(f"{raw} already exists; refusing to overwrite evidence")
-    day.mkdir(parents=True, exist_ok=True)
-    raw.write_bytes(body)
-    (day / f"{board}.headers.txt").write_text(headers, encoding="utf-8")
+    _write(raw, body)
+    _write(day / f"{board}.headers.txt", headers)
     meta = {
         "board": board, "url": url, "final_url": final,
         "fetched_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "fetched_local": time.strftime("%a %b %d %H:%M:%S %Z %Y"),
         "http_status": status, "bytes": len(body), "sha256": sha256_bytes(body),
     }
-    (day / f"{board}.fetch.txt").write_text("".join(f"{k}={v}\n" for k, v in meta.items()), encoding="utf-8")
+    _write(day / f"{board}.fetch.txt", "".join(f"{k}={v}\n" for k, v in meta.items()))
     return raw
 
 
@@ -342,6 +374,7 @@ def claude_judge(prompt_path, log_dir, runner=subprocess.run, claude_bin="claude
     """Return judge(posting, resume). Each call is a new `claude -p` process with a new session ID, no session
     persistence, no tools, and an empty working directory. The full raw output is saved before validation."""
     prompt_path, log_dir = Path(prompt_path), Path(log_dir)
+    policy.check_write(log_dir / "_write-check")   # refuse an unwritable log folder before any `claude -p` call; nothing is created
     template = prompt_path.read_text(encoding="utf-8")
 
     def judge(posting: dict, resume: dict) -> dict:
@@ -365,13 +398,12 @@ def claude_judge(prompt_path, log_dir, runner=subprocess.run, claude_bin="claude
         meta = {"session_id": env.get("session_id") or session, "session_id_requested": session,
                 "model": sorted(env.get("modelUsage") or {}) or None,
                 "requested_at": requested, "finished_at": finished}
-        log_dir.mkdir(parents=True, exist_ok=True)
         out = log_dir / f"{time.strftime('%Y%m%dT%H%M%S')}-{posting.get('id')}-{session}.json"
-        out.write_text(json.dumps({
+        _write(out, json.dumps({
             **meta, "label": "judgment (raw Claude response)", "posting_id": posting.get("id"),
             "prompt_file": prompt_path.as_posix(), "prompt_sha256": sha256_bytes(prompt.encode("utf-8")),
             "cmd": cmd, "returncode": proc.returncode, "stdout": proc.stdout, "stderr": proc.stderr,
-        }, indent=2, ensure_ascii=False), encoding="utf-8")
+        }, indent=2, ensure_ascii=False))
         meta["raw_response_file"] = out.as_posix()
         return {"text": text, "meta": meta}
 
@@ -380,15 +412,19 @@ def claude_judge(prompt_path, log_dir, runner=subprocess.run, claude_bin="claude
 
 # ---------------------------------------------------------------- the watch (CONTRACT section 6)
 def _write_atomic(path: Path, text: str) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    tmp = path.with_name(path.name + ".tmp")
+    target = policy.check_write(path)
+    tmp = policy.check_write(path.with_name(path.name + ".tmp"))
+    target.parent.mkdir(parents=True, exist_ok=True)
     tmp.write_text(text, encoding="utf-8")
-    os.replace(tmp, path)
+    os.replace(tmp, target)
+    WRITTEN.append(str(target))
 
 
 def run(raw_path, state_path, out_path, resume: dict, judge=None, label=None) -> dict:
     """label (e.g. "SEEDED") is written at the top of the report; real runs carry no label."""
     raw_path, state_path, out_path = Path(raw_path), Path(state_path), Path(out_path)
+    policy.check_write(out_path)       # GATE section 5: both outputs are checked before anything is read or written
+    policy.check_write(state_path)
     raw_bytes = raw_path.read_bytes()
     data = json.loads(raw_bytes)
     if not isinstance(data, list) or not all(isinstance(p, dict) and isinstance(p.get("id"), str) for p in data):
@@ -435,10 +471,18 @@ def main(argv=None) -> int:
     j.add_argument("--resume", default="fixtures/resume.fictional.json")
     for q in (r, j):
         q.add_argument("--prompt", default="prompts/judge_v1.md")
-        q.add_argument("--judge-log", default="judgments")
+        q.add_argument("--judge-log", default="traces/judgments")
         q.add_argument("--model")
     a = ap.parse_args(argv)
+    try:
+        return _dispatch(a)
+    except policy.PermissionRefused as e:
+        print(f"[error] {e}", file=sys.stderr)
+        print(f"[error] status=error step={a.cmd}; files written before the refusal: {WRITTEN or 'none'}", file=sys.stderr)
+        return 2
 
+
+def _dispatch(a) -> int:
     if a.cmd == "fetch":
         path = fetch(a.board, Path(a.raw_dir))
         print(f"[fetch] saved {path}")

@@ -1,0 +1,40 @@
+review/06-revision-red.txt: run by CLAUDE CODE (not Prathamesh), started Tue Nov 10 09:02:59 EST 2026
+Python 3.13.1
+ad2f338825a99c5c3cad43bb52b727fa7cc661ffdb34db99d928b45a9ad63776 *jobwatch.py
+9a59c17a41c0da04663d3efc2bfb737beb0df1589e491e5b5221d905bb9c5efd *policy.py
+cfc8535463a98bc7a7faa544af4a593ece750cbd319502a0047bdc82fd2cb928 *tests/test_revision_fetch.py
+test_V1_library_fetch_outside_raw_dir_makes_zero_requests (test_revision_fetch.FetchChecksPathsBeforeRequest.test_V1_library_fetch_outside_raw_dir_makes_zero_requests)
+EXPECTED: jobwatch.fetch("zoox", <outside>, urlopen=fake) raises policy.PermissionRefused, fake.calls == 0, ... FAIL
+test_V2_cli_fetch_outside_raw_dir_exit_2_zero_requests (test_revision_fetch.FetchChecksPathsBeforeRequest.test_V2_cli_fetch_outside_raw_dir_exit_2_zero_requests)
+EXPECTED: jobwatch.main(["fetch", "--board", "zoox", "--raw-dir", <outside>]) returns 2, fake.calls == 0, and the outside folder stays empty. ... [error] write refused: C:\Users\PRATHA~1\AppData\Local\Temp\js2-fetch-outside-lxqo5h1k\2026-11-10\zoox.json resolves to C:\Users\Prathamesh P\AppData\Local\Temp\js2-fetch-outside-lxqo5h1k\2026-11-10\zoox.json, outside the project folder C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff
+[error] status=error step=fetch; files written before the refusal: none
+FAIL
+test_V3_control_inside_raw_dir_does_request (test_revision_fetch.FetchChecksPathsBeforeRequest.test_V3_control_inside_raw_dir_does_request)
+EXPECTED: with an INSIDE folder (a temp folder under state/), the checks pass and fake.calls == 1. This is a control, so that a ... ok
+
+======================================================================
+FAIL: test_V1_library_fetch_outside_raw_dir_makes_zero_requests (test_revision_fetch.FetchChecksPathsBeforeRequest.test_V1_library_fetch_outside_raw_dir_makes_zero_requests)
+EXPECTED: jobwatch.fetch("zoox", <outside>, urlopen=fake) raises policy.PermissionRefused, fake.calls == 0,
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_revision_fetch.py", line 59, in test_V1_library_fetch_outside_raw_dir_makes_zero_requests
+    self.assertEqual(self.fake.calls, 0, "the permission check must happen before the network request")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : the permission check must happen before the network request
+
+======================================================================
+FAIL: test_V2_cli_fetch_outside_raw_dir_exit_2_zero_requests (test_revision_fetch.FetchChecksPathsBeforeRequest.test_V2_cli_fetch_outside_raw_dir_exit_2_zero_requests)
+EXPECTED: jobwatch.main(["fetch", "--board", "zoox", "--raw-dir", <outside>]) returns 2, fake.calls == 0, and the outside folder stays empty.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_revision_fetch.py", line 74, in test_V2_cli_fetch_outside_raw_dir_exit_2_zero_requests
+    self.assertEqual(self.fake.calls, 0, "the permission check must happen before the network request")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : the permission check must happen before the network request
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.016s
+
+FAILED (failures=2)
+exit_code=1
+ended Tue Nov 10 09:03:00 EST 2026

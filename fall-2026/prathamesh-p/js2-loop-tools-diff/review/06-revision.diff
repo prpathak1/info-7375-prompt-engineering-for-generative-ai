@@ -1,0 +1,154 @@
+review/06-revision.diff: the step-6 revision ONLY, made by Claude Code on Tue Nov 10 09:10:08 EST 2026.
+Base = the patch Prathamesh ran in review/05-my-runs.txt (jobwatch.py ad2f3388..., tests/test_jobwatch.py b146bcb9...), reconstructed in the scratchpad by reversing
+the revision. The reconstructed hashes match those in 05-my-runs.txt exactly. New test file: tests/test_revision_fetch.py (shown in full at the end).
+Revised hashes: 56679bcf70a4b5b13c20142edda6f8505a8a1c8403caae30caef11e0d6dfa9cc *jobwatch.py 99ac0136c83fcc5c4084a55180e5f1ab232e6dfcf2467d16bb44276451db4f45 *tests/test_jobwatch.py cfc8535463a98bc7a7faa544af4a593ece750cbd319502a0047bdc82fd2cb928 *tests/test_revision_fetch.py 
+
+warning: in the working copy of 'C:/Users/PRATHA~1/AppData/Local/Temp/claude/C--info7375/2a2b865a-3a6c-41ce-8c26-e66e92de712f/scratchpad/prerev/jobwatch.py', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'jobwatch.py', CRLF will be replaced by LF the next time Git touches it
+diff --git a/jobwatch.py b/jobwatch.py
+index dc58817..ee8d637 100644
+--- a/jobwatch.py
++++ b/jobwatch.py
+@@ -126,6 +126,10 @@ def fetch(board: str, dest_dir: Path, urlopen=_OPENER.open) -> Path:
+     Files are written only after the final URL has passed the allow-list."""
+     url = board_url(board)
+     check_url(url)
++    day = Path(dest_dir) / time.strftime("%Y-%m-%d")
++    raw = day / f"{board}.json"
++    for target in (raw, day / f"{board}.headers.txt", day / f"{board}.fetch.txt"):
++        policy.check_write(target)            # step-6 revision: all three are checked BEFORE the network request
+     req = urllib.request.Request(url, method="GET", headers={"User-Agent": "info7375-js1-watch"})
+     with urlopen(req, timeout=60) as resp:
+         final = resp.geturl()
+@@ -136,12 +140,8 @@ def fetch(board: str, dest_dir: Path, urlopen=_OPENER.open) -> Path:
+     if status != 200:
+         raise RuntimeError(f"HTTP {status} from {final}")
+     json.loads(body)  # must be JSON before anything is written
+-    day = Path(dest_dir) / time.strftime("%Y-%m-%d")
+-    raw = day / f"{board}.json"
+     if raw.exists():
+         raise FileExistsError(f"{raw} already exists; refusing to overwrite evidence")
+-    for target in (raw, day / f"{board}.headers.txt", day / f"{board}.fetch.txt"):
+-        policy.check_write(target)            # all three are checked before any of them is written
+     _write(raw, body)
+     _write(day / f"{board}.headers.txt", headers)
+     meta = {
+warning: in the working copy of 'C:/Users/PRATHA~1/AppData/Local/Temp/claude/C--info7375/2a2b865a-3a6c-41ce-8c26-e66e92de712f/scratchpad/prerev/test_jobwatch.py', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'tests/test_jobwatch.py', CRLF will be replaced by LF the next time Git touches it
+diff --git a/tests/test_jobwatch.py b/tests/test_jobwatch.py
+index a4879ad..b72054a 100644
+--- a/tests/test_jobwatch.py
++++ b/tests/test_jobwatch.py
+@@ -116,7 +116,10 @@ class AllowList(unittest.TestCase):
+             def __enter__(self): return self
+             def __exit__(self, *a): return False
+ 
+-        with tempfile.TemporaryDirectory() as d:
++        # JS2 (Prathamesh's decision, 2026-11-10, FRICTIONAL F26): the temp folder is inside the project, under state/, because the step-6 revision
++        # checks the write path before the request, and a %TEMP% folder would be refused before the redirect is reached. Location only; no assertion changed.
++        (ROOT / "state").mkdir(exist_ok=True)
++        with tempfile.TemporaryDirectory(dir=ROOT / "state", prefix="_test_tmp_") as d:
+             with self.assertRaises(jobwatch.HostRefused):
+                 jobwatch.fetch("zoox", Path(d), urlopen=lambda *a, **k: FakeResp())
+             self.assertEqual(list(Path(d).rglob("*")), [], "refused fetch must write no files")
+diff --git a/tests/test_revision_fetch.py b/tests/test_revision_fetch.py
+new file mode 100644
+index 0000000..72b08b2
+--- /dev/null
++++ b/tests/test_revision_fetch.py
+@@ -0,0 +1,95 @@
++"""test_revision_fetch.py: review step 6 REVISE (Prathamesh, 2026-11-10). This test is written BEFORE the revision.
++
++Requirement (review/06-decision.md): fetch() checks all three target paths with policy.check_write BEFORE the network request.
++An outside --raw-dir must be refused with exit code 2 and make ZERO requests. A fake urlopen counts the calls.
++
++Each docstring starts with EXPECTED, written before the revision, plus a prediction for the code as it is now (patch at review/03-patch.diff).
++"""
++from __future__ import annotations
++
++import os
++import shutil
++import sys
++import tempfile
++import unittest
++from pathlib import Path
++
++HERE = Path(__file__).resolve().parent
++ROOT = HERE.parent
++sys.path.insert(0, str(ROOT))
++
++import jobwatch  # noqa: E402
++
++
++class _CountingUrlopen:
++    """Counts calls. If it is ever called, it answers like a real allowed Lever response, so that code which (wrongly) sends the
++    request first gets as far as the write check, and the test then sees calls == 1 rather than some unrelated error."""
++
++    def __init__(self):
++        self.calls = 0
++
++    def __call__(self, req, *a, **k):
++        self.calls += 1
++        url = req.full_url
++
++        class _Resp:
++            status = 200
++            headers = {}
++            def geturl(self): return url
++            def read(self): return b"[]"
++            def __enter__(self): return self
++            def __exit__(self, *exc): return False
++
++        return _Resp()
++
++
++class FetchChecksPathsBeforeRequest(unittest.TestCase):
++    def setUp(self):
++        self.outside = Path(tempfile.mkdtemp(prefix="js2-fetch-outside-"))   # under %TEMP%, outside ROOT
++        self.fake = _CountingUrlopen()
++
++    def tearDown(self):
++        shutil.rmtree(self.outside, ignore_errors=True)
++
++    def test_V1_library_fetch_outside_raw_dir_makes_zero_requests(self):
++        """EXPECTED: jobwatch.fetch("zoox", <outside>, urlopen=fake) raises policy.PermissionRefused, fake.calls == 0,
++        and the outside folder stays empty. (Prediction now: PermissionRefused is raised, but fake.calls == 1, so it FAILS on the call count.)"""
++        with self.assertRaises(jobwatch.policy.PermissionRefused):
++            jobwatch.fetch("zoox", self.outside, urlopen=self.fake)
++        self.assertEqual(self.fake.calls, 0, "the permission check must happen before the network request")
++        self.assertEqual(os.listdir(self.outside), [])
++
++    def test_V2_cli_fetch_outside_raw_dir_exit_2_zero_requests(self):
++        """EXPECTED: jobwatch.main(["fetch", "--board", "zoox", "--raw-dir", <outside>]) returns 2, fake.calls == 0, and the outside folder stays empty.
++        The CLI passes no urlopen, so the test swaps fetch()'s default urlopen for the fake and restores it afterwards. No real request is possible.
++        (Prediction now: returns 2, but fake.calls == 1, so it FAILS on the call count.)"""
++        saved = jobwatch.fetch.__defaults__
++        self.assertEqual(len(saved), 1, "fetch() is expected to have exactly one default (urlopen)")
++        jobwatch.fetch.__defaults__ = (self.fake,)
++        try:
++            rc = jobwatch.main(["fetch", "--board", "zoox", "--raw-dir", str(self.outside)])
++        finally:
++            jobwatch.fetch.__defaults__ = saved
++        self.assertEqual(rc, 2)
++        self.assertEqual(self.fake.calls, 0, "the permission check must happen before the network request")
++        self.assertEqual(os.listdir(self.outside), [])
++
++    def test_V3_control_inside_raw_dir_does_request(self):
++        """EXPECTED: with an INSIDE folder (a temp folder under state/), the checks pass and fake.calls == 1. This is a control, so that a
++        'never request' change cannot pass V1 and V2. The fake returns b"[]", so three files are written there, and they are removed afterwards.
++        (Prediction now: PASSES.)"""
++        (ROOT / "state").mkdir(exist_ok=True)
++        inside = Path(tempfile.mkdtemp(dir=ROOT / "state", prefix="_test_tmp_fetch_"))
++        try:
++            jobwatch.fetch("zoox", inside, urlopen=self.fake)
++            self.assertEqual(self.fake.calls, 1)
++        finally:
++            shutil.rmtree(inside, ignore_errors=True)
++            try:
++                (ROOT / "state").rmdir()     # only if this test left it empty
++            except OSError:
++                pass
++
++
++if __name__ == "__main__":
++    unittest.main(verbosity=2)
