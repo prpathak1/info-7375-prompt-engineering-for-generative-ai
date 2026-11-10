@@ -155,7 +155,7 @@ From [NOT-CHECKED.md](NOT-CHECKED.md). Items 1–4 were added on Prathamesh's in
 
 *(Items 10–14 were proposed by Claude Code and confirmed by Prathamesh. Former item (a), the fresh clone, was then checked; see "Fresh-clone check" above.)*
 
-### Claims not made (draft for Prathamesh to edit)
+### Claims not made
 
 - That the loop is correct in general. `finished` means only that every board reached a terminal outcome inside budget (GATE section 1).
 - That any posting fits the persona. The 31 zoox records are rule outputs (`record`), all `not_relevant`, and JS2 makes no Claude judgments (D-2).
@@ -188,4 +188,4 @@ I have read this README and I stand behind it. Signed, Prathamesh, 2026-11-10.
 | The deliberate failure (live run) | Predicted it in GATE D-12 before any request; built the command | Ran it; compared the result with the prediction | I predicted it before running it, so the result tests my understanding, not just the code. | `demo/01-live-run.txt`, `runs/…-incomplete.json`; F36 |
 | Finished but wrong | Built the SEEDED fixture and verify.py; dry-ran in a scratchpad copy only | Ran the demo | A checker that shares the agent's code would share its mistakes. | `demo/02-seeded-finished-but-wrong.txt`; F37 |
 | The defect in the accepted patch (WRITTEN) | Found it in its own dev run; fixed it test-first | Ordered the fix before the demos, and its order | Accepting the patch was my decision, so the bug that slipped through is mine to own and to get fixed. | `demo/CLAUDE-DEV-03`, `demo/CLAUDE-DEV-04`; F34 |
-| What is not checked, and the sign-off | Proposed NOT-CHECKED items 5–12; ran the fresh-clone check (former item (a)); drafted "claims not made" | Confirmed items 5–12; asked for the fresh-clone check; signs or withholds | My name is on it, so I'm accountable. | NOT-CHECKED.md; README "Fresh-clone check"; this section; F40 |
+| What is not checked, and the sign-off | Proposed NOT-CHECKED items 5–14; ran the fresh-clone check (former item (a)); drafted "claims not made" | Confirmed items 5–14; asked for the fresh-clone check; approved "claims not made" as written; signed on 2026-11-10 | My name is on it, so I'm accountable. | NOT-CHECKED.md; README "Fresh-clone check"; this section; F40 |

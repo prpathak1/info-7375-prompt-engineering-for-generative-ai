@@ -374,3 +374,13 @@ My take lines appear on entries where I made a decision. Entries with one: F5 (b
   Prathamesh's university email address. That line was in the already-pushed backup commit `8960186`. It was reworded so that it names neither pattern.
   Prathamesh chose to rewrite history. `8960186` and the final changes are folded into one commit, "JS2: sign-off and submission", on top of `6dc2abb`, and the fork branch is force-pushed.
   `8960186` is then no longer on the branch, although GitHub may still serve it by hash for a while. The fresh-clone check in F40 ran against `8960186`. The files changed after it are the logs and the README.
+
+## F42. Final wording pass (Tue Nov 10 10:33:46 EST 2026) *(Claude Code)*
+- Prathamesh approved the "Claims not made" list as written. Its heading changed from "Claims not made (draft for Prathamesh to edit)" to "Claims not made".
+- A folder-wide search for "draft", "to edit", "pending", "not yet", "to be written" and "TBD" (excluding the `raw/`, `state/`, `traces/` and `runs/` data) found one more outdated item.
+  The last README driver's-seat row said "items 5–12" and "signs or withholds". It now says "items 5–14", "approved "claims not made" as written" and "signed on 2026-11-10".
+- Left unchanged on purpose:
+  - accurate provenance wording ("drafted by Claude…", "approved as drafted") in README, GATE, CONTRACT, SOURCES, `review/07-still-missed.md` and `tests/hand_labels.PROVENANCE.md`;
+  - timestamped FRICTIONAL and NOT-CHECKED entries that were true when written (for example F29 "not yet committed", F33 "NOT yet confirmed");
+  - the header of the review evidence file `review/03-behavior.md` ("DRAFT … for Prathamesh to check row by row"). Prathamesh checked it in step 6 (`review/06-decision.md`), and the evidence file is not rewritten after the decision;
+  - the `pending` variable in `loop.py`. TBD: no occurrences.
