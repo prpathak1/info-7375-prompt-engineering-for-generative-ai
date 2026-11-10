@@ -1,0 +1,248 @@
+started Tue Nov 10 08:44:27 EST 2026
+Python 3.13.1
+fc917421b62dc3ac3de8d444518d2a9d715b288ddd086de1bd0315d596535a0c *tests/test_policy.py
+26c858b391fb565f87057eb2c13ef3023beb8aeb9b2c636421545ebd9935bf99 *jobwatch.py
+ls: cannot access 'policy.py': No such file or directory
+test_C1_state_and_out_both_outside (test_policy.CliWritesOutsideProject.test_C1_state_and_out_both_outside)
+EXPECTED: exit 2; stderr contains "refused" and "o.json" (the first write, --out, as in JS1 run()); ... FAIL
+test_C2_out_outside_state_inside (test_policy.CliWritesOutsideProject.test_C2_out_outside_state_inside)
+EXPECTED: exit 2; stderr names "o.json"; the outside folder stays empty; the inside state file is NOT created ... FAIL
+test_C3_state_outside_out_inside (test_policy.CliWritesOutsideProject.test_C3_state_outside_out_inside)
+EXPECTED: exit 2; stderr names "s.json"; no file outside. Whether runs/... was written before the refusal is ... FAIL
+test_C4_control_both_inside_allowed (test_policy.CliWritesOutsideProject.test_C4_control_both_inside_allowed)
+EXPECTED: exit 0, and both files are created under state/ and runs/. This is a control, so that a "refuse everything" ... ok
+test_R1_B7_read_fixture_allowed (test_policy.PolicyReadBoundaries.test_R1_B7_read_fixture_allowed)
+EXPECTED: check_read(fixtures/resume.fictional.json) returns its resolved path (readable, although P7 shows it is not writable). ... ERROR
+test_R2_read_outside_refused (test_policy.PolicyReadBoundaries.test_R2_read_outside_refused)
+EXPECTED: PermissionRefused for check_read of a real file outside ROOT (a temp file). ... ERROR
+test_P10_B9_new_file_in_writable_folders_allowed (test_policy.PolicyWriteBoundaries.test_P10_B9_new_file_in_writable_folders_allowed)
+EXPECTED: allowed (returns the path inside ROOT) for a NEW file in each of raw/, state/, runs/, traces/. Nothing is written. ... ERROR
+test_P1_B3_sibling_prefix_root (test_policy.PolicyWriteBoundaries.test_P1_B3_sibling_prefix_root)
+EXPECTED: PermissionRefused for ../js2-loop-tools-diff-evil/x.json (a string-prefix check would accept it; that is wrong version W3). ... ERROR
+test_P2_B4_sibling_prefix_folder (test_policy.PolicyWriteBoundaries.test_P2_B4_sibling_prefix_folder)
+EXPECTED: PermissionRefused for ROOT/raw-evil/x.json (it starts with "raw" but is not raw/; W3). ... ERROR
+test_P3_B6_dotdot_escape (test_policy.PolicyWriteBoundaries.test_P3_B6_dotdot_escape)
+EXPECTED: PermissionRefused for ROOT/raw/../../js1-contract-and-watch/x.json (it resolves into the JS1 folder). ... ERROR
+test_P4_B12_absolute_outside_temp (test_policy.PolicyWriteBoundaries.test_P4_B12_absolute_outside_temp)
+EXPECTED: PermissionRefused for <%TEMP%>/x.json (absolute, outside the project). ... ERROR
+test_P5_B12_absolute_outside_system (test_policy.PolicyWriteBoundaries.test_P5_B12_absolute_outside_system)
+EXPECTED: PermissionRefused for C:/Windows/js2-x.txt (or /etc/js2-x.txt on POSIX). The file is never created. ... ERROR
+test_P6_B5_junction_escape (test_policy.PolicyWriteBoundaries.test_P6_B5_junction_escape)
+EXPECTED: PermissionRefused for ROOT/raw/<junction>/escape.json, where <junction> is an mklink /J pointing to a folder outside ROOT ... ERROR
+test_P7_B8_inside_project_not_writable (test_policy.PolicyWriteBoundaries.test_P7_B8_inside_project_not_writable)
+EXPECTED: PermissionRefused for fixtures/resume.fictional.json, GATE.md and jobwatch.py (inside ROOT, but not writable). ... ERROR
+test_P8_B10_overwrite_evidence_needs_approval (test_policy.PolicyWriteBoundaries.test_P8_B10_overwrite_evidence_needs_approval)
+EXPECTED: ApprovalRequired (a subclass of PermissionRefused) for the existing raw/2026-11-10/zoox.json with no approve list. ... ERROR
+test_P9_B11_overwrite_with_exact_approval (test_policy.PolicyWriteBoundaries.test_P9_B11_overwrite_with_exact_approval)
+EXPECTED: allowed with approve=("raw/2026-11-10/zoox.json",); it returns the resolved path. Approving a DIFFERENT ... ERROR
+
+======================================================================
+ERROR: test_R1_B7_read_fixture_allowed (test_policy.PolicyReadBoundaries.test_R1_B7_read_fixture_allowed)
+EXPECTED: check_read(fixtures/resume.fictional.json) returns its resolved path (readable, although P7 shows it is not writable).
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 214, in test_R1_B7_read_fixture_allowed
+    pol = _policy()
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 46, in _policy
+    import policy  # noqa: PLC0415
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'policy'
+
+======================================================================
+ERROR: test_R2_read_outside_refused (test_policy.PolicyReadBoundaries.test_R2_read_outside_refused)
+EXPECTED: PermissionRefused for check_read of a real file outside ROOT (a temp file).
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 220, in test_R2_read_outside_refused
+    pol = _policy()
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 46, in _policy
+    import policy  # noqa: PLC0415
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'policy'
+
+======================================================================
+ERROR: test_P10_B9_new_file_in_writable_folders_allowed (test_policy.PolicyWriteBoundaries.test_P10_B9_new_file_in_writable_folders_allowed)
+EXPECTED: allowed (returns the path inside ROOT) for a NEW file in each of raw/, state/, runs/, traces/. Nothing is written.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 200, in test_P10_B9_new_file_in_writable_folders_allowed
+    pol = _policy()
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 46, in _policy
+    import policy  # noqa: PLC0415
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'policy'
+
+======================================================================
+ERROR: test_P1_B3_sibling_prefix_root (test_policy.PolicyWriteBoundaries.test_P1_B3_sibling_prefix_root)
+EXPECTED: PermissionRefused for ../js2-loop-tools-diff-evil/x.json (a string-prefix check would accept it; that is wrong version W3).
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 126, in test_P1_B3_sibling_prefix_root
+    pol = _policy()
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 46, in _policy
+    import policy  # noqa: PLC0415
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'policy'
+
+======================================================================
+ERROR: test_P2_B4_sibling_prefix_folder (test_policy.PolicyWriteBoundaries.test_P2_B4_sibling_prefix_folder)
+EXPECTED: PermissionRefused for ROOT/raw-evil/x.json (it starts with "raw" but is not raw/; W3).
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 132, in test_P2_B4_sibling_prefix_folder
+    pol = _policy()
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 46, in _policy
+    import policy  # noqa: PLC0415
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'policy'
+
+======================================================================
+ERROR: test_P3_B6_dotdot_escape (test_policy.PolicyWriteBoundaries.test_P3_B6_dotdot_escape)
+EXPECTED: PermissionRefused for ROOT/raw/../../js1-contract-and-watch/x.json (it resolves into the JS1 folder).
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 138, in test_P3_B6_dotdot_escape
+    pol = _policy()
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 46, in _policy
+    import policy  # noqa: PLC0415
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'policy'
+
+======================================================================
+ERROR: test_P4_B12_absolute_outside_temp (test_policy.PolicyWriteBoundaries.test_P4_B12_absolute_outside_temp)
+EXPECTED: PermissionRefused for <%TEMP%>/x.json (absolute, outside the project).
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 144, in test_P4_B12_absolute_outside_temp
+    pol = _policy()
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 46, in _policy
+    import policy  # noqa: PLC0415
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'policy'
+
+======================================================================
+ERROR: test_P5_B12_absolute_outside_system (test_policy.PolicyWriteBoundaries.test_P5_B12_absolute_outside_system)
+EXPECTED: PermissionRefused for C:/Windows/js2-x.txt (or /etc/js2-x.txt on POSIX). The file is never created.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 150, in test_P5_B12_absolute_outside_system
+    pol = _policy()
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 46, in _policy
+    import policy  # noqa: PLC0415
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'policy'
+
+======================================================================
+ERROR: test_P6_B5_junction_escape (test_policy.PolicyWriteBoundaries.test_P6_B5_junction_escape)
+EXPECTED: PermissionRefused for ROOT/raw/<junction>/escape.json, where <junction> is an mklink /J pointing to a folder outside ROOT
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 159, in test_P6_B5_junction_escape
+    pol = _policy()                                  # imported first: unpatched, nothing gets created
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 46, in _policy
+    import policy  # noqa: PLC0415
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'policy'
+
+======================================================================
+ERROR: test_P7_B8_inside_project_not_writable (test_policy.PolicyWriteBoundaries.test_P7_B8_inside_project_not_writable)
+EXPECTED: PermissionRefused for fixtures/resume.fictional.json, GATE.md and jobwatch.py (inside ROOT, but not writable).
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 175, in test_P7_B8_inside_project_not_writable
+    pol = _policy()
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 46, in _policy
+    import policy  # noqa: PLC0415
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'policy'
+
+======================================================================
+ERROR: test_P8_B10_overwrite_evidence_needs_approval (test_policy.PolicyWriteBoundaries.test_P8_B10_overwrite_evidence_needs_approval)
+EXPECTED: ApprovalRequired (a subclass of PermissionRefused) for the existing raw/2026-11-10/zoox.json with no approve list.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 183, in test_P8_B10_overwrite_evidence_needs_approval
+    pol = _policy()
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 46, in _policy
+    import policy  # noqa: PLC0415
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'policy'
+
+======================================================================
+ERROR: test_P9_B11_overwrite_with_exact_approval (test_policy.PolicyWriteBoundaries.test_P9_B11_overwrite_with_exact_approval)
+EXPECTED: allowed with approve=("raw/2026-11-10/zoox.json",); it returns the resolved path. Approving a DIFFERENT
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 192, in test_P9_B11_overwrite_with_exact_approval
+    pol = _policy()
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 46, in _policy
+    import policy  # noqa: PLC0415
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'policy'
+
+======================================================================
+FAIL: test_C1_state_and_out_both_outside (test_policy.CliWritesOutsideProject.test_C1_state_and_out_both_outside)
+EXPECTED: exit 2; stderr contains "refused" and "o.json" (the first write, --out, as in JS1 run());
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 91, in test_C1_state_and_out_both_outside
+    self._assert_refused(cp, "o.json")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 83, in _assert_refused
+    self.assertEqual(cp.returncode, 2, f"exit code\nstdout:\n{cp.stdout}\nstderr:\n{cp.stderr}")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2 : exit code
+stdout:
+[run] raw=raw/2026-11-10/zoox.json sha256=7ebca330474c3b7b288a50691b955770e94e1acefe2846692faca7a20eee425c
+[run] baseline=True total=234 new=0 removed=0
+[run] report -> C:\Users\PRATHA~1\AppData\Local\Temp\js2-outside-9w9mgquz\o.json; state -> C:\Users\PRATHA~1\AppData\Local\Temp\js2-outside-9w9mgquz\s.json
+
+stderr:
+
+
+======================================================================
+FAIL: test_C2_out_outside_state_inside (test_policy.CliWritesOutsideProject.test_C2_out_outside_state_inside)
+EXPECTED: exit 2; stderr names "o.json"; the outside folder stays empty; the inside state file is NOT created
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 100, in test_C2_out_outside_state_inside
+    self._assert_refused(cp, "o.json")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 83, in _assert_refused
+    self.assertEqual(cp.returncode, 2, f"exit code\nstdout:\n{cp.stdout}\nstderr:\n{cp.stderr}")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2 : exit code
+stdout:
+[run] raw=raw/2026-11-10/zoox.json sha256=7ebca330474c3b7b288a50691b955770e94e1acefe2846692faca7a20eee425c
+[run] baseline=True total=234 new=0 removed=0
+[run] report -> C:\Users\PRATHA~1\AppData\Local\Temp\js2-outside-n_w95ep1\o.json; state -> C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\state\_test_58041526_seen.json
+
+stderr:
+
+
+======================================================================
+FAIL: test_C3_state_outside_out_inside (test_policy.CliWritesOutsideProject.test_C3_state_outside_out_inside)
+EXPECTED: exit 2; stderr names "s.json"; no file outside. Whether runs/... was written before the refusal is
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 109, in test_C3_state_outside_out_inside
+    self._assert_refused(cp, "s.json")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\tests\test_policy.py", line 83, in _assert_refused
+    self.assertEqual(cp.returncode, 2, f"exit code\nstdout:\n{cp.stdout}\nstderr:\n{cp.stderr}")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2 : exit code
+stdout:
+[run] raw=raw/2026-11-10/zoox.json sha256=7ebca330474c3b7b288a50691b955770e94e1acefe2846692faca7a20eee425c
+[run] baseline=True total=234 new=0 removed=0
+[run] report -> C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js2-loop-tools-diff\runs\_test_5fdcabd4_o.json; state -> C:\Users\PRATHA~1\AppData\Local\Temp\js2-outside-s8tnfczp\s.json
+
+stderr:
+
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.926s
+
+FAILED (failures=3, errors=12)
+exit_code=1
+ended Tue Nov 10 08:44:28 EST 2026
