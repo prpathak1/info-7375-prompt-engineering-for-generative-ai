@@ -1,0 +1,5 @@
+[kokoro] beat-B09.mp3  13.97s  voice=af_bella
+[kokoro] 1 beat(s) generated · cost $0.00 · durations are GROUND TRUTH, same as generate_audio.py
+audio_exit=0
+B09 89% `one` → `1`; `tenth` → `10th`; `four oh four` → `404`
+transcribe_exit=0

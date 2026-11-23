@@ -1,0 +1,256 @@
+{
+  "video": "final-project-film-2",
+  "metadata": {
+    "slug": "honest-shortlist-final",
+    "title": "Honest Shortlist: Final Project Film",
+    "topic": "FINAL PROJECT FILM",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "student",
+    "persona": "none: Prathamesh's own first-person script, synthetic voice, disclosed in B00",
+    "voice": "af_bella",
+    "voice_kokoro": "af_bella",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Plain",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "bookend_exempt": [
+      "cold-open",
+      "bidea",
+      "bdefs",
+      "bhtf",
+      "bvdt",
+      "bout"
+    ],
+    "bookend_exempt_reason": "Student film: narrated as myself, with no instructor name, persona, credit line or outro (same as the pitch film). B00 is a plain title with the synthetic-voice disclosure; B17 is a short close.",
+    "source_doc": "SCRIPT.md (approved 2026-11-23)",
+    "playlist": "INFO 7375 Fall 2026",
+    "chapter_number": 0,
+    "tags": [
+      "agentic AI",
+      "job search agent",
+      "source grounding",
+      "evaluation",
+      "INFO 7375"
+    ],
+    "build": {
+      "at": "2026-11-23T11:32:06",
+      "cut": "review",
+      "filled": 18,
+      "of": 18,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'un-annotated' \u2014 COLD OPEN LAW wants ClaudeComposerAsk",
+        "B17: palette=claude but the outro is 'un-annotated' \u2014 OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "source_of_truth": "beat_sheet.json \u2014 edit the sheet, not this file",
+  "beats_total": 18,
+  "beats_open": 0,
+  "beats": [
+    {
+      "beat_id": "B00",
+      "status": "filled",
+      "on_disk": "manim/B00.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B00.mp4",
+      "label": "I'm Prathamesh Pathak, and this is the film for my final project, Honest Shortlist. This synthetic v"
+    },
+    {
+      "beat_id": "B01",
+      "status": "filled",
+      "on_disk": "manim/B01.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B01.mp4",
+      "label": "Honest Shortlist will give an international network engineering student a short daily list of new jo"
+    },
+    {
+      "beat_id": "B02",
+      "status": "filled",
+      "on_disk": "manim/B02.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B02.mp4",
+      "label": "Why care? Sponsorship. On October twentieth, I checked seven network engineering postings at three e"
+    },
+    {
+      "beat_id": "B03",
+      "status": "filled",
+      "on_disk": "manim/B03.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B03.mp4",
+      "label": "Company history doesn't settle it. Zoox had one thousand three hundred sixty-four H one B approvals,"
+    },
+    {
+      "beat_id": "B04",
+      "status": "filled",
+      "on_disk": "manim/B04.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B04.mp4",
+      "label": "What exists already? LinkedIn alerts send new matching postings. When I looked at LinkedIn's search "
+    },
+    {
+      "beat_id": "B05",
+      "status": "filled",
+      "on_disk": "manim/B05.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B05.mp4",
+      "label": "A chat assistant, given one pasted posting, did better: it caught \"eight plus years\" and said the po"
+    },
+    {
+      "beat_id": "B06",
+      "status": "filled",
+      "on_disk": "manim/B06.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B06.mp4",
+      "label": "And the Reallocation Engine's existing fetcher silently dropped six hundred thirty-one of Shield AI'"
+    },
+    {
+      "beat_id": "B07",
+      "status": "filled",
+      "on_disk": "manim/B07.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B07.mp4",
+      "label": "So why mine? It will watch the boards itself, like an alert, show its evidence, like a careful reade"
+    },
+    {
+      "beat_id": "B08",
+      "status": "filled",
+      "on_disk": "manim/B08.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B08.mp4",
+      "label": "Here's how. The data will be public Greenhouse, Lever, and Ashby job feeds. No logins, no LinkedIn o"
+    },
+    {
+      "beat_id": "B09",
+      "status": "filled",
+      "on_disk": "manim/B09.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B09.mp4",
+      "label": "Step one already ran in JS2, on November tenth: one fetch per board, inside a budget. Four boards to"
+    },
+    {
+      "beat_id": "B10",
+      "status": "filled",
+      "on_disk": "manim/B10.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B10.mp4",
+      "label": "Step two ran too: keep only new postings. Zoox had thirty-one new ones against my saved October stat"
+    },
+    {
+      "beat_id": "B11",
+      "status": "filled",
+      "on_disk": "manim/B11.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B11.mp4",
+      "label": "Step three exists in my Reallocation mode, not yet in the agent: pull every sentence about sponsorsh"
+    },
+    {
+      "beat_id": "B12",
+      "status": "filled",
+      "on_disk": "manim/B12.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B12.mp4",
+      "label": "My JS1 validator already rejects any quote that isn't in the posting. Then a fresh fetch will confir"
+    },
+    {
+      "beat_id": "B13",
+      "status": "filled",
+      "on_disk": "manim/B13.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B13.mp4",
+      "label": "Do I have what I need? The boards need no account. The code is standard-library Python on my laptop."
+    },
+    {
+      "beat_id": "B14",
+      "status": "filled",
+      "on_disk": "manim/B14.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B14.mp4",
+      "label": "How will I know it worked? JS1 left a warning. All twenty test postings were not a fit, so always an"
+    },
+    {
+      "beat_id": "B15",
+      "status": "filled",
+      "on_disk": "manim/B15.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B15.mp4",
+      "label": "So I'll measure false positives, a \"supported\" label whose quote doesn't back the claim, and false n"
+    },
+    {
+      "beat_id": "B16",
+      "status": "filled",
+      "on_disk": "manim/B16.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B16.mp4",
+      "label": "It worked if it finds most real fits without calling any clearance- or citizenship-only posting rele"
+    },
+    {
+      "beat_id": "B17",
+      "status": "filled",
+      "on_disk": "manim/B17.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B17.mp4",
+      "label": "Zero tolerance for calling a posting relevant when it rules out sponsorship. Missing a real fit is a"
+    }
+  ]
+}

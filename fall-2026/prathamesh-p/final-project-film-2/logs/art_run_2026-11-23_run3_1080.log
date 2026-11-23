@@ -1,0 +1,159 @@
+[run] skip B00_Title — B00 already filled
+[run] skip B01_Card — B01 already filled
+[run] skip B02_Tally — B02 already filled
+[run] skip B03_History — B03 already filled
+[run] skip B04_Alerts — B04 already filled
+[run] skip B05_Chat — B05 already filled
+[run] skip B06_Dropped — B06 already filled
+[run] skip B07_Grid — B07 already filled
+[run] skip B08_Pipeline — B08 already filled
+[run] skip B10_NewOnly — B10 already filled
+[run] skip B11_Extract — B11 already filled
+[run] skip B12_Validator — B12 already filled
+[run] skip B13_Resources — B13 already filled
+[run] skip B14_Baseline — B14 already filled
+[run] skip B15_HeldOut — B15 already filled
+[run] skip B16_Seeded — B16 already filled
+[run] skip B17_Close — B17 already filled
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[gateW] B09_LiveRun clean
+[run] rendering B09_LiveRun
+Manim Community v0.20.1
+
+[11/23/26 11:30:01] INFO     Animation 0 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                                                 
+[11/23/26 11:30:02] INFO     Animation 1 : Using cached    cairo_renderer.py:94
+                             data (hash :                                      
+                             <LOCAL>                     
+                             817)                                              
+
+Animation 1: FadeIn(RoundedRectangle):   0%|          | 0/1 [00:00<?, ?it/s]
+                                                                            
+[11/23/26 11:30:04] INFO     Animation 2 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                                                 
+[11/23/26 11:30:05] INFO     Animation 3 : Using cached    cairo_renderer.py:94
+                             data (hash :                                      
+                             <LOCAL>                     
+                             103)                                              
+
+Animation 3: FadeIn(VGroup of 3 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]
+                                                                                   
+[11/23/26 11:30:12] INFO     Animation 4 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                                                 
+[11/23/26 11:30:14] INFO     Animation 5 : Using cached    cairo_renderer.py:94
+                             data (hash :                                      
+                             <LOCAL>                     
+                             77)                                               
+
+Animation 5: FadeIn(VGroup of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]
+                                                                                   
+[11/23/26 11:30:23] INFO     Animation 6 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+[11/23/26 11:30:25] INFO     Animation 7 : Using cached    cairo_renderer.py:94
+                             data (hash :                                      
+                             <LOCAL>                     
+                             0)                                                
+
+Animation 7: GrowFromCenter(Dot), etc.:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                                             
+[11/23/26 11:30:32] INFO     Animation 8 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                                                 
+                    INFO     Combining to Movie file.  scene_file_writer.py:753
+                    INFO                               scene_file_writer.py:904
+                             File ready at                                     
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                         
+                             <LOCAL>                           
+                                                                               
+                    INFO     Rendered B09_LiveRun                  scene.py:278
+                             Played 9 animations                               
+You are using manim version v0.20.1, but version v0.22.1 is available.
+You should consider upgrading via pip install -U manim
+<LOCAL> DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+Animation 1: FadeIn(RoundedRectangle):   0%|          | 0/6 [00:00<?, ?it/s]
+                                                                            
+
+Animation 3: FadeIn(VGroup of 3 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]
+Animation 3: FadeIn(VGroup of 3 submobjects):  50%|#####     | 4/8 [00:00<00:00, 32.21it/s]
+Animation 3: FadeIn(VGroup of 3 submobjects): 100%|##########| 8/8 [00:00<00:00, 33.03it/s]
+                                                                                           
+
+Animation 5: FadeIn(VGroup of 2 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]
+Animation 5: FadeIn(VGroup of 2 submobjects):  75%|#######5  | 6/8 [00:00<00:00, 51.19it/s]
+                                                                                           
+
+Animation 7: GrowFromCenter(Dot), etc.:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                             
+[audit] scenes: 14 snapshots → CLEAN
+[audit] report: <LOCAL>
+[remotion] nothing to do — no shot.remotion.pattern beats
+[art] compiled B09  MANIM    14.0s  ← B09.mp4
+[art] motion histogram: graphic:18
+[art] SKIN LINT: B00: palette=claude but the cold open is 'un-annotated' — COLD OPEN LAW wants ClaudeComposerAsk
+[art] SKIN LINT: B17: palette=claude but the outro is 'un-annotated' — OUTRO LAW wants ClaudeTitleOutro
+[art] build stamp → beat_sheet.json (18/18 filled)
+[art] QC contact sheet → <LOCAL>
+[art] wrote <LOCAL>  (234.2s, audio: per-beat timeline (source audio preserved), drawtext: yes)
+[art] slots: 18/18 filled — B00:MANIM B01:MANIM B02:MANIM B03:MANIM B04:MANIM B05:MANIM B06:MANIM B07:MANIM B08:MANIM B09:MANIM B10:MANIM B11:MANIM B12:MANIM B13:MANIM B14:MANIM B15:MANIM B16:MANIM B17:MANIM
+[run] GATE V — frame-level visual QC on the compiled reel
+[gate-v] frames=36 BLOCKER=0 MAJOR=0 → <LOCAL>
+[run] done → <LOCAL>  (QC gates: on)
+[run] REVIEW built; no final exported. Use ./art final <reel> for a verified master.
+[run] any remaining slates are YOUR slots — see <LOCAL>
+art_run_exit=0

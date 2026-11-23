@@ -1,0 +1,19 @@
+B00 95% `prathamesh` → `prathamish`
+B01 100% none
+B02 97% `twentieth` → `20th`
+B03 70% `zoox` → `zooks`; `one thousand three hundred sixty four h one b` → `1 364 h1b`
+B04 89% `linkedin` → `linked in`; `linkedin's` → `linked in`; `thirty first` → `31st`
+B05 97% `paste` → `pasted`
+B06 83% `six hundred thirty one` → `631`; `six hundred fifty three` → `653`
+B07 100% none
+B08 100% none
+B09 87% `one` → `1`; `tenth` → `10th`; `one four oh four` → `1404`
+B10 87% `too` → `two`; `zoox` → `zooks`; `thirty one` → `31`
+B11 95% `three` → `3`; `four` → `4`
+B12 95% `js1` → `js one`
+B13 98% `fifty` → `50`
+B14 90% `twenty` → `20`; `a hundred percent` → `100`
+B15 96% `forty` → `40`; `labelled` → `labeled`
+B16 100% none
+B17 100% none
+transcribe_exit=0
