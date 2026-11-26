@@ -1,0 +1,287 @@
+{
+  "seed": 20261125,
+  "created": "2026-11-25 18:48:28 Eastern Standard Time",
+  "command": "python -I holdout.py --seed 20261125",
+  "population": {
+    "unique_postings": 1994,
+    "network_titles": 40,
+    "other": 1954
+  },
+  "strata": {
+    "A": "title has whole-word network/networks/networking; 20 drawn",
+    "B": "all others; 10 drawn"
+  },
+  "rule": "Held-out: never used to tune any rule, weight or prompt. Labels by Prathamesh, blind to filter output.",
+  "postings": [
+    {
+      "hid": "H01",
+      "stratum": "B",
+      "board": "cloudflare",
+      "platform": "greenhouse",
+      "id": "7783835",
+      "title": "Named Account Executive, Thailand",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H02",
+      "stratum": "A",
+      "board": "cloudflare",
+      "platform": "greenhouse",
+      "id": "8187404",
+      "title": "Systems Engineer, Network Protocols & Distributed Systems",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H03",
+      "stratum": "A",
+      "board": "openai",
+      "platform": "ashby",
+      "id": "9f78c41f-8d39-46c9-b9c3-c3b075905b24",
+      "title": "Network Engineer",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H04",
+      "stratum": "A",
+      "board": "datadog",
+      "platform": "greenhouse",
+      "id": "8128450",
+      "title": "Staff Engineer - Cloud Networks",
+      "captured": "2026-11-25"
+    },
+    {
+      "hid": "H05",
+      "stratum": "A",
+      "board": "cloudflare",
+      "platform": "greenhouse",
+      "id": "7541032",
+      "title": "Senior Software Engineer - Network Platforms",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H06",
+      "stratum": "A",
+      "board": "cloudflare",
+      "platform": "greenhouse",
+      "id": "8311376",
+      "title": "Data Center Network Operations Engineer",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H07",
+      "stratum": "A",
+      "board": "openai",
+      "platform": "ashby",
+      "id": "ead83ff6-7a58-43dd-b7da-b85e7ddd679c",
+      "title": "RTL Design Engineer, Networking / NoC",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H08",
+      "stratum": "A",
+      "board": "openai",
+      "platform": "ashby",
+      "id": "a80e213f-c592-4337-a410-e5bf94f4e40d",
+      "title": "Network Engineer",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H09",
+      "stratum": "B",
+      "board": "openai",
+      "platform": "ashby",
+      "id": "7613aca3-9dd8-41cd-b114-06ef4de967a9",
+      "title": "Software Engineer, Cooperative AI",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H10",
+      "stratum": "A",
+      "board": "datadog",
+      "platform": "greenhouse",
+      "id": "8267561",
+      "title": "Senior Network Engineer, Office Technology",
+      "captured": "2026-11-25"
+    },
+    {
+      "hid": "H11",
+      "stratum": "A",
+      "board": "cloudflare",
+      "platform": "greenhouse",
+      "id": "8185723",
+      "title": "Senior Engineering Manager \u2014 Network Connectivity",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H12",
+      "stratum": "B",
+      "board": "datadog",
+      "platform": "greenhouse",
+      "id": "8002771",
+      "title": "Senior Financial Systems Analyst",
+      "captured": "2026-11-25"
+    },
+    {
+      "hid": "H13",
+      "stratum": "B",
+      "board": "zoox",
+      "platform": "lever",
+      "id": "2ed8a665-cee8-4d70-bcb1-e96b6214b371",
+      "title": "Senior/Staff Software Engineer, ML Inference Optimization",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H14",
+      "stratum": "A",
+      "board": "cloudflare",
+      "platform": "greenhouse",
+      "id": "7992903",
+      "title": "Senior Network Engineer",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H15",
+      "stratum": "A",
+      "board": "cloudflare",
+      "platform": "greenhouse",
+      "id": "7446310",
+      "title": "Software Engineer, Network Performance & Reliability (Argo)",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H16",
+      "stratum": "B",
+      "board": "openai",
+      "platform": "ashby",
+      "id": "bb28a39e-eb1f-41ef-96de-98adf58a8c3c",
+      "title": "People Technology Analyst, Workday PATT & Benefits",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H17",
+      "stratum": "B",
+      "board": "openai",
+      "platform": "ashby",
+      "id": "c67d4a21-5677-4f93-8962-3ac618a6f6c2",
+      "title": "AI Deployment Manager (Japanese-Speaking)",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H18",
+      "stratum": "B",
+      "board": "zoox",
+      "platform": "lever",
+      "id": "a50dec1e-ad55-415f-880c-2f1bd8291311",
+      "title": "Manager, Procurement & Strategic Partnerships",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H19",
+      "stratum": "A",
+      "board": "fastly",
+      "platform": "greenhouse",
+      "id": "8045052",
+      "title": "Senior SRE - Networks",
+      "captured": "2026-11-25"
+    },
+    {
+      "hid": "H20",
+      "stratum": "B",
+      "board": "cloudflare",
+      "platform": "greenhouse",
+      "id": "8045321",
+      "title": "Senior Named Account Executive, South Africa",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H21",
+      "stratum": "A",
+      "board": "openai",
+      "platform": "ashby",
+      "id": "f6b9903c-9034-436b-a4ec-4c8643a6d0dd",
+      "title": "Networking Operating System Firmware Engineer",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H22",
+      "stratum": "B",
+      "board": "openai",
+      "platform": "ashby",
+      "id": "832094fd-4d89-4fe4-bc18-9ba88d347a18",
+      "title": "Forward Deployed Engineer (FDE), Legal-SF",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H23",
+      "stratum": "A",
+      "board": "cloudflare",
+      "platform": "greenhouse",
+      "id": "8099671",
+      "title": "Network Deployment Engineer",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H24",
+      "stratum": "A",
+      "board": "cloudflare",
+      "platform": "greenhouse",
+      "id": "8157281",
+      "title": "Staff Software Engineer - Integrated Network Strategy",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H25",
+      "stratum": "A",
+      "board": "openai",
+      "platform": "ashby",
+      "id": "0ed12b35-0115-4ad3-81f5-ea1bb05c9f6b",
+      "title": "White Space Manager, Network & Data Halls",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H26",
+      "stratum": "A",
+      "board": "openai",
+      "platform": "ashby",
+      "id": "3ca637f8-c0d6-4253-8568-1f31b02adf76",
+      "title": "Datacenter Networking Technician, AI Compute Deployment - Stargate",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H27",
+      "stratum": "A",
+      "board": "openai",
+      "platform": "ashby",
+      "id": "1dddc3d3-00d5-4b19-a321-a8d00720f543",
+      "title": "Community Programs Manager, Champion Network",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H28",
+      "stratum": "A",
+      "board": "cloudflare",
+      "platform": "greenhouse",
+      "id": "7793013",
+      "title": "Senior Software Engineer - Network Connectivity (Go/Rust)",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H29",
+      "stratum": "A",
+      "board": "zoox",
+      "platform": "lever",
+      "id": "94b5b4a5-257a-43d8-96bb-8dccd6d690f0",
+      "title": "Software Engineer - Road Network Tools",
+      "captured": "2026-11-10"
+    },
+    {
+      "hid": "H30",
+      "stratum": "B",
+      "board": "zoox",
+      "platform": "lever",
+      "id": "40a0ff29-6701-4c82-a5eb-afb69682b6c6",
+      "title": "Head of Contingent Workforce & Travel",
+      "captured": "2026-11-10"
+    }
+  ]
+}

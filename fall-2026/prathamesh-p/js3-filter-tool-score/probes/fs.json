@@ -1,0 +1,315 @@
+[
+ {
+  "label": "initialize",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 1,
+   "method": "initialize",
+   "params": {
+    "protocolVersion": "2025-06-18",
+    "capabilities": {},
+    "clientInfo": {
+     "name": "js3-probe",
+     "version": "1"
+    }
+   }
+  }
+ },
+ {
+  "label": "initialized",
+  "send": {
+   "jsonrpc": "2.0",
+   "method": "notifications/initialized"
+  },
+  "expect_reply": false
+ },
+ {
+  "label": "tools/list",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 2,
+   "method": "tools/list"
+  }
+ },
+ {
+  "label": "P1 list_allowed_directories",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 3,
+   "method": "tools/call",
+   "params": {
+    "name": "list_allowed_directories",
+    "arguments": {}
+   }
+  }
+ },
+ {
+  "label": "P2 read inside (absolute)",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 4,
+   "method": "tools/call",
+   "params": {
+    "name": "read_text_file",
+    "arguments": {
+     "path": "<USER_HOME>\\AppData\\Local\\Temp\\claude\\4e8d4235241879a7\\6b3303a4-c35b-47c1-a963-e41ef2931cad\\scratchpad\\fs-eval\\allowed\\inside.txt"
+    }
+   }
+  }
+ },
+ {
+  "label": "P3 read outside canary (absolute)",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 5,
+   "method": "tools/call",
+   "params": {
+    "name": "read_text_file",
+    "arguments": {
+     "path": "<USER_HOME>\\AppData\\Local\\Temp\\claude\\4e8d4235241879a7\\6b3303a4-c35b-47c1-a963-e41ef2931cad\\scratchpad\\fs-eval\\outside\\canary.txt"
+    }
+   }
+  }
+ },
+ {
+  "label": "P4 read outside via .. traversal",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 6,
+   "method": "tools/call",
+   "params": {
+    "name": "read_text_file",
+    "arguments": {
+     "path": "<USER_HOME>\\AppData\\Local\\Temp\\claude\\4e8d4235241879a7\\6b3303a4-c35b-47c1-a963-e41ef2931cad\\scratchpad\\fs-eval\\allowed\\..\\outside\\canary.txt"
+    }
+   }
+  }
+ },
+ {
+  "label": "P5 read prefix-sibling allowed-evil",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 7,
+   "method": "tools/call",
+   "params": {
+    "name": "read_text_file",
+    "arguments": {
+     "path": "<USER_HOME>\\AppData\\Local\\Temp\\claude\\4e8d4235241879a7\\6b3303a4-c35b-47c1-a963-e41ef2931cad\\scratchpad\\fs-eval\\allowed-evil\\canary.txt"
+    }
+   }
+  }
+ },
+ {
+  "label": "P6 read relative path inside.txt",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 8,
+   "method": "tools/call",
+   "params": {
+    "name": "read_text_file",
+    "arguments": {
+     "path": "inside.txt"
+    }
+   }
+  }
+ },
+ {
+  "label": "P7 read relative ../outside",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 9,
+   "method": "tools/call",
+   "params": {
+    "name": "read_text_file",
+    "arguments": {
+     "path": "..\\outside\\canary.txt"
+    }
+   }
+  }
+ },
+ {
+  "label": "P8 read through junction allowed/link-to-outside",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 10,
+   "method": "tools/call",
+   "params": {
+    "name": "read_text_file",
+    "arguments": {
+     "path": "<USER_HOME>\\AppData\\Local\\Temp\\claude\\4e8d4235241879a7\\6b3303a4-c35b-47c1-a963-e41ef2931cad\\scratchpad\\fs-eval\\allowed\\link-to-outside\\canary.txt"
+    }
+   }
+  }
+ },
+ {
+  "label": "P9 list junction directory",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 11,
+   "method": "tools/call",
+   "params": {
+    "name": "list_directory",
+    "arguments": {
+     "path": "<USER_HOME>\\AppData\\Local\\Temp\\claude\\4e8d4235241879a7\\6b3303a4-c35b-47c1-a963-e41ef2931cad\\scratchpad\\fs-eval\\allowed\\link-to-outside"
+    }
+   }
+  }
+ },
+ {
+  "label": "P10 write inside (declared allowed)",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 12,
+   "method": "tools/call",
+   "params": {
+    "name": "write_file",
+    "arguments": {
+     "path": "<USER_HOME>\\AppData\\Local\\Temp\\claude\\4e8d4235241879a7\\6b3303a4-c35b-47c1-a963-e41ef2931cad\\scratchpad\\fs-eval\\allowed\\written-inside.txt",
+     "content": "probe write inside"
+    }
+   }
+  }
+ },
+ {
+  "label": "P11 write outside (absolute)",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 13,
+   "method": "tools/call",
+   "params": {
+    "name": "write_file",
+    "arguments": {
+     "path": "<USER_HOME>\\AppData\\Local\\Temp\\claude\\4e8d4235241879a7\\6b3303a4-c35b-47c1-a963-e41ef2931cad\\scratchpad\\fs-eval\\outside\\written-outside.txt",
+     "content": "ESCAPED"
+    }
+   }
+  }
+ },
+ {
+  "label": "P12 write outside via ..",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 14,
+   "method": "tools/call",
+   "params": {
+    "name": "write_file",
+    "arguments": {
+     "path": "<USER_HOME>\\AppData\\Local\\Temp\\claude\\4e8d4235241879a7\\6b3303a4-c35b-47c1-a963-e41ef2931cad\\scratchpad\\fs-eval\\allowed\\..\\outside\\written-dotdot.txt",
+     "content": "ESCAPED"
+    }
+   }
+  }
+ },
+ {
+  "label": "P13 write through junction",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 15,
+   "method": "tools/call",
+   "params": {
+    "name": "write_file",
+    "arguments": {
+     "path": "<USER_HOME>\\AppData\\Local\\Temp\\claude\\4e8d4235241879a7\\6b3303a4-c35b-47c1-a963-e41ef2931cad\\scratchpad\\fs-eval\\allowed\\link-to-outside\\written-junction.txt",
+     "content": "ESCAPED"
+    }
+   }
+  }
+ },
+ {
+  "label": "P14 copy outside canary into allowed",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 16,
+   "method": "tools/call",
+   "params": {
+    "name": "copy_file",
+    "arguments": {
+     "source": "<USER_HOME>\\AppData\\Local\\Temp\\claude\\4e8d4235241879a7\\6b3303a4-c35b-47c1-a963-e41ef2931cad\\scratchpad\\fs-eval\\outside\\canary.txt",
+     "destination": "<USER_HOME>\\AppData\\Local\\Temp\\claude\\4e8d4235241879a7\\6b3303a4-c35b-47c1-a963-e41ef2931cad\\scratchpad\\fs-eval\\allowed\\copied.txt"
+    }
+   }
+  }
+ },
+ {
+  "label": "P15 move inside file to outside",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 17,
+   "method": "tools/call",
+   "params": {
+    "name": "move_file",
+    "arguments": {
+     "source": "<USER_HOME>\\AppData\\Local\\Temp\\claude\\4e8d4235241879a7\\6b3303a4-c35b-47c1-a963-e41ef2931cad\\scratchpad\\fs-eval\\allowed\\written-inside.txt",
+     "destination": "<USER_HOME>\\AppData\\Local\\Temp\\claude\\4e8d4235241879a7\\6b3303a4-c35b-47c1-a963-e41ef2931cad\\scratchpad\\fs-eval\\outside\\moved.txt"
+    }
+   }
+  }
+ },
+ {
+  "label": "P16 directory_tree of parent",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 18,
+   "method": "tools/call",
+   "params": {
+    "name": "directory_tree",
+    "arguments": {
+     "path": "<USER_HOME>\\AppData\\Local\\Temp\\claude\\4e8d4235241879a7\\6b3303a4-c35b-47c1-a963-e41ef2931cad\\scratchpad\\fs-eval"
+    }
+   }
+  }
+ },
+ {
+  "label": "P17 search_files for canary from allowed",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 19,
+   "method": "tools/call",
+   "params": {
+    "name": "search_files",
+    "arguments": {
+     "path": "<USER_HOME>\\AppData\\Local\\Temp\\claude\\4e8d4235241879a7\\6b3303a4-c35b-47c1-a963-e41ef2931cad\\scratchpad\\fs-eval\\allowed",
+     "pattern": "canary"
+    }
+   }
+  }
+ },
+ {
+  "label": "P18 get_file_info outside",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 20,
+   "method": "tools/call",
+   "params": {
+    "name": "get_file_info",
+    "arguments": {
+     "path": "<USER_HOME>\\AppData\\Local\\Temp\\claude\\4e8d4235241879a7\\6b3303a4-c35b-47c1-a963-e41ef2931cad\\scratchpad\\fs-eval\\outside\\canary.txt"
+    }
+   }
+  }
+ },
+ {
+  "label": "P19 unknown tool",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 21,
+   "method": "tools/call",
+   "params": {
+    "name": "delete_everything",
+    "arguments": {}
+   }
+  }
+ },
+ {
+  "label": "P20 bad args (missing path)",
+  "send": {
+   "jsonrpc": "2.0",
+   "id": 22,
+   "method": "tools/call",
+   "params": {
+    "name": "read_text_file",
+    "arguments": {}
+   }
+  }
+ }
+]

@@ -1,0 +1,96 @@
+{
+  "run_id": "20261125T184034-139103",
+  "label": null,
+  "started_at": "2026-11-25T18:40:34-0500",
+  "status": "incomplete",
+  "exit_code": 3,
+  "budgets": {
+    "boards": 4,
+    "requests": 6,
+    "seconds": 120
+  },
+  "boards": [
+    {
+      "board": "greenhouse-fastly",
+      "platform": "greenhouse",
+      "url": "https://boards-api.greenhouse.io/v1/boards/fastly/jobs?content=true",
+      "outcome": "ok",
+      "attempts": 1,
+      "attempt_log": [
+        {
+          "n": 1,
+          "http_status": 200,
+          "final_url": "https://boards-api.greenhouse.io/v1/boards/fastly/jobs?content=true",
+          "raw_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js3-filter-tool-score\\raw\\2026-11-25\\greenhouse-fastly.20261125T184034-139103.a1.json",
+          "fetch_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js3-filter-tool-score\\raw\\2026-11-25\\greenhouse-fastly.20261125T184034-139103.a1.fetch.txt",
+          "sha256": "58719b0841fcdafa53f269d7dd4c5d962e271511384504699cf24e28ca5e7544",
+          "bytes": 952545
+        }
+      ],
+      "posting_count": 50,
+      "new_count": 0,
+      "new_ids": [],
+      "records": [],
+      "previous_state_file": null,
+      "state_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js3-filter-tool-score\\state\\greenhouse-fastly.json",
+      "raw_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js3-filter-tool-score\\raw\\2026-11-25\\greenhouse-fastly.20261125T184034-139103.a1.json",
+      "baseline": true
+    },
+    {
+      "board": "greenhouse-datadog",
+      "platform": "greenhouse",
+      "url": "https://boards-api.greenhouse.io/v1/boards/datadog/jobs?content=true",
+      "outcome": "ok",
+      "attempts": 1,
+      "attempt_log": [
+        {
+          "n": 1,
+          "http_status": 200,
+          "final_url": "https://boards-api.greenhouse.io/v1/boards/datadog/jobs?content=true",
+          "raw_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js3-filter-tool-score\\raw\\2026-11-25\\greenhouse-datadog.20261125T184034-139103.a1.json",
+          "fetch_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js3-filter-tool-score\\raw\\2026-11-25\\greenhouse-datadog.20261125T184034-139103.a1.fetch.txt",
+          "sha256": "bc34356f804f7ea3523d4aa11d83dceaf8cbe78b9f2827932f7c38d866a4e895",
+          "bytes": 4907985
+        }
+      ],
+      "posting_count": 392,
+      "new_count": 0,
+      "new_ids": [],
+      "records": [],
+      "previous_state_file": null,
+      "state_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js3-filter-tool-score\\state\\greenhouse-datadog.json",
+      "raw_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js3-filter-tool-score\\raw\\2026-11-25\\greenhouse-datadog.20261125T184034-139103.a1.json",
+      "baseline": true
+    },
+    {
+      "board": "ashby-tailscale",
+      "platform": "ashby",
+      "url": "https://api.ashbyhq.com/posting-api/job-board/tailscale",
+      "outcome": "failed_http_404",
+      "attempts": 1,
+      "attempt_log": [
+        {
+          "n": 1,
+          "http_status": 404,
+          "final_url": "https://api.ashbyhq.com/posting-api/job-board/tailscale",
+          "raw_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js3-filter-tool-score\\raw\\2026-11-25\\ashby-tailscale.20261125T184034-139103.a1.body",
+          "fetch_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js3-filter-tool-score\\raw\\2026-11-25\\ashby-tailscale.20261125T184034-139103.a1.fetch.txt",
+          "sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+          "bytes": 9
+        }
+      ],
+      "error_type": "http_404",
+      "why_stopped": "HTTP 404: bad board name or removed board; no retry (GATE section 4)",
+      "http_status": 404
+    }
+  ],
+  "escalations": [],
+  "not_attempted": [],
+  "requests_used": 3,
+  "seconds_used": 1.813,
+  "verify_reminder": "verify.py has NOT run. 'finished' only means every board reached a terminal outcome inside budget; it does not mean the result is right (GATE section 1). Run: python -I verify.py <this report>",
+  "trace_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js3-filter-tool-score\\traces\\20261125T184034-139103.jsonl",
+  "report_file": "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js3-filter-tool-score\\runs\\20261125T184034-139103-incomplete.json",
+  "refused_repeats": [],
+  "ended_at": "2026-11-25T18:40:36-0500"
+}

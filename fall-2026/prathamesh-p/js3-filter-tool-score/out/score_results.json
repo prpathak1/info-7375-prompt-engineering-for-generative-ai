@@ -1,0 +1,571 @@
+{
+ "run": "2026-11-25 19:27:52 Eastern Standard Time",
+ "results": {
+  "C0": {
+   "desc": "JS2 baseline: inherited rules only (T1-T5, A1-A2, K1)",
+   "object": "-",
+   "ref": null,
+   "cfg": {
+    "t2a": false,
+    "t3a": false,
+    "a3_negation": false,
+    "a6": false,
+    "a7_may_access": false,
+    "ear_strict": false,
+    "a2_export_license": false,
+    "seniority": false,
+    "k2": false,
+    "abstain_rule2": false,
+    "skill_threshold": 2
+   },
+   "outcomes": {
+    "H01": "reject T1",
+    "H02": "reject A1",
+    "H03": "accept",
+    "H04": "reject K1",
+    "H05": "reject A1",
+    "H06": "reject A1",
+    "H07": "reject A1",
+    "H08": "accept",
+    "H09": "reject T1",
+    "H10": "reject A1",
+    "H11": "reject A1",
+    "H12": "reject T1",
+    "H13": "reject T1",
+    "H14": "reject A1",
+    "H15": "reject A1",
+    "H16": "reject T1",
+    "H17": "reject T1",
+    "H18": "reject T1",
+    "H19": "flag",
+    "H20": "reject T1",
+    "H21": "reject A1",
+    "H22": "reject T1",
+    "H23": "reject A1",
+    "H24": "reject A1",
+    "H25": "reject K1",
+    "H26": "flag",
+    "H27": "reject K1",
+    "H28": "reject A1",
+    "H29": "reject T2",
+    "H30": "reject T1"
+   },
+   "accepted": {
+    "tp": 1,
+    "fp": 1,
+    "fn": 0,
+    "tn": 27
+   },
+   "reaches_me": {
+    "tp": 1,
+    "fp": 3,
+    "fn": 0,
+    "tn": 25
+   },
+   "accepted_ids": [
+    "H03",
+    "H08"
+   ],
+   "reach_ids": [
+    "H03",
+    "H08",
+    "H19",
+    "H26"
+   ]
+  },
+  "C1": {
+   "desc": "C0 + seniority gate S1-S5",
+   "object": "filter rule",
+   "ref": "C0",
+   "cfg": {
+    "t2a": false,
+    "t3a": false,
+    "a3_negation": false,
+    "a6": false,
+    "a7_may_access": false,
+    "ear_strict": false,
+    "a2_export_license": false,
+    "seniority": true,
+    "k2": false,
+    "abstain_rule2": false,
+    "skill_threshold": 2
+   },
+   "outcomes": {
+    "H01": "reject T1",
+    "H02": "reject A1",
+    "H03": "accept",
+    "H04": "reject S1",
+    "H05": "reject A1",
+    "H06": "reject A1",
+    "H07": "reject A1",
+    "H08": "accept",
+    "H09": "reject T1",
+    "H10": "reject A1",
+    "H11": "reject A1",
+    "H12": "reject T1",
+    "H13": "reject T1",
+    "H14": "reject A1",
+    "H15": "reject A1",
+    "H16": "reject T1",
+    "H17": "reject T1",
+    "H18": "reject T1",
+    "H19": "reject S1",
+    "H20": "reject T1",
+    "H21": "reject A1",
+    "H22": "reject T1",
+    "H23": "reject A1",
+    "H24": "reject A1",
+    "H25": "reject S1",
+    "H26": "reject S3",
+    "H27": "reject S1",
+    "H28": "reject A1",
+    "H29": "reject T2",
+    "H30": "reject T1"
+   },
+   "accepted": {
+    "tp": 1,
+    "fp": 1,
+    "fn": 0,
+    "tn": 27
+   },
+   "reaches_me": {
+    "tp": 1,
+    "fp": 1,
+    "fn": 0,
+    "tn": 27
+   },
+   "accepted_ids": [
+    "H03",
+    "H08"
+   ],
+   "reach_ids": [
+    "H03",
+    "H08"
+   ]
+  },
+  "C2": {
+   "desc": "C0 + negation guard A3",
+   "object": "filter rule",
+   "ref": "C0",
+   "cfg": {
+    "t2a": false,
+    "t3a": false,
+    "a3_negation": true,
+    "a6": false,
+    "a7_may_access": false,
+    "ear_strict": false,
+    "a2_export_license": false,
+    "seniority": false,
+    "k2": false,
+    "abstain_rule2": false,
+    "skill_threshold": 2
+   },
+   "outcomes": {
+    "H01": "reject T1",
+    "H02": "reject A1",
+    "H03": "accept",
+    "H04": "reject K1",
+    "H05": "reject A1",
+    "H06": "reject A1",
+    "H07": "reject A1",
+    "H08": "accept",
+    "H09": "reject T1",
+    "H10": "reject A1",
+    "H11": "reject A1",
+    "H12": "reject T1",
+    "H13": "reject T1",
+    "H14": "reject A1",
+    "H15": "reject A1",
+    "H16": "reject T1",
+    "H17": "reject T1",
+    "H18": "reject T1",
+    "H19": "flag",
+    "H20": "reject T1",
+    "H21": "reject A1",
+    "H22": "reject T1",
+    "H23": "reject A1",
+    "H24": "reject A1",
+    "H25": "reject K1",
+    "H26": "flag",
+    "H27": "reject K1",
+    "H28": "reject A1",
+    "H29": "reject T2",
+    "H30": "reject T1"
+   },
+   "accepted": {
+    "tp": 1,
+    "fp": 1,
+    "fn": 0,
+    "tn": 27
+   },
+   "reaches_me": {
+    "tp": 1,
+    "fp": 3,
+    "fn": 0,
+    "tn": 25
+   },
+   "accepted_ids": [
+    "H03",
+    "H08"
+   ],
+   "reach_ids": [
+    "H03",
+    "H08",
+    "H19",
+    "H26"
+   ]
+  },
+  "C3": {
+   "desc": "C0 + new title false friends T2a",
+   "object": "filter rule",
+   "ref": "C0",
+   "cfg": {
+    "t2a": true,
+    "t3a": false,
+    "a3_negation": false,
+    "a6": false,
+    "a7_may_access": false,
+    "ear_strict": false,
+    "a2_export_license": false,
+    "seniority": false,
+    "k2": false,
+    "abstain_rule2": false,
+    "skill_threshold": 2
+   },
+   "outcomes": {
+    "H01": "reject T1",
+    "H02": "reject A1",
+    "H03": "accept",
+    "H04": "reject K1",
+    "H05": "reject A1",
+    "H06": "reject A1",
+    "H07": "reject T2a",
+    "H08": "accept",
+    "H09": "reject T1",
+    "H10": "reject A1",
+    "H11": "reject A1",
+    "H12": "reject T1",
+    "H13": "reject T1",
+    "H14": "reject A1",
+    "H15": "reject A1",
+    "H16": "reject T1",
+    "H17": "reject T1",
+    "H18": "reject T1",
+    "H19": "flag",
+    "H20": "reject T1",
+    "H21": "reject A1",
+    "H22": "reject T1",
+    "H23": "reject A1",
+    "H24": "reject A1",
+    "H25": "reject K1",
+    "H26": "flag",
+    "H27": "reject T2a",
+    "H28": "reject A1",
+    "H29": "reject T2",
+    "H30": "reject T1"
+   },
+   "accepted": {
+    "tp": 1,
+    "fp": 1,
+    "fn": 0,
+    "tn": 27
+   },
+   "reaches_me": {
+    "tp": 1,
+    "fp": 3,
+    "fn": 0,
+    "tn": 25
+   },
+   "accepted_ids": [
+    "H03",
+    "H08"
+   ],
+   "reach_ids": [
+    "H03",
+    "H08",
+    "H19",
+    "H26"
+   ]
+  },
+  "C4": {
+   "desc": "FILTER v0.1 (all approved v0.1 rules)",
+   "object": "filter version",
+   "ref": "C0",
+   "cfg": {
+    "t2a": true,
+    "t3a": true,
+    "a3_negation": true,
+    "a6": true,
+    "a7_may_access": false,
+    "ear_strict": false,
+    "a2_export_license": false,
+    "seniority": true,
+    "k2": true,
+    "abstain_rule2": true,
+    "skill_threshold": 2
+   },
+   "outcomes": {
+    "H01": "reject T1",
+    "H02": "reject A1",
+    "H03": "accept",
+    "H04": "reject S1",
+    "H05": "reject A1",
+    "H06": "reject A1",
+    "H07": "reject T2a",
+    "H08": "accept",
+    "H09": "reject T1",
+    "H10": "reject A1",
+    "H11": "reject A1",
+    "H12": "reject T1",
+    "H13": "reject T1",
+    "H14": "reject A1",
+    "H15": "reject A1",
+    "H16": "reject T1",
+    "H17": "reject T1",
+    "H18": "reject T1",
+    "H19": "reject S1",
+    "H20": "reject T1",
+    "H21": "reject A1",
+    "H22": "reject T1",
+    "H23": "reject A1",
+    "H24": "reject A1",
+    "H25": "reject S1",
+    "H26": "reject S3",
+    "H27": "reject T2a",
+    "H28": "reject A1",
+    "H29": "reject T2",
+    "H30": "reject T1"
+   },
+   "accepted": {
+    "tp": 1,
+    "fp": 1,
+    "fn": 0,
+    "tn": 27
+   },
+   "reaches_me": {
+    "tp": 1,
+    "fp": 1,
+    "fn": 0,
+    "tn": 27
+   },
+   "accepted_ids": [
+    "H03",
+    "H08"
+   ],
+   "reach_ids": [
+    "H03",
+    "H08"
+   ]
+  },
+  "C5": {
+   "desc": "FILTER v0.1 -> v0.2 (EAR exact, A7)",
+   "object": "filter version",
+   "ref": "C4",
+   "cfg": {
+    "t2a": true,
+    "t3a": true,
+    "a3_negation": true,
+    "a6": true,
+    "a7_may_access": true,
+    "ear_strict": true,
+    "a2_export_license": false,
+    "seniority": true,
+    "k2": true,
+    "abstain_rule2": true,
+    "skill_threshold": 2
+   },
+   "outcomes": {
+    "H01": "reject T1",
+    "H02": "reject A2",
+    "H03": "accept",
+    "H04": "reject S1",
+    "H05": "reject A2",
+    "H06": "reject A2",
+    "H07": "reject T2a",
+    "H08": "accept",
+    "H09": "reject T1",
+    "H10": "reject A1",
+    "H11": "reject A2",
+    "H12": "reject T1",
+    "H13": "reject T1",
+    "H14": "reject A2",
+    "H15": "reject A2",
+    "H16": "reject T1",
+    "H17": "reject T1",
+    "H18": "reject T1",
+    "H19": "reject S1",
+    "H20": "reject T1",
+    "H21": "reject A1",
+    "H22": "reject T1",
+    "H23": "reject A2",
+    "H24": "reject A2",
+    "H25": "reject S1",
+    "H26": "reject S3",
+    "H27": "reject T2a",
+    "H28": "reject A2",
+    "H29": "reject T2",
+    "H30": "reject T1"
+   },
+   "accepted": {
+    "tp": 1,
+    "fp": 1,
+    "fn": 0,
+    "tn": 27
+   },
+   "reaches_me": {
+    "tp": 1,
+    "fp": 1,
+    "fn": 0,
+    "tn": 27
+   },
+   "accepted_ids": [
+    "H03",
+    "H08"
+   ],
+   "reach_ids": [
+    "H03",
+    "H08"
+   ]
+  },
+  "C6": {
+   "desc": "v0.2 with K1 threshold 2 -> 3",
+   "object": "setting",
+   "ref": "C5",
+   "cfg": {
+    "t2a": true,
+    "t3a": true,
+    "a3_negation": true,
+    "a6": true,
+    "a7_may_access": true,
+    "ear_strict": true,
+    "a2_export_license": false,
+    "seniority": true,
+    "k2": true,
+    "abstain_rule2": true,
+    "skill_threshold": 3
+   },
+   "outcomes": {
+    "H01": "reject T1",
+    "H02": "reject A2",
+    "H03": "accept",
+    "H04": "reject S1",
+    "H05": "reject A2",
+    "H06": "reject A2",
+    "H07": "reject T2a",
+    "H08": "reject K1",
+    "H09": "reject T1",
+    "H10": "reject A1",
+    "H11": "reject A2",
+    "H12": "reject T1",
+    "H13": "reject T1",
+    "H14": "reject A2",
+    "H15": "reject A2",
+    "H16": "reject T1",
+    "H17": "reject T1",
+    "H18": "reject T1",
+    "H19": "reject S1",
+    "H20": "reject T1",
+    "H21": "reject A1",
+    "H22": "reject T1",
+    "H23": "reject A2",
+    "H24": "reject A2",
+    "H25": "reject S1",
+    "H26": "reject S3",
+    "H27": "reject T2a",
+    "H28": "reject A2",
+    "H29": "reject T2",
+    "H30": "reject T1"
+   },
+   "accepted": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "tn": 28
+   },
+   "reaches_me": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "tn": 28
+   },
+   "accepted_ids": [
+    "H03"
+   ],
+   "reach_ids": [
+    "H03"
+   ]
+  },
+  "C7": {
+   "desc": "FILTER v0.2 -> v0.3 (A2 export-license sentence -> A7 flag)",
+   "object": "filter version",
+   "ref": "C5",
+   "cfg": {
+    "t2a": true,
+    "t3a": true,
+    "a3_negation": true,
+    "a6": true,
+    "a7_may_access": true,
+    "ear_strict": true,
+    "a2_export_license": true,
+    "seniority": true,
+    "k2": true,
+    "abstain_rule2": true,
+    "skill_threshold": 2
+   },
+   "outcomes": {
+    "H01": "reject T1",
+    "H02": "reject K1",
+    "H03": "accept",
+    "H04": "reject S1",
+    "H05": "reject S1",
+    "H06": "flag",
+    "H07": "reject T2a",
+    "H08": "accept",
+    "H09": "reject T1",
+    "H10": "reject A1",
+    "H11": "reject S1",
+    "H12": "reject T1",
+    "H13": "reject T1",
+    "H14": "reject S1",
+    "H15": "flag",
+    "H16": "reject T1",
+    "H17": "reject T1",
+    "H18": "reject T1",
+    "H19": "reject S1",
+    "H20": "reject T1",
+    "H21": "reject A1",
+    "H22": "reject T1",
+    "H23": "reject S3",
+    "H24": "reject S1",
+    "H25": "reject S1",
+    "H26": "reject S3",
+    "H27": "reject T2a",
+    "H28": "reject S1",
+    "H29": "reject T2",
+    "H30": "reject T1"
+   },
+   "accepted": {
+    "tp": 1,
+    "fp": 1,
+    "fn": 0,
+    "tn": 27
+   },
+   "reaches_me": {
+    "tp": 1,
+    "fp": 3,
+    "fn": 0,
+    "tn": 25
+   },
+   "accepted_ids": [
+    "H03",
+    "H08"
+   ],
+   "reach_ids": [
+    "H03",
+    "H06",
+    "H08",
+    "H15"
+   ]
+  }
+ }
+}

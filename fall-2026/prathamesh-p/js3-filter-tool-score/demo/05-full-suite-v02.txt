@@ -1,0 +1,322 @@
+# run at 2026-11-25T19:20:36-0500  (after config switches; FILTER v0.2)
+# python -I -m unittest discover -s tests -v
+test_missing_title_abstains (test_filter.Abstain.test_missing_title_abstains)
+No title -> abstain. ... ok
+test_rule2_no_role_word_and_both_insufficient_abstains (test_filter.Abstain.test_rule2_no_role_word_and_both_insufficient_abstains)
+'Network Coordinator', silent body (authorization and seniority both insufficient) -> abstain. ... ok
+test_short_body_abstains (test_filter.Abstain.test_short_body_abstains)
+Body under 200 characters -> abstain. ... ok
+test_title_reject_wins_over_short_body (test_filter.Abstain.test_title_reject_wins_over_short_body)
+Gate 1 runs on the title first: 'Road Network Engineer' with an empty body -> reject T2, not abstain. ... ok
+test_every_quote_is_found_again (test_filter.Evidence.test_every_quote_is_found_again)
+Every non-null quote in an accepted and a rejected decision is an exact substring of its field. ... ok
+test_tampered_quote_is_reported (test_filter.Evidence.test_tampered_quote_is_reported)
+A quote that is not in the posting -> verify_quotes returns an error. ... ok
+test_v02_1_EAR_does_not_match_ears (test_filter.FilterV02.test_v02_1_EAR_does_not_match_ears)
+'the eyes and ears of the team' -> no A1 (EAR is exact uppercase, no plural) -> accept. ... ok
+test_v02_1_EAR_lowercase_does_not_match (test_filter.FilterV02.test_v02_1_EAR_lowercase_does_not_match)
+'wear ear protection on the floor' -> lowercase 'ear' is not EAR -> accept. ... ok
+test_v02_1_EAR_uppercase_still_rejects (test_filter.FilterV02.test_v02_1_EAR_uppercase_still_rejects)
+'Items subject to the EAR.' -> reject A1, quote 'EAR'. ... ok
+test_v02_2_explicit_exclusion_still_rejects (test_filter.FilterV02.test_v02_2_explicit_exclusion_still_rejects)
+The same sentence plus 'Must be a U.S. citizen.' -> reject A1. ... ok
+test_v02_2_may_require_access_export_control_flags (test_filter.FilterV02.test_v02_2_may_require_access_export_control_flags)
+The Cloudflare 'may require access ... export control' sentence alone -> flag A7, sponsorship unknown. ... ok
+test_T1_networking_and_networks_count (test_filter.Gate1Title.test_T1_networking_and_networks_count)
+'Networking Engineer' and 'Networks Engineer' pass T1 -> accept with two skills. ... ok
+test_T1_no_network_word_rejects (test_filter.Gate1Title.test_T1_no_network_word_rejects)
+'Product Manager' -> reject, gate T1. ... ok
+test_T1_whole_word_only (test_filter.Gate1Title.test_T1_whole_word_only)
+'Networkx Engineer' has no whole-word network -> reject T1. ... ok
+test_T2_false_friend_rejects (test_filter.Gate1Title.test_T2_false_friend_rejects)
+'Social Network Engineer' -> reject, gate T2. ... ok
+test_T2a_network_strategy_with_engineer_word_is_not_T2a (test_filter.Gate1Title.test_T2a_network_strategy_with_engineer_word_is_not_T2a)
+'Network Strategy Engineer' has an engineer word -> T2a does not apply -> accept. ... ok
+test_T2a_new_false_friends_reject (test_filter.Gate1Title.test_T2a_new_false_friends_reject)
+Champion network / network-on-chip / NoC / network strategy without an engineer word -> reject T2a. ... ok
+test_T3_role_word_accepts (test_filter.Gate1Title.test_T3_role_word_accepts)
+'Network Engineer' + 2 skills + silent body -> accept; title claim supported, quote 'Network Engineer'. ... ok
+test_T3a_operations_with_engineer_word_accepts (test_filter.Gate1Title.test_T3a_operations_with_engineer_word_accepts)
+'Network Operations Engineer' has 'engineer' -> T3 applies, not T3a -> accept. ... ok
+test_T3a_technician_without_role_word_flags (test_filter.Gate1Title.test_T3a_technician_without_role_word_flags)
+'Network Technician' (no T3 role word) -> flag, T3a in flags. ... ok
+test_T4_software_flags (test_filter.Gate1Title.test_T4_software_flags)
+'Software Engineer, Network Platform' -> flag, T4 in flags. ... ok
+test_T5_no_role_word_flags_when_seniority_known (test_filter.Gate1Title.test_T5_no_role_word_flags_when_seniority_known)
+'Network Coordinator' + '0-2 years' (S5 supported) -> flag with T5. ... ok
+test_A1_citizen_rejects_with_contradicted_quote (test_filter.Gate2Authorization.test_A1_citizen_rejects_with_contradicted_quote)
+'Must be a U.S. citizen.' -> reject A1; authorization contradicted, quote 'U.S. citizen'. ... ok
+test_A1_plural (test_filter.Gate2Authorization.test_A1_plural)
+'Open to U.S. citizens only.' -> reject A1. ... ok
+test_A1_searched_in_body_not_title (test_filter.Gate2Authorization.test_A1_searched_in_body_not_title)
+A Gate-2 phrase only in the title is not searched -> no A1. ... ok
+test_A2_sponsorship_refusal_rejects (test_filter.Gate2Authorization.test_A2_sponsorship_refusal_rejects)
+'We are unable to sponsor visas.' -> reject A2, authorization contradicted. ... ok
+test_A3_negator_before_phrase (test_filter.Gate2Authorization.test_A3_negator_before_phrase)
+'No security clearance is needed.' -> flag (A3). ... ok
+test_A3_negator_too_far_does_not_guard (test_filter.Gate2Authorization.test_A3_negator_too_far_does_not_guard)
+Negator more than 5 words away -> A1 still rejects. ... ok
+test_A4_authorized_to_work_is_not_refusal (test_filter.Gate2Authorization.test_A4_authorized_to_work_is_not_refusal)
+'must be authorized to work in the U.S.' -> accept; authorization insufficient, note says sponsorship unknown. ... ok
+test_A6_green_card_and_permanent_resident_reject (test_filter.Gate2Authorization.test_A6_green_card_and_permanent_resident_reject)
+'green card' / 'permanent resident' / 'U.S. persons only' -> reject A6. ... ok
+test_W1_years_military_dear_do_not_trigger_A1 (test_filter.Gate2Authorization.test_W1_years_military_dear_do_not_trigger_A1)
+W1: substring matching would fire 'EAR' in 'years' and 'ITAR' in 'military'. Whole word -> accept. ... ok
+test_W4_A3_negated_clearance_flags_not_rejects (test_filter.Gate2Authorization.test_W4_A3_negated_clearance_flags_not_rejects)
+W4: 'Security clearance not required.' -> flag (A3), not reject. ... ok
+test_W5_A5_silent_is_insufficient_never_supported (test_filter.Gate2Authorization.test_W5_A5_silent_is_insufficient_never_supported)
+W5: no authorization text -> label insufficient, note 'posting is silent'. ... ok
+test_S1_title_levels_reject (test_filter.Gate3Seniority.test_S1_title_levels_reject)
+Senior / Sr. / Staff / Principal / Lead / Manager / Director / Head of / VP in title -> reject S1. ... ok
+test_S2_engineer_I_is_entry_level (test_filter.Gate3Seniority.test_S2_engineer_I_is_entry_level)
+'Network Engineer I' -> accept, seniority supported. ... ok
+test_S3_five_plus_years_rejects (test_filter.Gate3Seniority.test_S3_five_plus_years_rejects)
+'5+ years of experience' -> reject S3, min_years 5, quote contains '5+ years'. ... ok
+test_S3_minimum_of_pattern (test_filter.Gate3Seniority.test_S3_minimum_of_pattern)
+'Minimum of 6 years of relevant experience' -> reject S3. ... ok
+test_S3_smallest_N_wins (test_filter.Gate3Seniority.test_S3_smallest_N_wins)
+'1+ years of experience required; 7+ years of experience preferred' -> min_years 1 -> accept. ... ok
+test_S3_three_or_four_years_flags (test_filter.Gate3Seniority.test_S3_three_or_four_years_flags)
+'3+ years of professional experience' and '4 or more years of experience' -> flag, S3 in flags. ... ok
+test_S3_two_years_supported (test_filter.Gate3Seniority.test_S3_two_years_supported)
+'2+ years of experience' -> accept, seniority supported. ... ok
+test_S3_years_without_experience_nearby_ignored (test_filter.Gate3Seniority.test_S3_years_without_experience_nearby_ignored)
+'5+ years in business' and '2 years ago' (no 'experience' within 6 words) -> no years read -> accept. ... ok
+test_S4_no_years_is_insufficient_and_passes (test_filter.Gate3Seniority.test_S4_no_years_is_insufficient_and_passes)
+No years and no level word -> seniority insufficient; posting still accepted. ... ok
+test_S5_entry_phrases_supported (test_filter.Gate3Seniority.test_S5_entry_phrases_supported)
+'new grad' in title or 'entry level' in body -> seniority supported. ... ok
+test_W2_S2_manager_I_is_not_entry_level (test_filter.Gate3Seniority.test_W2_S2_manager_I_is_not_entry_level)
+W2: 'Manager I, Engineering - Zero Trust Networking' -> reject S1 (not entry level). ... ok
+test_K1_one_skill_rejects (test_filter.Gate4Skills.test_K1_one_skill_rejects)
+Only 'BGP' -> reject K1; skills claim insufficient. ... ok
+test_K1_repeated_term_counts_once (test_filter.Gate4Skills.test_K1_repeated_term_counts_once)
+'BGP ... BGP' -> 1 distinct -> reject K1. ... ok
+test_K1_two_distinct_skills_accept_and_plural_counts (test_filter.Gate4Skills.test_K1_two_distinct_skills_accept_and_plural_counts)
+'VLANs' (plural) + 'firewall' -> 2 distinct -> accept; skills supported. ... ok
+test_K2_lexical_false_friends_do_not_count (test_filter.Gate4Skills.test_K2_lexical_false_friends_do_not_count)
+'context switching', 'ticket routing', DNS inside a URL do not count -> 0 skills -> reject K1. ... ok
+test_K3_other_skill_groups_do_not_count (test_filter.Gate4Skills.test_K3_other_skill_groups_do_not_count)
+Python, Ansible, Azure, zero trust -> not skills.networking -> reject K1. ... ok
+test_held_out_locked_until_labels_exist (test_filter.HoldoutGuard.test_held_out_locked_until_labels_exist)
+include_holdout=True without an existing labels file -> HoldoutLocked. ... ok
+test_held_out_postings_excluded_by_default (test_filter.HoldoutGuard.test_held_out_postings_excluded_by_default)
+select_for_run drops all 30 held-out postings. ... ok
+test_R1_ties_break_by_newest_date_missing_last (test_filter.Ranking.test_R1_ties_break_by_newest_date_missing_last)
+Same tier and skill count: newest first; a missing date ranks last. ... ok
+test_W3_entry_role_outranks_keyword_dense_role (test_filter.Ranking.test_W3_entry_role_outranks_keyword_dense_role)
+W3: a 2-skill posting with seniority supported ranks above a 9-skill posting with seniority insufficient. ... ok
+test_W3_staff_with_nine_skills_is_not_accepted (test_filter.Ranking.test_W3_staff_with_nine_skills_is_not_accepted)
+A 9-skill 'Staff Network Engineer' is rejected by S1, so it never reaches the ranking. ... ok
+test_real_datadog_manager_I_rejected_S1 (test_filter.RealNonHeldOut.test_real_datadog_manager_I_rejected_S1)
+W2 on the real Datadog title -> reject S1. ... ok
+test_real_fixture_is_not_held_out (test_filter.RealNonHeldOut.test_real_fixture_is_not_held_out)
+The two real postings below are not in holdout/HOLDOUT.json. ... ok
+test_real_zoox_senior_network_security_engineer_rejected_S1 (test_filter.RealNonHeldOut.test_real_zoox_senior_network_security_engineer_rejected_S1)
+JS1 accepted this posting (8+ years). v0.1 -> reject S1. ... ok
+test_accepts_lever_https (test_jobwatch.AllowList.test_accepts_lever_https) ... ok
+test_refuses_non_https_and_odd_ports (test_jobwatch.AllowList.test_refuses_non_https_and_odd_ports) ... ok
+test_refuses_off_list_hosts (test_jobwatch.AllowList.test_refuses_off_list_hosts) ... ok
+test_refuses_redirect_off_host_and_writes_nothing (test_jobwatch.AllowList.test_refuses_redirect_off_host_and_writes_nothing) ... ok
+test_source_has_one_get_and_no_send_paths (test_jobwatch.AllowList.test_source_has_one_get_and_no_send_paths) ... ok
+test_each_call_gets_a_new_session_id (test_jobwatch.JudgeHarness.test_each_call_gets_a_new_session_id) ... ok
+test_fenced_output_is_rejected_and_kept_verbatim (test_jobwatch.JudgeHarness.test_fenced_output_is_rejected_and_kept_verbatim) ... ok
+test_fresh_headless_call_and_raw_saved_with_session_id (test_jobwatch.JudgeHarness.test_fresh_headless_call_and_raw_saved_with_session_id) ... ok
+test_prompt_allowed_resume_paths_match_what_validator_resolves (test_jobwatch.JudgeHarness.test_prompt_allowed_resume_paths_match_what_validator_resolves) ... ok
+test_prompt_contract_names_the_fixed_schema (test_jobwatch.JudgeHarness.test_prompt_contract_names_the_fixed_schema) ... ok
+test_accepts_fictional_fixture (test_jobwatch.ResumeLoader.test_accepts_fictional_fixture) ... ok
+test_refuses_non_example_email (test_jobwatch.ResumeLoader.test_refuses_non_example_email) ... ok
+test_refuses_without_fictional_true (test_jobwatch.ResumeLoader.test_refuses_without_fictional_true) ... ok
+test_auth_gate_phrases_make_not_relevant_and_cite_visa (test_jobwatch.Rule.test_auth_gate_phrases_make_not_relevant_and_cite_visa) ... ok
+test_auth_phrase_ear_is_whole_word (test_jobwatch.Rule.test_auth_phrase_ear_is_whole_word) ... ok
+test_auth_phrase_hyphen_is_a_boundary (test_jobwatch.Rule.test_auth_phrase_hyphen_is_a_boundary) ... ok
+test_auth_phrases_all_whole_word (test_jobwatch.Rule.test_auth_phrases_all_whole_word) ... ok
+test_auth_phrases_allow_plural_s (test_jobwatch.Rule.test_auth_phrases_allow_plural_s) ... ok
+test_auth_sponsorship_refusal_phrases (test_jobwatch.Rule.test_auth_sponsorship_refusal_phrases) ... ok
+test_flag_network_without_role_word (test_jobwatch.Rule.test_flag_network_without_role_word) ... ok
+test_flag_software_networking_is_not_relevant_with_needs_human (test_jobwatch.Rule.test_flag_software_networking_is_not_relevant_with_needs_human) ... ok
+test_hand_labels_if_present (test_jobwatch.Rule.test_hand_labels_if_present) ... ok
+test_include_title_with_two_skills_and_no_auth_text_is_relevant (test_jobwatch.Rule.test_include_title_with_two_skills_and_no_auth_text_is_relevant) ... ok
+test_location_is_not_a_criterion (test_jobwatch.Rule.test_location_is_not_a_criterion) ... ok
+test_other_false_friends_and_no_network (test_jobwatch.Rule.test_other_false_friends_and_no_network) ... ok
+test_road_network_tools_is_not_relevant_in_real_day1_data (test_jobwatch.Rule.test_road_network_tools_is_not_relevant_in_real_day1_data) ... ok
+test_road_network_tools_is_not_relevant_synthetic (test_jobwatch.Rule.test_road_network_tools_is_not_relevant_synthetic) ... ok
+test_skills_match_whole_word_case_insensitive_plural_s (test_jobwatch.Rule.test_skills_match_whole_word_case_insensitive_plural_s) ... ok
+test_skills_plural_rule_still_requires_whole_word (test_jobwatch.Rule.test_skills_plural_rule_still_requires_whole_word) ... ok
+test_skills_read_lists_content_with_tags_stripped (test_jobwatch.Rule.test_skills_read_lists_content_with_tags_stripped) ... ok
+test_skills_threshold_is_two (test_jobwatch.Rule.test_skills_threshold_is_two) ... ok
+test_sponsorship_available_is_not_a_hit (test_jobwatch.Rule.test_sponsorship_available_is_not_a_hit) ... ok
+test_verdict_is_two_valued (test_jobwatch.Rule.test_verdict_is_two_valued) ... ok
+test_accepts_good_output_and_labels_it_judgment (test_jobwatch.Validator.test_accepts_good_output_and_labels_it_judgment) ... ok
+test_rejects_off_schema (test_jobwatch.Validator.test_rejects_off_schema) ... ok
+test_rejects_uncited_or_fabricated_justification (test_jobwatch.Validator.test_rejects_uncited_or_fabricated_justification) ... ok
+test_check_citations_catches_fabrication (test_jobwatch.W1UncitedJustification.test_check_citations_catches_fabrication) ... ok
+test_every_record_citation_is_grounded (test_jobwatch.W1UncitedJustification.test_every_record_citation_is_grounded) ... ok
+test_one_skill_posting_cites_exactly_that_one_term (test_jobwatch.W1UncitedJustification.test_one_skill_posting_cites_exactly_that_one_term) ... ok
+test_W2_many_new_postings_each_carry_their_own_verdict (test_jobwatch.Watch.test_W2_many_new_postings_each_carry_their_own_verdict) ... ok
+test_W2_verdict_attached_to_correct_posting (test_jobwatch.Watch.test_W2_verdict_attached_to_correct_posting) ... ok
+test_baseline_on_real_day1_zoox_reports_zero_new (test_jobwatch.Watch.test_baseline_on_real_day1_zoox_reports_zero_new) ... ok
+test_baseline_reports_zero_new_and_saves_state (test_jobwatch.Watch.test_baseline_reports_zero_new_and_saves_state) ... ok
+test_failed_run_leaves_state_untouched (test_jobwatch.Watch.test_failed_run_leaves_state_untouched) ... ok
+test_judgment_never_changes_record (test_jobwatch.Watch.test_judgment_never_changes_record) ... ok
+test_rejected_judgment_is_stored_as_rejected_not_repaired (test_jobwatch.Watch.test_rejected_judgment_is_stored_as_rejected_not_repaired) ... ok
+test_rerun_same_day_reports_zero_new (test_jobwatch.Watch.test_rerun_same_day_reports_zero_new) ... ok
+test_second_run_reports_only_unseen_ids (test_jobwatch.Watch.test_second_run_reports_only_unseen_ids) ... ok
+test_seeded_label_is_carried_in_report (test_jobwatch.Watch.test_seeded_label_is_carried_in_report) ... ok
+test_state_equals_exactly_current_run_ids (test_jobwatch.Watch.test_state_equals_exactly_current_run_ids) ... ok
+test_A_1_parse_real_saved_raw_counts (test_loop.AdaptersAndState.test_A_1_parse_real_saved_raw_counts)
+EXPECTED: parsing the REAL saved captures raw/2026-11-10/{zoox,cloudflare,openai}.json gives 234, 466 and 826 postings ... ok
+test_A_2_greenhouse_content_unescaped_and_stripped (test_loop.AdaptersAndState.test_A_2_greenhouse_content_unescaped_and_stripped)
+EXPECTED: the Greenhouse content "&lt;p&gt;Run BGP and OSPF.&lt;/p&gt;" becomes descriptionPlain "Run BGP and OSPF." (no tags), and id 101 becomes "101". ... ok
+test_A_3_format_changed (test_loop.AdaptersAndState.test_A_3_format_changed)
+EXPECTED: FormatChanged for non-JSON, for Greenhouse/Ashby bodies without a "jobs" list, for Lever bodies that are not a list, ... ok
+test_A_4_baseline_then_new_ids_with_records (test_loop.AdaptersAndState.test_A_4_baseline_then_new_ids_with_records)
+EXPECTED: run 1 (no state) gives new_count 0 (baseline, as in JS1) and writes state with ids {L1, L2}. Run 2, whose body adds L3 ... ok
+test_A_5_seeded_label_everywhere (test_loop.AdaptersAndState.test_A_5_seeded_label_everywhere)
+EXPECTED: label="SEEDED" puts "SEEDED" in report["label"], at the start of run_id, in the report filename, in every raw filename, ... ok
+test_B_1_constants_match_gate_table (test_loop.Budgets.test_B_1_constants_match_gate_table)
+EXPECTED: the values parsed from the GATE section 2 table (boards 4, requests 6, seconds 120) and the per-request timeout (30 s), ... ok
+test_B_2_more_than_max_boards_refused_before_any_request (test_loop.Budgets.test_B_2_more_than_max_boards_refused_before_any_request)
+EXPECTED: five distinct boards (more than 4) give "error", exit 2, with zero transport calls. ... ok
+test_B_3_cli_flag_cannot_raise_a_budget (test_loop.Budgets.test_B_3_cli_flag_cannot_raise_a_budget)
+EXPECTED: --max-requests 7, --max-boards 5 or --max-seconds 121 (each above GATE) returns 2 with zero transport calls. ... [error] ConfigRefused: --max-requests 7 refused: a flag can only lower a GATE budget (1..6); raising it needs a dated GATE.md amendment by Prathamesh (step: configuration)
+[error] ConfigRefused: --max-boards 5 refused: a flag can only lower a GATE budget (1..4); raising it needs a dated GATE.md amendment by Prathamesh (step: configuration)
+[error] ConfigRefused: --max-seconds 121 refused: a flag can only lower a GATE budget (1..120); raising it needs a dated GATE.md amendment by Prathamesh (step: configuration)
+ok
+test_B_4_cli_flag_can_lower_a_budget (test_loop.Budgets.test_B_4_cli_flag_can_lower_a_budget)
+EXPECTED: --max-requests 1 with two boards gives exit 4 (budget_exhausted) after exactly 1 call. ... ok
+test_B_5_default_boards_are_the_gate_four (test_loop.Budgets.test_B_5_default_boards_are_the_gate_four)
+EXPECTED: with no --board, the CLI uses exactly the GATE D-1 boards plus the D-12 deliberate failure, in this order: ... ok
+test_P_10_format_change_escalates_and_raw_kept_unparsed (test_loop.ErrorPolicy.test_P_10_format_change_escalates_and_raw_kept_unparsed)
+EXPECTED: a 200 non-JSON body gives escalated, 1 call. The raw body is saved (the escalation's evidence file exists, holds ... ok
+test_P_11_request_budget_never_exceeded_by_retries (test_loop.ErrorPolicy.test_P_11_request_budget_never_exceeded_by_retries)
+EXPECTED (W5): four boards that each answer 503 twice would want 8 requests. Exactly 6 calls happen, then budget_exhausted/4, ... ok
+test_P_12_raw_saved_for_every_attempt_with_hash (test_loop.ErrorPolicy.test_P_12_raw_saved_for_every_attempt_with_hash)
+EXPECTED: each attempt's body is saved under raw_dir/<day>/ with a .fetch.txt holding http_status and a sha256 equal to the ... ok
+test_P_1_404_no_retry (test_loop.ErrorPolicy.test_P_1_404_no_retry)
+EXPECTED (W5): 404 gives exactly 1 call, outcome failed_http_404, no sleep, run incomplete/3, no invented values. ... ok
+test_P_2_410_no_retry (test_loop.ErrorPolicy.test_P_2_410_no_retry)
+EXPECTED: 410 gives exactly 1 call and outcome failed_http_410 (D-3 names outcomes failed_http_<code>). ... ok
+test_P_3_5xx_one_retry_then_fail (test_loop.ErrorPolicy.test_P_3_5xx_one_retry_then_fail)
+EXPECTED (W5): for each of 500, 502, 503 and 504, the code repeated twice gives exactly 2 calls, outcome failed_http_<code>, ... ok
+test_P_4_503_then_ok_recovers (test_loop.ErrorPolicy.test_P_4_503_then_ok_recovers)
+EXPECTED: 503 followed by 200 gives 2 calls, outcome ok, and run finished/0. ... ok
+test_P_5_429_retry_after_honoured_up_to_10s (test_loop.ErrorPolicy.test_P_5_429_retry_after_honoured_up_to_10s)
+EXPECTED: 429 with Retry-After: 5, then 200, gives a sleep of 5 s and 2 calls. 429 with Retry-After: 30 (>10) gives NO retry, ... ok
+test_P_6_timeout_and_reset_one_retry (test_loop.ErrorPolicy.test_P_6_timeout_and_reset_one_retry)
+EXPECTED: TimeoutError twice gives 2 calls and failed_timeout. ConnectionResetError twice gives 2 calls and failed_network. ... ok
+test_P_7_dns_no_retry (test_loop.ErrorPolicy.test_P_7_dns_no_retry)
+EXPECTED: DNSFailure gives exactly 1 call and failed_network. ... ok
+test_P_8_401_403_escalate_no_retry (test_loop.ErrorPolicy.test_P_8_401_403_escalate_no_retry)
+EXPECTED: 401 and 403 each give 1 call, outcome "escalated", and an entry in report["escalations"] naming the board, ... ok
+test_P_9_login_redirect_on_allowed_host_escalates (test_loop.ErrorPolicy.test_P_9_login_redirect_on_allowed_host_escalates)
+EXPECTED: a 200 whose final_url is https://api.lever.co/login gives escalated, 1 call, and no posting_count. ... ok
+test_E1_finished_exit_0_with_required_fields (test_loop.Exits.test_E1_finished_exit_0_with_required_fields)
+EXPECTED: three boards that answer 200 give status "finished", exit_code 0. Each board has outcome "ok", posting_count 2, ... ok
+test_E2_incomplete_exit_3_failed_board_fields_and_state_untouched (test_loop.Exits.test_E2_incomplete_exit_3_failed_board_fields_and_state_untouched)
+EXPECTED: three ok boards plus the deliberate bad board answering 404 give "incomplete", exit 3 (W6: not "finished"). ... ok
+test_E3_budget_exhausted_exit_4_names_budget_value_and_not_attempted (test_loop.Exits.test_E3_budget_exhausted_exit_4_names_budget_value_and_not_attempted)
+EXPECTED: with max_requests=2 and three boards, the third request is not taken. Status "budget_exhausted", exit 4. ... ok
+test_E4_seconds_budget_checked_before_each_request (test_loop.Exits.test_E4_seconds_budget_checked_before_each_request)
+EXPECTED: a fake clock that advances 70 s per request, with max_seconds=120. Request 1 happens at t=0 and request 2 at t=70. ... ok
+test_E5_error_exit_2_off_host_final_url_stops_run_and_lists_written (test_loop.Exits.test_E5_error_exit_2_off_host_final_url_stops_run_and_lists_written)
+EXPECTED: board 1 is ok (its raw and state are written). Board 2's response has final_url https://evil.example/x (an off-host redirect). ... ok
+test_E6_error_exit_2_on_unexpected_exception (test_loop.Exits.test_E6_error_exit_2_on_unexpected_exception)
+EXPECTED: a transport raising ValueError("boom") (not a listed error type) gives "error", exit 2, error.type "ValueError", ... ok
+test_E7_ok_empty_counts_as_finished (test_loop.Exits.test_E7_ok_empty_counts_as_finished)
+EXPECTED: a 200 with zero postings is outcome "ok_empty" with posting_count 0, and the run is "finished", exit 0. ... ok
+test_E8_cli_prints_one_line_summary_and_returns_exit_code (test_loop.Exits.test_E8_cli_prints_one_line_summary_and_returns_exit_code)
+EXPECTED: loop.main([...]) with an injected transport returns 3 for the 404 case and prints one line containing "status=incomplete". ... ok
+test_H_1_allowed_hosts_exactly_gate (test_loop.Permissions.test_H_1_allowed_hosts_exactly_gate)
+EXPECTED: adapters.ALLOWED_HOSTS == {"api.lever.co", "boards-api.greenhouse.io", "api.ashbyhq.com"}, and the board URLs match GATE D-1. ... ok
+test_H_2_B1_B2_check_url_refusals (test_loop.Permissions.test_H_2_B1_B2_check_url_refusals)
+EXPECTED: HostRefused for example.com (B1), the lookalike api.lever.co.evil.example (B2), http://, userinfo, and port 8443. ... ok
+test_H_3_W8_redirect_handler_refuses_off_host_for_all_three (test_loop.Permissions.test_H_3_W8_redirect_handler_refuses_off_host_for_all_three)
+EXPECTED (W8): the real transport's redirect handler (loop._AllowListRedirects) raises HostRefused for a redirect from each ... ok
+test_H_4_W3_sibling_prefix_dir_refused_before_any_request (test_loop.Permissions.test_H_4_W3_sibling_prefix_dir_refused_before_any_request)
+EXPECTED (W3): state_dir = ROOT/state-evil (a sibling-prefix folder) gives "error", exit 2, with zero calls; the folder is not created. ... ok
+test_H_5_W4_junction_raw_dir_refused_before_any_request (test_loop.Permissions.test_H_5_W4_junction_raw_dir_refused_before_any_request)
+EXPECTED (W4): raw_dir = a junction under the sandbox pointing outside ROOT gives "error", exit 2, zero calls, and an empty ... ok
+test_H_6_B13_static_no_send_paths (test_loop.Permissions.test_H_6_B13_static_no_send_paths)
+EXPECTED (B13): loop.py and adapters.py contain no POST/PUT/PATCH/DELETE method, no Authorization or Cookie header, no smtplib, ... ok
+test_H_7_reads_go_through_check_read (test_loop.Permissions.test_H_7_reads_go_through_check_read)
+EXPECTED (step-6 follow-up): resume_path = a fictional résumé copied OUTSIDE the project gives "error", exit 2, zero calls, ... ok
+test_H_8_approve_only_exact_path (test_loop.Permissions.test_H_8_approve_only_exact_path)
+EXPECTED (step-6 follow-up; GATE B10/B11 at loop level): with a fixed run_id, the raw path for attempt 1 already exists under ... ok
+test_H_9_seeded_folder_is_readable_not_writable (test_loop.Permissions.test_H_9_seeded_folder_is_readable_not_writable)
+EXPECTED (amendment A1): policy.check_read(ROOT/seeded/SEEDED-openai-empty.json) is allowed; check_write on the same path is refused. ... ok
+test_R_1_normalize_url (test_loop.RepeatRule.test_R_1_normalize_url)
+EXPECTED: scheme and host lower-cased, default port dropped, query parameters sorted, fragment removed. Every variant below ... ok
+test_R_2_ledger_refuses_repeat_allows_one_retry (test_loop.RepeatRule.test_R_2_ledger_refuses_repeat_allows_one_retry)
+EXPECTED: permit(GET, u) gives True. A second permit of an equivalent URL without retry gives False, is recorded in .refused and not counted in .sent. ... ok
+test_R_3_duplicate_board_collapsed_and_logged (test_loop.RepeatRule.test_R_3_duplicate_board_collapsed_and_logged)
+EXPECTED: boards ["lever:zoox", "LEVER:zoox"] are collapsed to one. There is exactly 1 call and 1 board in the report, ... ok
+test_R_4_trace_has_every_request_and_outcome (test_loop.RepeatRule.test_R_4_trace_has_every_request_and_outcome)
+EXPECTED: the trace (traces/<run_id>.jsonl, under traces_dir) is JSON lines. The number of "request" observations equals the transport ... ok
+test_V_1_static_independence (test_loop.Verify.test_V_1_static_independence)
+EXPECTED: verify.py imports none of jobwatch, loop, adapters or policy. ... ok
+test_V_2_W7_seeded_empty_finished_run_fails (test_loop.Verify.test_V_2_W7_seeded_empty_finished_run_fails)
+EXPECTED (W7): the previous snapshot has 3 openai ids, and the SEEDED day-2 run gets {"jobs": []}. The agent says finished/0 ... ok
+test_V_3_honest_run_passes (test_loop.Verify.test_V_3_honest_run_passes)
+EXPECTED: previous snapshot {a-1, a-2} and today's body {a-1, a-2} give finished, and verify.py exits 0 with "PASS". ... ok
+test_V_4_report_disagreeing_with_raw_fails (test_loop.Verify.test_V_4_report_disagreeing_with_raw_fails)
+EXPECTED: an honest run whose saved report is then edited (posting_count 2 changed to 5) makes verify.py exit 1 and name "posting_count". ... ok
+test_V_5_raw_hash_mismatch_fails (test_loop.Verify.test_V_5_raw_hash_mismatch_fails)
+EXPECTED: an honest run whose saved raw body is then altered makes verify.py exit 1 and name "sha256". ... ok
+test_V_6_drop_over_50_percent_fails (test_loop.Verify.test_V_6_drop_over_50_percent_fails)
+EXPECTED: a previous snapshot of 5 ids and today's 2 postings (a 60% drop) make verify.py exit 1 and name "50%". ... ok
+test_V_7_invented_value_on_failed_board_fails (test_loop.Verify.test_V_7_invented_value_on_failed_board_fails)
+EXPECTED: a 404 run whose report is edited to give the failed board a posting_count makes verify.py exit 1 and name "invented". ... ok
+test_C1_state_and_out_both_outside (test_policy.CliWritesOutsideProject.test_C1_state_and_out_both_outside)
+EXPECTED: exit 2; stderr contains "refused" and "o.json" (the first write, --out, as in JS1 run()); ... ok
+test_C2_out_outside_state_inside (test_policy.CliWritesOutsideProject.test_C2_out_outside_state_inside)
+EXPECTED: exit 2; stderr names "o.json"; the outside folder stays empty; the inside state file is NOT created ... ok
+test_C3_state_outside_out_inside (test_policy.CliWritesOutsideProject.test_C3_state_outside_out_inside)
+EXPECTED: exit 2; stderr names "s.json"; no file outside. Whether runs/... was written before the refusal is ... ok
+test_C4_control_both_inside_allowed (test_policy.CliWritesOutsideProject.test_C4_control_both_inside_allowed)
+EXPECTED: exit 0, and both files are created under state/ and runs/. This is a control, so that a "refuse everything" ... ok
+test_R1_B7_read_fixture_allowed (test_policy.PolicyReadBoundaries.test_R1_B7_read_fixture_allowed)
+EXPECTED: check_read(fixtures/resume.fictional.json) returns its resolved path (readable, although P7 shows it is not writable). ... ok
+test_R2_read_outside_refused (test_policy.PolicyReadBoundaries.test_R2_read_outside_refused)
+EXPECTED: PermissionRefused for check_read of a real file outside ROOT (a temp file). ... ok
+test_P10_B9_new_file_in_writable_folders_allowed (test_policy.PolicyWriteBoundaries.test_P10_B9_new_file_in_writable_folders_allowed)
+EXPECTED: allowed (returns the path inside ROOT) for a NEW file in each of raw/, state/, runs/, traces/. Nothing is written. ... ok
+test_P1_B3_sibling_prefix_root (test_policy.PolicyWriteBoundaries.test_P1_B3_sibling_prefix_root)
+EXPECTED: PermissionRefused for ../js2-loop-tools-diff-evil/x.json (a string-prefix check would accept it; that is wrong version W3). ... ok
+test_P2_B4_sibling_prefix_folder (test_policy.PolicyWriteBoundaries.test_P2_B4_sibling_prefix_folder)
+EXPECTED: PermissionRefused for ROOT/raw-evil/x.json (it starts with "raw" but is not raw/; W3). ... ok
+test_P3_B6_dotdot_escape (test_policy.PolicyWriteBoundaries.test_P3_B6_dotdot_escape)
+EXPECTED: PermissionRefused for ROOT/raw/../../js1-contract-and-watch/x.json (it resolves into the JS1 folder). ... ok
+test_P4_B12_absolute_outside_temp (test_policy.PolicyWriteBoundaries.test_P4_B12_absolute_outside_temp)
+EXPECTED: PermissionRefused for <%TEMP%>/x.json (absolute, outside the project). ... ok
+test_P5_B12_absolute_outside_system (test_policy.PolicyWriteBoundaries.test_P5_B12_absolute_outside_system)
+EXPECTED: PermissionRefused for C:/Windows/js2-x.txt (or /etc/js2-x.txt on POSIX). The file is never created. ... ok
+test_P6_B5_junction_escape (test_policy.PolicyWriteBoundaries.test_P6_B5_junction_escape)
+EXPECTED: PermissionRefused for ROOT/raw/<junction>/escape.json, where <junction> is an mklink /J pointing to a folder outside ROOT ... ok
+test_P7_B8_inside_project_not_writable (test_policy.PolicyWriteBoundaries.test_P7_B8_inside_project_not_writable)
+EXPECTED: PermissionRefused for fixtures/resume.fictional.json, GATE.md and jobwatch.py (inside ROOT, but not writable). ... ok
+test_P8_B10_overwrite_evidence_needs_approval (test_policy.PolicyWriteBoundaries.test_P8_B10_overwrite_evidence_needs_approval)
+EXPECTED: ApprovalRequired (a subclass of PermissionRefused) for the existing raw/2026-11-10/zoox.json with no approve list. ... ok
+test_P9_B11_overwrite_with_exact_approval (test_policy.PolicyWriteBoundaries.test_P9_B11_overwrite_with_exact_approval)
+EXPECTED: allowed with approve=("raw/2026-11-10/zoox.json",); it returns the resolved path. Approving a DIFFERENT ... ok
+test_V1_library_fetch_outside_raw_dir_makes_zero_requests (test_revision_fetch.FetchChecksPathsBeforeRequest.test_V1_library_fetch_outside_raw_dir_makes_zero_requests)
+EXPECTED: jobwatch.fetch("zoox", <outside>, urlopen=fake) raises policy.PermissionRefused, fake.calls == 0, ... ok
+test_V2_cli_fetch_outside_raw_dir_exit_2_zero_requests (test_revision_fetch.FetchChecksPathsBeforeRequest.test_V2_cli_fetch_outside_raw_dir_exit_2_zero_requests)
+EXPECTED: jobwatch.main(["fetch", "--board", "zoox", "--raw-dir", <outside>]) returns 2, fake.calls == 0, and the outside folder stays empty. ... [error] write refused: <USER_HOME>\AppData\Local\Temp\js2-fetch-outside-njedgmq4\2026-11-25\zoox.json resolves to <USER_HOME>\AppData\Local\Temp\js2-fetch-outside-njedgmq4\2026-11-25\zoox.json, outside the project folder C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js3-filter-tool-score
+[error] status=error step=fetch; files written before the refusal: none
+ok
+test_V3_control_inside_raw_dir_does_request (test_revision_fetch.FetchChecksPathsBeforeRequest.test_V3_control_inside_raw_dir_does_request)
+EXPECTED: with an INSIDE folder (a temp folder under state/), the checks pass and fake.calls == 1. This is a control, so that a ... ok
+test_W_1_two_refusals_after_a_writing_call_each_report_only_their_own_files (test_written_reset.WrittenIsPerCall.test_W_1_two_refusals_after_a_writing_call_each_report_only_their_own_files)
+EXPECTED: call A (a run fully inside state/) writes its out and state files and returns 0. Call B (--out outside) and then call C ... ok
+
+----------------------------------------------------------------------
+Ran 177 tests in 10.384s
+
+OK
+[loop] status=error exit=2 boards=0 requests=0/6 seconds=0.001/120 report=C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js3-filter-tool-score\state\_test_tmp_loop_kg9u0n0q\runs\20261125T192044-32fd2a-error.json
+[loop] status=error exit=2 boards=0 requests=0/6 seconds=0.001/120 report=C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js3-filter-tool-score\state\_test_tmp_loop_kg9u0n0q\runs\20261125T192044-d14230-error.json
+[loop] status=error exit=2 boards=0 requests=0/6 seconds=0.001/120 report=C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js3-filter-tool-score\state\_test_tmp_loop_kg9u0n0q\runs\20261125T192044-bfa6e3-error.json
+[loop] status=budget_exhausted exit=4 boards=2 requests=1/1 seconds=0.021/120 report=C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js3-filter-tool-score\state\_test_tmp_loop_7w17dn7r\runs\20261125T192044-b56309-budget_exhausted.json
+  [board] lever-zoox                                    ok               attempts=1 postings=2 new=0
+  [board] ashby-openai                                  not_attempted    attempts=0 why=-

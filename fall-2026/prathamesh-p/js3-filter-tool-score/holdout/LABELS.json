@@ -1,0 +1,249 @@
+{
+ "saved": "2026-11-25 19:09:59 EST",
+ "labelled": "2026-11-25",
+ "provenance": "Drafted by Claude (claude.ai chat) at Prathamesh's request from the LABEL-SHEET text that Claude Code printed (the obvious non-network and senior titles from the title alone). Prathamesh reviewed every label and approved them. Made blind to any filter output on the held-out set. Because Claude drafted the labels, a score measured against them is partly Claude judging Claude.",
+ "approved_by": "Prathamesh",
+ "seed_file": "holdout/HOLDOUT.json",
+ "labels": [
+  {
+   "hid": "H01",
+   "board": "cloudflare",
+   "id": "7783835",
+   "title": "Named Account Executive, Thailand",
+   "label": "not_fit",
+   "reason": "sales, not network work"
+  },
+  {
+   "hid": "H02",
+   "board": "cloudflare",
+   "id": "8187404",
+   "title": "Systems Engineer, Network Protocols & Distributed Systems",
+   "label": "unsure",
+   "reason": "protocol/systems software, close to network work; export-control sentence ambiguous for F-1"
+  },
+  {
+   "hid": "H03",
+   "board": "openai",
+   "id": "9f78c41f-8d39-46c9-b9c3-c3b075905b24",
+   "title": "Network Engineer",
+   "label": "fit",
+   "reason": "enterprise network engineering, no years stated, silent on authorization and clearance"
+  },
+  {
+   "hid": "H04",
+   "board": "datadog",
+   "id": "8128450",
+   "title": "Staff Engineer - Cloud Networks",
+   "label": "not_fit",
+   "reason": "Staff title"
+  },
+  {
+   "hid": "H05",
+   "board": "cloudflare",
+   "id": "7541032",
+   "title": "Senior Software Engineer - Network Platforms",
+   "label": "not_fit",
+   "reason": "Senior title"
+  },
+  {
+   "hid": "H06",
+   "board": "cloudflare",
+   "id": "8311376",
+   "title": "Data Center Network Operations Engineer",
+   "label": "not_fit",
+   "reason": "minimum 4 years required"
+  },
+  {
+   "hid": "H07",
+   "board": "openai",
+   "id": "ead83ff6-7a58-43dd-b7da-b85e7ddd679c",
+   "title": "RTL Design Engineer, Networking / NoC",
+   "label": "not_fit",
+   "reason": "chip design (NoC), false friend"
+  },
+  {
+   "hid": "H08",
+   "board": "openai",
+   "id": "a80e213f-c592-4337-a410-e5bf94f4e40d",
+   "title": "Network Engineer",
+   "label": "not_fit",
+   "reason": "UK role; persona needs US sponsorship"
+  },
+  {
+   "hid": "H09",
+   "board": "openai",
+   "id": "7613aca3-9dd8-41cd-b114-06ef4de967a9",
+   "title": "Software Engineer, Cooperative AI",
+   "label": "not_fit",
+   "reason": "AI research, not network work"
+  },
+  {
+   "hid": "H10",
+   "board": "datadog",
+   "id": "8267561",
+   "title": "Senior Network Engineer, Office Technology",
+   "label": "not_fit",
+   "reason": "Senior title"
+  },
+  {
+   "hid": "H11",
+   "board": "cloudflare",
+   "id": "8185723",
+   "title": "Senior Engineering Manager — Network Connectivity",
+   "label": "not_fit",
+   "reason": "Senior Engineering Manager"
+  },
+  {
+   "hid": "H12",
+   "board": "datadog",
+   "id": "8002771",
+   "title": "Senior Financial Systems Analyst",
+   "label": "not_fit",
+   "reason": "finance, not network work"
+  },
+  {
+   "hid": "H13",
+   "board": "zoox",
+   "id": "2ed8a665-cee8-4d70-bcb1-e96b6214b371",
+   "title": "Senior/Staff Software Engineer, ML Inference Optimization",
+   "label": "not_fit",
+   "reason": "ML engineering, Senior/Staff"
+  },
+  {
+   "hid": "H14",
+   "board": "cloudflare",
+   "id": "7992903",
+   "title": "Senior Network Engineer",
+   "label": "not_fit",
+   "reason": "Senior title"
+  },
+  {
+   "hid": "H15",
+   "board": "cloudflare",
+   "id": "7446310",
+   "title": "Software Engineer, Network Performance & Reliability (Argo)",
+   "label": "not_fit",
+   "reason": "software role on network reliability (15-1252)"
+  },
+  {
+   "hid": "H16",
+   "board": "openai",
+   "id": "bb28a39e-eb1f-41ef-96de-98adf58a8c3c",
+   "title": "People Technology Analyst, Workday PATT & Benefits",
+   "label": "not_fit",
+   "reason": "HR systems, not network work"
+  },
+  {
+   "hid": "H17",
+   "board": "openai",
+   "id": "c67d4a21-5677-4f93-8962-3ac618a6f6c2",
+   "title": "AI Deployment Manager (Japanese-Speaking)",
+   "label": "not_fit",
+   "reason": "deployment manager, not network work"
+  },
+  {
+   "hid": "H18",
+   "board": "zoox",
+   "id": "a50dec1e-ad55-415f-880c-2f1bd8291311",
+   "title": "Manager, Procurement & Strategic Partnerships",
+   "label": "not_fit",
+   "reason": "procurement manager"
+  },
+  {
+   "hid": "H19",
+   "board": "fastly",
+   "id": "8045052",
+   "title": "Senior SRE - Networks",
+   "label": "not_fit",
+   "reason": "Senior title"
+  },
+  {
+   "hid": "H20",
+   "board": "cloudflare",
+   "id": "8045321",
+   "title": "Senior Named Account Executive, South Africa",
+   "label": "not_fit",
+   "reason": "sales"
+  },
+  {
+   "hid": "H21",
+   "board": "openai",
+   "id": "f6b9903c-9034-436b-a4ec-4c8643a6d0dd",
+   "title": "Networking Operating System Firmware Engineer",
+   "label": "not_fit",
+   "reason": "firmware development; export line requires legal status"
+  },
+  {
+   "hid": "H22",
+   "board": "openai",
+   "id": "832094fd-4d89-4fe4-bc18-9ba88d347a18",
+   "title": "Forward Deployed Engineer (FDE), Legal-SF",
+   "label": "not_fit",
+   "reason": "forward deployed engineer, not network work"
+  },
+  {
+   "hid": "H23",
+   "board": "cloudflare",
+   "id": "8099671",
+   "title": "Network Deployment Engineer",
+   "label": "not_fit",
+   "reason": "5+ years required"
+  },
+  {
+   "hid": "H24",
+   "board": "cloudflare",
+   "id": "8157281",
+   "title": "Staff Software Engineer - Integrated Network Strategy",
+   "label": "not_fit",
+   "reason": "Staff title"
+  },
+  {
+   "hid": "H25",
+   "board": "openai",
+   "id": "0ed12b35-0115-4ad3-81f5-ea1bb05c9f6b",
+   "title": "White Space Manager, Network & Data Halls",
+   "label": "not_fit",
+   "reason": "facilities manager"
+  },
+  {
+   "hid": "H26",
+   "board": "openai",
+   "id": "3ca637f8-c0d6-4253-8568-1f31b02adf76",
+   "title": "Datacenter Networking Technician, AI Compute Deployment - Stargate",
+   "label": "not_fit",
+   "reason": "7+ years; technician lead"
+  },
+  {
+   "hid": "H27",
+   "board": "openai",
+   "id": "1dddc3d3-00d5-4b19-a321-a8d00720f543",
+   "title": "Community Programs Manager, Champion Network",
+   "label": "not_fit",
+   "reason": "community program, false friend"
+  },
+  {
+   "hid": "H28",
+   "board": "cloudflare",
+   "id": "7793013",
+   "title": "Senior Software Engineer - Network Connectivity (Go/Rust)",
+   "label": "not_fit",
+   "reason": "Senior title"
+  },
+  {
+   "hid": "H29",
+   "board": "zoox",
+   "id": "94b5b4a5-257a-43d8-96bb-8dccd6d690f0",
+   "title": "Software Engineer - Road Network Tools",
+   "label": "not_fit",
+   "reason": "road maps, false friend"
+  },
+  {
+   "hid": "H30",
+   "board": "zoox",
+   "id": "40a0ff29-6701-4c82-a5eb-afb69682b6c6",
+   "title": "Head of Contingent Workforce & Travel",
+   "label": "not_fit",
+   "reason": "workforce management"
+  }
+ ]
+}

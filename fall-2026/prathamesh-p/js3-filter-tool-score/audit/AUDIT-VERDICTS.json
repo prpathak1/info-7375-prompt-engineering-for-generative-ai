@@ -1,0 +1,377 @@
+{
+ "saved": "2026-11-25 19:10:10 Eastern Standard Time",
+ "provenance": "Verdicts drafted by Claude (claude.ai chat) from the rows Claude Code printed; reviewed and approved by Prathamesh, 2026-11-25.",
+ "filter_version_judged": "v0.1",
+ "rows": [
+  {
+   "row": "R01",
+   "board": "datadog",
+   "id": "8245889",
+   "title": "Commercial Account Executive - Israel",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R02",
+   "board": "datadog",
+   "id": "8230620",
+   "title": "Manager, Accounts Payable",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R03",
+   "board": "cloudflare",
+   "id": "8203752",
+   "title": "Senior Territory Account Executive, Central Eastern Europe - Digital Natives",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R04",
+   "board": "openai",
+   "id": "460b4295-3803-4dda-983d-3b0fea0b0fc4",
+   "title": "Software Engineer, Habitat (Online Data)",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R05",
+   "board": "datadog",
+   "id": "8418089",
+   "title": "Senior Developer Advocate, OpenTelemetry",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R06",
+   "board": "openai",
+   "id": "08e8d03a-df94-46af-8664-cd9aab1af445",
+   "title": "GTM Strategy & Operations, Professional Services",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R07",
+   "board": "openai",
+   "id": "1bec1791-b073-4f2a-9de6-34e36238c216",
+   "title": "Staff PLM & Engineering Applications Engineer, Consumer Devices",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R08",
+   "board": "datadog",
+   "id": "8259839",
+   "title": "Manager I, Engineering - Anomaly Detection",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R09",
+   "board": "datadog",
+   "id": "8303221",
+   "title": "Director, Enterprise Sales",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R10",
+   "board": "openai",
+   "id": "56aafd17-7db9-473a-b3b4-957b6d926cdf",
+   "title": "Manufacturing Engineer, Motors & Actuators",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R11",
+   "board": "datadog",
+   "id": "8300636",
+   "title": "Field Enablement Manager",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R12",
+   "board": "cloudflare",
+   "id": "8158104",
+   "title": "Workday Integration Specialist",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R13",
+   "board": "openai",
+   "id": "28c96920-a412-47c0-88f8-342790d779ff",
+   "title": "Partner Director, McKinsey Alliance",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R14",
+   "board": "openai",
+   "id": "7472e486-0aa6-4f9d-86da-2105a42b2dce",
+   "title": "Forward Deployed Engineer (FDE) - AI Infra - SF",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R15",
+   "board": "openai",
+   "id": "f01b7084-a68d-4e30-ace9-6b5e6d90c517",
+   "title": "Technical Threat Investigator, Threat Intel Engineering",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R16",
+   "board": "cloudflare",
+   "id": "8188468",
+   "title": "Infrastructure Network & Supply Engineer",
+   "filter": "reject A1",
+   "category": null,
+   "verdict": "disagree",
+   "why": "'may require access ... export control' is ambiguous for an F-1 holder; should flag, not reject."
+  },
+  {
+   "row": "R17",
+   "board": "openai",
+   "id": "0cebbcd0-7ff4-4492-8638-a7d7df1c0d22",
+   "title": "International Payroll Operations",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R18",
+   "board": "datadog",
+   "id": "7463765",
+   "title": "Commercial Account Executive",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R19",
+   "board": "cloudflare",
+   "id": "8325821",
+   "title": "Hardware Systems Engineer",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R20",
+   "board": "zoox",
+   "id": "17b2714f-5454-48a4-bb76-d14157575498",
+   "title": "Lead Analytics Engineer – Enterprise, Data & AI",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R21",
+   "board": "datadog",
+   "id": "7405822",
+   "title": "Enterprise Sales Executive",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R22",
+   "board": "datadog",
+   "id": "8126596",
+   "title": "Senior Sales Engineer - Majors (West)",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R23",
+   "board": "openai",
+   "id": "202eb061-23d7-4a58-80c8-bc3b41e56d39",
+   "title": "Software Engineer, Build Systems / CI",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R24",
+   "board": "datadog",
+   "id": "8365206",
+   "title": "Senior AI Research Engineer - GPU Systems & Kernels",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R25",
+   "board": "openai",
+   "id": "529feb11-4b9b-4baf-9b3f-f2b100156c5a",
+   "title": "Protection Scientist Engineer, Integrity",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R26",
+   "board": "openai",
+   "id": "4f0d64b8-bfa7-4c30-9972-a10d74b49075",
+   "title": "Software Engineer, Life Sciences",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R27",
+   "board": "cloudflare",
+   "id": "8200786",
+   "title": "Senior Customer Engineer, Majors",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R28",
+   "board": "openai",
+   "id": "063d1957-23f0-4976-b8bd-93a0d4a31cfb",
+   "title": "Supply Chain Operations Program Manager, AI Infrastructure",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R29",
+   "board": "openai",
+   "id": "0a24703f-6108-4422-807e-78831dd98ed1",
+   "title": "Manager, Applied AI Engineering  (Enterprise)",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "R30",
+   "board": "zoox",
+   "id": "c3877eb0-56d7-44a9-9a6d-88f87c1fc309",
+   "title": "Senior Strategic Sourcing Manager, CapEx",
+   "filter": "reject T1",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "N01",
+   "board": "openai",
+   "id": "bbad4315-1f13-4b2f-b595-cf1287274f2f",
+   "title": "Network Operations Engineer, AI Networking",
+   "filter": "reject S3",
+   "category": "a",
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "N02",
+   "board": "openai",
+   "id": "1fec5ecd-5b7b-45bc-bc8c-ac7184565551",
+   "title": "Software Engineer, Core Network Engineering",
+   "filter": "reject K1",
+   "category": "b",
+   "verdict": "disagree",
+   "why": "Title has 'software' (T4 flag) and duties are networking systems; the skills check rejected it because the skill list misses that phrasing. Should reach a human."
+  },
+  {
+   "row": "N03",
+   "board": "cloudflare",
+   "id": "8046869",
+   "title": "Interconnection Manager, Network Strategy Americas",
+   "filter": "reject T2a",
+   "category": "c",
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "N04",
+   "board": "cloudflare",
+   "id": "8267396",
+   "title": "Senior Manager, Integrated Network Strategy",
+   "filter": "reject T2a",
+   "category": "c",
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "N05",
+   "board": "cloudflare",
+   "id": "8159206",
+   "title": "Network Security Engineer",
+   "filter": "reject A1",
+   "category": "d",
+   "verdict": "disagree",
+   "why": "Same export-control sentence; should flag."
+  },
+  {
+   "row": "A01",
+   "board": "openai",
+   "id": "9f7371c4-e306-4a45-a400-aa2843fabd85",
+   "title": "Network Infrastructure Engineer, Global Network Infra (WAN)",
+   "filter": "accept",
+   "category": null,
+   "verdict": "agree",
+   "why": ""
+  },
+  {
+   "row": "X01",
+   "board": "cloudflare",
+   "id": "8081027",
+   "title": "Network Security Engineer",
+   "filter": "reject A1",
+   "category": "extra: 9th A1 reject, not on the sheet",
+   "verdict": "disagree",
+   "why": "The plural rule let EAR match 'ears' ('eyes and ears'). False friend."
+  }
+ ]
+}

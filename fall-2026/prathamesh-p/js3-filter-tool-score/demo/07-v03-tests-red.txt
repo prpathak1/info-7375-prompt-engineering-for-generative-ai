@@ -1,0 +1,41 @@
+# run at 2026-11-25T19:26:49-0500  FILTER v0.3 tests BEFORE the code change (filter.py = v0.2)
+# python -I -m unittest discover -s tests -p test_filter.py -k FilterV03 -v
+test_v03_cloudflare_pair_flags_A7 (test_filter.FilterV03.test_v03_cloudflare_pair_flags_A7)
+The real Cloudflare pair (may-require-access sentence + export-license sentence) -> flag A7. ... FAIL
+test_v03_export_license_sentence_alone_flags_A7 (test_filter.FilterV03.test_v03_export_license_sentence_alone_flags_A7)
+The export-license sentence alone -> flag A7 (sponsorship unknown), not reject A2. ... FAIL
+test_v03_plain_without_sponsorship_still_rejects_A2 (test_filter.FilterV03.test_v03_plain_without_sponsorship_still_rejects_A2)
+'Candidates must be able to work without sponsorship.' -> reject A2 (no export-license continuation). ... ok
+test_v03_visa_refusal_still_rejects_A2 (test_filter.FilterV03.test_v03_visa_refusal_still_rejects_A2)
+'We will not sponsor visas for this role.' -> reject A2. ... ok
+
+======================================================================
+FAIL: test_v03_cloudflare_pair_flags_A7 (test_filter.FilterV03.test_v03_cloudflare_pair_flags_A7)
+The real Cloudflare pair (may-require-access sentence + export-license sentence) -> flag A7.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js3-filter-tool-score\tests\test_filter.py", line 223, in test_v03_cloudflare_pair_flags_A7
+    self.assertEqual(r["outcome"], "flag")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'reject' != 'flag'
+- reject
++ flag
+
+
+======================================================================
+FAIL: test_v03_export_license_sentence_alone_flags_A7 (test_filter.FilterV03.test_v03_export_license_sentence_alone_flags_A7)
+The export-license sentence alone -> flag A7 (sponsorship unknown), not reject A2.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js3-filter-tool-score\tests\test_filter.py", line 216, in test_v03_export_license_sentence_alone_flags_A7
+    self.assertEqual(r["outcome"], "flag")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'reject' != 'flag'
+- reject
++ flag
+
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.005s
+
+FAILED (failures=2)

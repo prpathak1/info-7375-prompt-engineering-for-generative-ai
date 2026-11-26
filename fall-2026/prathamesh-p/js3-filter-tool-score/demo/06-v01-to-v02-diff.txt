@@ -1,0 +1,14 @@
+postings 1964 1964
+v0.1 outcomes Counter({'reject': 1963, 'accept': 1})
+v0.2 outcomes Counter({'reject': 1963, 'accept': 1})
+v0.2 gates Counter({'T1': 1944, 'A2': 9, 'S1': 5, 'T2a': 2, 'S3': 2, 'K1': 1})
+changed: 9
+- cloudflare 8081027 | Network Security Engineer | v0.1 reject A1 -> v0.2 reject A2 flags=[] | A2 sponsorship refusal: 'without sponsorship' | quote: without sponsorship
+- cloudflare 8083701 | Senior Engineering Manager, Cloudflare Network Interconnect | v0.1 reject A1 -> v0.2 reject A2 flags=[] | A2 sponsorship refusal: 'without sponsorship' | quote: without sponsorship
+- cloudflare 8088046 | Network Deployment Engineer - APJC | v0.1 reject A1 -> v0.2 reject A2 flags=[] | A2 sponsorship refusal: 'without sponsorship' | quote: without sponsorship
+- cloudflare 8088751 | Software Engineer, Cloudflare Network Interconnect | v0.1 reject A1 -> v0.2 reject A2 flags=['T4'] | A2 sponsorship refusal: 'without sponsorship' | quote: without sponsorship
+- cloudflare 8142261 | Systems Engineer, Network Automation | v0.1 reject A1 -> v0.2 reject A2 flags=[] | A2 sponsorship refusal: 'without sponsorship' | quote: without sponsorship
+- cloudflare 8159206 | Network Security Engineer | v0.1 reject A1 -> v0.2 reject A2 flags=[] | A2 sponsorship refusal: 'without sponsorship' | quote: without sponsorship
+- cloudflare 8164724 | Senior Software Engineer, Network On-Ramps | v0.1 reject A1 -> v0.2 reject A2 flags=['T4'] | A2 sponsorship refusal: 'without sponsorship' | quote: without sponsorship
+- cloudflare 8188468 | Infrastructure Network & Supply Engineer | v0.1 reject A1 -> v0.2 reject A2 flags=[] | A2 sponsorship refusal: 'without sponsorship' | quote: without sponsorship
+- cloudflare 8207864 | System Engineer - Network Systems | v0.1 reject A1 -> v0.2 reject A2 flags=[] | A2 sponsorship refusal: 'without sponsorship' | quote: without sponsorship

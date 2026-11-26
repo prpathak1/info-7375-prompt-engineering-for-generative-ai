@@ -1,0 +1,56 @@
+# run at 2026-11-25T19:10:28-0500  FILTER v0.2 tests BEFORE the code change (filter.py = v0.1)
+# python -I -m unittest discover -s tests -p test_filter.py -k FilterV02 -v
+test_v02_1_EAR_does_not_match_ears (test_filter.FilterV02.test_v02_1_EAR_does_not_match_ears)
+'the eyes and ears of the team' -> no A1 (EAR is exact uppercase, no plural) -> accept. ... FAIL
+test_v02_1_EAR_lowercase_does_not_match (test_filter.FilterV02.test_v02_1_EAR_lowercase_does_not_match)
+'wear ear protection on the floor' -> lowercase 'ear' is not EAR -> accept. ... FAIL
+test_v02_1_EAR_uppercase_still_rejects (test_filter.FilterV02.test_v02_1_EAR_uppercase_still_rejects)
+'Items subject to the EAR.' -> reject A1, quote 'EAR'. ... ok
+test_v02_2_explicit_exclusion_still_rejects (test_filter.FilterV02.test_v02_2_explicit_exclusion_still_rejects)
+The same sentence plus 'Must be a U.S. citizen.' -> reject A1. ... ok
+test_v02_2_may_require_access_export_control_flags (test_filter.FilterV02.test_v02_2_may_require_access_export_control_flags)
+The Cloudflare 'may require access ... export control' sentence alone -> flag A7, sponsorship unknown. ... FAIL
+
+======================================================================
+FAIL: test_v02_1_EAR_does_not_match_ears (test_filter.FilterV02.test_v02_1_EAR_does_not_match_ears)
+'the eyes and ears of the team' -> no A1 (EAR is exact uppercase, no plural) -> accept.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js3-filter-tool-score\tests\test_filter.py", line 183, in test_v02_1_EAR_does_not_match_ears
+    self.assertEqual(r["outcome"], "accept")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'reject' != 'accept'
+- reject
++ accept
+
+
+======================================================================
+FAIL: test_v02_1_EAR_lowercase_does_not_match (test_filter.FilterV02.test_v02_1_EAR_lowercase_does_not_match)
+'wear ear protection on the floor' -> lowercase 'ear' is not EAR -> accept.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js3-filter-tool-score\tests\test_filter.py", line 187, in test_v02_1_EAR_lowercase_does_not_match
+    self.assertEqual(d(body=PAD + TWO_SKILLS + " Wear ear protection on the floor.")["outcome"], "accept")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'reject' != 'accept'
+- reject
++ accept
+
+
+======================================================================
+FAIL: test_v02_2_may_require_access_export_control_flags (test_filter.FilterV02.test_v02_2_may_require_access_export_control_flags)
+The Cloudflare 'may require access ... export control' sentence alone -> flag A7, sponsorship unknown.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js3-filter-tool-score\tests\test_filter.py", line 197, in test_v02_2_may_require_access_export_control_flags
+    self.assertEqual(r["outcome"], "flag")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'reject' != 'flag'
+- reject
++ flag
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.004s
+
+FAILED (failures=3)

@@ -1,0 +1,23 @@
+# run at 2026-11-25T18:52:03-0500 (filter.py moved aside: tests written before implementation)
+# python -I -m unittest discover -s tests -p test_filter.py
+E
+======================================================================
+ERROR: test_filter (unittest.loader._FailedTest.test_filter)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_filter
+Traceback (most recent call last):
+  File "C:\Program Files\Python313\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Program Files\Python313\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js3-filter-tool-score\tests\test_filter.py", line 30, in <module>
+    import filter as flt  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'filter'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

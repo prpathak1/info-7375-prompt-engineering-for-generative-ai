@@ -1,0 +1,4 @@
+[loop] status=incomplete exit=3 boards=3 requests=3/6 seconds=1.813/120 report=C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js3-filter-tool-score\runs\20261125T184034-139103-incomplete.json
+  [board] greenhouse-fastly                             ok               attempts=1 postings=50 new=0
+  [board] greenhouse-datadog                            ok               attempts=1 postings=392 new=0
+  [board] ashby-tailscale                               failed_http_404  attempts=1 why=HTTP 404: bad board name or removed board; no retry (GATE section 4)

@@ -1,0 +1,12 @@
+{
+ "mcpServers": {
+  "js3": {
+   "type": "stdio",
+   "command": "python",
+   "args": [
+    "-I",
+    "C:\\info7375\\info-7375-prompt-engineering-for-generative-ai\\fall-2026\\prathamesh-p\\js3-filter-tool-score\\mcp_server.py"
+   ]
+  }
+ }
+}

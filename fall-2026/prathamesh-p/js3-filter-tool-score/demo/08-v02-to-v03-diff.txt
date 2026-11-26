@@ -1,0 +1,13 @@
+non-held-out postings 1964 1964
+v0.2 outcomes {'reject': 1963, 'accept': 1}
+v0.3 outcomes {'reject': 1960, 'flag': 3, 'accept': 1}
+changed: 9
+- cloudflare 8081027 | Network Security Engineer | v0.2 reject A2 -> v0.3 flag  flags=['A7', 'S3'] | human decides: A7, S3
+- cloudflare 8083701 | Senior Engineering Manager, Cloudflare Network Interconnect | v0.2 reject A2 -> v0.3 reject S1 flags=['A7'] | S1: level word 'Senior' in title
+- cloudflare 8088046 | Network Deployment Engineer - APJC | v0.2 reject A2 -> v0.3 reject S3 flags=['A7'] | S3: smallest stated requirement 5 years
+- cloudflare 8088751 | Software Engineer, Cloudflare Network Interconnect | v0.2 reject A2 -> v0.3 flag  flags=['T4', 'A7'] | human decides: T4, A7
+- cloudflare 8142261 | Systems Engineer, Network Automation | v0.2 reject A2 -> v0.3 reject K1 flags=['A7', 'S3'] | K1: 1 of 2 networking terms
+- cloudflare 8159206 | Network Security Engineer | v0.2 reject A2 -> v0.3 flag  flags=['A7'] | human decides: A7
+- cloudflare 8164724 | Senior Software Engineer, Network On-Ramps | v0.2 reject A2 -> v0.3 reject S1 flags=['T4', 'A7'] | S1: level word 'Senior' in title
+- cloudflare 8188468 | Infrastructure Network & Supply Engineer | v0.2 reject A2 -> v0.3 reject K1 flags=['A7'] | K1: 1 of 2 networking terms
+- cloudflare 8207864 | System Engineer - Network Systems | v0.2 reject A2 -> v0.3 reject K1 flags=['A7', 'S3'] | K1: 1 of 2 networking terms

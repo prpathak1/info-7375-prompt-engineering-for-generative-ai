@@ -1,0 +1,60 @@
+# AUDIT-SHEET: filter v0.1 decisions for Prathamesh to judge
+
+- **Drawn:** 2026-11-25 19:03:44 Eastern Standard Time with `python -I audit_sheet.py --seed 7375` from `out/decisions.jsonl` (`python -I filter.py run`, FILTER v0.1, N1-N6).
+- **Population:** 1964 postings (the 30 held-out postings are excluded): 1963 rejects, 1 accepts, 0 flags, 0 abstains.
+- **Deciding rule counts:** T1 1944, A1 9, S1 5, T2a 2, S3 2, K1 1, accept 1.
+- **Near-threshold pools** (after the random draw): a=1, b=1, c=2, d=7. The definitions are in the `audit_sheet.py` docstring.
+- **Accepts:** 1 exist, so 1 shown (target was 5).
+- **Key line** = the exact text the deciding rule quoted (or its note). **Context** = the first duty line found by the LABEL-SHEET line search, so you can judge a title-only reject.
+- **Fill in:** `agree` / `disagree` (with the filter's decision) and a short why. You can also reply with lines like `R07 disagree: ...`.
+
+## 1. Random rejects (30, seed 7375)
+
+| # | Board | Title | Decided by | Key line | Context | agree / disagree | why |
+|---|---|---|---|---|---|---|---|
+| R01 | datadog | Commercial Account Executive - Israel | reject T1: no whole-word network in title | no whole-word network in title | Commercial Account Executive As an Account Executive (AE) on our Commercial Sales team, you will assist in Datadog’s overall business growth by strategically en ... |  |  |
+| R02 | datadog | Manager, Accounts Payable | reject T1: no whole-word network in title | no whole-word network in title | We are seeking a Manager, Accounts Payable to lead Accounts Payable and Expense operations. This role will manage individual contributors and may oversee team l ... |  |  |
+| R03 | cloudflare | Senior Territory Account Executive, Central Eastern Europe - Digital Natives | reject T1: no whole-word network in title | no whole-word network in title | Strategic Revenue Generation: Architect and execute advanced territory and account plans to consistently exceed multi-million dollar sales targets and annual qu ... |  |  |
+| R04 | openai | Software Engineer, Habitat (Online Data) | reject T1: no whole-word network in title | no whole-word network in title | - Design and build core abstractions spanning storage, caching, routing, CDC, and privacy enforcement |  |  |
+| R05 | datadog | Senior Developer Advocate, OpenTelemetry | reject T1: no whole-word network in title | no whole-word network in title | Developer Advocates at Datadog are engineers who share their expertise with practitioners across the community, customers and non-customers alike. Our Senior De ... |  |  |
+| R06 | openai | GTM Strategy & Operations, Professional Services | reject T1: no whole-word network in title | no whole-word network in title | We are seeking a senior GTM Strategy & Operations professional to build and scale the operating system for OpenAI's Professional Services business. This is a fo ... |  |  |
+| R07 | openai | Staff PLM & Engineering Applications Engineer, Consumer Devices | reject T1: no whole-word network in title | no whole-word network in title | - Own the technical architecture, deployment, configuration, integration, validation, and long-term operation of NX and Teamcenter. |  |  |
+| R08 | datadog | Manager I, Engineering - Anomaly Detection | reject T1: no whole-word network in title | no whole-word network in title | The Anomaly Detection team’s mission is to build scalable, cost effective systems that can automatically detect anomalies in our customers’ system telemetry. Th ... |  |  |
+| R09 | datadog | Director, Enterprise Sales | reject T1: no whole-word network in title | no whole-word network in title | Our Director, Enterprise Sales will provide strategy, mentorship, and guidance for a team of Enterprise Sales Executives who are responsible for driving new bus ... |  |  |
+| R10 | openai | Manufacturing Engineer, Motors & Actuators | reject T1: no whole-word network in title | no whole-word network in title | Each opening focuses on one of the three specialties below, with shared responsibility for reliable processes and hardware. |  |  |
+| R11 | datadog | Field Enablement Manager | reject T1: no whole-word network in title | no whole-word network in title | Deliver engaging live and virtual enablement sessions for regional Sales and Customer Success teams, including onboarding, ongoing training, and reinforcement p ... |  |  |
+| R12 | cloudflare | Workday Integration Specialist  | reject T1: no whole-word network in title | no whole-word network in title | We are looking for a Workday Integration Specialist to join our People & Payroll Systems team, an energetic team focused on building resilient and efficient sol ... |  |  |
+| R13 | openai | Partner Director, McKinsey Alliance  | reject T1: no whole-word network in title | no whole-word network in title | - Own the global McKinsey relationship, including alliance strategy, pipeline growth, enterprise impact, deployment scale, and long-term expansion across priori ... |  |  |
+| R14 | openai | Forward Deployed Engineer (FDE) - AI Infra - SF | reject T1: no whole-word network in title | no whole-word network in title | - Own technical delivery for agreed semiconductor and AI-infrastructure workstreams, from initial scoping and prototypes through validation, production deployme ... |  |  |
+| R15 | openai | Technical Threat Investigator, Threat Intel Engineering | reject T1: no whole-word network in title | no whole-word network in title | - Conduct deep, end-to-end investigations into sophisticated threat actors interacting with OpenAI’s models, products, and broader ecosystem. |  |  |
+| R16 | cloudflare | Infrastructure Network & Supply Engineer | reject A1: A1: 'export control' | This position may require access to information protected under U.S. export control laws, including the U.S. Export Administration Regulations. | I nfrastructure Capacity & Expansion Planning |  |  |
+| R17 | openai | International Payroll Operations  | reject T1: no whole-word network in title | no whole-word network in title | - Lead the international payroll processing team and oversee end-to-end payroll delivery across EMEA and APAC, ensuring employees are paid accurately, on time, ... |  |  |
+| R18 | datadog | Commercial Account Executive | reject T1: no whole-word network in title | no whole-word network in title | As an Account Executive (AE) on our Commercial Sales team, you will assist in Datadog’s overall business growth by strategically engaging and closing net-new cu ... |  |  |
+| R19 | cloudflare | Hardware Systems Engineer | reject T1: no whole-word network in title | no whole-word network in title | Support and assist in the end to end server product qualification from concept to deployment, ensuring hardware designs (electrical, thermal and mechanical) are ... |  |  |
+| R20 | zoox | Lead Analytics Engineer – Enterprise, Data & AI | reject T1: no whole-word network in title | no whole-word network in title | Design and maintain a unified semantic model that provides a "single source of truth" for cross-functional stakeholders, AI Agents, Self Serve Analytics and Exe ... |  |  |
+| R21 | datadog | Enterprise Sales Executive | reject T1: no whole-word network in title | no whole-word network in title | Our Enterprise Sales Executives target and close new business with Datadog’s largest, most strategic customers and prospects. In this role you’ll be focused on ... |  |  |
+| R22 | datadog | Senior Sales Engineer - Majors (West) | reject T1: no whole-word network in title | no whole-word network in title | As a Senior Enterprise Sales Engineer, you’ll serve as a trusted technical advisor and strategic partner to both customers and Sales. You’ll lead complex techni ... |  |  |
+| R23 | openai | Software Engineer, Build Systems / CI | reject T1: no whole-word network in title | no whole-word network in title | - Own and evolve Bazel-based build and test workflows across a large, polyglot monorepo. |  |  |
+| R24 | datadog | Senior AI Research Engineer - GPU Systems & Kernels | reject T1: no whole-word network in title | no whole-word network in title | Write, tune, and debug GPU kernels (CUDA, Triton, or similar) for the operations that dominate LLM training and inference. |  |  |
+| R25 | openai | Protection Scientist Engineer, Integrity  | reject T1: no whole-word network in title | no whole-word network in title | - Define and drive protection strategy for a harm area or launch. Translate ambiguous risks into goals, priorities and roadmaps, and make trade-offs based on ev ... |  |  |
+| R26 | openai | Software Engineer, Life Sciences | reject T1: no whole-word network in title | no whole-word network in title | - Design backend services, APIs, and integrations that connect users with models, scientific tools, and laboratory services. |  |  |
+| R27 | cloudflare | Senior Customer Engineer, Majors | reject T1: no whole-word network in title | no whole-word network in title | The Customer Engineer (CE) is the core driver of our technical go-to-market strategy: a trusted technical advisor and primary architect of the customer journey. ... |  |  |
+| R28 | openai | Supply Chain Operations Program Manager, AI Infrastructure | reject T1: no whole-word network in title | no whole-word network in title | - Act as the single-threaded owner for operational readiness across NPI and ramp, accountable for outcomes from early bring-up through sustained production |  |  |
+| R29 | openai | Manager, Applied AI Engineering  (Enterprise) | reject T1: no whole-word network in title | no whole-word network in title | - Build, manage, and develop a high-performing team of Applied AI Engineers supporting large and complex enterprise customers. |  |  |
+| R30 | zoox | Senior Strategic Sourcing Manager, CapEx | reject T1: no whole-word network in title | no whole-word network in title | Lead procurement and partnership initiatives for Zoox’s manufacturing organizations; build and maintain strategic relationships with key suppliers as the lead p ... |  |  |
+
+## 2. Near-threshold cases
+
+| # | Board | Title | Decided by | Key line | Context | agree / disagree | why |
+|---|---|---|---|---|---|---|---|
+| N01 | openai | Network Operations Engineer, AI Networking | reject S3 (a): S3: smallest stated requirement 5 years | - 5+ years of experience operating large-scale data center, cloud, AI, or HPC network infrastructure. | - Own the operational health, availability, and reliability of production AI network infrastructure across Industrial Compute's data centers. |  |  |
+| N02 | openai | Software Engineer, Core Network Engineering | reject K1 (b): K1: 0 of 2 networking terms | K1: 0 of 2 networking terms | - Design, build, and operate networking systems that support large-scale AI training and inference infrastructure |  |  |
+| N03 | cloudflare | Interconnection Manager, Network Strategy Americas | reject T2a (c): false friend | Network Strategy | Own and execute the interconnection and backbone strategy for the Americas, balancing the distinct realities of the U.S. and South American markets. |  |  |
+| N04 | cloudflare | Senior Manager, Integrated Network Strategy  | reject T2a (c): false friend | Network Strategy | About Us At Cloudflare, we are on a mission to help build a better Internet. Today the company runs one of the world’s largest networks that powers millions of ... |  |  |
+| N05 | cloudflare | Network Security Engineer  | reject A1 (d): A1: 'export control' | This position may require access to information protected under U.S. export control laws, including the U.S. Export Administration Regulations. | Communicate with customers via chat, email, and phone |  |  |
+
+## 3. Accepts
+
+| # | Board | Title | Decided by | Key line | Context | agree / disagree | why |
+|---|---|---|---|---|---|---|---|
+| A01 | openai | Network Infrastructure Engineer, Global Network Infra (WAN) | accept: passed every gate | skills: BGP, TCP/IP, routing | - Design, deploy, and support WAN infrastructure across data centers, network PoPs, and cloud connectivity environments. |  |  |

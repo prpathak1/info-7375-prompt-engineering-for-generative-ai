@@ -1,0 +1,5 @@
+resume.json
+**/resume.json
+__pycache__/
+# 10.5 MB ShieldAI day-1 capture: kept locally as evidence; its hash, headers and fetch metadata are tracked
+raw/2026-10-30/shieldai.json

@@ -1,0 +1,91 @@
+Plain text of hand-prediction rows 2 and 3, extracted from raw/2026-10-30/zoox.json (fetched 2026-10-30 18:11:44 EDT).
+Extraction only: descriptionPlain and additionalPlain as-is; lists[].content with HTML tags removed and <li> shown as "- ". No verdicts, no matching.
+
+==============================================================================
+Posting ID: 8321d00e-9e2b-4947-a37e-fdbad7dcd637
+Title: Senior Network Security Engineer
+==============================================================================
+
+[descriptionPlain]
+Zoox's Network Security team architects and defends the digital borders of the company — from corporate offices to engineering labs and product/mission environments. As a Network Security Engineer, you will design, implement, and operate security controls across Zoox's enterprise, OT networks, and cloud infrastructure spanning on-premises data centers and public cloud environments (AWS, GCP), partnering closely with Network Engineering, IT, Product Security, and Software Engineering teams.
+
+[lists: In This Role, You Will...]
+- Design, implement, and maintain secure hybrid/multi-cloud network architectures (AWS/GCP, CloudWAN); enforce zero-trust access controls and network segmentation across corporate, data center, lab, and edge environments; develop and maintain related policies, standards, and architecture diagrams
+- Own and operate next-generation firewall platforms (Palo Alto Networks, Fortinet), managing policy architecture, segmentation, NAT, URL filtering, SSL/TLS decryption, and threat prevention tuning
+- Architect, operate, and own the lifecycle of secure remote access solutions (VPN, ZTNA, site-to-site tunnels), ensuring high availability, certificate-based authentication, and integration with identity providers (SAML, Entra ID)
+- Drive automation and Infrastructure-as-Code (IaC) using Terraform, Python, CI/CD, and REST APIs for configuration management, firewall policies, and security baselines; integrate LLM-based tools to streamline operational tasks and reduce manual toil
+- Oversee security operations including 24/7 network security monitoring, traffic analysis, threat detection, vulnerability assessments, and remediation; support compliance requirements by conducting security reviews for new projects and infrastructure changes
+- Drive 802.1X/certificate-based Network Access Control (NAC) initiatives across wired and wireless environments
+- Collaborate with team members and contribute to cross-functional security initiatives with Product Security, SRE, IT, and Software Engineering teams
+
+[lists: Qualifications]
+- 8+ years of network security engineering experience securing enterprise and cloud environments
+- Platform Expertise: Deep, hands-on expertise in next-gen firewalls (Palo Alto, Fortinet), AWS NFW, WAFs, IDS/IPS, NAC/802.1X, PKI, VPN, and ZTNA solutions (Zscaler, Netskope, Prisma Access, or equivalent)
+- Technical Knowledge: Strong understanding of core network protocols (TCP/IP, BGP, OSPF, VLAN, 802.1X, TLS/PKI) and cloud networking security principles (AWS, GCP, or Azure)
+- Automation: Hands-on experience with IaC and automation tooling including Terraform, Python, CI/CD pipelines, and REST APIs
+- Security Operations: Experience with network security monitoring, threat detection, and security operations tooling (SIEM, IDS/IPS, vulnerability management platforms), including integration with network controls
+- Compliance: Proven experience supporting major compliance initiatives (NIST 800-53, CSF 2.0, ISO 27001), including control implementation and evidence collection
+
+[lists: Bonus Qualifications]
+- Experience in autonomous vehicle, robotics, IT/OT or automotive environments
+- Certifications: PCNSE, AWS Security Specialty, CCNA
+- Experience experimenting with or deploying AI/ML-based security capabilities (e.g., anomaly detection, behavioral analytics, LLM-driven copilots) in network or cloud security workflows
+
+[additionalPlain]
+About Zoox
+Zoox is developing the first ground-up, fully autonomous vehicle fleet and the supporting ecosystem required to bring this technology to market. Sitting at the intersection of robotics, machine learning, and design, Zoox aims to provide the next generation of mobility-as-a-service in urban environments. We’re looking for top talent that shares our passion and wants to be part of a fast-moving and highly execution-oriented team.
+
+Follow us on LinkedIn
+
+Accommodations
+If you need an accommodation to participate in the application or interview process please reach out to accommodations@zoox.com or your assigned recruiter.
+
+A Final Note:
+You do not need to match every listed expectation to apply for this position. Here at Zoox, we know that diverse perspectives foster the innovation we need to be successful, and we are committed to building a team that encompasses a variety of backgrounds, experiences, and skills.
+
+
+==============================================================================
+Posting ID: 9945ef61-1c15-4cf1-9734-b65944c73757
+Title: Staff Network Security Architect
+==============================================================================
+
+[descriptionPlain]
+Zoox's Network Security team architects and defends the digital borders of the company, from corporate offices to engineering labs and product/mission environments. As Staff Network Security Architect, you own the target-state design for how Zoox segments, connects, and controls trust across enterprise IT, OT and lab networks, and hybrid cloud (AWS, GCP). You set the standards other teams build to, you are the security design authority on new infrastructure, and you are accountable for the coherence of the whole picture rather than the health of any one platform. You'll partner closely with Network Engineering, IT, Product Security, Hardware, and Software Engineering, and you'll influence far more systems than you personally operate.
+
+[lists: In This Role, You Will...]
+- Own Zoox's network security reference architecture across corporate, data center, lab/OT, and edge environments, and define the segmentation and trust model that everything else is built against
+- Serve as the security design authority for new infrastructure: run design reviews and threat models early enough to change the design, and define the criteria under which a design is approved, conditionally approved, or rejected
+- Translate security frameworks into buildable engineering standards. Map controls to NIST CSF 2.0, NIST 800-53, and ISO 27001 (IEC 62443 a plus for OT/lab), and turn them into reference patterns, guardrails, and acceptance criteria engineers can implement without interpreting policy
+- Define the zero-trust and identity-to-network strategy, including 802.1X/certificate-based NAC, PKI trust hierarchy, ZTNA and remote access, and how non-human and headless lab/vehicle assets are authenticated and authorized
+- Architect secure hybrid and multi-cloud connectivity (CloudWAN, SD-WAN, transit and inspection architectures, cloud-native controls) and define where inspection, enforcement, and logging belong
+- Drive secure-by-design into the delivery path: encode standards as Terraform modules, policy-as-code, and CI/CD guardrails so the secure pattern is the default one, not a review gate
+- Own data flow and trust boundary analysis for sensitive environments, including vehicle data, lab telemetry, and third-party and vendor connectivity
+- Own the governance side of architecture: risk articulation for leadership, exception and compensating control decisions, architecture decision records, and the multi-year roadmap that retires legacy patterns
+- Set technical direction and raise the bar across the team through mentorship, design review, and written standards rather than through direct ownership of day-to-day operations
+
+[lists: Qualifications]
+- 10+ years in network and security engineering, including 4+ years in an architecture or technical-lead role where you owned designs others implemented
+- Demonstrated ownership of an enterprise-scale segmentation or zero-trust architecture from concept through adoption, including what you changed when it met reality
+- Ability to reason about security frameworks as design inputs, not audit artifacts: fluency with NIST CSF 2.0, NIST 800-53, and ISO 27001, and a track record of turning them into engineering standards and evidence
+- Depth in threat modeling and secure-by-design for network and infrastructure, including data flow analysis, trust boundaries, blast radius, and failure modes
+- Strong platform grounding to keep designs buildable: next-gen firewalls (Palo Alto, Fortinet), AWS NFW, IDS/IPS, NAC/802.1X, PKI, VPN, ZTNA (Zscaler, Prisma Access, or equivalent), and core protocols (TCP/IP, BGP, OSPF, VLAN, TLS/PKI)
+- Cloud network security depth in AWS and/or GCP, including inspection architecture, cloud-native enforcement, and IaC delivery with Terraform
+
+[lists: Bonus Qualifications]
+- OT, ICS, robotics, automotive, or manufacturing network security experience (IEC 62443, Purdue model, or equivalent)
+- Autonomous vehicle or safety-critical systems exposure
+- Certifications: CISSP-ISSAP, SABSA, TOGAF, CCIE Security, PCNSE, AWS Security Specialty
+- Experience applying AI/ML to network or cloud security (anomaly detection, behavioral analytics, LLM-assisted design review or policy analysis)
+
+[additionalPlain]
+About Zoox
+Zoox is developing the first ground-up, fully autonomous vehicle fleet and the supporting ecosystem required to bring this technology to market. Sitting at the intersection of robotics, machine learning, and design, Zoox aims to provide the next generation of mobility-as-a-service in urban environments. We’re looking for top talent that shares our passion and wants to be part of a fast-moving and highly execution-oriented team.
+
+Follow us on LinkedIn
+
+Accommodations
+If you need an accommodation to participate in the application or interview process please reach out to accommodations@zoox.com or your assigned recruiter.
+
+A Final Note:
+You do not need to match every listed expectation to apply for this position. Here at Zoox, we know that diverse perspectives foster the innovation we need to be successful, and we are committed to building a team that encompasses a variety of backgrounds, experiences, and skills.
+

@@ -1,0 +1,18 @@
+# run at 2026-11-25T18:41:37-0500
+# python -I -m unittest discover -s tests
+.........................................................[error] ConfigRefused: --max-requests 7 refused: a flag can only lower a GATE budget (1..6); raising it needs a dated GATE.md amendment by Prathamesh (step: configuration)
+[error] ConfigRefused: --max-boards 5 refused: a flag can only lower a GATE budget (1..4); raising it needs a dated GATE.md amendment by Prathamesh (step: configuration)
+[error] ConfigRefused: --max-seconds 121 refused: a flag can only lower a GATE budget (1..120); raising it needs a dated GATE.md amendment by Prathamesh (step: configuration)
+............................................................[error] write refused: <USER_HOME>\AppData\Local\Temp\js2-fetch-outside-qm4y1iw3\2026-11-25\zoox.json resolves to <USER_HOME>\AppData\Local\Temp\js2-fetch-outside-qm4y1iw3\2026-11-25\zoox.json, outside the project folder C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js3-filter-tool-score
+[error] status=error step=fetch; files written before the refusal: none
+...
+----------------------------------------------------------------------
+Ran 120 tests in 3.464s
+
+OK
+[loop] status=error exit=2 boards=0 requests=0/6 seconds=0.001/120 report=C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js3-filter-tool-score\state\_test_tmp_loop_m4bv4bzf\runs\20261125T184139-87ce20-error.json
+[loop] status=error exit=2 boards=0 requests=0/6 seconds=0.001/120 report=C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js3-filter-tool-score\state\_test_tmp_loop_m4bv4bzf\runs\20261125T184139-51095f-error.json
+[loop] status=error exit=2 boards=0 requests=0/6 seconds=0.001/120 report=C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js3-filter-tool-score\state\_test_tmp_loop_m4bv4bzf\runs\20261125T184139-c7acf6-error.json
+[loop] status=budget_exhausted exit=4 boards=2 requests=1/1 seconds=0.014/120 report=C:\info7375\info-7375-prompt-engineering-for-generative-ai\fall-2026\prathamesh-p\js3-filter-tool-score\state\_test_tmp_loop_otsipqey\runs\20261125T184139-1e3510-budget_exhausted.json
+  [board] lever-zoox                                    ok               attempts=1 postings=2 new=0
+  [board] ashby-openai                                  not_attempted    attempts=0 why=-
